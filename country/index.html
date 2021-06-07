@@ -1,0 +1,2430 @@
+﻿<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国を知ろう！｜日本ワーキング・ホリデー協会';
+$header_obj->description_page='日本とワーキングホリデー協定を結んでいる国は、世界12カ国。大自然の風景や歴史的建造物など、国ごとの魅力を掲載していますので、滞在先を選ぶ際にお役立てください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/country-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーホリ協定国を知ろう！';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+<script type="text/javascript" src="/country/country_info/js/map.js"></script>';
+
+//$header_obj->add_css_files='<link rel="stylesheet" href="/country/country_info/style.css" type="text/css" />';
+
+$header_obj->add_style='
+<style type="text/css">
+
+	.messagepop {
+		position:absolute;
+		float:left;
+		bottom:5px;
+		left:5px;
+		display:none;
+
+		padding:10px;
+
+		background-color:#FFFFFF;
+		border:1px solid #999999;
+		cursor:default;
+		text-align:left;
+		width:auto;
+		z-index:50;
+	}
+	#interactive-map{
+		position:relative;
+		margin-bottom:30px;
+	}
+</style>';
+
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+$header_obj->add_css_files='<link href="/country/css/style.css" rel="stylesheet" type="text/css" /><link href="/country/css/style-m.css?v=20180822" rel="stylesheet" type="text/css" />';
+} else {
+$header_obj->add_css_files='<link href="/country/css/style.css" rel="stylesheet" type="text/css" /><link href="/country/css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs(); ?>
+
+	<p id="area-map-title">ワーホリ協定国を知ろう！</p>
+
+<!-- 		<div id="area-map-message-sp">
+			現在日本とワーキングホリデー協定を結んでいる国はこの19カ国です。<br />
+			興味がある国を選んでください。
+		</div>
+	-->
+<!--
+		<div id="area-map">
+			<img src="./images/map-all.jpg" width="680" height="365" usemap="#map" />
+			<map name="map">
+			<area shape="rect" coords="394,281,509,302" href="#li-aus" alt="オーストラリア">
+			<area shape="rect" coords="12,175,125,194" href="#li-can" alt="カナダ">
+			<area shape="rect" coords="216,78,330,98" href="#li-uk" alt="イギリス">
+			<area shape="rect" coords="489,316,604,338" href="#li-nz" alt="ニュージーランド">
+			<area shape="rect" coords="180,152,295,174" href="#li-fra" alt="フランス">
+			<area shape="rect" coords="375,127,489,148" href="#li-pol" alt="ポーランド">
+			<area shape="rect" coords="359,100,473,121" href="#li-dnk" alt="デンマーク">
+			<area shape="rect" coords="349,50,464,71" href="#li-nor" alt="ノルウェー">
+			<area shape="rect" coords="181,111,294,132" href="#li-ire" alt="アイルランド">
+            <area shape="rect" coords="174,183,289,203" href="#li-por" alt="ポルトガル">
+			<area shape="rect" coords="555,151,670,170" href="#li-kor" alt="韓国">
+			<area shape="rect" coords="526,222,641,241" href="#li-hkg" alt="香港">
+			<area shape="rect" coords="548,194,663,214" href="#li-ywn" alt="台湾">
+			<area shape="rect" coords="369,153,485,174" href="#li-svk" alt="スロバキア">
+			<area shape="rect" coords="180,235,300,260" href="#li-esp" alt="スペイン">
+			<area shape="rect" coords="307,250,428,272" href="#li-deu" alt="ドイツ">
+			<area shape="rect" coords="330,217,446,240" href="#li-aut" alt="オーストリア">
+			<area shape="rect" coords="346,188,463,210" href="#li-hun" alt="ハンガリー">
+			</map>
+		</div>
+		<div id="area-map-sp">
+			<ul class="clearfix">
+				<li><a href="#li-aus" alt="オーストラリア"><img src="./images/btn-aus.jpg" /></a></li>
+				<li><a href="#li-can" alt="カナダ"><img src="./images/btn-can.jpg" /></a></li>
+				<li><a href="#li-fra" alt="フランス"><img src="./images/btn-fra.jpg" /></a></li>
+                <li><a href="#li-deu" alt="ドイツ"><img src="./images/btn-deu.jpg" /></a></li>
+				<li><a href="#li-ire" alt="アイルランド"><img src="./images/btn-ire.jpg" /></a></li>
+				<li><a href="#li-kor" alt="韓国"> <img src="./images/btn-kor.jpg" /></a></li>
+				<li><a href="#li-nz" alt="ニュージーランド"><img src="./images/btn-nz.jpg" /></a></li>
+				<li><a href="#li-uk" alt="イギリス"><img src="./images/btn-uk.jpg" /></a></li>
+				<li><a href="#li-dnk" alt="デンマーク"><img src="./images/btn-dnk.jpg" /></a></li>
+				<li><a href="#li-nor" alt="ノルウェー"><img src="./images/btn-nor.jpg" /></a></li>
+				<li><a href="#li-hkg" alt="香港"><img src="./images/btn-hkg.jpg" /></a></li>
+				<li><a href="#li-ywn" alt="台湾"><img src="./images/btn-ywn.jpg" /></a></li>
+				<li><a href="#li-pol" alt="ポーランド"><img src="./images/btn-pol.jpg" /></a></li>
+				<li><a href="#li-por" alt="ポルトガル"><img src="./images/btn-por.jpg" /></a></li>
+				<li><a href="#li-svk" alt="スロバキア"><img src="./images/btn-svk.jpg" /></a></li>
+				<li><a href="#li-aut" alt="オーストリア"><img src="./images/btn-aut.jpg" /></a></li>
+			</ul>
+		</div>
+	-->
+
+	<!--  start flag -->
+	<!--<div class="mcontent-country-box clearfix">
+		<ul class="country-box-01 clearfix">
+			<li class="c-01">
+				<a href="#li-aus">
+					<img src="/images/coBtn_aus.gif">
+				</a>
+			</li>
+			<li class="c-09">
+				<a href="#li-can">
+					<img src="/images/coBtn_can.gif">
+				</a>
+			</li>
+			<li class="c-05">
+				<a href="#li-nz">
+					<img src="/images/coBtn_nz.gif">
+				</a>
+			</li>
+
+			<li class="c-03">
+				<a href="#li-uk">
+					<img src="/images/coBtn_uk.gif">
+				</a>
+			</li>
+
+			<li class="c-07">
+				<a href="#li-ire">
+					<img src="/images/coBtn_ire.gif">
+				</a>
+			</li>
+
+			<li class="c-06">
+				<a href="#li-fra">
+					<img src="/images/coBtn_fra.gif">
+				</a>
+			</li>
+
+
+			<li class="c-10">
+				<a href="#li-deu">
+					<img src="/images/coBtn_deu.gif">
+				</a>
+			</li>
+
+			<li class="c-11">
+				<a href="#li-dnk">
+					<img src="/images/coBtn_dnk.gif">
+				</a>
+			</li>
+
+			<li class="c-12">
+				<a href="#li-nor">
+					<img src="/images/coBtn_nor.gif">
+				</a>
+			</li>
+
+
+
+			<li class="c-02">
+				<a href="#li-kor">
+					<img src="/images/coBtn_kor.gif">
+				</a>
+			</li>
+
+			<li class="c-04">
+				<a href="#li-ywn">
+					<img src="/images/coBtn_ywn.gif">
+				</a>
+			</li>
+
+
+
+
+			<li class="c-08">
+				<a href="#li-hkg">
+					<img src="/images/coBtn_hkg.gif">
+				</a>
+			</li>
+
+
+			<li class="c-14">
+				<a href="#li-pol">
+					<img src="/images/coBtn_pol.gif">
+				</a>
+			</li>
+
+
+
+			<li class="c-15">
+				<a href="#li-prt">
+					<img src="/images/coBtn_por.gif">
+				</a>
+			</li>
+
+
+			<li class="c-11">
+				<a href="#li-svk">
+					<img src="/images/coBtn_svk.gif">
+				</a>
+			</li>
+
+
+			<li class="c-15">
+				<a href="#li-aut">
+					<img src="/images/coBtn_aut.gif">
+				</a>
+			</li>
+
+
+			<li class="c-17">
+				<a href="#li-hun">
+					<img src="/images/coBtn_hun.gif">
+				</a>
+			</li>
+
+
+			<li class="c-18">
+				<a href="#li-esp">
+					<img src="/images/coBtn_esp.gif">
+				</a>
+			</li>
+			<li class="c-19">
+				<a href="#li-cze">
+					<img src="/images/coBtn_cze.gif">
+				</a>
+			</li>
+			
+				<li class="c-20">
+				<a href="#li-arg">
+					<img src="/images/coBtn_arg.gif">
+				</a>
+				</li>
+				
+				<li class="c-21">
+				<a href="#li-chl">
+					<img src="/images/coBtn_chl.gif">
+				</a>
+				</li>
+				<li class="c-22">
+					<a href="#li-isl">
+						<img src="/images/cobtn_isl.gif">
+					</a>
+				</li>
+
+
+
+
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div> -->
+	<!--  end flag -->
+	<div class="country-list-box clearfix">
+		<p>本格英語ならコチラから！</p>
+		<ul class="country-box-first clearfix">
+			<li class="c-01">
+				<a href="#li-aus">
+					<img src="/images/coBtn_aus.gif">
+				</a>
+			</li>
+			<li class="c-09">
+				<a href="#li-can">
+					<img src="/images/coBtn_can.gif">
+				</a>
+			</li>
+			<li class="c-05">
+				<a href="#li-nz">
+					<img src="/images/coBtn_nz.gif">
+				</a>
+			</li>
+			<li class="c-03">
+				<a href="#li-uk">
+					<img src="/images/coBtn_uk.gif">
+				</a>
+			</li>
+		</ul>
+		<p>目的に合わせて選べる人気国！</p>
+		<ul class="country-box-second clearfix">
+			<li class="c-10">
+				<a href="#li-deu">
+					<img src="/images/coBtn_deu.gif">
+				</a>
+			</li>
+			<li class="c-06">
+				<a href="#li-fra">
+					<img src="/images/coBtn_fra.gif">
+				</a>
+			</li>
+			<li class="c-07">
+				<a href="#li-ire">
+					<img src="/images/coBtn_ire.gif">
+				</a>
+			</li>
+			<li class="c-11">
+				<a href="#li-dnk">
+					<img src="/images/coBtn_dnk.gif">
+				</a>
+			</li>
+			<li class="c-12">
+				<a href="#li-nor">
+					<img src="/images/coBtn_nor.gif">
+				</a>
+			</li>
+			<li class="c-08">
+				<a href="#li-hkg">
+					<img src="/images/coBtn_hkg.gif">
+				</a>
+			</li>
+			<li class="c-04">
+				<a href="#li-twn">
+					<img src="/images/coBtn_twn.gif">
+				</a>
+			</li>
+			<li class="c-02">
+				<a href="#li-kor">
+					<img src="/images/coBtn_kor.gif">
+				</a>
+			</li>
+		</ul>
+		<p>その他の協定国</p>
+		<ul class="country-box-third clearfix">
+			<li class="c-14">
+				<a href="#li-pol">
+					<img src="/images/coBtn_pol.gif">
+				</a>
+			</li>
+			<li class="c-15">
+				<a href="#li-prt">
+					<img src="/images/coBtn_prt.gif">
+				</a>
+			</li>
+			<li class="c-11">
+				<a href="#li-svk">
+					<img src="/images/coBtn_svk.gif">
+				</a>
+			</li>
+			<li class="c-15">
+				<a href="#li-aut">
+					<img src="/images/coBtn_aut.gif">
+				</a>
+			</li>
+			<li class="c-17">
+				<a href="#li-hun">
+					<img src="/images/coBtn_hun.gif">
+				</a>
+			</li>
+			<li class="c-18">
+				<a href="#li-esp">
+					<img src="/images/coBtn_esp.gif">
+				</a>
+			</li>
+			<li class="c-19">
+				<a href="#li-cze">
+					<img src="/images/coBtn_cze.gif">
+				</a>
+			</li>
+			<li class="c-20">
+				<a href="#li-arg">
+					<img src="/images/coBtn_arg.gif">
+				</a>
+			</li>
+			<li class="c-21">
+				<a href="#li-chl">
+					<img src="/images/coBtn_chl.gif">
+				</a>
+			</li>
+			<li class="c-22">
+				<a href="#li-isl">
+					<img src="/images/coBtn_isl.gif">
+				</a>
+			</li>
+			<li class="c-23">
+				<a href="#li-ltu">
+					<img src="/images/coBtn-ltu.gif">
+				</a>
+			</li>
+			<li class="c-24">
+				<a href="#li-swe">
+					<img src="/images/coBtn-swe.gif">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	
+	<div id="area-map-message" class="area-round-corner">
+		ワーキングホリデーとは、日本と協定を結んだ国に一定期間滞在でき、その間の滞在費を補うための働いたりできる制度のことです。<br />
+		では、今日本とワーホリ協定を結んでいる国の事を、皆さんはどれくらい知っていますか？<br />
+		ワーホリ協定国は22 カ国！どの国もとっても魅力にあふれる国です。
+	</div><br />
+	<div class="country-usa  clearfix">
+		<ul class="country-usa-box">
+		<li class="liusa clearfix">
+		<div class="flex-content">
+		<i class="fa fa-user ico-blue" aria-hidden="true"></i><p class="box-chat from-them">アメリカはワーホリ協定国ではないんですか？</p>
+	</div>
+	<div class="flex-content">
+		<p class="from-me box-chat">アメリカはワーホリ協定国ではありませんが、</br>留学先としてとても人気が高い国です。</p>
+		<i class="fa fa-user ico-default" aria-hidden="true"></i>
+	</div>
+		</li>
+		<li class="liusa">
+			<a href="#li-usa">
+				<img src="/images/coBtn_usa.gif">
+			</a>
+		</li>
+		</ul>
+	</div>
+
+	<div class="area-display-sp">
+		<div class="advbox03">
+			<?php
+			// 103
+			define('MAX_PATH', '/var/www/html/ad');
+			if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+			if (!isset($phpAds_context)) {
+			$phpAds_context = array();
+		}
+		// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+		$phpAds_raw = view_local('', 94, 0, 0, '', '', '0', $phpAds_context, '');
+	}
+	echo $phpAds_raw['html'];
+	?>
+</div>
+</div>
+
+<ul class="list-country">
+	<li id="li-aus">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-aus.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">AUSTRALIA<span>オーストラリア</span></dd>
+			<dd class="dd-sp clearfix"><span>AUSTRALIA</span><span class="name-jp">オーストラリア</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">国際的にも高い評価を得る教育大国。広大な大地に近代都市と世界遺産が調和する国。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/1616" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/aus1.jpg" alt="最東部の秘境"></dt>
+							<dd> <img src="./images/double-arrow.png" alt=""> オーストラリア<br />最東部の秘境 </dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/osakablog/item/1556" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/aus2.jpg" alt="人生で絶対一度は行きたい場所"></dt>
+							<dd><img src="./images/double-arrow.png" alt="">人生で絶対<br />一度は行きたい場所</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/country/australia/recommend" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/aus3.jpg" alt="Great Barrie Reefを大紹介!"></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> オーストラリアの<br />都市選び！</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/australia/" target="_blank">
+						<img src="./images/btn-aus-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-aus.html" target="_blank">
+						<img src="./images/btn-aus-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=オーストラリア" target="_blank">
+						<img src="./images/btn-aus-log.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/australia/">
+						<img src="../../country/images/icon-country.png">
+						<p>オーストラリア<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/wh/australia/">
+						<i class="fa fa-suitcase" aria-hidden="true"></i>
+						<p>オーストラリアの<br>ワーホリ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-aus.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>オーストラリアの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=オーストラリア">
+						<img src="../../country/images/icon-blog.png">
+						<p>オーストラリア<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,1&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">オーストラリア無料セミナー</a>
+			<a href="/seminar/ser/country/aus" target="_blank" class="country-morebtn btn-seminar display-SP">オーストラリア無料セミナー</a>
+		</div>
+	</li>
+	<!-- オーストラリア -->
+
+	<li id="li-can">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-can.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">CANADA<span>カナダ</span></dd>
+			<dd class="dd-sp clearfix"><span>CANADA</span><span class="name-jp">カナダ</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">多国籍、他民族、多言語が混ざり合う「小さな地球」。四季折々に移り変わる大自然も魅力的。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/fukuokablog/item/1481" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ca1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> カナダに行ったら<br />必ず見ておきたいもの</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/nagoyablog/item/1595" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ca2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 様々な文化に触れられる<br />カナダ最大の街</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/fukuokablog/item/1504" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ca3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 花溢れる優雅な州都<br />ビクトリア</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/canada/" target="_blank">
+						<img src="./images/btn-can-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-can.html" target="_blank">
+						<img src="./images/btn-can-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=カナダ"target="_blank">
+						<img src="./images/btn-can-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/canada/">
+						<img src="../../country/images/icon-country.png">
+						<p>カナダ<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/wh/canada/">
+						<i class="fa fa-suitcase" aria-hidden="true"></i>
+						<p>カナダの<br>ワーホリ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-can.html" >
+						<img src="../../country/images/icon-visa.png">
+						<p>カナダの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=カナダ">
+						<img src="../../country/images/icon-blog.png">
+						<p>カナダ<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,3&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">カナダ無料セミナー</a>
+			<a href="/seminar/ser/country/can" target="_blank" class="country-morebtn btn-seminar display-SP">カナダ無料セミナー</a>
+		</div>
+
+	</li>
+	<!-- カナダ -->
+
+	<li id="li-nz">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-nz.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">NEW ZEALAND<span>ニュージーランド</span></dd>
+			<dd class="dd-sp clearfix"><span>NEW ZEALAND</span><span class="name-jp">ニュージーランド</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">安全な治安と心優しい人々に囲まれ緩やかな気候の中でゆったりと時間を過ごせる。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/nagoyablog/item/1607" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nz1.jpg" alt=""></dt>
+							<dd> <img src="./images/double-arrow.png" alt="">ニュージーランドは<br />こんな国</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/osakablog/item/1094" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nz2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 夏の終わりに<br />ランタンフェスティバル</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/osakablog/item/815" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nz3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> ニュージーの秋<br />Guy Fawkes Day</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/newzealand/" target="_blank">
+						<img src="./images/btn-nz-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-nz.html" target="_blank">
+						<img src="./images/btn-nz-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ニュージーランド" target="_blank">
+						<img src="./images/btn-nz-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/newzealand/">
+						<img src="../../country/images/icon-country.png">
+						<p>ニュージーランド<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/wh/newzealand/">
+						<i class="fa fa-suitcase" aria-hidden="true"></i>
+						<p>ニュージーランドの<br>ワーホリ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-nz.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ニュージーランドの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ニュージーランド">
+						<img src="../../country/images/icon-blog.png">
+						<p>ニュージーランド<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,2&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">ニュージーランド無料セミナー</a>
+			<a href="/seminar/ser/country/nz" target="_blank" class="country-morebtn btn-seminar display-SP">ニュージーランド無料セミナー</a>
+		</div>
+
+	</li>
+	<!-- ニュージーランド -->
+
+	<li id="li-uk">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-uk.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">UNITED KINGDOM<span>イギリス</span></dd>
+			<dd class="dd-sp clearfix"><span>UNITED KINGDOM</span><span class="name-jp">イギリス</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">伝統ある歴史と近代的な文化が混ざり合う国。世界最高峰の博物館なども堪能できる。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/1581" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/uk1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> イギリス料理の<br />朝食事情♪</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e7%b7%8f%e5%90%88/968/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/uk2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 歴史と文化が<br />混ざり合う国イギリス</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/europe/bloomsbury/%e5%ad%a6%e6%a0%a1%e5%91%a8%e8%be%ba%e6%83%85%e5%a0%b1%ef%bc%9abloomsbury/12" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/uk3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 絶対行きたい!<br />テムズ川沿い観光スポット</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/unitedkingdom/" target="_blank">
+						<img src="./images/btn-uk-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-uk.html" target="_blank">
+						<img src="./images/btn-uk-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=イギリス" target="_blank">
+						<img src="./images/btn-uk-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/unitedkingdom/">
+						<img src="../../country/images/icon-country.png">
+						<p>イギリス<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/wh/uk/">
+						<i class="fa fa-suitcase" aria-hidden="true"></i>
+						<p>イギリスの<br>ワーホリ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-uk.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>イギリスの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=イギリス">
+						<img src="../../country/images/icon-blog.png">
+						<p>イギリス<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,4&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">イギリス無料セミナー</a>
+			<a href="/seminar/ser/country/uk" target="_blank" class="country-morebtn btn-seminar display-SP">イギリス無料セミナー</a>
+		</div>
+
+	</li>
+	<!-- イギリス -->
+
+	<li id="li-fra">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-fra.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">FRANCE<span>フランス</span></dd>
+			<dd class="dd-sp clearfix"><span>FRANCE</span><span class="name-jp">フランス</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">優れた芸術やエンターテインメントに触れ合うことができ活気にあふれ世界中の人々を魅了する「花の都」。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/1577" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/fra1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 独立記念日に<br />パリで花火を見る</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/item/306" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/fra2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> ワーホリを使って<br />フランスを楽しもう!</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/item/346" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/fra3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> フランスといえば<br />ツールドフランス</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/france/" target="_blank">
+						<img src="./images/btn-fra-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-fra.html" target="_blank">
+						<img src="./images/btn-fra-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=フランス" target="_blank">
+						<img src="./images/btn-fra-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/france/">
+						<img src="../../country/images/icon-country.png">
+						<p>フランス<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-fra.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>フランスの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=フランス">
+						<img src="../../country/images/icon-blog.png">
+						<p>フランス<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,5&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">フランス無料セミナー</a>
+			<a href="/seminar/ser/country/fra" target="_blank" class="country-morebtn btn-seminar display-SP">フランス無料セミナー</a>
+		</div>
+
+	</li>
+	<!-- フランス -->
+	<li id="li-deu">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-deu.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">GERMANY<span>ドイツ</span></dd>
+			<dd class="dd-sp clearfix"><span>GERMANY</span><span class="name-jp">ドイツ</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">中世の趣を残す古城や街並みに、最先端の現代アートが交差する歴史と文化に彩られた国。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/osakablog/item/1647" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ger_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 歴史を体感する街<br />ハイデンブルグ</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/nagoyablog/item/1661" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ger_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> ドイツって<br />どんな国?</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/osakablog/item/1648" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ger_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 世界遺産と共に<br />ケルンを紹介!</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/germany/" target="_blank">
+						<img src="./images/btn-deu-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-deu.html" target="_blank">
+						<img src="./images/btn-deu-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ドイツ" target="_blank">
+						<img src="./images/btn-deu-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/germany/">
+						<img src="../../country/images/icon-country.png">
+
+						<p>ドイツ<br>をもっと詳しく知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-deu.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ドイツの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ドイツ">
+						<img src="../../country/images/icon-blog.png">
+						<p>ドイツ<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,6&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">ドイツ無料セミナー</a>
+			<a href="/seminar/ser/country/other" target="_blank" class="country-morebtn btn-seminar display-SP">ドイツ無料セミナー</a>
+		</div>
+
+	</li>
+
+	<!-- ドイツ -->
+
+	<li id="li-ire">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-ire.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">IRELAND<span>アイルランド</span></dd>
+			<dd class="dd-sp clearfix"><span>IRELAND</span><span class="name-jp">アイルランド</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">ケルトの文化が息づく、緑豊かな美しい島。陽気で素朴な人々があなたを出迎えます。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/nagoyablog/item/1617" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ire_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> アイルランドって<br />こんな国!</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/item/217" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ire_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> アイルランドの<br />魅力発見セミナー</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/nagoyablog/item/1956%E3%80%91" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ire_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 歴史的な雰囲気の<br>街並</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/ireland/" target="_blank">
+						<img src="./images/btn-ire-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-ire.html" target="_blank">
+						<img src="./images/btn-ire-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アイルランド" target="_blank">
+						<img src="./images/btn-ire-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/ireland/">
+						<img src="../../country/images/icon-country.png">
+						<p>アイルランド<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-ire.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>アイルランドの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アイルランド">
+						<img src="../../country/images/icon-blog.png">
+						<p>アイルランド<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<a href="/seminar/seminar.php?navigation=1&month=<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,7&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">アイルランド無料セミナー</a>
+			<a href="/seminar/ser/country/other" target="_blank" class="country-morebtn btn-seminar display-SP">アイルランド無料セミナー</a>
+		</div>
+
+	</li>
+
+	<!-- アイルランド -->
+
+	<li id="li-dnk">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-dnk.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">DENMARK<span>デンマーク</span></dd>
+			<dd class="dd-sp clearfix"><span>DENMARK</span><span class="name-jp">デンマーク</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">北欧諸国の中で最も南に位置し500 以上の島々からなる大自然の美しい島国。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/osakablog/item/1609" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/den_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> デンマーク<br />といえばコレ!</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/item/1568" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/den_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> デンマークは<br />幸せと平和を願う国</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/osakablog/item/1598" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/den_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 世界一幸福な国<br />デンマーク</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/denmark/" target="_blank">
+						<img src="./images/btn-dnk-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-dnk.html" target="_blank">
+						<img src="./images/btn-dnk-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=デンマーク" target="_blank">
+						<img src="./images/btn-dnk-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/denmark/">
+						<img src="../../country/images/icon-country.png">
+						<p>デンマーク<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-dnk.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>デンマークの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=デンマーク">
+						<img src="../../country/images/icon-blog.png">
+						<p>デンマーク<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- デンマーク -->
+
+	<li id="li-nor">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-nor.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">NORWAY<span>ノルウェー</span></dd>
+			<dd class="dd-sp clearfix"><span>NORWAY</span><span class="name-jp">ノルウェー</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">国土の半分は森林に覆われ9 万を超す湖沼をもつ北欧最大の「森と湖の国」。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/1526" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nor_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> ノルウェーの<br />公用語</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/osakablog/item/1489" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nor_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> オーロラ＆フィオルドなど<br />大自然に向き合える国</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/item/1681%E3%80%91" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/nor_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> ノルウェーの<br>流行事情</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/norway/" target="_blank">
+						<img src="./images/btn-nor-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-nor.html" target="_blank">
+						<img src="./images/btn-nor-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ノルウェー" target="_blank">
+						<img src="./images/btn-nor-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/norway/">
+						<img src="../../country/images/icon-country.png">
+						<p>ノルウェー<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-nor.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ノルウェーの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ノルウェー">
+						<img src="../../country/images/icon-blog.png">
+						<p>ノルウェー<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- ノルウェー -->
+
+	<li id="li-hkg">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-hkg.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">HONG KONG<span>香港</span></dd>
+			<dd class="dd-sp clearfix"><span>HONG KONG</span><span class="name-jp">香港</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">貿易、金融におけるアジアの中心都市として世界的に急成長した雅やかな近代大都市。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/1408" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/hk_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 絶対行きたい香港の<br />3大オススメスポット</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/item/1563" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/hk_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 香港に行ってみよう<br />気になる物価は?</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/item/1602" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/hk_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 香港の<br />2 大○○!</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/hongkong/" target="_blank">
+						<img src="./images/btn-hkg-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-hkg.html" target="_blank">
+						<img src="./images/btn-hkg-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=香港" target="_blank">
+						<img src="./images/btn-hkg-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/hongkong/">
+						<img src="../../country/images/icon-country.png">
+						<p>香港<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-hkg.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>香港の<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=香港">
+						<img src="../../country/images/icon-blog.png">
+						<p>香港<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- 香港 -->
+
+	<li id="li-ywn">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-ywn.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">TAIWAN<span>台湾</span></dd>
+			<dd class="dd-sp clearfix"><span>TAIWAN</span><span class="name-jp">台湾</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">どこか懐かしい風景でノスタルジックな雰囲気に浸ることができる自然と近代文化が両立する場所。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/osakablog/item/1406" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ywm_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 台湾は隠れた<br />温泉大国!</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/osakablog/item/1500" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ywm_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 日本と台湾の<br />友好関係</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/osakablog/item/1531" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ywm_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 台湾にもゆるキャラ!?<br />タイワンダーくんとは??</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/taiwan/" target="_blank">
+						<img src="./images/btn-ywn-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-ywn.html" target="_blank">
+						<img src="./images/btn-ywn-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=台湾" target="_blank">
+						<img src="./images/btn-ywn-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/taiwan/">
+						<img src="../../country/images/icon-country.png">
+						<p>台湾<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-ywn.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>台湾の<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=台湾">
+						<img src="../../country/images/icon-blog.png">
+						<p>台湾<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+	</li>
+	<!-- 台湾 -->
+
+	<li id="li-kor">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-kor.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">SOUTH KOREA<span>韓国</span></dd>
+			<dd class="dd-sp clearfix"><span>SOUTH KOREA</span><span class="name-jp">韓国</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">全土にわたり長い歴史を持つ主要都市が点在し今尚発展を続ける国、韓国。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/item/2010" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/kor_01.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 韓国って<br />どんな国？</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/item/2009" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/kor_02.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt=""> 韓国おすすめ料理<br />ベスト３♪</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/item/2011" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/kor_03.png" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ソウルに行こう！<br />人気エリアを紹介</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/southkorea/" target="_blank">
+						<img src="./images/btn-kor-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-kor.html" target="_blank">
+						<img src="./images/btn-kor-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=韓国" target="_blank">
+						<img src="./images/btn-kor-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/southkorea/">
+						<img src="../../country/images/icon-country.png">
+						<p>韓国<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-kor.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>韓国の<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=韓国">
+						<img src="../../country/images/icon-blog.png">
+						<p>韓国<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- 韓国 -->
+	<!-- ポーランド -->
+	<li id="li-pol">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-pol.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">POLAND<span>ポーランド</span></dd>
+			<dd class="dd-sp clearfix"><span>POLAND</span><span class="name-jp">ポーランド</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">「ヨーロッパの心臓」とも呼ばれ、数多くの歴史的イベントの舞台となった、東西ヨーロッパの懸け橋。</p>
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2821/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/pol_01.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ポーランドも日本と<br />ワーホリ協定を結びました</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2825/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/pol_02.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリで巡りたい<br />ポーランドの世界遺産</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2828/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/pol_03.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">覚えておきたい<br />ポーランド語を紹介します</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/poland/" target="_blank">
+						<img src="./images/btn-pol-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-pol.html" target="_blank">
+						<img src="./images/btn-pol-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ポーランド" target="_blank">
+						<img src="./images/btn-pol-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/poland/">
+						<img src="../../country/images/icon-country.png">
+						<p>ポーランド<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-pol.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ポーランドの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ポーランド">
+						<img src="../../country/images/icon-blog.png">
+						<p>ポーランド<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- アイルランド -->
+	<li id="li-prt">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-por.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">PORTUGAL<span>ポルトガル</span></dd>
+			<dd class="dd-sp clearfix"><span>PORTUGAL</span><span class="name-jp">ポルトガル</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">日本にも大きな影響を与えた、どこで見たことがある懐かしい風景が広がる国</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2831/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/por_01.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">2015年からポルトガルも<br />ワーホリ協定国に!</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2848/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/por_02.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">「Olá！（オラ）」<br />すぐに使えるポルトガル語</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/2840/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/por_03.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">日本人にもなじみ深い<br>「ポルトガル料理」</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/portugal/" target="_blank">
+						<img src="./images/btn-por-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-prt.html" target="_blank">
+						<img src="./images/btn-por-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ポルトガル" target="_blank">
+						<img src="./images/btn-por-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/portugal/">
+						<img src="../../country/images/icon-country.png">
+						<p>ポルトガル<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-prt.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ポルトガルの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ポルトガル">
+						<img src="../../country/images/icon-blog.png">
+						<p>ポルトガル<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<li id="li-svk">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-svk.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">SLOVAKIA<span>スロバキア</span></dd>
+			<dd class="dd-sp clearfix"><span>SLOVAKIA</span><span class="name-jp">スロバキア</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">伝統のある落ち着いた生活様式と美しい山脈地帯を有する東欧の小国。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3383/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/SVK_01.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">スロバキアとの<br />ワーホリが始まります</dd>
+						</dl>
+					</a>
+				</div>
+
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3509/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/SVK_03.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">スロバキア料理を<br />堪能しよう♪</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3505/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/SVK_02.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">スロバキアの首都は<br>世界一退屈な！？</dd>
+						</dl>
+					</a>
+				</div>
+
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/slovakia/" target="_blank">
+						<img src="./images/btn-svk-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-svk.html" target="_blank">
+						<img src="./images/btn-svk-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=スロバキア" target="_blank">
+						<img src="./images/btn-svk-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/slovakia/">
+						<img src="../../country/images/icon-country.png">
+						<p>スロバキア<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-svk.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>スロバキアの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=スロバキア">
+						<img src="../../country/images/icon-blog.png">
+						<p>スロバキア<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+	</li>
+	<li id="li-aut">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-aut.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">AUSTRIA<span>オーストリア</span></dd>
+			<dd class="dd-sp clearfix"><span>AUSTRIA</span><span class="name-jp">オーストリア</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">アルプスの大自然と、音楽や芸術など宮廷文化が融合したヨーロッパが集う国</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3516" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/AUT_01.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">オーストリアとの<br />ワーホリが始まります</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3522" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/AUT_02.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">オーストリアを<br />代表する音楽家たち</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/3530" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/AUT_03.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">有名な「あの飲み物」は<br>オーストリアが発祥！</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/austria/" target="_blank">
+						<img src="./images/btn-aut-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-aut.html" target="_blank">
+						<img src="./images/btn-aut-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=オーストリア" target="_blank">
+						<img src="./images/btn-aut-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/austria/">
+						<img src="../../country/images/icon-country.png">
+						<p>オーストリア<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-aut.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>オーストリアの<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=オーストリア">
+						<img src="../../country/images/icon-blog.png">
+						<p>オーストリア<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+
+	<!--hungary-->
+	<li id="li-hun">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/hun_flag.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">HUNGARY<span>ハンガリー</span></dd>
+			<dd class="dd-sp clearfix"><span>HUNGARY</span><span class="name-jp">ハンガリー</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">世界有数の温泉大国であり、自然に囲まれたヨーロッパで最も美しいと言われる国</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%e7%b7%8f%e5%90%88/6670/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/Hun1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">新たにハンガリーとの<br />ワーホリが始まります</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/6678/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/Hun2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に訪れたい<br />観光地（ハンガリー編）</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/6702/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/Hun3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">日本の常識が通用しない！？<br />温泉大国ハンガリーの魅力</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/hungary/" target="_blank">
+						<img src="./images/btn-hun-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-hun.html" target="_blank">
+						<img src="./images/btn-hun-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ハンガリー" target="_blank">
+						<img src="./images/btn-hun-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/hungary/">
+						<img src="../../country/images/icon-country.png">
+						<p>ハンガリー<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-hun.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>ハンガリー<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=ハンガリー">
+						<img src="../../country/images/icon-blog.png">
+						<p>ハンガリー<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!--Spain-->
+	<li id="li-esp">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-esp.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">SPAIN<span>スペイン</span></dd>
+			<dd class="dd-sp clearfix"><span>SPAIN</span><span class="name-jp">スペイン</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">太陽が降り注ぐ、陽気で明るい国スペイン。北はピレネー山脈を挟んでフランスと隣接し</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/6919/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ESP1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">スペインとの<br />ワーホリが始まります</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/6943/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ESP2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">スペインサッカーが見れる<br />おすすめ都市三選！</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/6913/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/ESP3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に訪れたい<br />観光地（スペイン編）</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/spain/" target="_blank">
+						<img src="./images/btn-esp-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-esp.html" target="_blank">
+						<img src="./images/btn-esp-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=スペイン" target="_blank">
+						<img src="./images/btn-esp-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/spain/">
+						<img src="../../country/images/icon-country.png">
+						<p>スペイン<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-esp.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>スペイン<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=スペイン">
+						<img src="../../country/images/icon-blog.png">
+						<p>スペイン<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+
+	<!--CZE-->
+	<li id="li-cze">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-cze.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">CZECH<span>チェコ</span></dd>
+			<dd class="dd-sp clearfix"><span>CZECH</span><span class="name-jp">チェコ</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message"> </p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%E6%B5%B7%E5%A4%96%E3%81%8A%E5%BD%B9%E7%AB%8B%E3%81%A1%E6%83%85%E5%A0%B1/7401/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/cze1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">新たにチェコとの</br>ワーホリが開始されます！</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%E7%B7%8F%E5%90%88/7400/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/chl2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に訪れたい</br>観光地（チェコ編）</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e7%b7%8f%e5%90%88/7434/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/chl3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">プラハだけじゃない、</br>チェコのおすすめ都市３選！</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/czech/" target="_blank">
+						<img src="./images/btn-cze-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-cze.html" target="_blank">
+						<img src="./images/btn-cze-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=チェコ" target="_blank">
+						<img src="./images/btn-cze-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/czech/">
+						<img src="../../country/images/icon-country.png">
+						<p>チェコ<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-cze.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>チェコ<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=チェコ">
+						<img src="../../country/images/icon-blog.png">
+						<p>チェコ<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!--ARG-->
+	<li id="li-arg">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-arg.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">ARGENTINA<span>アルゼンチン</span></dd>
+			<dd class="dd-sp clearfix"><span>ARGENTINA</span><span class="name-jp">アルゼンチン</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message"> 日本の真反対に位置する、豊かな自然とヨーロピアンな雰囲気が魅力の「南米のパリ」。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/7272/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/arg1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">新たにアルゼンチンとの</br>ワーホリが開始されます！</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/7244/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/arg2.jpg" alt="" width="167px" height="100px"></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に訪れたい</br>観光地（アルゼンチン編）</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/7275/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/arg3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">アルゼンチンでしか見れない</br>スポーツイベント３選</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/argentina/" target="_blank">
+						<img src="./images/btn-arg-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-arg.html" target="_blank">
+						<img src="./images/btn-arg-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アルゼンチン" target="_blank">
+						<img src="./images/btn-arg-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/argentina/">
+						<img src="../../country/images/icon-country.png">
+						<p>アルゼンチン<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-arg.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>アルゼンチン<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アルゼンチン">
+						<img src="../../country/images/icon-blog.png">
+						<p>アルゼンチン<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!--CHL-->
+	<li id="li-chl">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-chl.jpg" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">CHILE<span>チリ</span></dd>
+			<dd class="dd-sp clearfix"><span>CHILE</span><span class="name-jp">チリ</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">南北に伸びた独特な地形が作り出した。神秘的な歴史を実感しよう。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/8550/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/chl1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">新たにチリとの</br>ワーホリが開始されます！</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/8546/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/chl2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に一度は訪れたい</br>おすすめ観光地（チリ編）</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e6%b8%a1%e8%88%aa%e3%81%be%e3%81%a7%e3%81%ae%e6%ba%96%e5%82%99/8566/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/chl3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">チリの祝日はお祭り騒ぎ！？</br>町中がお祭り並に賑わう祝日３選！</dd>
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/chile/" target="_blank">
+						<img src="./images/btn-chl-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-chl.html" target="_blank">
+						<img src="./images/btn-chl-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=チリ" target="_blank">
+						<img src="./images/btn-chl-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/chile/">
+						<img src="../../country/images/icon-country.png">
+						<p>チリ<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-chl.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>チリ<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=チリ">
+						<img src="../../country/images/icon-blog.png">
+						<p>チリ<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	
+	<!--ISL-->
+	<li id="li-isl">
+		<dl class="dl-country-title clearfix">
+			<dt><img src="./images/flag-isl.gif" width="51" height="33" /></dt>
+			<dd class="dd-pc clearfix">ICELAND<span>アイスランド</span></dd>
+			<dd class="dd-sp clearfix"><span>ICELAND</span><span class="name-jp">アイスランド</span></dd>
+		</dl>
+		<div class="list-country-content">
+			<p class="country-message">火山と氷河、オーロラと白夜など。大自然の魅力溢れる「火と氷の島」。</p>
+
+			<div class="area-block clearfix">
+				<div class="area-block-1">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/11673/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/isl_1.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">新たにアイスランドとの</br>ワーホリが開始されます！</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-2">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/11604/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/isl_2.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ワーホリ中に訪れたい</br>観光地（アイスランド編）</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="area-block-3">
+					<a href="/blog/tokyoblog/%e6%b5%b7%e5%a4%96%e3%81%8a%e5%bd%b9%e7%ab%8b%e3%81%a1%e6%83%85%e5%a0%b1/11660/" target="_blank">
+						<dl class="dl-article">
+							<dt><img src="./images/photo/isl_3.jpg" alt=""></dt>
+							<dd><img src="./images/double-arrow.png" alt="">ここでしか体験できない</br>お勧めアクティビティ３選</dd>              
+						</dl>
+					</a>
+				</div>
+			</div>
+			<div class="all-btn">
+				<div class="btn">
+					<a href="/country/iceland/" target="_blank">
+						<img src="./images/btn-ice-country.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-isl.html" target="_blank">
+						<img src="./images/btn-ice-visa.png" alt="">
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アイスランド" target="_blank">
+						<img src="./images/btn-ice-blog.png" alt="">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="sp-all-btn">
+				<div class="btn">
+					<a href="/country/iceland/">
+						<img src="../../country/images/icon-country.png">
+						<p>アイスランド<br>をもっと詳しく知りたい人はこちらへ！</p>
+
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/visa/v-isl.html">
+						<img src="../../country/images/icon-visa.png">
+						<p>アイスランド<br>ビザ情報を知りたい人はこちらへ！</p>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="/blog/search/tag/?tag=アイスランド">
+						<img src="../../country/images/icon-blog.png">
+						<p>アイスランド<br>に関するブログ記事はこちらから！</p>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+	</li>
+	<!-- SWE-->
+	<li id="li-swe">
+		<dl class="dl-country-title clearfix">
+				<dt><img src="./images/flag-swe.jpg" width="51" height="33" /></dt>
+				<dd class="dd-pc clearfix">SWEDEN<span>スウェーデン</span></dd>
+				<dd class="dd-sp clearfix"><span>SWEDEN</span><span class="name-jp" >スウェーデン</span></dd>
+			</dl>
+			<div class="list-country-content">
+				<p class="country-message">水の都市を中心に広がる自然と新旧の街並みが調和する「北欧のベネチア」</p>
+	
+				<div class="area-block clearfix">
+					<div class="area-block-1">
+						<a href="/blog/tokyoblog/渡航までの準備/9536/" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/swe_01.jpg" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt="">世界中の留学生が集まる</br>スウェーデン留学！</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="area-block-2">
+						<a href="/visa/v-swe.html" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/swe_02.jpg" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt="">スウェーデンの大学に入るには？</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="area-block-3">
+						<a href="/ryugaku/ryugaku_eng.html" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/swe_03.jpg" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt="">スウェーデン大学に必要な</br>語学力とは？</dd>              
+							</dl>
+						</a>
+					</div>
+				</div>
+				<div class="all-btn">
+					<div class="btn">
+						<a href="/country/sweden" target="_blank">
+							<img src="./images/btn-swe-country.png" alt="">
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/visa/v-swe.html" target="_blank">
+							<img src="./images/btn-swe-visa.png" alt="">
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/blog/search/tag/?tag=スウェーデン" target="_blank">
+							<img src="./images/btn-swe-log.png" alt="">
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="sp-all-btn">
+					<div class="btn">
+						<a href="/country/sweden">
+							<img src="../../country/images/icon-country.png">
+							<p>スウェーデンをもっと詳しく<br>知りたい人はこちらへ！</p>
+	
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/visa/v-swe.html">
+							<img src="../../country/images/icon-visa.png">
+							<p>スウェーデンのビザ情報を<br>知りたい人はこちらへ！</p>
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/blog/search/tag/?tag=スウェーデン">
+							<img src="../../country/images/icon-blog.png">
+							<p>スウェーデンに関する<br>ブログ記事はこちらから！</p>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<a href="/seminar/seminar.php?navigation=1&month=08&year=2019&place_name=&checked_countryname=,8&checked_know=,0<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,3&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">アメリカ無料セミナー</a>
+				<a href="/seminar/seminar.php?navigation=1&month=08&year=2019&place_name=&checked_countryname=,8&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-SP">アメリカ無料セミナー</a>
+			</div>
+	
+		</li>
+	<!--USA-->
+	<li id="li-usa">
+		<dl class="dl-country-title clearfix">
+				<dt><img src="./images/flag-usa.jpg" width="51" height="33" /></dt>
+				<dd class="dd-pc clearfix">UNITED STATES OF AMERICA<span>アメリカ合衆国</span></dd>
+				<dd class="dd-sp clearfix"><span>UNITED STATES OF AMERICA</span><span class="name-jp" style="display: none">アメリカ合衆国</span></dd>
+			</dl>
+			<div class="list-country-content">
+				<p class="country-message">近代的な大都市と圧倒的な大自然そして世界最高水準の教育機関を有する大国家。</p>
+	
+				<div class="area-block clearfix">
+					<div class="area-block-1">
+						<a href="/blog/tokyoblog/渡航までの準備/9536/" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/usa_01.png" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt="">世界中の留学生が集まる</br>アメリカで語学留学しよう！</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="area-block-2">
+						<a href="/ryugaku/usa_univ.html" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/usa_02.png" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt=""></br>アメリカの大学に入るには？</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="area-block-3">
+						<a href="/ryugaku/ryugaku_eng.html" target="_blank">
+							<dl class="dl-article">
+								<dt><img src="./images/photo/usa_03.png" alt=""></dt>
+								<dd><img src="./images/double-arrow.png" alt="">アメリカの大学に必要な</br>語学力とは？</dd>              
+							</dl>
+						</a>
+					</div>
+				</div>
+				<div class="all-btn">
+					<div class="btn">
+						<a href="/wh/america/" target="_blank">
+							<img src="./images/btn-usa-country.png" alt="">
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/ryugaku/usa_visa.html" target="_blank">
+							<img src="./images/btn-usa-visa.png" alt="">
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/blog/search/tag/?tag=アメリカ" target="_blank">
+							<img src="./images/btn-usa-log.png" alt="">
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="sp-all-btn">
+					<div class="btn">
+						<a href="/wh/america/">
+							<img src="../../country/images/icon-country.png">
+							<p>アメリカをもっと詳しく<br>知りたい人はこちらへ！</p>
+	
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/visa/v-usa.html">
+							<img src="../../country/images/icon-visa.png">
+							<p>アメリカのビザ情報を<br>知りたい人はこちらへ！</p>
+						</a>
+					</div>
+					<div class="btn">
+						<a href="/blog/search/tag/?tag=アメリカ">
+							<img src="../../country/images/icon-blog.png">
+							<p>アメリカに関する<br>ブログ記事はこちらから！</p>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<a href="/seminar/seminar.php?navigation=1&month=08&year=2019&place_name=&checked_countryname=,8&checked_know=,0<?php echo date("m")?>&year=<?php echo date("Y")?>&place_name=&checked_countryname=,3&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-PC">アメリカ無料セミナー</a>
+				<a href="/seminar/seminar.php?navigation=1&month=08&year=2019&place_name=&checked_countryname=,8&checked_know=,0" target="_blank" class="country-morebtn btn-seminar display-SP">アメリカ無料セミナー</a>
+			</div>
+	
+		</li>
+		
+
+</ul>
+<div class="area-display-sp">
+	<div class="advbox03">
+		<?php
+		// 103
+		define('MAX_PATH', '/var/www/html/ad');
+		if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+		if (!isset($phpAds_context)) {
+		$phpAds_context = array();
+	}
+	// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+	$phpAds_raw = view_local('', 94, 0, 0, '', '', '0', $phpAds_context, '');
+}
+echo $phpAds_raw['html'];
+?>
+</div>
+</div>
+</div><!-- /#maincontent -->
+</div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+Installation started 2019-12-25 14:52:42
+Attempting to connect to database revive-502 with user revive-502
+Connected to database revive-502
+Database settings and permissions are OK
+creating upgrade_action audit table
+successfully created upgrade_action audit table
+creating database_action audit table
+successfully created database_action audit table
+schema definition from cache TRUE
+Installation created the core tables
+Installation updated the schema version to 623
+Installation updated the application version to 5.0.2
+Preparing to set timezone preference...
+Found timezone preference ID of 16
+Found the admin account's timezone association, updating preference...
+Updated the admin account timezone preference to: 'Asia/Tokyo'
+Starting file-check for plugins...
+Finished file-check for plugins
+Starting file-check for plugins...
+Finished file-check for plugins
+Starting file-check for plugins...
+Finished file-check for plugins

@@ -1,0 +1,221 @@
+﻿<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ノルウェー情報';
+$header_obj->description_page='ノルウェーのビザ。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/NW-countrypage.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ノルウェー | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/bflag12.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/map-nor.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/map-nor-sp.png" />
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>ノルウェー人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />Oslo</li>
+				<li><img src="../images/crown-2.gif" />Bergen</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" />Loen</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>ノルウェー基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Oslo Commune</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">Norsk, English</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>385,199 km&#178;<span>(世界66位)</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>5,109,056人<span>(世界116位)</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>Norsk Krone (NOK)</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Oslo Commune</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-nor.png" /><br />
+								1月1日<br />
+								02:00am
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Oslo Commune</td>
+					</tr>
+					<tr>
+						<th>面積</th><td>385,199 km&#178;<span>(世界66位)</span></td>
+					</tr>
+					<tr>
+						<th>人口</th><td>5,109,056人<span>(世界116位)</td>
+					</tr>
+				</table>
+				<table class="table-info" style="margin-right:0">
+					<tr>
+						<th>言語</th><td id="td-language">Norsk, English</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>Norsk Krone (NOK)</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Oslo Commune</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-nor.png" /><br />
+							1月1日<br />
+							02:00am
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+
+		<h2 class="h2-title"><span>ノルウェーってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			ノルウェーは「森と山の国」と呼ばれるほど、自然が豊かな国だ。特に美しいフィオルドや、数々の渓谷は人々の心を魅了し続けている。そしてノルウェーの大きな特徴といえば、白夜の存在だろう。夏の期間は地球の公転の関係で、一日の日照時間が長くなる。その結果、夜になっても太陽が沈まない日ができるのだ。意外と知られていないが冬になると逆の現象が起き、一日中太陽が昇らない日もある。ノルウェーへ渡航する際は環境違いに気をつける必要がある。
+			</p>
+
+		    <p class="text01">
+			ノルウェーは男女平等が進んでいる国としても有名だ。女性の参政権が認められたのは1913年と早く、世界でも先駆者的な立ち位置にいる。また、国民一人当たりに対するGDP（国内総生産）も世界2位と高く、とても住みやすい国といえるだろう。また、首都オスロをはじめ数多くの観光地が点在しており、ムンクの「叫び」など有名な美術品・建築物を楽しむために、世界各地から観光者が訪れている。
+			</p>
+		</div>
+
+
+    <div class="area-display-pc">
+      <div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-nor.html" title="ノルウェーのワーキングホリデー（ワーホリ）ビザ情報へ">ノルウェーのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+        <div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+    </div>
+    <div class="area-display-sp">
+	<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+      	<a href="../../visa/v-nor.html" class="btn-visa area-round-corner">
+        ノルウェーの<br />ビザ情報はこちらから
+      </a>
+        <div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+    </div>
+  
+  
+  
+      <?php 
+        //settings for the calendar module display
+              $country_to_display = 'ノルウェー';
+              $number_to_display = '2';
+              
+        display_horizontal_calendar($country_to_display,$number_to_display); 
+        ?>
+      <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    <div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+  
+  
+    <div class="area-display-pc">
+      <h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+      <?php include('../flags_country_list.php'); ?>
+    </div>
+    <div class="area-display-sp">
+      <a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+    </div>
+  
+  
+ 		<?php $links_obj->display_links(); ?>
+
+		</div><!-- /#maincontent -->
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

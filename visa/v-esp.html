@@ -1,0 +1,106 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='スペインのワーキングホリデービザ情報';
+$header_obj->description_page='スペインのワーキングホリデービザ取得のステップや注意事項を掲載しています。スペインへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（スペイン） | ワーホリビザ情報';
+
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	 <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/flag-esp.png" alt="" />
+	 <div class='clear'></div>
+
+<?php
+
+?>
+<!--
+	</div>
+	 <p style="margin:20px 0px">
+		現在、ビザ情報を確認中です。正式な情報が公表され次第、こちらのページでご案内します。
+	 </p>-->
+	  
+	  <!-- new content add -->
+	<div class="content-visa-new">
+	  <h2 class="sec-title"> ワーキングホリデービザ（AML） </h2>	
+		<p class="text01">1.ワーキングホリデービザとは、日本政府とスペイン政府との間の協定によって、ワーキングホリデー制度の参加者として有効な査証を所持する日本国の国民に対し、入国の日から一年間の滞在を許可し、かつ、旅行資金を補うために必要な限りにおいて、スペイン国の法令に従って就労することを認めるためのビザである。<br>
+年間発給ビザの枠は500名である。 </p>
+        <h2 class="sec-title"> 法的根拠 </h2>	
+		<p class="text01">ワーキング・ホリデー制度に関するスペイン王国政府と日本国政府との間の協定（東京、2017年4月5日）</p>
+        <h2 class="sec-title"> 申請方法 </h2>	
+		<p class="text01">ビザ申請には、申請者本人が大使館に出頭し、書類を提出することが必要です。<br>
+        平日（月～金）9:30 ～12:30の開館時間内にお越しください。<br>
+        大使館へのアクセスや休館日はこちらでご確認ください。<br>
+        ※ 予約は不要です。<br>
+        留学・研究査証はスペイン外務省の許可がなければ発給できません。従って、時間に余裕を持ってち、出発希望日の約二か月前に申請することをお勧めします。ただし、出発希望日の90日以上前の申請は受付できませんのでご注意下さい。</p>
+        <h2 class="sec-title"> 査証審査の結果について  </h2>	
+		<p class="text01">査証が発給された場合、申請者本人は通知から1カ月以内に、在東京スペイン大使館へ出頭してパスポートを受け取らねばなりません。また、大使館を出る前に、査証に間違いがなく、正しく押印されているかを確認すること。<br>
+        査証が否決された場合、申請者本人へ通知します。この場合、通知から二か月以内にマドリード高等裁判所に行政訴訟の異議申し立てを提出することができます。または通知から一カ月以内に在東京スペイン大使館へ異議申し立てを提出することも可能です。</p>   <h2 class="sec-title"> 申請手数料 </h2>	
+		<p class="text01">無料 （但し、ＮＩＥ番号の申請費として1288円は必要です。）</p>
+		<h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		<ul class="list-visabasic">
+	          <a href="http://www.mofa.go.jp/mofaj/area/spain/index.html" target="_blank">基本情報</a>
+	          <a href="http://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_161.html#ad-image-0" target="_blank">安全情報</a>
+	          <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/espa.html" target="_blank">在外公館</a>
+	    </ul>
+		
+		<h2 class="sec-title">2.申請条件</h2>
+		<ul class="list-disc" style="padding-left: 0px;margin-left: 0px;">
+        <ul class="list-disc">
+            <li>ワーキング・ホリデー査証申請時の年齢が十八歳以上、三十歳以下であること。</li>
+			<li>日本国籍を所有し、有効な旅券（パスポート）の残存期間がスペイン国の滞在期間をカバーしていること。（原本とコピー）</li>
+			<li>被扶養者を同伴しないこと。（但し、当該家族が査証を取得している場合はこの限りではない）</li>
+			<li>写真（4.5x3.5）1枚。申請書右上に貼付すること。（カラー写真で、背景が白色）</li>
+			<li>住民票（発行から90日以内のもの）。申請時点で日本に3ヶ月以上居住していること。</li>
+			<li>１年オープンの往復の航空券の予約、もしくは往路のみの航空券の予約。往路の予約のみ提出する場合は、復路の航空券代を下記の残高証明書の金額にプラスすること。</li>
+			<li>経済能力の証明。最低でも、最初の3ヶ月滞在費分の1614ユーロ相当以上のスペインでの滞在費を支弁する能力を証明するものとして、下記の内のいじれか１つを選択：
+            <ul class="text01" style="list-style:none; display:block; margin: 20px 10px;">
+		<li> - 本人名義の残高証明書（和文でも可）<br>
+               金融機関もしくは郵便局が発行（押印されていないものは不可）</li>
+		<li> - 本人名義の銀行中朝のコピー（通帳の表紙及び現在までの数ヶ月間の出入金の記録のコピー）</li>
+	</ul></li>
+            
+			<li>健康診断書。大使館作成の雛型（Anexo1 参照）に基づいて、医師が記入、署名し、医師及び病院印（別々の印）が捺印された最新のもの。（発行日和1ヶ月以内のもの）</li>
+			<li>以前にワーキング・ホリデー詐称の発給をスペイン（当該締約国）政府から受けていないこと。</li>
+			<li>ワーキングホリデービザ申請に伴う宣誓書（Anexo2 参照）添付のフォームに記入し、申請者本人がパスポートと同じ署名をすること。</li>
+            <li>NIE番号申請用紙（EX-15号、Anexo3 参照）、NIE申請費（1288円）をご負担ください。</li>
+            <li>ワーキングホリデービザ申請に伴う宣誓書（Anexo 2参照）添付のフォームに記入し、申請者本人がパスポートと同じ署名をすること。</li>
+            <li>Plan de viaje（旅行日程表）指定のフォームに大まかな予定を記入。スペイン語。または英語。</li>
+		</ul>
+        </ul>
+	</div>
+	  
+	  <!-- ========== -->
+	  
+	 <!--  <p style='text-align:center;font-size:20px'> 大使館からの情報が発表され次第、お知らせいたします。</p> -->
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2019/06/10に確認した情報です。</font></p>
+	  </div>
+	  
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+		<br />
+	 	<?php $header_obj->display_visa_links(); ?>
+		<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

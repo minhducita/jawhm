@@ -1,0 +1,349 @@
+@import url("common.css");
+@CHARSET "UTF-8";
+
+/* overall */
+h1 {
+    font-size: 30px !important;
+}
+
+h2 {
+    font-size: 26px !important;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.badge{
+    background-color: #d15b47 !important;
+}
+
+.list-group {
+    margin-left: 0 !important;
+}
+
+.white-space {
+    margin-left: 10px;
+}
+
+.main-containts {
+    font-size: 17px;
+}
+
+.font-time {
+    background-color: #3cb371;
+    color: #ffffff;
+    padding-left: 20px !important;
+    border-right-width: 20px !important;
+    padding-right: 15px !important;
+}
+
+.time {
+    font-size: 19px;
+    right: 5px;
+    top: 5px;
+}
+
+.ace-nav>li.indianred > a {
+    background-color: #cd5c5c
+}
+
+ .ace-nav>li.indianred>a:hover, .ace-nav>li.indianred>a:focus {
+    background-color: #cd5c5c
+}
+
+.ace-nav>li.open .indianred>a {
+    background-color: #cd5c5c !important
+}
+
+/* index */
+.bum-wrapper {
+    position: relative;
+    padding-right: 0px;
+    padding-left: -50px;
+    width: 320px;
+}
+
+.welcome-font {
+    font-size: 30px;
+    color: #ccc;
+    position: relative;
+    top: 20px;
+    margin-left: -45px;
+}
+
+a.mes{
+    color: #000000;
+    font-style: normal;
+}
+
+a:link.mes {
+    color: #000000;
+    font-style:normal;
+}
+
+a:visited.mes {
+    color: #000000;
+}
+
+a:hover.mes {
+    color: #000000;
+    font-style: normal;
+}
+
+a:active.mes {
+    color: #000000;
+    font-style: normal;
+}
+
+.link-color {
+    color: #428bca;
+}
+
+.append-color {
+    background-color: #e5f2f7;
+    font-size: 17px;
+}
+
+.append-size {
+    padding-top:10px !important;
+    padding-bottom: 150px !important;
+}
+
+.kill-rlpadding {
+    padding-left: 0;
+    padding-right: 0;
+    word-break: break-all;
+}
+
+.kill-allpadding {
+    padding: 0;
+}
+
+.kill-tbmargin {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.kill-padding-left {
+    padding-left: 0;
+}
+
+/* common */
+.inc-btn, .inc-multi {
+    padding-top: 10px !important;
+    padding-bottom: 40px !important;
+}
+
+.client-new-memo,
+.seminar-new-memo {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+/* school contact */
+.comment-wrapper, .comment,
+.client-comment, .staff-comment {
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.comment-wrapper {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+.client-comment,
+.staff-comment {
+    background: #ccc;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    z-index: -1;
+    position: relative;
+    padding: 6px;
+    padding-left: 8px;
+}
+
+.client-comment {
+    margin-right: 60px;
+}
+
+.staff-comment {
+    margin-left: 60px;
+}
+
+.client-comment:after,
+.staff-comment:after {
+    top: 65%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-width: 15px;
+    margin-top: -15px;
+}
+
+.client-comment:after {
+    left: 100%;
+    border-left-color: #ccc;
+    top: 30px;
+}
+
+.staff-comment:after {
+    right: 100%;
+    border-right-color: #ccc;
+}
+
+.comment-top-padding {
+    padding-top: 10px;
+}
+
+.comment-bottom-padding {
+    padding-bottom: 10px;
+}
+
+.msgspan-topleft {
+    padding-left: 14px;
+}
+
+.msgspan-bottomright {
+    margin-top: 3px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+}
+
+.client-image {
+    position: absolute;
+    right: 1%;
+    top: 37px;
+
+}
+
+.client-size {
+    max-width: 60px;
+    height:auto;
+}
+
+.staff-image {
+    left: 1%;
+    bottom: 46px;;
+    position: absolute;
+}
+
+/* client */
+a.write-link {
+    color: #ffffff;
+
+}
+
+.client-button {
+    width: 170px;
+}
+
+.kill-ul-padding {
+    margin-bottom: 0;
+    padding-right: 0;
+}
+
+/* seminar */
+.datetime-jpn {
+    width: 103px;
+}
+
+.join-number {
+    width: 85px;
+}
+
+.seminar-wrapper {
+    margin-bottom: 50px;
+}
+
+.kill-margin-bottom {
+    margin-bottom: 0;
+}
+
+.search-detail-body {
+    margin-bottom: 30px;
+}
+
+.icon-edit {
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.icon-trash {
+    font-size: 15px;
+}
+
+/* iPhone */
+@media screen and (max-width: 321px) {
+    .welcome-font {
+        margin-left: 0;
+    }
+
+    .smp-logo {
+        margin-left: 30px;
+    }
+
+    .calender-icon{
+        width: 19px;
+        padding-left: 3px;
+        padding-right: 3px;
+        height: 34px;
+    }
+
+    .btn-margin-top {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .seminar-comment {
+        margin-left: -15px;
+        width: 200px;
+        padding-left:15px;
+    }
+
+    .client-memo-title {
+        margin-left: -15px;
+        width: 203px;
+        padding-left:15px;
+    }
+
+    .passport-resize {
+      max-width: 180px;
+      height: auto;
+    }
+}
+
+/* Android */
+@media screen and (max-width: 561px) {
+    .btn-margin-top {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* PC or android */
+@media screen and (min-width: 561px) {
+    .button-step {
+        padding: 10px;
+    }
+
+    .calender-icon{
+        padding-left: 12px;
+        margin-right: 0px;
+        width: 35px;
+        height: 28px;
+    }
+
+    .passport-resize {
+      max-width: 400px;
+      height: auto;
+    }
+
+}

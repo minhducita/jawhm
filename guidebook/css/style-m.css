@@ -1,0 +1,61 @@
+@charset "utf-8";
+/*
+********************************************************************************
+■ SP
+********************************************************************************
+*/
+#maincontent .sec-title {
+	background: url("../images/m-sec-title-bg.gif") repeat-x left top;
+	padding: 5px 5px 0;
+}
+#maincontent .sec-title span {
+	display: block;
+	margin-top: 5px;
+	padding: 2px 5px;
+	border-left: 4px solid #000034;
+	border-bottom: 1px solid #ccc;
+}
+.attention-text-01 {
+	font-size: 12px;
+}
+#btn-seminar {
+	width: 226px;
+	height: auto;
+}
+.table-caption {
+	font-size: 12px;
+}
+.table-list-guidebook .th-title {
+	font-size: 12px;
+}
+/*>>>>>>>>>FIx 2016-05-10<<<<<<<<<<*/
+.mb_none{
+	display: none;
+}
+.sec-contents.pc_none{
+
+}
+.sec-contents.pc_none p{
+	line-height: 1.5em;
+	display: inline-block;
+	margin: auto 5px;
+	text-align: justify;
+}
+.sec-contents.pc_none #image-02,.sec-contents.pc_none #image-03{
+	display: block;
+	box-shadow: 1px 1px 5px #888;
+}
+.sec-contents.pc_none #image-02{
+	width: 85%;
+	margin: 10px auto;
+}
+.sec-contents.pc_none #image-03{
+	width: 75%;
+	margin: 15px auto 25px;
+}
+.sec-contents.pc_none ul{
+	display: block;
+	margin: 5px 15px 0px;
+	line-height: 1.5em;
+	color:  #1d2089;
+}

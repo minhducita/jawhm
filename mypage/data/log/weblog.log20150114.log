@@ -1,0 +1,177 @@
+2015-01-14T10:07:22+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-01-14 10:07:22' and starttime <= '2015-02-14 10:07:22'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-01-14 10:07:22' and starttime <= '2015-02-14 10:07:22'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-01-14T10:07:31+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-01-14T10:09:54+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-01-14T17:01:37+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (status)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-01-14T17:01:53+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.article_expiration_date ' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.article_expiration_date ' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-01-14T17:02:40+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.article_expiration_date ' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.article_expiration_date ' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-01-14T17:16:55+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.flightimage_expiratoin_date' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.flightimage_expiratoin_date' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(33): BaseModel->searchList('clientstatus', 'article_expirat...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(59): IndexModel->getStatusExpiration('clientstatus', '2015-01-28')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-01-14T17:20:17+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[21000]: Cardinality violation: 1241 Operand should contain 1 column(s)' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `memlist...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `memlist...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `memlist...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `memlist...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(756): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(171): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(41): BaseModel->getInfo('memlist', Array, Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(202): IndexModel->getEmail('memlist', Array)
+#9 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(173): Batch_ReminderController->writeEmail(Object(Batch_ReminderController), Array, Array)
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[21000]: Cardinality violation: 1241 Operand should contain 1 column(s)' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `memlist...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `memlist...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `memlist...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(756): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(171): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(41): BaseModel->getInfo('memlist', Array, Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(202): IndexModel->getEmail('memlist', Array)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(173): Batch_ReminderController->writeEmail(Object(Batch_ReminderController), Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}

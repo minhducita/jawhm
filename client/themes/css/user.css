@@ -1,0 +1,159 @@
+@import url("common.css");
+
+.contents-wrapper {
+	background: none repeat scroll 0 0 #FCFCFC;
+	border: 1px solid #BBBBBB;
+	margin: 10px auto;
+	overflow: auto;
+	padding: 20px;
+	padding-top: 0px;
+	text-align: left;
+	border: 1px solid #DDDDDD;
+	box-shadow: 0 0 5px #CCCCCC, 0 0 0 #000000 inset;
+}
+
+.footer-margin {
+	margin: 80px;
+}
+
+body.login {
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height: 1.4em;
+	background-color: white;
+}
+
+#intro {
+	background-color: white;
+	height: 100%;
+	color: #666666;      
+	font-size: 16px;
+}
+
+#jawhmBanner {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px; 
+	line-height: 1.4em;
+}
+    
+.button-login {
+	background-color: #6CC655;
+	color: white;
+	font-size: 16px;
+	line-height: 44px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	padding-left: 44px;
+	background-position: 7px 7px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+}
+
+.button.jawhm {
+	background-color: #261147;
+	color: white;
+	background-image: url('/client/themes/images/jawhm.png');
+}
+
+.button.jawhm:hover {
+	background-color: #000033;
+}
+
+.button.google {
+	background-color: #DF4B31;
+	color: white;
+	background-image: url('/client/themes/images/g+.png');
+}
+
+.button.google:hover {
+	background-color: #B9341D;
+}
+
+.button.twitter {
+	background-color: #55ACEE;
+	color: white;
+	background-image: url('/client/themes/images/twitter.png');
+}
+
+.button.twitter:hover {
+	background-color: #178DE8;
+}
+
+.button.facebook {
+	background-color: #4963A4;
+	color: white;
+	background-image: url('/client/themes/images/f.png');
+}
+
+.button.facebook:hover {
+	background-color: #3A4F82;
+}
+
+.button.microsoft {
+	background-color: #0072C6;
+	color: white;
+	background-image: url('/images/mobile-icon-toolbar-windows_2x.png');
+}
+
+.button.microsoft:hover {
+	background-color: #005C9E;
+}
+
+.button.evernote {
+	background-color: #5CB52B;
+	color: white;
+	background-image: url('/images/mobile-icon-toolbar-evernote_2x.png');
+}
+
+.button.evernote:hover {
+	background-color: #499122;
+}
+
+/* list */
+table {
+	width: 100%;
+}
+
+table thead{
+	color: #fff8dc;
+	background-color: #4169e1;
+}
+
+table tbody {
+	background-color: #ffffff;
+}
+
+table tbody.even {
+	background-color: #7fffd4;
+}
+
+table tbody.list:hover {
+	background-color: #66cdaa;
+}
+
+#suggest {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCFF;
+    font-size: 90%;
+    width: 200px;
+}
+#suggest div {
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#suggest div.select{ /* キー上下で選択した場合のスタイル */
+    color: #FFFFFF;
+    background-color: #3366FF;
+}
+#suggest div.over{ /* マウスオーバ時のスタイル */
+    background-color: #99CCFF;
+}

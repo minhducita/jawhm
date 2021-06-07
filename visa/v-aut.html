@@ -1,0 +1,188 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='オーストリアのワーキングホリデービザ情報';
+$header_obj->description_page='オーストリアのワーキングホリデービザ取得のステップや注意事項を掲載しています。オーストリアへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（オーストリア） | ワーホリビザ情報';
+
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	     <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag15.gif" alt="" />
+	 <p class="text01">
+			<span class="centered-btn"><a class="visa-btn country-info" href="../country/austria" title="スロバキア">オーストリア</a></span>
+			<b>オーストリアのワーキングホリデービザの取得方法についてご案内します。</b>
+	 </p> 
+	 <div class='clear'></div>
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/************************
+
+	// 067
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 64, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 068
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 65, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 069
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 66, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 070
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 67, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 071
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 68, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+***************************/
+
+?>
+<!--
+	</div>
+	 <p style="margin:20px 0px">
+		現在、ビザ情報を確認中です。正式な情報が公表され次第、こちらのページでご案内します。
+	 </p>-->
+<!--	 Add new content 29-09-2016-->
+	<h2 class="sec-title">ビザについて</h2>
+	<p class="text01">ワーキングホリデー制度は18－30歳までの青少年に就労を渡航目的としない文化観光など休暇目的の入国 及び滞在期間中に旅行・滞在資金を補うための付随的な就労を認める制度です。外国に滞在することにより語学力を身に付け、外国の文化および生活を知り，相 互理解を深めることで将来就職に役に立つ知識を得ることを主な趣旨とします。</p>
+	<p class="text01">ビザＤ“ＷＨＰ”で最長12か月間滞在し、基本的に就労許可を取得することなく収入を得ることができます。ビザＤ“ＷＨＰ”は査証免除協定に基づくシェンゲン地域のノービザ滞在と別枠扱いであり、一旦出国することなくノービザ滞在前後でも可能です。
+	注意：滞在資格は扶養家族にまで及びませんので、配偶者、子供などは別途一般ビザ既定に基づく申請が必要。</p>
+	<p class="bg-yellow">オーストリアワーキングホリデーに関する情報の詳細は<a href="https://www.bmeia.gv.at/jp/botschaft/tokio.html" target="_blank">オーストリア大使館</a>からご確認ください</p>
+	<h3 class="h3-01">外務省HPで基本情報を確認しよう</h3>
+		<p class="text01">
+		<a href="https://www.mofa.go.jp/mofaj/area/austria/index.html" target="_blank">基本情報</a> 
+		<a href="http://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_156.html#ad-image-0" target="_blank">安全情報</a> 
+		<a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/oumlst.html" target="_blank">在外公館</a>
+	</p>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+	<center>
+		<p>
+			<font color="orangered">ビザの申請、ひとりでできますか？</font>
+		</p>
+		<a href="/mem/#meritt"><img src="images/memline5_on.gif"></a>
+	</center>
+	
+	<h2 class="sec-title">申請の条件</h2>
+	<ul class="text01" style="list-style:none;">
+		<li>• 申請者の年齢は18歳から満30歳であること</li>
+		<li>• WHPビザの申請はビザの有効期間の3か月前から、遅くとも3週間前までに行う</li>
+		<li>• WHPビザの有効期間の変更はできない</li>
+		<li>• WHPビザの最長期間は12か月であり、複数の再入国が可能</li>
+		<li>• WHPビザの延長はできません</li>
+		<li>• WHPビザは一国一人一回のみ申請可能（WHPビザを消化できない場合、キャンセルしない限り再申請できなくなります。<br> ただし就労しなかった理由による事後キャンセルはできません）</li>
+		<li>• 就労が可能であるものの、就労・就学は主な渡航目的であってはいけません</li>
+		<li>• 申請者はWHPビザの有効期間より残存期間3か月以上ある旅券を所持する  </li>
+		<li>• 申請者は往復航空券、あるいは購入に必要な資金を持たねばなりません</li>
+		<li>• 申請者はオーストリア入国後最初の一定期間、自力で生活できる充分な資金を持たねばなりません</li>
+		<li>• 申請者は充分な健康保険に加入していなければなりません</li>
+		<li>• 申請者は充分な健康状態でなければなりません、なお犯罪歴があってはなりません</li>
+		<li>• WHPビザは無料です </li>
+	</ul>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+	
+	<h2 class="sec-title">申請に必要なもの</h2>
+	<ul class="text01" style="list-style:none;">
+		<li>• 申請用紙　ビザ D　VisumD</li>
+		<li>• パスポート（申請されたビザの有効期間より３ヶ月以上の有効残存期間、未使用ページ数が最低２ページある、発給から 10 年以内）</li>
+		<li>• パスポートのコピー（身分事項ページ、ビザ貼り付けページ）</li>
+		<li>• ICAOの規格による最近の写真（パスポートサイズ）</li>
+		<li>• 旅行保険証書（疾病、傷害、帰国費用 )、最低補償額各 3 万ユーロのもの</li>
+		<li>• フライト予約確定書</li>
+		<li>• 宿泊の予約証明、ホテルの予約 (1 ヶ月 )</li>
+		<li>• 充分な資金の証明、通帳（6 ヶ月分の残高証明）</li>
+		<li>• 返信用封筒</li>
+	</ul>
+	<p class="text01">※ ２０１７年 7 月現在、尚、規定が変わる可能性がありますので、ご了承ください。</br>また詳細は在日オーストリア大使館にお問い合わせください。</p>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		<p><font size="1">※掲載されているビザ情報は、2019/06/15に確認した情報です。</font></p>
+	</div>
+	<center>
+		<p>
+			<font color="orangered">ビザの申請、ひとりでできますか？</font>
+		</p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a>
+	</center>
+	<br />
+<?php $links_obj->display_links(); ?>
+<?php $header_obj->display_visa_links(); ?>
+<style>
+		.linkbox	{
+			margin : 15px 15px 15px 15px;
+			padding	: 10px 20px 10px 20px;
+			background-color : #FFE4B5;
+			font-size:10pt;
+		}
+	</style>
+	<div class="linkbox"> 
+		お探しの情報はありましたか？ 以下のページもよく見られていますよ
+		<br>・<a href="/school/">オーストリアの学校</a>
+		<br>・<a href="/qa.html">オーストリアのQ&A</a>
+		<br>・<a href="/country/austria">オーストリアの国情報</a>
+		<br> 
+	</div>
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

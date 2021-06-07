@@ -1,0 +1,37 @@
+/*
+ Category Limitation 設定画面で使用するCSS
+*/
+
+p#isp-checked_ontop {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+
+div.isp-category-layer {
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	}
+
+ul.isp-category-list {
+	height: 200px;
+	overflow: scroll;
+	border: 1px solid #ddd;
+	padding: 5px;
+	}
+ul.isp-category-list ul.children {
+	padding-left: 1.5em;
+	}
+
+.radius-and-shadow {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 5px #999;
+	-moz-box-shadow: 0px 0px 5px #999;
+	}
+
+.clear { clear: both; }

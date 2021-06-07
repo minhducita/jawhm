@@ -1,0 +1,272 @@
+<?php
+$start_date = date('Y-m-d');
+$end_date = date('Y-m-d', strtotime(date('Y-m-d') . "+1 month"));
+include '../seminar_module/seminar_module.php';
+$config = array(
+    'view_mode' => 'list',
+    'dummy_mode' => 'on'
+);
+$sm = new SeminarModule($config);
+$config = array(
+    'view_mode' => 'list',
+    'start_date' => $start_date,
+    'end_date' => $end_date,
+    'list' => array(
+        'past_view' => '',
+        'keyword' => '体験談',
+        'count_field_active' => '',
+    )
+);
+
+require_once '../include/header.php';
+
+$header_obj = new Header();
+$header_obj->title_page = 'ワーキングホリデー・セミナー診断';
+$header_obj->fncMenubar_function = false;
+$header_obj->description_page = 'あなたにオススメのセミナーが分かる！ワーホリ協会監修 ワーホリ・留学を考えている人のためのセミナー診断';
+$header_obj->keywords_page = 'ワーキングホリデー,ワーホリ,留学,セミナー診断';
+$header_obj->fncFacebookMeta_function = true;
+
+//$header_obj->add_css_files = '<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー・セミナー診断';
+
+$header_obj->add_style = $sm->get_add_style();
+$header_obj->add_js_files = $sm->get_add_js() . '<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/shindan/js/script.js"></script>
+';
+
+if ($header_obj->computer_use() == false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="/shindan/css/style_sp.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->add_css_files .= $sm->get_add_css();
+$header_obj->display_header();
+?>
+
+<div id="area-body">
+	<section class="pcview">
+    <div id="area-panel-header">
+    <div id="area-panel">
+  
+      <div id="panel-main">
+        <p id="panel-a-text">
+          <span class="color-orange">海外のリアルな生活事情を知りたい</span><br />
+          あなたにオススメのセミナーはコレ！
+        </p>
+        <p id="panel-seminar-name" class="color-orange">
+          体験談セミナー
+        </p>
+  
+        <div id="area-image-text" class="clearfix">
+          <img id="panel-a-image" src="/shindan/images/seminar_06.jpg" />
+          <div id="area-panel-a-text">
+            <p>実際の海外生活はどんな感じなのか、</p>
+            <p>体験談を聞いてイメージしてみましょう！</p>
+            <p>体験談ごとにジャンル分けされているので、</p>
+            <p>あなたが知りたかったことを聞けますよ。</p>
+          </div>
+        </div>
+  
+        <div id="area-seminar-info">
+          <p id="seminar-info-title">このセミナーに参加する！</p>
+          <p id="seminar-info-comment">セミナーは各会場で随時開催中です。お近くの会場を選択してください。</p>
+          <ul id="panel-a-btn">
+            <li><a href="panel-sub-tokyo"><img class="btn-hover" src="/shindan/images/a-btn-tokyo.png" alt="東京" /></a></li>
+            <li><a href="panel-sub-osaka"><img class="btn-hover" src="/shindan/images/a-btn-osaka.png" alt="大阪" /></a></li>
+            <li><a href="panel-sub-nagoya"><img class="btn-hover" src="/shindan/images/a-btn-nagoya.png" alt="名古屋" /></a></li>
+            <li><a href="panel-sub-fukuoka"><img class="btn-hover" src="/shindan/images/a-btn-fukuoka.png" alt="福岡" /></a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div id="panel-sub-tokyo" class="panel-sub">
+        <p id="seminar-place-title">体験談セミナー　東京会場</p>
+  
+        <?php
+        $config['list']['place_default'] = 'tokyo';
+        $sm = new SeminarModule($config);
+        $exists = $sm->show();
+        if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+        ?>
+  
+        <p class="seminar-info-more"><a href="http://www.jawhm.or.jp/seminar/seminar" target="blank">セミナー情報をもっと見る</a></p>
+      </div>
+  
+      <div id="panel-sub-osaka" class="panel-sub">
+        <p id="seminar-place-title">体験談セミナー　大阪会場</p>
+  
+        <?php
+        $config['list']['place_default'] = 'osaka';
+        $sm = new SeminarModule($config);
+        $exists = $sm->show();
+        if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+        ?>
+  
+        <p class="seminar-info-more"><a href="http://www.jawhm.or.jp/seminar/seminar" target="blank">セミナー情報をもっと見る</a></p>
+      </div>
+  
+      <div id="panel-sub-nagoya" class="panel-sub">
+        <p id="seminar-place-title">体験談セミナー　名古屋会場</p>
+  
+        <?php
+        $config['list']['place_default'] = 'nagoya';
+        $sm = new SeminarModule($config);
+        $exists = $sm->show();
+        if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+        ?>
+  
+        <p class="seminar-info-more"><a href="http://www.jawhm.or.jp/seminar/seminar" target="blank">セミナー情報をもっと見る</a></p>
+      </div>
+  
+      <div id="panel-sub-fukuoka" class="panel-sub">
+        <p id="seminar-place-title">体験談セミナー　福岡会場</p>
+  
+        <?php
+        $config['list']['place_default'] = 'fukuoka';
+        $sm = new SeminarModule($config);
+        $exists = $sm->show();
+        if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+        ?>
+  
+        <p class="seminar-info-more"><a href="http://www.jawhm.or.jp/seminar/seminar" target="blank">セミナー情報をもっと見る</a></p>
+      </div>
+    </div>
+    <div id="area-panel-footer">&nbsp;</div>
+    </div>
+    <!-- オレンジ斜線背景エリア -->
+  
+  
+    <p class="seminar-etc-title"><span>その他のおススメセミナー</span></p>
+  
+    <div id="area-seminar-etc-info">
+      <p>
+        ワーキング・ホリデー協会では、他にもたくさんのセミナーを開催しています。<br />
+        あなたの知りたい情報に合わせて、様々なセミナーに参加して頂くことが出来ます！
+      </p>
+  
+      <ul id="seminar-btn">
+        <li><a href="/shindan/seminar01.html"><img class="btn-hover" src="/shindan/images/seminar-btn-1.jpg" alt="初心者セミナー" /></a></li>      
+        <li><a href="/shindan/seminar02.html"><img class="btn-hover" src="/shindan/images/seminar-btn-2.jpg" alt="海外渡航プランニング法セミナー" /></a></li>
+        <li><a href="/shindan/seminar03.html"><img class="btn-hover" src="/shindan/images/seminar-btn-3.jpg" alt="学校比較選びかたセミナー" /></a></li>
+        <li><a href="/shindan/seminar04.html"><img class="btn-hover" src="/shindan/images/seminar-btn-4.jpg" alt="年内渡航相談会" /></a></li>
+        <li><a href="/shindan/seminar05.html"><img class="btn-hover" src="/shindan/images/seminar-btn-5.jpg" alt="女性限定セミナー" /></a></li>
+        <li><a href="/shindan/seminar07.html"><img class="btn-hover" src="/shindan/images/seminar-btn-6.jpg" alt="語学学校セミナー" /></a></li>
+        <li><a href="/shindan/seminar08.html"><img class="btn-hover" src="/shindan/images/seminar-btn-7.jpg" alt="休職ワーホリセミナー" /></a></li>
+        <li><a href="/shindan/seminar09.html"><img class="btn-hover" src="/shindan/images/seminar-btn-8.jpg" alt="中継セミナー" /></a></li>
+      </ul>
+  
+      <p id="btn-back-top"><a href="/shindan/"><img class="btn-hover" src="/shindan/images/btn-back-top.jpg" alt="診断TOPへ" /></a></p>
+    </div>
+  
+  </section><!-- /.pcview -->
+  
+  <section class="spview result">
+  	<h3><a href="/shindan/">あなたにオススメのセミナーが分かる！ワーホリ・留学を考えている人のためのセミナー診断</a></h3>
+    <div class="mainBox" id="panel-a-btn">
+    	<div class="atext">
+      	<p>
+          <span>海外のリアルな世界事情を知りたい</span><br>
+          あなたにオススメのセミナーはコレ！<br>
+          <span class="semName">体験談セミナー</span>
+        </p>
+      </div><!-- /.atext -->
+      
+      <div class="detail"> 
+      	<img class="left" src="/shindan/images/seminar_06.jpg" alt="セミナー画像">
+        <p class="right">
+        ワーホリ・留学を体験したカウンセラーの経験談を、様々なジャンルから選んで聞くことができるセミナーです。
+        </p>
+      </div><!-- /.detail -->     
+      
+      <h4>このセミナーに参加する！</h4>
+      <p class="pad10 mgb10">セミナーは各会場で随時開催中です。下記からお近くの会場を選択してください。</p>
+      <ul class="areaBtn">
+      	<li class="btnTokyo"><a href="panel-sub-tokyo-sp">東京</a></li>
+        <li class="btnOsaka"><a href="panel-sub-osaka-sp">大阪</a></li>
+        <li class="btnNagoya"><a href="panel-sub-nagoya-sp">名古屋</a></li>
+      </ul>
+      <ul class="areaBtn">
+        <li class="btnFukuoka"><a href="panel-sub-fukuoka-sp">福岡</a></li>
+      </ul><!-- /.areaBtn -->           
+    </div><!-- /.mainBox -->
+    
+    <div class="reBtn">
+    	<a href="/shindan/">もう一度診断する！</a>
+    </div><!-- /.reBtn -->
+    
+    <div class="seminarBox">
+      <div id="panel-sub-tokyo-sp" class="panel-sub">
+            <h4>体験談セミナー　東京会場</h4>
+            <?php
+            $config['list']['place_default'] = 'tokyo';
+            $sm = new SeminarModule($config);
+            $exists = $sm->show();
+            if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+            ?>
+            <p class="moreView"><a href="/seminar/seminar">セミナー情報をもっと見る</a></p>
+        </div>
+        <div id="panel-sub-osaka-sp" class="panel-sub">
+            <h4>体験談セミナー　大阪会場</h4>
+            <?php
+            $config['list']['place_default'] = 'osaka';
+            $sm = new SeminarModule($config);
+            $exists = $sm->show();
+            if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+            ?>
+            <p class="moreView"><a href="/seminar/seminar">セミナー情報をもっと見る</a></p>
+        </div>
+        <div id="panel-sub-nagoya-sp" class="panel-sub">
+            <h4>体験談セミナー　名古屋会場</h4>
+            <?php
+            $config['list']['place_default'] = 'nagoya';
+            $sm = new SeminarModule($config);
+            $exists = $sm->show();
+            if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+            ?>
+            <p class="moreView"><a href="/seminar/seminar">セミナー情報をもっと見る</a></p>
+        </div>
+        <div id="panel-sub-fukuoka-sp" class="panel-sub">
+            <h4>体験談セミナー　福岡会場</h4>
+            <?php
+            $config['list']['place_default'] = 'fukuoka';
+            $sm = new SeminarModule($config);
+            $exists = $sm->show();
+            if(!$exists) echo "<p>現在セミナースケジュールの調整中です。</p>";
+            ?>
+            <p class="moreView"><a href="/seminar/seminar">セミナー情報をもっと見る</a></p>
+        </div>
+    </div><!-- /.seminarBox -->
+    
+    <div class="othSeminar">
+    	<h4 class="sec-title">その他のオススメセミナー</h4>
+      <p>
+      	ワーキング・ホリデー協会では、他にもたくさんのセミナーを開催しています。<br>
+        あなたの知りたい情報に合わせて、様々なセミナーに参加して頂くことが出来ます！
+      </p>
+      
+      <ul class="semList">
+      	<li	class="sem01"><a href="/shindan/seminar01.html"><span>初心者セミナー<br>まだセミナーに参加したことがない方へ</span></a></li>
+        <li class="sem02"><a href="/shindan/seminar02.html"><span>海外渡航プランニング法セミナー<br>海外渡航の前に色々な情報を集めたい方へ</span></a></li>
+        <li class="sem09"><a href="/shindan/seminar04.html"><span>年内渡航相談会セミナー<br>プランを立てたり具体的な質問をしたい方へ</span></a></li>
+        <li class="sem03"><a href="/shindan/seminar03.html"><span>学校比較選びかたセミナー<br>海外での目標を見つけたい方へ</span></a></li>        
+        <li class="sem05"><a href="/shindan/seminar05.html"><span>女性限定セミナー<br>女性ならではのデリケートな悩みがある方へ</span></a></li>
+        <li class="sem06"><a href="/shindan/seminar07.html"><span>語学学校セミナー<br>目指す目標がある！特別な情報を知りたい！方へ</span></a></li>
+        <li class="sem07"><a href="/shindan/seminar08.html"><span>休職ワーホリセミナー<br>自分を変えたい、ワーホリをもっと楽しみたい方へ</span></a></li>
+        <li class="sem08"><a href="/shindan/seminar09.html"><span>中継セミナー<br>会場が遠くて参加できない、家で情報収集したい方へ</span></a></li>
+      </ul><!-- /.semList -->
+    </div><!-- /.othSeminar -->
+  </section><!-- /.spview -->
+
+</div>
+
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

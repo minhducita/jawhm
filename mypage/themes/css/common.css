@@ -1,0 +1,193 @@
+body {
+    font-size: 13px !important;
+    font-family: "メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HiraKakuPro-W3","ＭＳ Ｐゴシック","MS PGothic",Arial, Helvetica,sans-serif !important;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+}
+
+#loading-view {
+ /* 領域の位置やサイズに関する設定 */
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ position: fixed;
+ top: 0;
+ left: 0;
+ /* 背景関連の設定 */
+ background-color: #ffffff;
+ filter: alpha(opacity=85);
+ -moz-opacity: 0.85;
+ -khtml-opacity: 0.85;
+ opacity: 0.85;
+ background-image: url('../images/loading.gif');
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+/* etc */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-middle {
+    vertical-align: middle !important;
+}
+
+.span-center {
+    display: block;
+    text-align: center;
+}
+
+.span-right {
+    display: block;
+    text-align: right;
+}
+
+.table-center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.space-left {
+    margin-left: 10px;
+}
+
+.anti-alert {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.table-right {
+    margin-left: auto;
+}
+
+.title-padding {
+    padding-left: 5px;
+}
+
+.text-hidden {
+    visibility: hidden;
+}
+
+.text-red {
+    font-size: 15px;
+    color: #FF0000;
+}
+
+.text-smaller-red {
+  font-size: 13px;
+  color: $FF0000;
+}
+
+.text-notice {
+    font-size: 13px;
+    color: #428bca;
+}
+
+.text-bold {
+    font-style: bold;
+}
+
+.font-bold {
+    font-size: 120%;
+    font-style: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.black-text {
+    color: black;
+}
+
+.text-bold {
+    font-weight:bold;
+}
+
+.text-under {
+    text-decoration: underline;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 120%;
+    color: #000;
+}
+
+.item-value {
+    font-style: italic;
+}
+
+.list-title-centering {
+    padding-top:6px;
+}
+
+.primary-color {
+    background-color: #428bca;
+}
+
+.success-color {
+    background-color: #5cb85c;
+}
+
+.info-color {
+    background-color: #5bc0de;
+}
+
+.warning-color {
+    background-color: #f0ad4e;
+}
+
+.danger-color {
+    background-color: #d9534f;
+}
+
+.emotion {
+    font-size: 120%;
+    color: #3366ff;
+}
+
+.emphasize {
+    font-size: 120%;
+    color: #ff0000;
+}
+
+.alert {
+    font-size: 120%;
+    color: #800080;
+}
+
+.hurry {
+    font-size: 120%;
+    color: #ff2200;
+}
+
+.awake {
+    font-size: 120%;
+    color: #339966;
+}
+
+.notice {
+    font-size: 120%;
+    color: #3366ff;
+}
+
+.indent {
+    text-indent:1em;
+}
+
+.text-break {
+    word-break: break-all;
+}

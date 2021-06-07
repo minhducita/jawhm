@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+/*
+********************************************************************************
+■ 共通
+********************************************************************************
+*/
+div.spview, section.spview { display:none; }
+
+#area-body {
+	width: 912px;
+	margin: 0 auto 30px;
+	padding: 20px 0;
+}
+
+#area-panel-header {
+	background: url("../images/bg-panel-header.gif") no-repeat left top;
+	padding-top: 10px;
+}
+
+#area-panel {
+	background: url("../images/bg-panel.gif") repeat-y left top;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#area-panel-footer {
+	background: url("../images/bg-panel-footer.gif") no-repeat left bottom;
+	height: 10px;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+#panel-main {
+	background: url("../images/panel-base.png") no-repeat left top;
+	width: 840px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.color-pink {
+	color: #f46b6b;
+}
+
+.color-orange {
+	color: #f86a1e;
+}
+
+.btn-hover:hover {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+
+
+/*
+********************************************************************************
+■ TOP
+********************************************************************************
+*/
+
+#panel-top-title {
+	position: absolute;
+	top: 35px;
+	left: 45px;
+}
+
+#area-panel-top-text {
+	position: absolute;
+	width: 545px;
+	top: 225px;
+	left: 145px;
+}
+
+#area-panel-top-text p {
+	border-bottom: 1px dashed #cbcbcb;
+	padding-top: 8px;
+	text-align: center;
+	font-size: 15px;
+}
+
+#panel-top-pam {
+	position: absolute;
+	top: 330px;
+	left: 95px;
+}
+
+#panel-top-btn {
+	position: absolute;
+	top: 450px;
+	left: 295px;
+}
+
+/*
+********************************************************************************
+■ 診断質問
+********************************************************************************
+*/
+
+#panel-q-text {
+	position: absolute;
+	top: 90px;
+	left: 155px;
+	background: url("../images/q-base.png") no-repeat left top;
+	width: 525px;
+	height: 70px;
+	padding-left: 90px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+#panel-q-image {
+	position: absolute;
+	top: 200px;
+	left: 155px;
+}
+
+#panel-q-btn {
+	position: absolute;
+	top: 395px;
+	left: 200px;
+}
+
+#panel-q-btn li {
+	display: inline;
+}
+
+#panel-q-btn li:first-child {
+	margin-right: 40px;
+}
+
+
+/*
+********************************************************************************
+■ 診断結果
+********************************************************************************
+*/
+
+#panel-a-text {
+	position: absolute;
+	top: 65px;
+	left: 195px;
+	background: url("../images/a-base.png") no-repeat left top;
+	height: 70px;
+	padding-left: 115px;
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#panel-seminar-name {
+	position: absolute;
+	top: 125px;
+	left: 310px;
+	font-weight: bold;
+	font-size: 34px;
+}
+
+#area-image-text {
+	position: absolute;
+	top: 190px;
+	left: 85px;
+	width: 670px;
+}
+
+#area-image-text #panel-a-image {
+	float: left;
+}
+
+#area-image-text #area-panel-a-text {
+	width: 425px;
+	float: right;
+	padding-top: 25px;
+}
+
+#area-image-text #area-panel-a-text p {
+	border-bottom: 1px dashed #cbcbcb;
+	padding: 8px 8px 0;
+	font-size: 14px;
+}
+
+#area-seminar-info {
+	position: absolute;
+	top: 390px;
+	left: 85px;
+	width: 670px;
+}
+
+#area-seminar-info #seminar-info-title {
+	font-size: 23px;
+	font-weight: bold;
+	border-left: 11px solid #ff7e01;
+	color: #ff7e01;
+	padding-left: 8px;
+	margin-bottom: 10px;
+}
+
+#area-seminar-info #seminar-info-comment {
+	font-size: 14px;
+}
+
+#area-seminar-info #panel-a-btn {
+	margin-top: 10px;
+}
+
+#area-seminar-info #panel-a-btn li {
+	display: inline;
+	margin-right: 5px;
+}
+
+#area-seminar-info #panel-a-btn li:last-child {
+	margin-right: 0;
+}
+
+.panel-sub {
+	display: none;
+	width: 757px;
+	margin: 30px auto 15px;
+	padding: 20px 30px;
+	background-color: #fff;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	behavior: url("http://jawhm.dev.platetec.com/js/PIE.htc");
+}
+
+.panel-sub #seminar-place-title {
+	color: #ff7e01;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+/*
+.panel-sub .area-place-info {
+	background-color: #dcdcdc;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+*/
+.panel-sub .area-place-info {
+	background-color: #dcdcdc;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.panel-sub .seminar-info-more {
+	text-align: right;
+	margin-top: 20px;
+}
+
+#area-body .seminar-etc-title {
+	background: url("../images/m-sec-title-bg.gif") repeat-x left top;
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000033;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+#area-body .seminar-etc-title span {
+	display: block;
+	margin-top: 5px;
+	padding: 0 5px;
+	border-left: 4px solid #000034;
+}
+
+#area-seminar-etc-info {
+	padding: 10px;
+}
+
+#area-seminar-etc-info #seminar-btn {
+	margin: 20px 0;
+}
+
+#area-seminar-etc-info #seminar-btn li {
+	display: inline;
+}
+
+#area-seminar-etc-info #btn-back-top {
+	text-align: center;
+}
+
+#area-seminar-info a.memBtn {
+	display:block;
+	width:249px;
+	margin:15px auto;
+}
+
+/*
+********************************************************************************
+■ responsive images
+********************************************************************************
+*/
+
+.responsive-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*
+********************************************************************************
+■ clearfix
+********************************************************************************
+*/
+
+.clearfix:after {content: ".";display: block;clear: both;height: 0;visibility: hidden;}
+.clearfix {min-height: 1px;}
+* html .clearfix {height: 1px; /*\*//*/height: auto;overflow: hidden;/**/}

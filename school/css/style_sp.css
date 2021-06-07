@@ -1,0 +1,1089 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****************************************************************
+ common
+*****************************************************************/
+html {
+  background-color: transparent;
+  background-image: none;
+}
+body {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size:14px;
+  color:#343434;
+  line-height:1.5;
+}
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.right { float:right; }
+.left { float:left; }
+.block { display:block; }
+
+.alRight { text-align:right; }
+.alLeft { text-align:left; }
+.alCenter { text-align:center; }
+
+a { text-decoration:none !important; }
+
+/*****************************************************************
+ margin / padding
+*****************************************************************/
+.pdl55 { padding-left:55px; }
+.pdl430 { padding-left:430px; }
+
+.mgt10 { margin-top:10px !important; }
+.mgt20 { margin-top:20px !important; }
+.mgt30 { margin-top:30px !important; }
+
+.mgb10 { margin-bottom:10px !important; }
+.mgb20 { margin-bottom:20px !important; }
+.mgb30 { margin-bottom:30px !important; }
+.mgb40 { margin-bottom:40px !important; }
+.mgb70 { margin-bottom:70px !important; }
+
+/*****************************************************************
+  common
+*****************************************************************/
+#schoolSec .visualBox { margin-bottom: 20px; }
+#schoolSec div#tabs ul.topTab {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 5px;
+  margin-bottom: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#schoolSec.schoolAus div#tabs ul.topTab { border-bottom:2px solid #ff8000; }
+#schoolSec.schoolEng div#tabs ul.topTab { border-bottom:2px solid #9273da; }
+#schoolSec.schoolCan div#tabs ul.topTab { border-bottom:2px solid #ff7b7d; }
+#schoolSec.schoolNez div#tabs ul.topTab { border-bottom:2px solid #a2bf23; }
+#schoolSec.schoolWW div#tabs ul.topTab {  border-bottom:2px solid #4395f1; }
+
+#schoolSec div#tabs ul.topTab li {
+  float: left;
+  margin-right: 6px;
+  width: 18.5%;
+  box-sizing: border-box;
+}
+#schoolSec div#tabs ul.topTab li:last-child { margin-right:0; }
+#schoolSec div#tabs ul.topTab li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 86%;
+  font-weight: bold;
+  line-height: 1;
+  border-bottom: 0 !important;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+#schoolSec.schoolAus div#tabs ul.topTab li a {
+  color: #ff8000;
+  border: 2px solid #ff8000;
+}
+#schoolSec.schoolAus div#tabs ul.topTab li a:hover,
+#schoolSec.schoolAus div#tabs ul.topTab li.active a {
+  background-color:#ff8000;
+  color:#fff;
+}
+#schoolSec.schoolEng div#tabs ul.topTab li a {
+  color: #9273da;
+  border: 2px solid #9273da;
+}
+#schoolSec.schoolEng div#tabs ul.topTab li a:hover,
+#schoolSec.schoolschoolEngAus div#tabs ul.topTab li.active a {
+  background-color:#9273da;
+  color:#fff;
+}
+#schoolSec.schoolCan div#tabs ul.topTab li a {
+  color: #ff7b7d;
+  border: 2px solid #ff7b7d;
+}
+#schoolSec.schoolCan div#tabs ul.topTab li a:hover,
+#schoolSec.schoolCan div#tabs ul.topTab li.active a {
+  background-color:#ff7b7d;
+  color:#fff;
+}
+#schoolSec.schoolNez div#tabs ul.topTab li a {
+  color: #a2bf23;
+  border: 2px solid #a2bf23;
+}
+#schoolSec.schoolNez div#tabs ul.topTab li a:hover,
+#schoolSec.schoolNez div#tabs ul.topTab li.active a {
+  background-color:#a2bf23;
+  color:#fff;
+}
+#schoolSec.schoolWW div#tabs ul.topTab li a {
+  color: #4395f1;
+  border: 2px solid #4395f1;
+}
+
+
+
+#schoolSec.schoolIre div#tabs ul.topTab li a:hover,#schoolSec.schoolDeu div#tabs ul.topTab li.active a,
+#schoolSec.schoolFra div#tabs ul.topTab li.active a,#schoolSec.schoolEng div#tabs ul.topTab li.active a
+{
+    background-color: #9273da;
+    color: #fff;
+}
+#schoolSec.schoolIre div#tabs ul.topTab li.active a,#schoolSec.schoolDeu div#tabs ul.topTab li.active a,
+#schoolSec.schoolFra div#tabs ul.topTab li.active a,#schoolSec.schoolEng div#tabs ul.topTab li.active a
+{
+    background-color: #9273da;
+    color: #fff;
+}
+
+#schoolSec.schoolIre div#tabs ul.topTab li a,#schoolSec.schoolDeu div#tabs ul.topTab li a,
+#schoolSec.schoolFra div#tabs ul.topTab li a,#schoolSec.schoolEng div#tabs ul.topTab li a
+{
+    color: #9273da;
+    border: 2px solid #9273da;
+}
+#schoolSec.schoolIre section h3,#schoolSec.schoolDeu section h3,#schoolSec.schoolFra section h3,
+#schoolSec.schoolEng section h3,#schoolSec.schoolDeu section h3  {
+    border-bottom: 2px solid #9273da;
+}
+#schoolSec.schoolIre div#tabs ul.topTab,#schoolSec.schoolDeu div#tabs ul.topTab,
+#schoolSec.schoolFra div#tabs ul.topTab,#schoolSec.schoolEng div#tabs ul.topTab
+{
+    border-bottom: 2px solid #9273da;
+}
+#schoolSec.schoolIre dl.programList dd,#schoolSec.schoolDeu dl.programList dd,#schoolSec.schoolFra dl.programList dd,
+#schoolSec.schoolEng dl.programList dd,#schoolSec.schoolUsa dl.programList dd{display:block !important;}
+#schoolSec.schoolDeu dl.activeList dt,#schoolSec.schoolIre dl.activeList dt {
+    background-color: #9273da;
+}
+#schoolSec.schoolDeu dl.activeList dd,#schoolSec.schoolIre dl.activeList dd,#schoolSec.schoolFra dl.activeList dd,
+#schoolSec.schoolEng dl.activeList dd
+ {
+     border: 1px solid #9273da;
+ }
+#schoolSec.schoolAus section.point h4 { background:url(../images/icon_pointAus.png) no-repeat left center; }
+#schoolSec.schoolEng section.point h4 { background:url(../images/icon_pointEng.png) no-repeat left center; }
+#schoolSec.schoolCan section.point h4 { background:url(../images/icon_pointCan.png) no-repeat left center; }
+#schoolSec.schoolNez section.point h4 { background:url(../images/icon_pointNez.png) no-repeat left center; }
+#schoolSec.schoolWW section.point h4 { background:url(../images/icon_pointWW.png) no-repeat left center; }
+
+#schoolSec.schoolDeu section.point h4, #schoolSec.schoolIre section.point h4,
+#schoolSec.schoolEng section.point h4, #schoolSec.schoolFra section.point h4
+{
+    background:url(../images/icon_point1.png) no-repeat left center;
+}
+#schoolSec.schoolUsa section.point h4 {    background:url(../images/icon_pointUsa.png) no-repeat left center; }
+#schoolSec.schoolUsa dl.activeList dd
+{
+    border: 1px solid #0068b7;
+}
+#schoolSec.schoolUsa dl.activeList dt {
+    background-color: #0068b7;
+}
+#schoolSec.schoolUsa div#tabs ul.topTab{
+    border-bottom: 2px solid #0068b7;
+}
+#schoolSec.schoolUsa section h3  {
+    border-bottom: 2px solid #0068b7;
+}
+#schoolSec.schoolUsa div#tabs ul.topTab li a{
+    color: #0068b7;
+    border: 2px solid #0068b7;
+}
+#schoolSec.schoolUsa div#tabs ul.topTab li.active a{
+    background-color: #0068b7;
+    color: #fff;
+}
+
+#schoolSec.schoolWW div#tabs ul.topTab li a:hover,
+#schoolSec.schoolWW div#tabs ul.topTab li.active a {
+  background-color:#4395f1;
+  color:#fff;
+}
+
+#schoolSec div#tabs ul.bottomTab {
+  overflow:hidden;
+  padding:0 10px;
+  margin-bottom:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec div#tabs ul.bottomTab li { width: 49%; float:left; box-sizing: border-box; }
+#schoolSec div#tabs ul.bottomTab li:last-child { float:right; }
+#schoolSec div#tabs ul.bottomTab li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -o-border-radius: 5px; 
+  border-radius: 5px; 
+}
+#schoolSec div#tabs ul.bottomTab li a.active {
+  background-color:#c9c9c9;
+  color:#fff;
+}
+#schoolSec.schoolAus div#tabs ul.bottomTab li a { background-color: #ff8000; }
+#schoolSec.schoolEng div#tabs ul.bottomTab li a { background-color: #9273da; }
+#schoolSec.schoolCan div#tabs ul.bottomTab li a { background-color: #ff7b7d; }
+#schoolSec.schoolNez div#tabs ul.bottomTab li a { background-color: #a2bf23; }
+#schoolSec.schoolWW div#tabs ul.bottomTab li a { background-color: #4961c6; }
+
+#schoolSec div.pgTop { overflow:hidden; margin: 30px 10px 25px 0; text-align:right; }
+#schoolSec div.pgTop a {
+  background: url(../images/icon_pgTopSp.png) no-repeat right top;
+  -webkit-background-size:43px;
+  -moz-background-size:43px;
+  -o-background-size:43px;
+  background-size:43px;
+  padding: 10px 50px 0 0;
+  min-height: 43px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  vertical-align: bottom;
+  text-align: right;
+}
+#schoolSec div.pgTop a span {
+  font-size:9px;
+  color:#d2d2d2;
+  display:block;
+}
+
+#schoolSec #schoolSec p.sclArea {
+  font-size:18px;
+  padding:0 130px 0 30px;
+  margin-bottom:-1px;
+  z-index:9999;
+}
+#schoolSec p.sclArea {
+  display: inline-block;
+  padding: 0px 70px 0 36px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolAus p.sclArea {
+  background: url(../images/icon_flagSpAus.png) no-repeat 10px center;
+  -webkit-background-size: 20px 15px;
+  -moz-background-size: 20px 15px;
+  -o-background-size: 20px 15px;
+  background-size: 20px 15px;
+  border-bottom: 1px solid #ff8000;
+}
+
+#schoolSec.schoolEng p.sclArea {
+  display: inline-block;
+  padding: 0px 70px 0 36px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolEng p.sclArea {
+  background: url(../images/icon_flagSpEng.png) no-repeat 10px center;
+  -webkit-background-size: 20px 15px;
+  -moz-background-size: 20px 15px;
+  -o-background-size: 20px 15px;
+  background-size: 20px 15px;
+  border-bottom: 1px solid #9273da;
+}
+#schoolSec.schoolCan p.sclArea {
+  display: inline-block;
+  padding: 0px 70px 0 36px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolCan p.sclArea {
+  background: url(../images/icon_flagSpCan.png) no-repeat 10px center;
+  -webkit-background-size: 20px 15px;
+  -moz-background-size: 20px 15px;
+  -o-background-size: 20px 15px;
+  background-size: 20px 15px;
+  border-bottom: 1px solid #ff7b7d;
+}
+#schoolSec.schoolUsa p.sclArea{
+    border-bottom: 1px solid #0068b7;
+}
+#schoolSec.schoolIre p.sclArea,#schoolSec.schoolEng p.sclArea,
+#schoolSec.schoolDeu p.sclArea,{
+    border-bottom: 1px solid #9273da;
+}
+#schoolSec.schoolFra p.sclArea{
+    border-bottom: 1px solid #9273da;
+}
+#schoolSec.schoolNez p.sclArea {
+  display: inline-block;
+  padding: 0px 70px 0 36px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolNez p.sclArea {
+  background: url(../images/icon_flagSpNez.png) no-repeat 10px center;
+  -webkit-background-size: 20px 15px;
+  -moz-background-size: 20px 15px;
+  -o-background-size: 20px 15px;
+  background-size: 20px 15px;
+  border-bottom: 1px solid #a2bf23;
+}
+#schoolSec.schoolWW p.sclArea {
+  display: inline-block;
+  padding: 0px 70px 0 36px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolWW p.sclArea {
+  background: url(../images/icon_flagSpWW.png) no-repeat 10px center;
+  -webkit-background-size: 20px 15px;
+  -moz-background-size: 20px 15px;
+  -o-background-size: 20px 15px;
+  background-size: 20px 15px;
+  border-bottom: 1px solid #4961c6;
+}
+#schoolSec h2 {
+  padding: 10px;
+  font-size: 24px;
+  color: #000;
+  line-height: 1;
+  float: none !important;
+  height: auto !important;  
+  margin: 0 0 10px 0 !important;
+  border-top: 1px solid #ccc;
+  width: auto !important;
+}
+#schoolSec h2 span.ruby {
+  display:block;
+  font-size:12px;
+  font-weight:normal;
+}
+
+#schoolSec section.panel,
+#schoolSec section.seminar {
+  padding:0 10px;
+  margin-bottom:40px;
+  font-size:12px;
+  color:#000;
+}
+#schoolSec section h3 {
+  color:#000;
+  font-size:18px;
+  margin-bottom: 15px;
+}
+#schoolSec section h3 span { display:none; }
+
+#schoolSec.schoolAus section h3 { border-bottom:2px solid #ff8000; }
+#schoolSec.schoolEng section h3 { border-bottom:2px solid #9273da; }
+#schoolSec.schoolCan section h3 { border-bottom:2px solid #ff7b7d; }
+#schoolSec.schoolNez section h3 { border-bottom:2px solid #a2bf23; }
+#schoolSec.schoolWW section h3 {  border-bottom:2px solid #4395f1; }
+
+#topicpath { float:none !important; }
+
+
+/*****************************************************************
+  概　要
+*****************************************************************/
+#schoolSec #panel1 p.planeTxt { margin-bottom:40px; font-size:12px; }
+#schoolSec section.point {
+  width: 95%;
+  float: none;
+  margin: 0 auto 30px auto;
+}
+#schoolSec section.point h4 {
+  min-height:35px;
+  padding-left:45px;
+  margin: 0 0 10px 0;
+  font-size:16px;
+  font-weight:normal;
+  text-indent:0;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+#schoolSec.schoolAus section.point h4 {
+  background:url(../images/icon_pointSpAus.png) no-repeat left center;
+  -webkit-background-size:35px;
+  -moz-background-size:35px;
+  -o-background-size:35px;
+  background-size:35px;
+}
+#schoolSec.schoolEng section.point h4 {
+  background:url(../images/icon_pointSpEng.png) no-repeat left center;
+  -webkit-background-size:35px;
+  -moz-background-size:35px;
+  -o-background-size:35px;
+  background-size:35px;
+}
+#schoolSec.schoolCan section.point h4 {
+  background:url(../images/icon_pointSpCan.png) no-repeat left center;
+  -webkit-background-size:35px;
+  -moz-background-size:35px;
+  -o-background-size:35px;
+  background-size:35px;
+}
+#schoolSec.schoolNez section.point h4 {
+  background:url(../images/icon_pointSpNez.png) no-repeat left center;
+  -webkit-background-size:35px;
+  -moz-background-size:35px;
+  -o-background-size:35px;
+  background-size:35px;
+}
+#schoolSec.schoolWW section.point h4 {
+  background:url(../images/icon_pointSpWW.png) no-repeat left center;
+  -webkit-background-size:35px;
+  -moz-background-size:35px;
+  -o-background-size:35px;
+  background-size:35px;
+}
+#schoolSec section.point ul li {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-size:13px;
+}
+#schoolSec section.point ul li:before {
+  content: "●";
+  padding-right: 5px;
+  font-size: 10px;
+}
+#schoolSec.schoolAus section.point ul li:before { color: #ff8000; }
+#schoolSec.schoolEng section.point ul li:before { color: #9273da; }
+#schoolSec.schoolCan section.point ul li:before { color: #f56a6c; }
+#schoolSec.schoolNez section.point ul li:before { color: #a2c01d; }
+#schoolSec.schoolWW section.point ul li:before { color: #4395f1; }
+
+
+/*****************************************************************
+  キャンパス
+*****************************************************************/
+#schoolSec div.map iframe {
+  width: 100%;
+  height: 200px;
+  border:none;
+}
+#schoolSec section#panel2 .sclBox { margin-bottom:35px; }
+
+/*****************************************************************
+  コース
+*****************************************************************/
+#schoolSec table.commonTbl {
+  width:100%;
+  border-top:1px solid #a0a0a0;
+  border-bottom :1px solid #a0a0a0;
+  margin-bottom:15px;
+}
+#schoolSec table.commonTbl tr th,
+#schoolSec table.commonTbl tr td {
+  padding:8px 15px;
+  vertical-align:middle;
+  font-size:12px;
+  border-bottom:1px solid #cfcfcf;
+  box-sizing: border-box;
+}
+#schoolSec table.commonTbl tr.center td { text-align:center; }
+#schoolSec table.commonTbl tr td.fs25 { text-align:center; line-height: 0; }
+#schoolSec table.commonTbl tr:last-child th,
+#schoolSec table.commonTbl tr:last-child td { border-bottom:none; }
+#schoolSec table.commonTbl tr td { text-align:left; }
+#schoolSec table.commonTbl tr th {
+  width:30%;
+  background-color:#eeeeee;
+  font-weight:normal;
+  text-align:center;
+}
+
+#schoolSec dl.programList dt {
+  background:url(../images/icon_plus.png) no-repeat 98% center;
+  -webkit-background-size:20px;
+  -moz-background-size:20px;
+  -o-background-size:20px;
+  background-size:20px;
+  background-color: #3c6eb0;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  margin-top:10px;
+}
+#schoolSec dl.programList dt.active {
+  background:url(../images/icon_minus.png) no-repeat 98% center;
+  -webkit-background-size:20px;
+  -moz-background-size:20px;
+  -o-background-size:20px;
+  background-size:20px;
+  background-color: #3c6eb0;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+#schoolSec dl.programList dd {
+  border: 1px solid #3c6eb0;
+  border-radius: 0 0 8px 8px;
+  padding: 15px;
+  /*margin-bottom:10px;*/
+}
+
+#schoolSec dl.programList dd ul li:before {
+  content: "●";
+  color: #000;
+  padding-right: 5px;
+  font-size: 10px;
+}
+
+#schoolSec dl.activeList dt {
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#schoolSec dl.activeList dd {
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  margin-bottom:10px;
+}
+#schoolSec.schoolAus dl.activeList dt { background-color: #ff8000; }
+#schoolSec.schoolAus dl.activeList dd { border: 1px solid #ff8000; }
+
+#schoolSec.schoolEng dl.activeList dt { background-color: #6049d3; }
+#schoolSec.schoolEng dl.activeList dd { border: 1px solid #6049d3; }
+
+#schoolSec.schoolCan dl.activeList dt { background-color: #ff6466; }
+#schoolSec.schoolCan dl.activeList dd { border: 1px solid #ff6466; }
+
+#schoolSec.schoolNez dl.activeList dt { background-color: #459b45; }
+#schoolSec.schoolNez dl.activeList dd { border: 1px solid #459b45; }
+
+#schoolSec.schoolWW dl.activeList dt {  background-color: #4961c6; }
+#schoolSec.schoolWW dl.activeList dd {  border: 1px solid #4961c6; }
+
+#schoolSec dl.programList dd h4 {
+  font-size: 18px !important;
+  color: #000 !important;
+  text-indent: 0 !important;
+  background-color: #fff !important;
+  padding: 0 !important;
+  margin:0 0 5px 0 !important;
+  font-weight: bold;
+}
+
+/*****************************************************************
+  ブログ
+*****************************************************************/
+#schoolSec #panel4 .voice ul {
+  overflow:hidden;
+  margin-bottom:10px;
+}
+#schoolSec #panel4 .voice ul.mgb30 { margin-bottom:10px !important; }
+#schoolSec #panel4 .voice ul li {
+  overflow: hidden;
+  margin-bottom: 15px;;
+}
+#schoolSec #panel4 .voice ul li:last-child { margin-bottom:0; }
+#schoolSec #panel4 .voice ul li img { float:left; }
+#schoolSec #panel4 .voice ul li p {
+  float: right;
+  width: 82%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  position:relative;
+  background-color:#eeeeee;
+  -weborder-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  padding:15px;
+  font-size:12px;
+}
+#schoolSec #panel4 .voice ul li p:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -13px;
+  border: 5px solid transparent;
+  border-right: 10px solid #eeeeee;  border-right: 13px solid #eeeeee;
+}
+div.blog a.moreView {
+  background-color:#4373b3;
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+section.voice a.moreView {
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+#schoolSec.schoolAus section.voice a.moreView { background-color:#ff8000; }
+#schoolSec.schoolEng section.voice a.moreView { background-color:#6049d3; }
+#schoolSec.schoolCan section.voice a.moreView { background-color:#ff6c6e; }
+#schoolSec.schoolNez section.voice a.moreView { background-color:#459b45; }
+#schoolSec.schoolWW section.voice a.moreView {  background-color:#3c59d3; }
+
+div.blog a.moreView span,
+section.voice a.moreView span {
+  background: url(../images/icon_arrow.png) no-repeat right center;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding-right: 20px;
+  line-height: 2.8;
+}
+
+/*****************************************************************
+  検索結果
+*****************************************************************/
+#schoolSec.srcSec h2 {
+  font-size:14px !important;
+  padding: 15px 0 8px 12px;
+  border-bottom: 1px solid #ccc;
+}
+#schoolSec.srcSec input[type=radio], input[type=checkbox] {
+  display: none;
+}
+#schoolSec.srcSec input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
+}
+#schoolSec.srcSec div.country .checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 8px 0;
+  padding: 10px 70px 10px 35px;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#schoolSec.srcSec div.country .checkbox:after,
+#schoolSec.srcSec div.conditions .checkbox:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: block;
+  margin-top: -7px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #bbb;
+  content: '';
+}
+#schoolSec.srcSec div.country .checkbox:before,
+#schoolSec.srcSec div.conditions .checkbox:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #53b300;
+  border-bottom: 3px solid #53b300;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); 
+}
+#schoolSec.srcSec div.conditions .checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding-left:35px;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+#schoolSec.srcSec section.srcBox button.Btn {
+  background:url(../images/search/srcBtn_sp.png) no-repeat left top;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  background-size: 100% auto;
+  height: 0;
+  width: 90%;
+  padding-top: 16%;
+  overflow:hidden;
+  display:block;
+  margin:30px auto;
+  border: none;
+}
+#schoolSec.srcSec div.country div.inList label.country_Aus { background:url(../images/search/srcIcon_Aus.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Can { background:url(../images/search/srcIcon_Can.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Nez { background:url(../images/search/srcIcon_Nez.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Eng { background:url(../images/search/srcIcon_Eng.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Eng { background:url(../images/search/srcIcon_Eng.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Usa { background:url(../images/search/srcIcon_Usa.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Eur { background:url(../images/search/srcIcon_Eur.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country,
+#schoolSec.srcSec div.conditions {
+  border: 1px solid #2e3097;
+  margin-bottom: 15px;
+}
+#schoolSec.srcSec div.country h3,
+#schoolSec.srcSec div.conditions h3 {
+  background-color: #2e3097;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#schoolSec.srcSec div.conditions h3 {
+  background:url(../images/search/plus_bgImg.png) no-repeat 96% 48% #2e3097;
+  -webkit-background-size:18px 18px;
+  -moz-background-size:18px 18px;
+  background-size:18px 18px;
+  margin-bottom:20px;
+}
+#schoolSec.srcSec div.conditions h3.close {
+  background:url(../images/search/plus_bgImg2.png) no-repeat 96% 48% #2e3097;
+  -webkit-background-size:18px 4px;
+  -moz-background-size:18px 4px;
+  background-size:18px 4px;
+}
+#schoolSec.srcSec div.country div.inList { padding:10px; }
+#schoolSec.srcSec div.conditions dl {
+  overflow: hidden;
+  width: 96%;
+  margin: 0 auto;
+  border-top: 1px solid #bdbdbd;
+}
+#schoolSec.srcSec div.conditions dl.last {
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom:10px;
+}
+#schoolSec.srcSec div.conditions dl dt {
+  vertical-align: middle;
+  font-size: 14px;
+  background-color: #eeeeee;
+  padding:5px 10px;
+}
+#schoolSec.srcSec div.conditions dl dd { padding: 10px; }
+#schoolSec.srcSec div.conditions dl dd ul li {
+  display:inline-block;
+  width:100%;
+}
+#schoolSec.srcSec div.conditions div.link { text-align:right; padding:0 15px 10px 0; }
+#schoolSec.srcSec div.conditions div.link span {
+  display:inline-block;
+  background:url(../images/search/peke_bgImg.png) no-repeat right center;
+  -webkit-background-size:17px 17px;
+  -moz-background-size:17px 17px;
+  background-size:17px 17px;
+  padding-right:22px;
+}
+
+#schoolSec.srcSec section.pickUpList table { border-bottom: 1px solid #ccc; margin-bottom:75px; }
+#schoolSec.srcSec section.pickUpList table tr.spView.flagCell { border-top: 1px solid #ccc; }
+#schoolSec.srcSec section.pickUpList table tr.spView.flagCell td { background-color: #e9e9e9; padding: 4px 10px; }
+#schoolSec.srcSec section.pickUpList table tr.spView.flagCell td a { font-size: 90%; display: inline; }
+#schoolSec.srcSec section.pickUpList table tr.spView.flagCell td a img { width:20px; }
+#schoolSec.srcSec section.pickUpList table th {
+  width: 25%;
+  padding: 0 10px;
+}
+#schoolSec.srcSec section.pickUpList table td { vertical-align:middle; }
+#schoolSec.srcSec section.pickUpList table th {
+  vertical-align:top;
+  padding:25px 10px;
+}
+#schoolSec.srcSec section.pickUpList table th img {
+  max-width: 100%;
+  height: auto;
+}
+#schoolSec.srcSec section.pickUpList table td {
+  width: 55%;
+  padding: 10px;
+}
+#schoolSec.srcSec section.pickUpList table td a {
+  font-size: 130%;
+  text-decoration: underline !important;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  display: block;
+}
+#schoolSec.srcSec section.pickUpList table td a span {
+  font-size: 75%;
+  display: block;
+}
+#schoolSec.srcSec section.pickUpList table td p.caption { margin-top:5px; }
+#schoolSec.srcSec section.pickUpList table td.flagCell,
+#schoolSec.srcSec section.pickUpList ul.iconList.pcView { display:none; }
+#schoolSec.srcSec section.pickUpList ul.iconList { margin: 5px 0 20px 0px; }
+#schoolSec.srcSec section.pickUpList ul.iconList li {
+  display: inline-block;
+  color: #fff;
+  padding: 1px 15px;
+  margin: 0 5px 5px 0;
+}
+#schoolSec.srcSec section.pickUpList ul.iconList.Deu li { background-color: #9273da; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Eng li { background-color: #9273da; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Aus li { background-color: #ff8000; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Can li { background-color: #ff7b7d; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Nez li { background-color: #a2bf23; }
+#schoolSec.srcSec section.pickUpList ul.iconList.WW li { background-color: #4395f1; }
+#schoolSec.srcSec section.pickUpList tr.spView { border-top:none; }
+#schoolSec.srcSec section.pickUpList tr.spView td { padding:0 10px; }
+#schoolSec.srcSec section.pickUpList tr.spView ul.iconList li {
+  padding: 1px 8px;
+  margin: 0 2px 2px 0;
+  font-size: 80%;
+}
+/*#schoolSec.srcSec section.voiceBan { margin-bottom:50px; }*/
+#schoolSec.srcSec section.voiceBan { margin-bottom:10px; }
+#schoolSec.srcSec section.voiceBan p { margin-bottom:10px; }
+#schoolSec.srcSec div.resultlBox {
+  width:95%;
+  border:1px solid #21286c;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  margin:0 auto 20px auto;
+  padding:10px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec.srcSec div.resultlBox h3 {
+  background:none;
+  font-weight:bold;
+  color:#000;
+  margin-bottom:5px;
+  font-size:16px;
+}
+#schoolSec.srcSec div.resultlBox span {
+  display:block;
+  text-align:right;
+}
+#schoolSec.srcSec div.resultlBox span a { text-decoration:underline !important; color:#000; font-size:85%; }
+#schoolSec.srcSec p.noschool{
+  text-align: center;
+  margin: 30px 0  20px 0;
+}
+#schoolSec.srcSec a.check_clear {
+  cursor: pointer;
+}
+/*** @Minhquyen -- slide voice sponsors */
+#schoolSec.srcSec section.voiceBan #voice-search-slide{
+  margin-bottom: 20px;
+}
+#schoolSec.srcSec section.voiceBan #voice-search-slide .slide-img{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#schoolSec.srcSec .pickup-school-photo{
+  padding-bottom: 20px;
+}
+#schoolSec.srcSec .pickup-school-photo .photo-list{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#schoolSec.srcSec .pickup-school-photo .photo-list .photo-element{
+  width: calc((100%-15px)/4);
+  margin-right:5px;
+}
+#schoolSec.srcSec .pickup-school-photo .photo-list .photo-element:last-child{
+  margin-right: 0px;
+}
+#schoolSec.srcSec .pickup-school-photo .photo-list .photo-element img, #schoolSec.srcSec .pickup-school-photo .photo-main img {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+/*** commment students ***/
+.comment-sp ul{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.comment-sp ul li {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.comment-sp ul li img {
+  float: left;
+}
+.comment-sp ul li p {
+  float: right;
+  width: 82%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #eeeeee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 12px;
+}
+.comment-sp ul li textarea {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  height: 45px;
+  float: right;
+  width: 72%;
+}
+.link-school-detail td a button{
+  width: 100%;
+  border: 1px solid red;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+/*****************************************************************
+  ブログ記事一覧
+*****************************************************************/
+
+#schoolSec section.panel .blog_article_list .blog_date_pc {
+    display: none;
+}
+#schoolSec section.panel .blog_article_list .blog_date_sm {
+    display: block;
+    color: #9c9c9c;
+}
+#schoolSec section.panel .blog_article_list {
+    margin-bottom: 25px;
+}
+#schoolSec section.panel .blog_article_list li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-top :1px solid #33359a;
+}
+#schoolSec section.panel .blog_article_list li:last-child {
+    border-bottom :1px solid #33359a;
+}
+#schoolSec section.panel .blog_article_list li .txt_container{
+    float: left;
+    width: 48%;
+}
+#schoolSec section.panel .blog_article_list li .txt_container .title {
+    color: #0088cc;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#schoolSec section.panel .blog_article_list li .img_container {
+    overflow: hidden;
+    float: left;
+    width: 48%;
+    height: 100px;
+    position: relative;
+    margin-right: 10px;
+}
+#schoolSec section.panel .blog_article_list li .img_container .bgtag {
+    background-color: #FFBB39;
+    position: absolute;
+    left: -87px;
+    top: -27px;
+    text-align: center;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    width: 90px;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+#schoolSec section.panel .blog_article_list li .img_container .bgtag p {
+    font-family: Myriad, Helvetica, Arial, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, sans-serif;
+    font-size: 17px;
+    top: 37px;
+    color: white;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+}
+#schoolSec section.panel .blog_article_list li .img_container img {
+    min-height: 100px;
+    min-width: 200px;
+    width: 100%;
+}
+#schoolSec div.flexslider ul.slides iframe {
+  width: 100%;
+  height:200px;
+}
+#schoolSec div.flexslider ul.slides img {
+  width: auto;
+  max-width: 100%;
+  max-height: 235px;
+  margin: 0 auto;
+}
+/*2273 LuuDV Start*/
+#schoolSec div#tabs_btn ul.bottomTab {
+  overflow:hidden;
+  padding:0 10px;
+  margin-bottom:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec div#tabs_btn ul.bottomTab li { width: 49%; float:left; box-sizing: border-box; }
+#schoolSec div#tabs_btn ul.bottomTab li:last-child { float:right; }
+#schoolSec div#tabs_btn ul.bottomTab li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -o-border-radius: 5px; 
+  border-radius: 5px; 
+}
+#schoolSec div#tabs_btn ul.bottomTab li a.active {
+  background-color:#c9c9c9;
+  color:#fff;
+}
+#schoolSec.schoolAus div#tabs_btn ul.bottomTab li a { background-color: #ff8000; }
+#schoolSec.schoolEng div#tabs_btn ul.bottomTab li a { background-color: #9273da; }
+#schoolSec.schoolCan div#tabs_btn ul.bottomTab li a { background-color: #ff7b7d; }
+#schoolSec.schoolNez div#tabs_btn ul.bottomTab li a { background-color: #a2bf23; }
+#schoolSec.schoolWW div#tabs_btn ul.bottomTab li a { background-color: #4961c6; }
+/*2273 LuuDV End*/

@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*
+********************************************************************************
+■ 共通
+********************************************************************************
+*/
+
+.sec-contents {
+	width: 98%;
+	margin: 1.5em auto;
+	font-size: 12px;
+}
+
+.image-left {
+	float: left;
+	padding-right: 1em;
+}
+
+.area-btn-seminar {
+	text-align: center;
+}
+
+.attention-text-01 {
+	font-weight: bold;
+	color: #f37a08;
+	font-size: 15px;
+}
+
+.table-list-guidebook {
+	width: 100%;
+	margin-bottom: 20px;
+	table-layout: fixed;
+}
+
+.table-caption {
+	font-size: 16px;
+	text-align: left;
+}
+
+.table-caption span {
+	color: #000033;
+}
+
+.table-list-guidebook td,
+.table-list-guidebook th {
+	border-top: 1px solid #4389e3;
+	border-bottom: 1px solid #4389e3;
+	padding: 8px 12px;
+}
+
+.table-list-guidebook .th-title {
+	background-color: #7fb1f3;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.table-list-guidebook .th-title-01 {
+	width: 45%;
+}
+
+.table-list-guidebook .th-title-02 {
+	width: 55%;
+}
+
+.table-list-guidebook .th-place {
+	text-align: left;
+	font-weight: normal;
+	border-right: 1px solid #4389e3;
+}
+
+.table-list-guidebook .td-url {
+	word-wrap: break-word;
+}
+
+.table-list-guidebook a {
+	color: #474ee6;
+}
+
+.table-list-guidebook a:hover {
+	color: #7A80ED;
+	text-decoration: underline;
+}
+
+
+
+/*
+********************************************************************************
+■ responsive images
+********************************************************************************
+*/
+
+.responsive-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*
+********************************************************************************
+■ clearfix
+********************************************************************************
+*/
+
+.clearfix:after {content: ".";display: block;clear: both;height: 0;visibility: hidden;}
+.clearfix {min-height: 1px;}
+* html .clearfix {height: 1px; /*\*//*/height: auto;overflow: hidden;/**/}

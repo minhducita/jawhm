@@ -1,0 +1,261 @@
+@charset "utf-8";
+/*
+------------------------------------------------------------
+国選択ページ
+------------------------------------------------------------
+*/
+.btn-seminar.display-SP{
+		display: none;
+	}
+.btn-seminar .display-SP{
+	display: none;
+}
+#area-map-title {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 18px
+}
+#area-map-message-sp {
+	display: none;
+}
+#area-map {
+	width: 680px;
+	margin: 10px auto;
+}
+#area-map-sp {
+	display: none;
+}
+#area-map-message {
+	text-align: center;
+	padding: 15px;
+	margin-right: 10px;
+	margin-top: 30px;
+}
+.area-display-sp {
+	display: none;
+}
+.dd-sp {
+	display: none;
+}
+.list-country li .dl-country-title dd {
+	background: url('../../country/images/title.png') no-repeat;
+	color: #fff;
+	font-weight: bold;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 56px;
+	padding: 0 20px;
+	font-size: 18px;
+	position: absolute;
+    width: 570px;
+}
+.list-country li .dl-country-title dd span {
+	display: block;
+	float: right;
+}
+.area-block div {
+	width: 205px;
+    float: left;
+    margin-right: 10px;
+}
+.area-block .area-block-4 {
+	width: 150px;
+}
+.area-block .area-block-4 {
+	margin-right: 0;
+}
+.area-block .area-block-4 .link-btn img {
+	width: 150px;
+}
+.area-block .area-block-4 .link-btn:hover {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+.area-block .area-block-4 .link-detail {
+	margin-bottom: 11px;
+}
+.area-block div a:hover .dd-btn {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+.area-block .dl-article dd {
+	font-size: 12px;
+	padding: 5px 5px 5px 15px;
+	line-height: 15px;
+}
+.country-morebtn {
+	width: 70%;
+	margin: 0 auto;
+}
+.country-morebtn:hover {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+/*
+------------------------------------------------------------
+各国ページ
+------------------------------------------------------------
+*/
+#list-country-btn {
+	width: 660px;
+	margin-bottom: 15px;
+	/*overflow: hidden;*/
+}
+#list-country-btn li {
+	display: inline-block;
+    width: 160px;
+    margin-right: 2px;
+    margin-bottom: 0;
+    padding: 0;
+}
+#list-country-btn li a {
+	margin-bottom: 0;
+	padding: 0;
+}
+#list-country-btn li img {
+	width: 160px;
+	height: auto;
+}
+#list-country-btn li a:hover img {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+.btn-back-list {
+	display: block;
+	width: 100%;
+	margin: 10px auto;
+	background-color: #F39800;
+	padding: 8px 0;
+	text-align: center;
+	text-decoration: none;
+	color: #fff !important;
+	font-size: 18px;
+	font-weight: bold;
+}
+.btn-back-list:hover {
+	background-color: #F5AC33;
+}
+#area-map-img {
+	width: 676px;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+.area-main-content .area-left {
+	width: 45%;
+	float: left;
+}
+.area-main-content .area-right {
+	width: 53%;
+	float: right;
+}
+.table-clock {
+	width: 100%;
+	margin: 20px 0 15px;
+}
+.table-clock caption {
+	background-color: #0E6EB8;
+	text-align: left;
+	color: #fff;
+	padding: 3px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+.table-clock th,
+.table-clock td {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+/* --------------------------------------------------
+    追加 _ 2015.02.23
+-------------------------------------------------- */
+.centered-btn_set3 {
+	font-size: 13px;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+/* --------------------------------------------------
+    FIx  _ 2015.05.10
+-------------------------------------------------- */
+.dl-article dd img{
+	float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.all-btn{
+	margin: 30px 0 17px 0;
+}
+.all-btn .btn img{
+	float: left;
+	margin: 0 1px;
+}
+.all-btn .btn{
+	position: relative;;
+}
+.btn-country {
+	position: absolute;
+    top: 10px;
+    left: 63px;
+    font-weight: bold;
+    color: #333;
+    line-height: 14px;
+}
+.btn-visa {
+	position: absolute;
+    top: 10px;
+    left: 63px;
+    font-weight: bold;
+    color: #333;
+    line-height: 14px;
+}
+.btn-log{
+	position: absolute;
+    top: 10px;
+    left: 63px;
+    font-weight: bold;
+    color: #333;
+    line-height: 14px;
+}
+.btn-seminar{
+	clear: both;
+}
+.list-country-content{
+	border: 1px solid #ddd;
+    background: #f5f5f5;
+   	padding: 15px 0 20px 15px;
+}
+.area-block .dl-article dt img { 
+	width: 100%;
+	height: 120px;
+}
+.sp-all-btn{
+	display: none;
+}
+
+.country-usa {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+}
+.flex-content{
+display: flex;
+/*align-items: center;*/
+  margin-bottom: 10px;
+}
+.liusa{
+	float:left;
+	width: 45%;
+	/*margin-left: 15px;*/
+}
+.liusa a img{
+	width:323px;
+}
+.liusa:nth-child(2){
+	margin-left: 40px;
+}

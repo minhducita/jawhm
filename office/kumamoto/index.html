@@ -1,0 +1,189 @@
+<?php
+//require_once 'include/header.php';
+//$redirection='/event/map/mob.php?p=tokyo';
+
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+$header_obj->mobileredirect=$redirection;
+$header_obj->title_page='熊本のワーホリ協会をご案内';
+$header_obj->description_page='日本ワーキング・ホリデー協会の熊本オフィスをご案内いたします。熊本オフィスでは、初心者向けのワーホリセミナーを開催しております。ワーホリに参加される方は、是非ご来店ください。';
+$header_obj->keywords_page='新宿,オフィス,東京,海外,留学,ワーホリ,セミナー会場,日本ワーキングホリデー協会,ワーホリ協会';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/access-mainimg.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '日本ワーキング・ホリデー協会東京オフィス新宿本店へは新宿駅から徒歩１分！初心者セミナーでは最新情報と正しい知識をみにつけることができます。';
+
+$header_obj->add_js_files = "<script src='../../office/jquery.colorbox.js'> </script>
+							 <script src='../../office/googlemapPOPUP.js'> </script>
+";
+$header_obj->add_css_files = "<link rel='stylesheet' href='../../office/colorbox.css'>";
+
+$header_obj->display_header();
+
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('access'); ?>
+
+	  <h2 class="sec-title">アクセス</h2>
+	  <div align="right" style="margin-bottom: -40px;"><a href="http://www.jawhm.or.jp/event/map/pc.php?p=kumamoto" target="_blank"><img src="../../images/office/print.gif" width="100px"></a></div>
+	  <div class="table-base" style="margin-bottom:20px;">
+		<h3 class="table-base-title" style="font-size:18pt;" id="kumamoto-office">熊本オフィス</h3>
+<!-- TABLE MOBILE -->
+	<table class="tb-mobile">
+		<tr><th>住所</th></tr>
+		<tr><td>
+
+			<center>
+				<a class="btn-office seminor seminor2 seminor-mobile" style="margin-top: 40px;" href="http://www.jawhm.or.jp/seminar/seminar" target="_blank">無料セミナーのご予約はこちらから</a>
+			</center>
+
+			<div class="address-place-pc">
+				熊本セミナー会場：熊本オフィスにて開催されます。</br>
+				〒860-0848　熊本県熊本市中央区南坪井町 5-29<br>
+			</div>
+			<!--img class="office-place" src="../../office/images/office1.jpg"-->
+			<div class="address-place">
+				熊本セミナー会場：熊本オフィスにて開催されます。</br>
+				〒860-0848　熊本県熊本市中央区南坪井町 5-29<br>
+			</div>
+			<!-- MAP FOR PC -->
+			<div class="mapPC">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.426342931535!2d130.71032421518274!3d32.8074667809629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f4089a5745c1%3A0x532bc9b4200e5901!2z44CSODYwLTA4NDgg54aK5pys55yM54aK5pys5biC5Lit5aSu5Yy65Y2X5Z2q5LqV55S677yV4oiS77yS77yZ!5e0!3m2!1sja!2sjp!4v1522896062004" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!4v1531305269971!6m8!1m7!1sXyfrg_nOaTUq-1m2ZWSddg!2m2!1d32.80740811944482!2d130.7125281333286!3f348.0697366784656!4f16.374495458368457!5f0.40098360711451597" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<small style="bottom: -35px;"><a href="https://www.google.com/maps?ll=32.807467,130.712513&z=16&t=m&hl=ja&gl=JP&mapclient=embed&q=%E3%80%92860-0848+%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E5%9D%AA%E4%BA%95%E7%94%BA%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%99" target="_blank">大きな地図で見る</a></small>
+			</div>
+			<!-- END MAP FOE PC -->
+			<div class="btn-googlemap">
+				<a class="googlemapPOPUP" rel="nofollow" href="https://www.google.com/maps?ll=32.807467,130.712513&z=16&t=m&hl=ja&gl=JP&mapclient=embed&q=%E3%80%92860-0848+%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E5%9D%AA%E4%BA%95%E7%94%BA%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%99" target="_blank">
+				<img class="icon-place" src="../../office/images/place.png"><span>マップで見る</span></a>
+			</div>
+			<center>
+				<a class="btn-office seminor seminor2" style="margin-top: 40px;" href="https://www.jawhm.or.jp/seminar/seminar.php?place_name=kumamoto" target="_blank">無料セミナーのご予約はこちらから</a>
+			</center>
+		</td></tr>
+		<tr><th>最寄り駅</th></tr>
+		<tr>
+			<td>
+				<p>藤崎宮前駅から徒歩 5 分 (203m)</p>
+				<p>上通りから並木坂に入りローソンを右折（上乃裏方面）頂くと左手にあります。（地獄温泉斜め前）</p>
+				</br></br>
+				<iframe
+				src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3353.402304782387!2d13
+				0.71057946551005!3d32.808103889706075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4
+				m5!1s0x3540f4089a5745c1%3A0x532bc9b4200e5901!2z44CSODYwLTA4NDgg54aK5pys55yM54
+				aK5pys5biC5Lit5aSu5Yy65Y2X5Z2q5LqV55S677yV4oiS77yS77yZ!3m2!1d32.8074668!2d130.7125
+				129!4m5!1s0x3540f407b44f71d7%3A0xf3751b2a8981c5c2!2z6Jek5bSO5a6u5YmN6aeF44CB54a
+				K5pys55yM54aK5pys5biC5Lit5aSu5Yy677yT!3m2!1d32.808899!2d130.71353249999999!5e0!3m2!
+				1sja!2sjp!4v1522896555858" width="100%" height="300" frameborder="0" style="border:0"
+				allowfullscreen></iframe>
+				<center>
+					<div class="btn-address">
+						<div class="mapPC" style="margin-bottom: 50px;">
+							<small  style="bottom:0px"><a href="https://www.google.co.jp/maps/dir/%E3%80%92860-0848+%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E5%9D%AA%E4%BA%95%E7%94%BA%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%99/%E8%97%A4%E5%B4%8E%E5%AE%AE%E5%89%8D%E9%A7%85%E3%80%81%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%EF%BC%93/@32.8081039,130.7105795,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x3540f4089a5745c1:0x532bc9b4200e5901!2m2!1d130.7125129!2d32.8074668!1m5!1m1!1s0x3540f407b44f71d7:0xf3751b2a8981c5c2!2m2!1d130.7135325!2d32.808899!3e2?dcr=0" target="_blank">大きな地図で見る</a></small>
+						</div>
+
+						<a class="googlemapPOPUP" rel="nofollow" href="https://www.google.com/maps?ll=32.807467,130.712513&z=16&t=m&hl=ja&gl=JP&mapclient=embed&q=%E3%80%92860-0848+%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E5%9D%AA%E4%BA%95%E7%94%BA%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%99" target="_blank">
+						<img class="icon-place" src="../../office/images/place.png"><span>マップで見る</span></a>
+					</div>
+				</center>
+			</td>
+		</tr>
+		<tr><th>連絡先</th></tr>
+		<tr><td>
+			<center>
+				<a class="btn-office otoiawase" href="https://www.jawhm.or.jp/office/otoiawase/?p=kumamoto">お問い合わせ</a>
+				<a class="btn-office seminor" href="https://www.jawhm.or.jp/seminar/seminar.php?place_name=kumamoto" target="_blank">無料セミナーのご予約はこちらから</a>
+			</center>
+		</td></tr>
+		<tr><th>営業時間</th></tr>
+		<tr><td>OPEN 11:00 - CLOSE 19:00<br>
+				※ご注意　個別でのカウンセリングをご希望の場合は、事前にご予約をお願いいたします。
+		</td></tr>
+		<tr><th>スケジュール</th></tr>
+		<tr><td>
+			大学生 / 専門学校の生徒様の利用者が多い熊本オフィスは、地元熊本を含め、福岡県、佐賀県、･長崎県、熊本県、大分県、
+			宮崎県、鹿児島県などからセミナーへ参加していただいております。 週末を利用したカウンセリングやワーキングホ
+			リデーセミナーも人気です！熊本での楽しい 1 日を過ごす予定があれば、熊本オフィスにも是非お立ち寄りください。 
+		</td></tr>
+		<!--tr><th>カウンセラー紹介</th></tr>
+		<tr><td>
+			<center><a class="btn-office counselor" href="http://www.jawhm.or.jp/interview/#tokyo" target="_blank">新宿本店のカウンセラー一覧へ</a></center>
+		</td></tr-->
+		<tr><th>オフィスの様子</th></tr>
+		<tr>
+			<td>
+				<center>
+					<img src="/office/images/kumamoto/kumamoto_office.jpg" width="250px" alt="kumamoto office">
+				</center>
+			</td>
+		</tr>
+		<!--tr><th>新宿本店の雰囲気</th></tr>
+		<tr><td>
+			<img class="office-place" src="../../office/images/tokyo/tennai1.jpg">
+			<p>新宿本店は白色で統一され今まで以上に開放感溢れる、新宿とは思えないくらいリラックスできる空間になりました。	オフィス内には放送スタジオを設け最新ワーキングホリデー（ワーホリ）セミナー情報を各地へ配信しております。新宿にオフィスを設けることで、ショッピングや学校の授業前、仕事帰りにご来店いただく方やお友達との待ち合わせ場所としてご利用いただくお客様も 目立つようになりました。<br>
+            新宿は各地からの交通の便もよく、長距離バスでご来店いただき→ワーキングホリデー（ワーホリ）セミナー参加→そのまま日帰りされる方や1泊して東京を観光して帰られる方も 多いです。新宿でワーキングホリデー（ワーホリ）セミナーが受けられる便利さを実感していただけます。 新宿オフィスは、これから海外へご出発される方と海外からお戻りになられた方々で毎日活気にあふれております！</p>
+            <center>
+            	<a href="/blog/tokyoblog/" target="_blank"><img src="../../images/office/blog_off.gif" style="margin-top:28px;" alt="ワーキングホリデー協会スタッフブログはこちら"></a>
+            </center>
+		</td></tr>
+		<tr><th>新宿本店から</th></tr>
+		<tr><td>
+			<img class="office-place" src="../../office/images/tokyo/tennai2.jpg">
+			<strong>【インターン生「由紀ちゃん」からメッセージ】</strong><br>
+			新宿のオフィスにはほんとうにいろいろな方がご来店されます。わたしは以前シドニーでのワーキングホリデー（ワーホリ）生活経験があるのですが、 はじめは緊張しておろおろしているだけで、皆様の質問にしっかりと答えることができませんでした。 新宿スタッフの皆様にご迷惑をおかけしながら今では、ワーキングホリデー（ワーホリ）出発前準備セミナーを任されています！	新宿にオフィスがあるという便利さと女性スタッフも多いので女の子一人でも安心して参加できますよ！<br>
+			新宿にお越しの際には是非ご来店ください。土日、祝日も営業してます！ご来店時には私から声をかけますので、びっくりしないでくださいね。
+		</td></tr!-->
+	</table>	    
+<!-- END TABLE -->
+		<div class="aiu-link-block">
+			<a target="_blank" href="https://www-429.aig.co.jp/ota/?p=oA41F201">
+				海外行くのに保険は大丈夫ですか？<br><br>
+				<img src="https://www.jawhm.or.jp/images/btn_hoken2.jpg" /><br/><br>
+				<p style="font-size:9pt;">AIG保険会社のサイトへジャンプします</p>
+			</a>
+		</div>
+		&nbsp;<br/>
+		<div class="cpp-link-block">
+			<a target="_blank" href="http://www.jpcashpassport.jp/cpp/lp/mcgin.html?amid=843">
+				<img src="/office/btn_cpp.jpg" /><br/>
+				お金の新しい持って行き方お教えします
+			</a>
+		</div>
+		&nbsp;<br/>
+
+
+<!-- *********************** ページ下のセミナー一覧 start ************************ -->
+	<h3 class="osusume_seminar_title_list">おススメの無料ワーキングホリデー（ワーホリ）セミナー情報</h3>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '6';
+			display_horizontal_calendar($country_to_display,$number_to_display);            
+      ?>
+	<span class="bottom_osusume_seminar">★★★　留学・ワーホリの無料セミナー連日開催中！！　気になるセミナーをクリック！！　★★★</span>
+	  <div class="advbox03">
+
+</div>
+
+<!-- *********************** ページ下のセミナー一覧 end ************************ -->
+
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

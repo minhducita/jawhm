@@ -1,0 +1,773 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****************************************************************
+ common
+*****************************************************************/
+html {
+  background-color: transparent;
+  background-image: none;
+}
+body {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size:14px;
+  color:#343434;
+  line-height:1.5;
+}
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.right { float:right; }
+.left { float:left; }
+.block { display:block; }
+
+.alRight { text-align:right; }
+.alLeft { text-align:left; }
+.alCenter { text-align:center; }
+
+a { text-decoration:none !important; }
+
+/*****************************************************************
+ margin / padding
+*****************************************************************/
+.pdl55 { padding-left:55px; }
+.pdl430 { padding-left:430px; }
+
+.mgt10 { margin-top:10px !important; }
+.mgt20 { margin-top:20px !important; }
+.mgt30 { margin-top:30px !important; }
+
+.mgb10 { margin-bottom:10px !important; }
+.mgb20 { margin-bottom:20px !important; }
+.mgb30 { margin-bottom:30px !important; }
+.mgb40 { margin-bottom:40px !important; }
+.mgb70 { margin-bottom:70px !important; }
+
+/*****************************************************************
+  common
+*****************************************************************/
+#schoolSec .visualBox { margin-bottom: 20px; }
+#schoolSec div#tabs ul.topTab {
+  overflow:hidden;
+  width:680px;
+  padding:0 30px;
+  margin-bottom:30px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec.schoolAus div#tabs ul.topTab { border-bottom:2px solid #ff8000; }
+#schoolSec.schoolEng div#tabs ul.topTab { border-bottom:2px solid #9273da; }
+#schoolSec.schoolCan div#tabs ul.topTab { border-bottom:2px solid #ff7b7d; }
+#schoolSec.schoolNez div#tabs ul.topTab { border-bottom:2px solid #a2bf23; }
+#schoolSec.schoolWW div#tabs ul.topTab {  border-bottom:2px solid #4395f1; }
+#schoolSec div#tabs ul.topTab li {
+  float:left;
+  margin-right:6px;
+}
+#schoolSec div#tabs ul.topTab li:last-child { margin-right:0; }
+#schoolSec div#tabs ul.topTab li a {
+  display: block;
+  width: 115px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 17px;
+  font-weight:bold;
+  line-height:1;
+   border-bottom: 0 !important;
+  -webkit-border-radius: 18px 18px 0 0;
+  -moz-border-radius: 18px 18px 0 0;
+  -o-border-radius: 18px 18px 0 0;
+  border-radius: 18px 18px 0 0;
+}
+#schoolSec.schoolAus div#tabs ul.topTab li a {
+  color: #ff8000;
+  border: 2px solid #ff8000;
+}
+#schoolSec.schoolAus div#tabs ul.topTab li a:hover,
+#schoolSec.schoolAus div#tabs ul.topTab li.active a {
+  background-color:#ff8000;
+  color:#fff;
+}
+#schoolSec.schoolEng div#tabs ul.topTab li a {
+  color: #9273da;
+  border: 2px solid #9273da;
+}
+#schoolSec.schoolEng div#tabs ul.topTab li a:hover,
+#schoolSec.schoolschoolEngAus div#tabs ul.topTab li.active a {
+  background-color:#9273da;
+  color:#fff;
+}
+#schoolSec.schoolCan div#tabs ul.topTab li a {
+  color: #ff7b7d;
+  border: 2px solid #ff7b7d;
+}
+#schoolSec.schoolCan div#tabs ul.topTab li a:hover,
+#schoolSec.schoolCan div#tabs ul.topTab li.active a {
+  background-color:#ff7b7d;
+  color:#fff;
+}
+#schoolSec.schoolNez div#tabs ul.topTab li a {
+  color: #a2bf23;
+  border: 2px solid #a2bf23;
+}
+#schoolSec.schoolNez div#tabs ul.topTab li a:hover,
+#schoolSec.schoolNez div#tabs ul.topTab li.active a {
+  background-color:#a2bf23;
+  color:#fff;
+}
+#schoolSec.schoolWW div#tabs ul.topTab li a {
+  color: #4395f1;
+  border: 2px solid #4395f1;
+}
+#schoolSec.schoolWW div#tabs ul.topTab li a:hover,
+#schoolSec.schoolWW div#tabs ul.topTab li.active a {
+  background-color:#4395f1;
+  color:#fff;
+}
+
+#schoolSec div#tabs ul.bottomTab {
+  overflow:hidden;
+  width:680px;
+  padding:0 30px;
+  margin-bottom:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec div#tabs ul.bottomTab li { width:307px; float:left; }
+#schoolSec div#tabs ul.bottomTab li:last-child { float:right; }
+#schoolSec div#tabs ul.bottomTab li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  -webkit-border-radius: 10px; 
+  -moz-border-radius: 10px; 
+  -o-border-radius: 10px; 
+  border-radius: 10px; 
+}
+#schoolSec div#tabs ul.bottomTab li a.active {
+  background-color:#c9c9c9;
+  color:#fff;
+}
+#schoolSec.schoolAus div#tabs ul.bottomTab li a { background-color: #ff8000; }
+#schoolSec.schoolEng div#tabs ul.bottomTab li a { background-color: #9273da; }
+#schoolSec.schoolCan div#tabs ul.bottomTab li a { background-color: #ff7b7d; }
+#schoolSec.schoolNez div#tabs ul.bottomTab li a { background-color: #a2bf23; }
+#schoolSec.schoolWW div#tabs ul.bottomTab li a { background-color: #4961c6; }
+
+#schoolSec div.pgTop { overflow:hidden; margin:90px 0 50px 0; text-align:right; }
+#schoolSec div.pgTop a {
+  background: url(../images/icon_pgTop.png) no-repeat right top;
+  padding: 15px 50px 0 0;
+  height: 44px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  vertical-align: bottom;
+  text-align: right;
+}
+#schoolSec div.pgTop a span {
+  font-size:9px;
+  color:#d2d2d2;
+  display:block;
+}
+#schoolSec #schoolSec p.sclArea {
+  font-size:18px;
+  padding:0 130px 0 30px;
+  margin-bottom:-1px;
+  z-index:9999;
+}
+#schoolSec p.sclArea {
+  display: inline-block;
+  padding: 0px 120px 0 40px;
+  margin-bottom: -1px;
+  font-size: 16px;
+}
+#schoolSec.schoolAus p.sclArea {
+  background: url(../images/icon_flagAus.png) no-repeat 10px center;
+  border-bottom: 1px solid #ff8000;
+}
+#schoolSec.schoolEng p.sclArea {
+  background: url(../images/icon_flagEng.png) no-repeat 10px center;
+  border-bottom: 1px solid #9273da;
+}
+#schoolSec.schoolCan p.sclArea {
+  background: url(../images/icon_flagCan.png) no-repeat 10px center;
+  border-bottom: 1px solid #ff7b7d;
+}
+#schoolSec.schoolNez p.sclArea {
+  background: url(../images/icon_flagNez.png) no-repeat 10px center;
+  border-bottom: 1px solid #a2bf23;
+}
+#schoolSec.schoolWW p.sclArea {
+  background: url(../images/icon_flagWW.png) no-repeat 10px center;
+  border-bottom: 1px solid #4961c6;
+}
+#schoolSec h2 {
+  padding: 15px 30px;
+  font-size: 30px;
+  color: #000;
+  line-height: 1;
+  float: none !important;
+  height: auto !important;  
+  margin: 0 0 10px 0 !important;
+  border-top: 1px solid #ccc;
+  width: auto !important;
+}
+#schoolSec h2 span.ruby {
+  display:block;
+  font-size:20px;
+  font-weight:normal;
+}
+
+#schoolSec section.panel,
+#schoolSec section.seminar {
+  padding:0 25px;
+  margin-bottom:40px;
+  font-size:12px;
+  color:#000;
+}
+#schoolSec section h3 {
+  color:#000;
+  font-size:18px;
+  margin-bottom: 15px;
+}
+#schoolSec section h3 span {
+  color:#d2d2d2;
+  font-size:12px;
+  padding-left:15px;
+  margin-bottom:20px;
+  font-weight:normal;
+}
+#schoolSec.schoolAus section h3 { border-bottom:2px solid #ff8000; }
+#schoolSec.schoolEng section h3 { border-bottom:2px solid #9273da; }
+#schoolSec.schoolCan section h3 { border-bottom:2px solid #ff7b7d; }
+#schoolSec.schoolNez section h3 { border-bottom:2px solid #a2bf23; }
+#schoolSec.schoolWW section h3 {  border-bottom:2px solid #4961c6; }
+#topicpath { float:none !important; }
+
+/*****************************************************************
+  概　要
+*****************************************************************/
+#schoolSec #panel1 p.planeTxt { margin-bottom:40px; font-size:12px; }
+#schoolSec section.point {
+  width:295px;
+  margin-bottom:30px;
+}
+#schoolSec section.point h4 {
+  min-height:39px;
+  padding-left:50px;
+  margin: 0 0 10px 0;
+  font-size:16px;
+  font-weight:normal;
+  text-indent:0;
+  letter-spacing: 0.1em;
+}
+#schoolSec.schoolAus section.point h4 { background:url(../images/icon_pointAus.png) no-repeat left center; }
+#schoolSec.schoolEng section.point h4 { background:url(../images/icon_pointEng.png) no-repeat left center; }
+#schoolSec.schoolCan section.point h4 { background:url(../images/icon_pointCan.png) no-repeat left center; }
+#schoolSec.schoolNez section.point h4 { background:url(../images/icon_pointNez.png) no-repeat left center; }
+#schoolSec.schoolWW section.point h4 { background:url(../images/icon_pointWW.png) no-repeat left center; }
+
+#schoolSec section.point ul li {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-size:13px;
+}
+#schoolSec section.point ul li:before {
+  content: "●";
+  padding-right: 5px;
+  font-size: 18px;
+}
+#schoolSec.schoolAus section.point ul li:before { color: #ff8000; }
+#schoolSec.schoolEng section.point ul li:before { color: #9273da; }
+#schoolSec.schoolCan section.point ul li:before { color: #f56a6c; }
+#schoolSec.schoolNez section.point ul li:before { color: #a2c01d; }
+#schoolSec.schoolWW section.point ul li:before { color: #4395f1; }
+
+/*****************************************************************
+  キャンパス
+*****************************************************************/
+#schoolSec section#panel2 h3 {
+  border-bottom: none;
+  line-height: 1;
+  font-weight: bold;  
+}
+#schoolSec div.map iframe {
+  width: 100%;
+  height: 300px;
+  border:none;
+}
+#schoolSec section#panel2 .sclBox { margin-bottom:35px; }
+#schoolSec section#panel2 h3:before {
+  content: "■";
+  padding-right: 5px;
+  font-size: 33px;
+  line-height: 0.1;
+}
+#schoolSec.schoolAus section#panel2 h3:before { color: #ff8000; }
+#schoolSec.schoolEng section#panel2 h3:before { color: #9273da; }
+#schoolSec.schoolCan section#panel2 h3:before { color: #ff7b7d; }
+#schoolSec.schoolNez section#panel2 h3:before { color: #a2bf23; }
+#schoolSec.schoolWW section#panel2 h3:before { color: #4395f1; }
+
+/*****************************************************************
+  コース
+*****************************************************************/
+#schoolSec table.commonTbl {
+  width:100%;
+  border-top:1px solid #a0a0a0;
+  border-bottom :1px solid #a0a0a0;
+  margin-bottom:15px;
+}
+#schoolSec table.commonTbl tr th,
+#schoolSec table.commonTbl tr td {
+  padding:8px 15px;
+  vertical-align:middle;
+  font-size:12px;
+  border-bottom:1px solid #cfcfcf;
+  box-sizing: border-box;
+}
+#schoolSec table.commonTbl tr td.fs25 { font-size: 25px; line-height: 0; }
+#schoolSec table.commonTbl tr:last-child th,
+#schoolSec table.commonTbl tr:last-child td { border-bottom:none; }
+#schoolSec table.commonTbl tr td { text-align:left; }
+#schoolSec table.commonTbl tr th {
+  width:175px;
+  background-color:#eeeeee;
+  font-weight:normal;
+  text-align:center;
+}
+
+#schoolSec dl.programList dt {
+  background-color: #3c6eb0;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+#schoolSec dl.programList dd {
+  border: 1px solid #3c6eb0;
+  border-radius: 0 0 8px 8px;
+  padding: 15px;
+  margin-bottom:10px;
+}
+#schoolSec dl.programList dd ul li:before {
+  content: "●";
+  color: #000;
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+#schoolSec dl.activeList dt {
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+#schoolSec dl.activeList dd {
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  margin-bottom:10px;
+}
+#schoolSec.schoolAus dl.activeList dt { background-color: #ff8000; }
+#schoolSec.schoolAus dl.activeList dd { border: 1px solid #ff8000; }
+
+#schoolSec.schoolEng dl.activeList dt { background-color: #6049d3; }
+#schoolSec.schoolEng dl.activeList dd { border: 1px solid #6049d3; }
+
+#schoolSec.schoolCan dl.activeList dt { background-color: #ff6466; }
+#schoolSec.schoolCan dl.activeList dd { border: 1px solid #ff6466; }
+
+#schoolSec.schoolNez dl.activeList dt { background-color: #459b45; }
+#schoolSec.schoolNez dl.activeList dd { border: 1px solid #459b45; }
+
+#schoolSec.schoolWW dl.activeList dt {  background-color: #4961c6; }
+#schoolSec.schoolWW dl.activeList dd {  border: 1px solid #4961c6; }
+
+#schoolSec dl.programList dd h4 {
+  font-size: 18px !important;
+  color: #000 !important;
+  text-indent: 0 !important;
+  background-color: #fff !important;
+  padding: 0 !important;
+  margin:0 0 5px 0 !important;
+  font-weight: bold;
+}
+
+#schoolSec table.commonTbl tr td.fs25 span.ftst12 { 
+font-size: 12px; line-height: 0; 
+}
+
+/*****************************************************************
+  ブログ
+*****************************************************************/
+#schoolSec #panel4 .voice ul {
+  overflow:hidden;
+  margin-bottom:10px;
+}
+#schoolSec #panel4 .voice ul li {
+  overflow: hidden;
+  width: 308px;
+  float:left;
+  margin-right:14px;
+}
+#schoolSec #panel4 .voice ul li:last-child { margin-right:0 !important; }
+#schoolSec #panel4 .voice ul li img { float:left; }
+#schoolSec #panel4 .voice ul li p {
+  float: right;
+  width: 216px;
+  position:relative;
+  background-color:#eeeeee;
+  -weborder-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  padding:15px;
+  font-size:12px;
+}
+#schoolSec #panel4 .voice ul li p:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -13px;
+  border: 5px solid transparent;
+  border-right: 10px solid #eeeeee;  border-right: 13px solid #eeeeee;
+}
+div.blog a.moreView {
+  background-color:#4373b3;
+  display:block;
+  width:590px;
+  margin:0 auto;
+  text-align:center;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+section.voice a.moreView {
+  display:block;
+  width:590px;
+  margin:0 auto;
+  text-align:center;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+
+#schoolSec.schoolAus section.voice a.moreView { background-color:#ff8000; }
+#schoolSec.schoolEng section.voice a.moreView { background-color:#6049d3; }
+#schoolSec.schoolCan section.voice a.moreView { background-color:#ff6c6e; }
+#schoolSec.schoolNez section.voice a.moreView { background-color:#459b45; }
+#schoolSec.schoolWW section.voice a.moreView {  background-color:#3c59d3; }
+
+div.blog a.moreView span,
+section.voice a.moreView span {
+  background: url(../images/icon_arrow.png) no-repeat right center;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 20px;
+  line-height: 2.8;
+}
+
+/*****************************************************************
+  検索結果
+*****************************************************************/
+#schoolSec.srcSec h2 { line-height:1.5 !important; }
+#schoolSec.srcSec input[type=radio], input[type=checkbox] {
+  display: none;
+}
+#schoolSec.srcSec input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
+}
+#schoolSec.srcSec div.country .checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 8px 0;
+  padding: 10px 60px 10px 35px;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 210px;
+  box-sizing: border-box;
+}
+#schoolSec.srcSec div.country .checkbox:after,
+#schoolSec.srcSec div.conditions .checkbox:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: block;
+  margin-top: -7px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #bbb;
+  content: '';
+}
+#schoolSec.srcSec div.country .checkbox:before,
+#schoolSec.srcSec div.conditions .checkbox:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #53b300;
+  border-bottom: 3px solid #53b300;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); 
+}
+#schoolSec.srcSec div.conditions .checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding-left:35px;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+#schoolSec.srcSec section.srcBox button.Btn {
+  background:url(../images/search/srcBtn_pc.png) no-repeat left top;
+  height:0;
+  width:390px;
+  padding-top:64px;
+  overflow:hidden;
+  display:block;
+  margin:0 auto 30px auto;
+  border: none;
+}
+
+#schoolSec.srcSec div.country div.inList label.country_Aus { background:url(../images/search/srcIcon_Aus.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Can { background:url(../images/search/srcIcon_Can.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Nez { background:url(../images/search/srcIcon_Nez.png) no-repeat 95% center; }
+#schoolSec.srcSec div.country div.inList label.country_Eng { background:url(../images/search/srcIcon_Eng.png) no-repeat 95% center; }
+
+#schoolSec.srcSec div.country,
+#schoolSec.srcSec div.conditions {
+  border: 1px solid #2e3097;
+  margin-bottom: 15px;
+}
+#schoolSec.srcSec div.country h3,
+#schoolSec.srcSec div.conditions h3 {
+  background-color: #2e3097;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#schoolSec.srcSec div.conditions h3 { margin-bottom:20px; }
+#schoolSec.srcSec div.country div.inList { padding:10px; }
+#schoolSec.srcSec div.conditions dl {
+  overflow: hidden;
+  display: table;
+  width: 96%;
+  margin: 0 auto;
+  border-top: 1px solid #bdbdbd;
+}
+#schoolSec.srcSec div.conditions dl.last {
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom:10px;
+}
+#schoolSec.srcSec div.conditions dl dt {
+  width: 195px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  background-color: #eeeeee;
+}
+#schoolSec.srcSec div.conditions dl dd {
+  width: 450px;
+  display: table-cell;
+  padding: 10px;
+}
+#schoolSec.srcSec div.conditions dl dd ul li {
+  display:inline-block;
+  width:185px
+}
+#schoolSec.srcSec div.conditions div.link { text-align:right; padding:0 15px 10px 0; }
+#schoolSec.srcSec div.conditions div.link span {
+  display:inline-block;
+  background:url(../images/search/peke_bgImg.png) no-repeat right center;
+  -webkit-background-size:14px 14px;
+  -moz-background-size:14px 14px;
+  background-size:14px 14px;
+  padding-right:18px;
+}
+
+#schoolSec.srcSec section.pickUpList table { border-bottom: 1px solid #ccc; margin-bottom:75px; }
+#schoolSec.srcSec section.pickUpList table tr { border-top: 1px solid #ccc; }
+#schoolSec.srcSec section.pickUpList table th {
+  width: 25%;
+  padding: 0 10px;
+}
+#schoolSec.srcSec section.pickUpList table th,
+#schoolSec.srcSec section.pickUpList table td { vertical-align:middle; }
+#schoolSec.srcSec section.pickUpList table th img {
+  max-width: 130px;
+  height: auto;
+}
+#schoolSec.srcSec section.pickUpList table td {
+  width: 55%;
+  padding: 10px 0;
+}
+#schoolSec.srcSec section.pickUpList table td a {
+  font-size: 210%;
+  text-decoration: underline !important;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+#schoolSec.srcSec section.pickUpList table td a span {
+  font-size: 75%;
+  display: block;
+}
+#schoolSec.srcSec section.pickUpList table td p.caption { margin-top:5px; }
+#schoolSec.srcSec section.pickUpList table td.flagCell {
+  text-align: center;
+  padding: 0 15px;
+}
+#schoolSec.srcSec section.pickUpList table td.flagCell a { display:block; font-size:100%; margin-bottom:0; }
+#schoolSec.srcSec section.pickUpList ul.iconList { margin: 5px 0 10px 0px; }
+#schoolSec.srcSec section.pickUpList ul.iconList li {
+  display: inline-block;
+  color: #fff;
+  padding: 1px 15px;
+  margin: 0 5px 5px 0;
+}
+#schoolSec.srcSec section.pickUpList ul.iconList.Eng li { background-color: #9273da; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Aus li { background-color: #ff8000; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Can li { background-color: #ff7b7d; }
+#schoolSec.srcSec section.pickUpList ul.iconList.Nez li { background-color: #a2bf23; }
+#schoolSec.srcSec section.pickUpList ul.iconList.WW li { background-color: #4395f1; }
+
+#schoolSec.srcSec div.resultlBox {
+  border:1px solid #21286c;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  margin:0 auto 20px auto;
+  padding:15px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#schoolSec.srcSec div.resultlBox h3 {
+  background:none;
+  font-weight:bold;
+  color:#000;
+  margin-bottom:5px;
+  font-size:16px;
+}
+#schoolSec.srcSec div.resultlBox span {
+  display:block;
+  text-align:right;
+}
+#schoolSec.srcSec div.resultlBox span a { text-decoration:underline !important; color:#000; font-size:120%; }
+#schoolSec.srcSec section.pickUpList tr.spView { display:none; }
+#schoolSec.srcSec section.voiceBan { margin-bottom:50px; }
+#search_submit {
+
+}
+#schoolSec.srcSec p.noschool{
+  text-align: center;
+  margin: 30px 0  20px 0;
+}
+#schoolSec.srcSec a.check_clear {
+  cursor: pointer;
+}
+
+/*****************************************************************
+  ブログ記事一覧
+*****************************************************************/
+
+#schoolSec section.panel .blog_article_list {
+    margin-bottom: 16px;
+}
+#schoolSec section.panel .blog_article_list .blog_date_sm {
+    display: none;
+}
+#schoolSec section.panel .blog_article_list li {
+    overflow: hidden;
+    border-top : 1px solid #bfbfbf;
+    padding: 20px 0;
+}
+#schoolSec section.panel .blog_article_list li:last-child {
+    border-bottom: 1px solid #bfbfbf;
+}
+#schoolSec section.panel .blog_article_list li .img_container {
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    margin-right: 10px;
+}
+#schoolSec section.panel .blog_article_list li .img_container .bgtag {
+    background-color: #FFBB39;
+    position: absolute;
+    left: -87px;
+    top: -27px;
+    text-align: center;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    width: 90px;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+#schoolSec section.panel .blog_article_list li .img_container .bgtag p {
+    font-family: Myriad, Helvetica, Arial, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, sans-serif;
+    font-size: 17px;
+    top: 37px;
+    color: white;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+}
+#schoolSec section.panel .blog_article_list li .txt_container {
+    float: left;
+    width: 420px;
+}
+#schoolSec section.panel .blog_article_list li .txt_container .title {
+    font-size: 20px;
+    color: #136e95;
+}
+iframe {
+  width: 100%;
+  height:350px;
+}
+#schoolSec .slide img {
+  max-width: 100%;
+  height: auto;
+}

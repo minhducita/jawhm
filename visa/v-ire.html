@@ -1,0 +1,212 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='アイルランドのワーキングホリデービザ情報';
+$header_obj->description_page='参加可能年齢やビザ申請情報など、アイルランドのワーキングホリデービザを取得する際に必要となる情報を掲載しています。アイルランドへ渡航される方は、参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970"
+                                         height="170"/>';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（アイルランド） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+    <?php $header_obj->display_visa_links(); ?>
+    <img src="../images/bflag08.gif" alt=""/>
+
+    <div class="visa-country">
+        <p class="text01 bold">アイルランドのワーキングホリデービザの取得方法についてご案内します。</p>
+        <a class="visa-btn country-info" href="../country/ireland" title="アイルランド国情報へ">アイルランド国情報へ</a>
+    </div>
+
+    <div class="visa-wh">
+        <a href="/wh/ireland/">
+            <img src="/images/whire_PC.jpg" alt="アイルランドワーホリをチェック！"> 
+        </a>
+    </div>
+
+    <h2 class="sec-title">ビザ取得までのステップチャート</h2>
+    <h3 class="h3-01"> アイルランド ワーキングホリデービザに関して </h3>
+    <p class="text01">
+        ワーキング･ホリデー･プログラムは、アイルランド政府と日本政府主導のもと、日本国籍を有する青少年に対し、最大1年間アイルランドに滞在し、休暇の付随的側面として就労を可能とするものです。この制度の目的として、日本の青少年にアイルランドの文化、風景、人々を紹介すると共に休暇に加え就労、英語学習の機会も与えられます。<br/>
+        <br/>
+        2015年6月申請より特別な制限なく、１８歳～３０歳（申請受理時点）まで申請が可能となりました。</p>
+    <img src="../images/visa-ireland-flow.gif" alt=""/>
+    <br/>
+    <p class="bg-yellow"><a href="https://www.dfa.ie/ja/irish-embassy/japan/" target="_blank" rel="noreferrer"> アイルランド大使館 </a> <br/>
+        〒102-0083 東京都千代田区麹町2－10－7 アイルランドハウス　アイルランド大使館 ワーキング・ホリデープログラム係 </p>
+    <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+
+    <ul class="list-visabasic">
+        <a href="http://www.mofa.go.jp/mofaj/area/ireland/data.html" target="_blank" rel="noreferrer">基本情報</a>
+        <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=151" target="_blank" rel="noreferrer">安全情報</a>
+        <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/ireland.html" target="_blank" rel="noreferrer">在外公館</a>
+    </ul>
+    <br/>
+    <?php
+			//settings for the calendar module display
+            $country_to_display = 'アイルランド';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+      ?>
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+    </div>
+    <div class="text-center">
+        <p class="text-center" style="color: orangered">ビザの申請、ひとりでできますか？</p>
+        <a href="/mem/#meritt"><img src="images/memline5_off.gif" alt="メンバー登録"></a>
+    </div>
+    <h2 class="sec-title">ビザ申請方法</h2>
+    <h3 class="h3-01"> ワーキング・ホリデー・オーソリゼーション（許可証） 申請資格 </h3>
+    <ul class="list-number">
+        <li> 現在日本に居住していること（申請時を含む）</li>
+        <li> 一定期間（最長1年）アイルランドで休暇を過ごすことを本来の目的とすること</li>
+        <li> 申請書受理時点で、年齢が18歳以上30歳以下であること</li>
+        <li> 扶養家族（配偶者含む）を同伴しないこと（配偶者に申請資格がある場合は、それぞれ申請することが可能です）</li>
+        <li> 有効なパスポートと帰国用航空券、または、それが購入できる充分な資金を保持していること</li>
+        <li> アイルランド滞在中、生活に必要な資金として50万円以上の預金があること</li>
+        <li> 以前「ワーキング・ホリデープログラム」でアイルランドへ渡航した経験がないこと</li>
+        <li> 健康かつ、犯罪歴が無いこと</li>
+        <li> 滞在期間をカバーする医療保険に加入すること</li>
+    </ul>
+    <h3 class="h3-01"> 発給人数 </h3>
+    <p class="text01"> 800件
+        <!-- <br> -->
+        <!-- ※外務省にて発表はされていますが、アイルランド政府からの正式発表はまだありません。正式発表があるまでお待ちいただきますようお願いいたします。 -->
+    </p>
+    <h3 class="h3-01"> 申請料 </h3>
+    <p class="text01"> このプログラムの申請費用は13,800円です。</p>
+    <h3 class="h3-01"> 申請時期 </h3>
+    <p class="text01">
+        アイルランド大使館では、年2回ワーキング・ホリデー・オーソリゼーション（許可証）の申請受付期間を設けております。申請書は申請受付期間外には、受領いたしません。<br/>
+        <br/><br/>
+        <b>【2021年度の申請について】</b><br/>
+        ※2021年のワーキングホリデー募集要項は未発表です。
+        <br/>
+        <br/>
+        <b>第一期申請受付期間</b><br/>
+        ＜2020年9月30日以前のご出発を希望される方対象＞<br/>
+        2020年1月15日（水）～ 1月31日（金）（当日消印有効）<br/>
+        <br/>
+        <b>第二期申請受付期間</b><br/>
+        ＜2020年9月30日以降 〜 2021年3月20日以前の渡航予定の方対象＞<br/>
+        2020年7月下旬を予定しております。日程は本ウェブサイトにて後日お知らせいたします。<br/>
+    </p>
+    <h3 class="h3-01"> 申請方法  </h3>
+
+    <p class="text01">
+        <b>【１】申請書をE-mailにて提出 </b><br/>
+        <br/>
+        申請書（規約/Terms & Conditionsを含む）をダウンロードし、必要事項を英文記入のうえ、申請書を下記E-mailアドレスに送信願います。郵送は受け付けておりませんのでご注意下さい<br/><br/>
+        　workingholiday.ie.jp@vfshelpline.com<br/><br/>
+        この段階では、写真貼付は必要ありません。<br/><br/>
+        申請結果は、申請受付期間終了後の翌月中旬までにE-mailにてお知らせします。申請許可メールを受領した方は、必要書類の提出へお進み下さい。 <br/><br/>
+        個人情報保護に基づき申請書内の個人情報については、本プログラムの目的以外での利用はいたしません。<br/><br/>
+        申請書を提出した場合、規約（Terms & Conditions）に同意したとみなしましますので、ご注意ください。 <br/><br/>
+    </p>
+
+    <p class="text01">
+        <b>【２】必要書類の提出</b><br/>
+        <br/>
+        申請許可をE-mailにて受領した方は、下記必要書類を書留にて合同会社VFSサービシズ・ジャパンにご郵送下さい。<br/>
+        （パスポート、医療保険、航空券以外の提出書類は返却致しません。）<br/><br/>
+        1）申請許可のE-mail<br/>
+        　　＊大使館から送られた申請許可のE-mailを出力したもの<br/>
+        2）申請書と写真 2枚 （6ヶ月以内に撮影したもの）<br/>
+        　　＊ステップ3で作成した申請書を出力し、写真 1枚は申請書に貼付し、もう１枚は郵送してください。<br/>
+        3）パスポート（原本）<br/>
+        　　＊アイルランドを出国する時点で、有効期間は6ヶ月以上必要です。（6ヶ月+滞在期間）<br/>
+        4）パスポートのコピー<br/>
+        　　＊顔写真のページとスタンプが押印されているページのコピー<br/>
+        5）履歴書（英文）<br/>
+        　　＊書籍等で紹介されている簡易なものでA4サイズ１枚程度<br/>
+        6）卒業証明書（英文原本）<br/>
+        　　＊最終学歴校の卒業証明書。現在就学中の方は、在籍証明書でも可。<br/>
+        7）残高証明書（英文原本）<br/>
+        　　＊個人資金として50万円以上の金額を示す本人名義の残高証明書。<br/>
+        8）医療保険証券又は付保証明（英文原本とA4コピー１枚）<br/>
+        　　＊滞在期間をカバーする医療保険証券又は付保証明<br/>
+        9）航空券（原本とA4コピー１枚）<br/>
+        　　＊片道航空券又は往復航空券。E-チケット、予約確認書可。<br/>
+        10）補足申請フォーム、申請料振込控え<br/>
+        　　＊申請許可の下りた方のみ、詳細はご案内させていただきます。<br/>
+        11）返信用レターパック510<br/>
+        　　＊ご自身の住所、氏名記載のレターパック510の封筒（郵便局にて購入）<br/>
+    </p>
+
+    <p class="text01">
+        <br/>
+        必要書類受領、内容確認後、ワーキング・ホリデー・オーソリゼーション（許可証）を発給します。<br/>
+        なお、アイルランド入国から1ヶ月以内に、アイルランド警察入国管理局（GNIB）にて外国人登録をする必要があります。
+    </p>
+
+
+    <h3 class="h3-01"> 補足説明 </h3>
+    <ul class="list-disc">
+        <li> ワーキング・ホリデー・オーソリゼーション（許可証）の有効期限は入国より最大1年です。例えば、2019年1月2日に入国した場合、期限は2020年1月1日を超えることはできません</li>
+        <li> 申請者は、日本国籍かつ年齢が18歳以上30歳以下であること。（申請受理時点）</li>
+        <li> 申請許可がおりましたら、アイルランド滞在中に事故または病気になった場合に備えて全期間をカバーする医療保険の加入が必要となります。</li>
+        <li> アイルランド政府当局の判断により、ワーキング・ホリデー許可証は無効となる場合があります</li>
+        <li> このプログラムを行っている他の国同様、入国の際は通常の入国審査が必要となります。また、アイルランド入国の際、入国審査官は残高証明書等の提示を求める場合があります。</li>
+    </ul>
+
+    <h3 class="h3-01"> 参考リンク </h3>
+    <p class="text01">
+        ・アイルランド大使館 - ワーキングホリデーに関して ⇒　<a
+            href="https://www.dfa.ie/irish-embassy/japan/our-services/visas/working-holiday-programme/" target="blank"
+            rel="nofollow">リンク</a>
+    </p>
+
+    <br/>
+    <br/>
+    <p class="text01">
+        【注意】<br/>
+        ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+        また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+        正確なものであることを保証するものではありません。<br/>
+        ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+    </p>
+    <br/>
+    <?php
+			//settings for the calendar module display
+            $country_to_display = 'アイルランド';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+      ?>
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+        <p style="font-size: x-small">※掲載されているビザ情報は、2019/11/22に確認した情報です。</p>
+    </div>
+
+    <div class="text-center">
+        <p class="text-center" style="color: orangered">ビザの申請、ひとりでできますか？</p>
+        <a href="/mem/#meritt"><img src="images/memline4_off.gif" alt="メンバー登録"></a>
+    </div>
+    <br/>
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+</html>

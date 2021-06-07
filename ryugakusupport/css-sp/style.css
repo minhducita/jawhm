@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+#maincontent {
+	/*background-color: #ff0000;*/
+}
+
+.section-inner {
+	width: 94%;
+	margin: 0 auto;
+	padding: 10px 0;
+	font-size: 12px;
+}
+
+.area-info-banner {
+	width: 100%;
+	margin: 0 auto;
+	/*padding-bottom: 10px;*/
+}
+
+.area-info-banner img,
+.area-info-banner img a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.area-message {
+	width: 100%;
+	background-color: #fff0ad;
+}
+
+.area-message p {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding: 15px 0;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+
+
+.area-regist-btn {
+	width: 100%;
+	padding-top: 15px;
+	background: url("../img-sp/section-bg-02.gif") repeat left top;
+}
+
+.area-regist-btn ul {
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+
+.area-regist-btn ul li {
+	display: inline-block;
+	width: 40%;
+	margin-right: 2%;
+}
+
+.area-regist-btn ul li:last-child {
+	margin-right: 0;
+}
+
+
+
+
+
+/*
+------------------------------------------------------------
+section-01
+------------------------------------------------------------
+*/
+
+#section-01 {
+	background: url("../img-sp/section-bg-01.gif") repeat left top;
+}
+
+#section-01 dl dt h1 {
+	width: 95%;
+	margin: 0 auto 10px;
+	border-bottom: 1px dotted #003dbf;
+}
+
+#section-01 dl dd p.image-text {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+}
+
+#section-01 dl dd p.texts {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+	line-height: 18px;
+}
+
+#section-01 dl dd p.figure {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+}
+
+
+/*
+------------------------------------------------------------
+section-02
+------------------------------------------------------------
+*/
+
+#section-02 {
+	padding-top: 15px;
+	background: url("../img-sp/section-bg-02.gif") repeat left top;
+}
+
+#section-02 dl dt h1 {
+	width: 95%;
+	margin: 0 auto 10px;
+}
+
+#section-02 dl dd p.texts {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+	line-height: 18px;
+}
+
+#section-02 dl dd .area-clip {
+	position: relative;
+	width: 100%;
+	background-color: #ffffff;
+	-webkit-box-shadow: #d1d1d1 1px 1px 2px;
+	-moz-box-shadow: #d1d1d1 1px 1px 2px;
+	box-shadow: #d1d1d1 1px 1px 2px;
+	padding: 15px 0;
+	margin-bottom: 15px;
+}
+
+.area-clip dl {
+	display: block;
+	width: 90%;
+	margin: 0 auto 10px;
+}
+
+.area-clip dl:last-child {
+	padding-bottom: 0;
+}
+
+.area-clip-title {
+	width: 61px;
+	float: left;
+	margin-right: 10px;
+}
+
+.area-clip-title-sub {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+	padding-top: 4px;
+}
+
+.area-clip-text {
+	width: 58%;
+	float: left;
+	font-size: 10px;
+	line-height: 17px;
+}
+
+.area-clip-pic {
+	width: 40%;
+	float: right;
+}
+
+.clip-image {
+	width: 20px;
+	position: absolute;
+	top: -7px;
+	right: 5px;
+}
+
+
+
+/*
+------------------------------------------------------------
+section-03
+------------------------------------------------------------
+*/
+
+#section-03 {
+	padding-top: 15px;
+	background: url("../img-sp/section-bg-01.gif") repeat left top;
+}
+
+#section-03 dl {
+	margin-bottom: 15px;
+}
+
+#section-03 dl dt h1 {
+	width: 95%;
+	margin: 0 auto 10px;
+}
+
+#section-03 dl dd p.image-text {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+}
+
+#section-03 dl dd p.texts {
+	display: block;
+	width: 80%;
+	margin: 0 5% 0 15%;
+	line-height: 18px;
+}
+
+.set-qa {
+	width: 92%;
+	margin: 0 2% 15px 6%;
+}
+
+.set-qa dt h2 {
+	width: 100%;
+	margin: 0 auto 10px;
+}
+
+.set-qa dd {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	background: url("../img-sp/secion-03-answer.png") no-repeat left top;
+	background-size: 5% auto;
+	padding-left: 10%;
+	line-height: 18px;
+}
+
+#section-03 p.figure {
+	display: block;
+	width: 100%;
+	margin: 20px auto 15px;
+}
+
+
+
+/*
+------------------------------------------------------------
+section-04
+------------------------------------------------------------
+*/
+
+#section-04 {
+	padding-top: 15px;
+	background: url("../img-sp/section-bg-02.gif") repeat left top;
+}
+
+#section-04 dl dt h1 {
+	width: 95%;
+	margin: 0 auto 20px;
+}
+
+#section-04 dl dd p.texts {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+	line-height: 18px;
+}
+
+#section-04 dl dd p.figure {
+	display: block;
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+
+
+/*
+------------------------------------------------------------
+section-05
+------------------------------------------------------------
+*/
+
+#section-05 {
+	padding-top: 15px;
+	background: url("../img-sp/section-bg-02.gif") repeat left top;
+}
+
+#section-05 dl dt h1 {
+	width: 95%;
+	margin: 0 auto 20px;
+}
+
+#section-05 dl dd p.texts {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+	line-height: 18px;
+}
+
+#section-05 dl dd p.figure {
+	display: block;
+	width: 95%;
+	margin: 0 auto 15px;
+}
+
+
+
+
+
+
+/*
+------------------------------------------------------------
+ADD 2014-07-30
+新ヘッダーフッター適用するまでの一時的な処理として
+------------------------------------------------------------
+*/
+
+#wrap-box { 
+	width: 100% !important;
+}
+
+
+#contents {
+	margin-left: 0 !important;
+	margin-right:0 !important;
+	width: 100% !important;
+}
+
+#mobile-seminar-regist-btn,
+#mobile-seminar-regist-btn li {
+	line-height: 0;
+}
+
+#header-box {
+	margin-bottom: 0 !important;
+}
+

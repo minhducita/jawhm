@@ -1,0 +1,145 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='スペインリアのワーキングホリデービザ情報';
+$header_obj->description_page='オーストラリアのワーキングホリデービザ取得のステップや注意事項を掲載しています。オーストラリアへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（オーストラリア） | ワーホリビザ情報';
+
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	 <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/flag-esp.png" alt="" />
+	 <!--p class="text01">
+			<span class="centered-btn"><a class="visa-btn country-info" href="../country/portugal" title="ポーランド">ポルトガル</a></span>
+			<b>ポルトガルのワーキングホリデービザの取得方法についてご案内します。</b>
+	 </p--> 
+	 <div class='clear'></div>
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/************************
+
+	// 067
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 64, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 068
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 65, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 069
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 66, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 070
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 67, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 071
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 68, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+***************************/
+
+?>
+<!--
+	</div>
+	 <p style="margin:20px 0px">
+		現在、ビザ情報を確認中です。正式な情報が公表され次第、こちらのページでご案内します。
+	 </p>-->
+	  
+	  <!-- new content add -->
+	<div class="content-visa-new">
+	  <h2 class="sec-title"> 在日スペイン大使館 </h2>	
+	  
+		<p>	106-0032 東京都港区六本木１丁目３−２９</p>
+
+		<p>	03-3583-8531</p>
+
+		<p>	http://www.exteriores.gob.es/Embajadas/TOKIO/ja/Paginas/inicio.aspx</p>
+		<!--div class="yellow-box">
+			<p><a href="http://embaixadadeportugal.jp/jp/" target="_blank">ポルトガル大使館</a></p>
+			<p>102-0083</p>
+			<p>東京都千代田区麹町3-10-3　神浦麹町ビル5階</p>
+		</div-->
+	  
+		<h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		<ul class="list-visabasic">
+	          <a href="http://www.mofa.go.jp/mofaj/area/spain/index.html" target="_blank">基本情報</a>
+	          <a href="http://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_161.html#ad-image-0" target="_blank">安全情報</a>
+	          <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/espa.html" target="_blank">在外公館</a>
+	    </ul>
+
+	</div>
+	  
+	  <!-- ========== -->
+	  
+	 <!--  <p style='text-align:center;font-size:20px'> 大使館からの情報が発表され次第、お知らせいたします。</p> -->
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2017/03/15に確認した情報です。</font></p>
+	  </div>
+	  
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+		<br />
+	 	<?php $header_obj->display_visa_links(); ?>
+		<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+[0.00001] [Error] /var/www/html/jawhmcart/config.local.php - no read or write permissions (666)
+[0.41921] [Error] Server configuration does not meet the requirements
+[0.41941] [Error] Incorrect permissions are assigned to the files and/or folders listed below.
+[0.00001] [Notice] Creating database scheme
+[1.01308] [Notice] Importing data
+[2.77751] [Notice] Creating demo
+[6.91200] [Notice] Installing additional language en
+[8.27436] [Notice] Installing additional language en

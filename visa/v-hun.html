@@ -1,0 +1,119 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ハンガリーのワーキングホリデービザ情報';
+$header_obj->description_page='ハンガリーのワーキングホリデービザ取得のステップや注意事項を掲載しています。ハンガリーへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（ハンガリー） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+    	  <?php echo $header_obj->breadcrumbs('country'); ?>
+
+			<div style="clear:both; height:10px;">&nbsp;</div>
+      <?php $header_obj->display_visa_links(); ?>
+	  <img src="/images/coun_hun_2.gif" alt="" style="border: 1px solid #cbcbcb;" />
+<?php
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+
+	echo('
+	<p class="text01">
+	<span class="centered-btn" style="padding-top:0;margin-bottom:0"><a class="visa-btn country-info" href="/country/hungary" title="ハンガリー">ハンガリー</a></span>
+	<b>ハンガリーのワーキングホリデービザの取得方法についてご案内します。</b>
+	');
+
+
+} else {
+
+	echo('
+	<p class="text01">
+	<span class="centered-btn" style="padding-top:0;margin-bottom:0"><a class="visa-btn country-info" href="/country/hungary" title="ハンガリー">ハンガリー</a></span>
+	<b>ハンガリーのワーキングホリデービザの取得方法についてご案内します。</b>
+	');
+
+}
+?>
+
+</p>
+
+<div class="content-visa-new">
+	  <h2 class="sec-title"> ハンガリーにおけるワーキングホリデー制度について </h2>	
+	  <p class="text01">ハンガリーでワーキングホリデー制度に参加をするにはまず以下の二つの方法があります。《※ハンガリーの場合ワーキングホリデービザではなく、ワーキングホリデーを滞在目的とする一時滞在許可証 (Temporary Residence Permit) が必要です》</p>
+	   <p class="text01"><br /></p>
+	   <p class="text01">１． 日本で事前に査証を申請する</p>
+	   <p class="text01">ワーキングホリデーを滞在目的とする一時滞在許可証を受け取るための査証（ビザ）を、在京ハンガリー大使館において申請し発給を受ける。ただしこの場合の査証は、あくまでも一時滞在許可証に切り替えをするための査証（ビザ）であり、この査証（ビザ）だけでワーキングホリデー制度を利用する長期滞在が出来るわけではありません。シェンゲン協定加盟国内に入国後３０日以内にハンガリーの移民局（ＢＡＨ）へ行き、一時滞在許可証への切り替え手続きを行う必要があります。</p>
+	   <p class="text01"><br /></p>
+	   <p class="text01">２． ハンガリーの移民局で直接申請する</p>
+	    <p class="text01">日本国籍の場合ハンガリーの移民局（ＢＡＨ）でワーキングホリデーを滞在目的とする一時滞在許可証 (Temporary Residence Permit) の申請をし滞在許可証を取得することが出来ます。無査証あるいは 一時滞在許可証以外の査証を持っていてすでにシェンゲン協定加盟国内、あるいはハンガリーに滞在している場合は、その詳細は直接現地移民局（ＢＡＨ）にお問い合わせをお願いします。日本から渡航する場合は査証（ビザ）を取得してからの渡航をして下さい。</p>
+	   <p class="text01"><br /></p>
+	   <p class="text01">【注意】日本国籍の場合は年間募集人員の枠（２０１８年は２００人）があるため、その枠内であるかどうかによっては参加が出来ない場合もあります。</p>
+	   <p class="text01"><br /></p>
+
+	   <h3 class="h3-01">ワーキングホリデー制度に参加するには以下の①から⑨までの要件をすべて満たしている必要があります。</h3>
+	    <p class="text01">1. 主として休暇を過ごすためにハンガリーに入国する意図を有すること</p>
+	    <p class="text01">2. 一時滞在許可証を申請する段階または査証から書き換えをする段階で年齢が１８歳以上３０歳以下であること（査証申請の段階ではありません）</p>
+	    <p class="text01">3. 被扶養者を同伴しないこと</p>
+	    <p class="text01">4. 少なくとも予定される滞在の間有効する旅券及び帰国のための旅行切符又は切符を購入するための十分な資金を所持していること</p>
+	    <p class="text01">5. ハンガリーにおける滞在の当初の期間生計を維持するための相当な資金を所持していること（最低２５万円の銀行残高が目安）</p>
+	    <p class="text01">6. 滞在終了時にハンガリーを含むシェンゲン協定加盟国から出国する意図を有し、かつ、滞在の間ワーキングホリデー制度の参加者としての在留資格を変更しないこと</p>
+	    <p class="text01">7. 以前に一時滞在許可証の発給をハンガリー政府から受けていないこと</p>
+	    <p class="text01">8. 健康であること及び犯罪経歴を有しないこと</p>
+	    <p class="text01">9. 滞在の間、ハンガリーにおいて効力を有する法令を遵守する意図を有すること</p> </br>
+	    <p class="text01">日本で査証を申請する場合は上記の①から⑨の要件を満たしていることを前提として以下の書類の提出により一時滞在許可証のための査証（ビザ）を申請する必要がある。</p>
+	    <p class="text01">１） 申請用紙</p>
+	    <p class="text01">２） 写真 2枚</p>
+	    <p class="text01">３） 当面の滞在先の証明（ホテルなどの予約証明。１～２週間で良い）</p>
+	    <p class="text01">４） 滞在中の生活維持費用を持っていることの証明（銀行残高証明など）</p>
+	    <p class="text01">５） 滞在中の海外旅行保険</p>
+	    <p class="text01">すでにハンガリーに入国している場合は、提出書類についてはほぼ同様のものが必要であるが、現地移民局（ＢＡＨ）に直接確認をしてから申請を行うこと。</p>
+	    <p class="text01">以上すべての要件を満たし、募集人員の枠内ということであれば、数次入国について有効であり、かつ、発給の日から一年間ハンガリーで有効である一時滞在許可証が無償で発給される。</p>
+	    <p class="text01">※さらに詳しい内容については移民局のサイトにて確認すること。</p>
+		
+</div>
+
+
+	<h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+	<ul class="list-visabasic">
+	<li><a alt="基本情報" href="http://www.mofa.go.jp/mofaj/area/hungary/index.html" target="_blank">基本情報</a> <a alt="安全情報" href="http://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_168.html#ad-image-0" target="_blank">安全情報</a> <a alt="在外公館" href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/hungary.html" target="_blank">在外公館</a></li>
+</ul>
+	<div class="clear">&nbsp;</div>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+		<p><font size="1">※掲載されているビザ情報は、2017/03/15に確認した情報です。</font></p>
+	</div>
+	<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+    
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+	<style>
+	.linkbox	{
+		margin : 15px 15px 15px 15px;
+		padding	: 10px 20px 10px 20px;
+		background-color : #FFE4B5;
+		font-size:10pt;
+	}
+	</style>
+    <div class="linkbox">
+	お探しの情報はありましたか？ 以下のページもよく見られていますよ<br>
+	　・&nbsp;<a href="/visa/v-uk.html">イギリスビザ情報</a><br>　・&nbsp;<a href="/visa/v-fra.html">フランスビザ情報</a><br>　・&nbsp;<a href="/country/hungary/index.html">ハンガリーの国情報</a><br>　・&nbsp;<a href="/visa/v-ire.html">アイルランドビザ情報</a><br>　・&nbsp;<a href="/ryugaku/usa_visa.html">アメリカ語学留学ビザ</a><br></div>
+
+    &nbsp;<br/>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

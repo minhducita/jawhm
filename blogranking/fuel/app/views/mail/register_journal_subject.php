@@ -1,0 +1,1 @@
+[BLOGRANKING]登録がありました

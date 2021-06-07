@@ -1,0 +1,226 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・アルゼンチンの基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶアイルランドの食文化や緑が広がる風景など、現地の情報を掲載しています。渡航をされる前の準備にお役立てください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="banner_argentina.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'アイルランド | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/bflag20.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/ARG_PC.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/ARG_SP.png" />
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>アルゼンチン人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />Buenos Aires</li>
+				<li><img src="../images/crown-2.gif" />Córdoba</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" /> Mendoza</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>アルゼンチン基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Buenos Aires</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">español</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>2,780,400km2（8位）;<span>(日本の約7倍)</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>40,760,000人（32位）<span>(日本の3分の1)</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>Argentine peso(ARS)</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Buenos Aires</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-arg.png" /><br />
+								12月31日<br />
+								21:00 pm
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Buenos Aires</td>
+					</tr>
+					<tr>
+						<th>面積</th><td>2,780,400km2（8位）;<span>(日本の約7倍)</span></td>
+					</tr>
+					<tr>
+						<th>人口</th><td>40,760,000人（32位）<span>(日本の3分の1)</td>
+					</tr>
+				</table>
+				<table class="table-info" style="margin-right:0">
+					<tr>
+						<th>言語</th><td id="td-language">español</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>Argentine peso(ARS)</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Buenos Aires</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-arg.png" /><br />
+							12月31日<br />
+							21:00 pm
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>アルゼンチンってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			アルゼンチンは、ブラジルに次ぐ南米第二の大国。国民の大半はヨーロッパ系移住者の子孫であるため、他の南米諸国とは異なり、文化や街並みなどの雰囲気がヨーロッパに近く、首都のブエノスアイレスは南米のパリとも呼ばれている。
+			</p>
+			   <p class="text01">アルゼンチンには、「悪魔の喉笛」の異名を持つイグアスの滝をはじめ、アンデス山脈、バンパス平原など、大自然の恩恵を感じることが出来る観光地が数多く点在している。</p>
+					<p class="text01">アルゼンチンではサッカーが非常に盛んであり、選手デビューを目指す若者のスポーツ留学先として選ばれることが多い。また、イタリアのスカラ座、フランスのオペラ座と並ぶ世界三大劇場のひとつである「コロン劇場」があるため、タンゴを学びにアルゼンチンを訪れる人も増えてきている。</p>
+						<p class="text01">1870年代以降の急速な経済発展に伴い、牛肉と小麦の重要な輸出国となったアルゼンチン。現在でも肉牛の生産量・消費量ともに世界一を誇る。全国各地にパリージャと呼ばれる肉料理専門店があり、郷土料理をはじめ様々な部位・種類の肉料理を楽しむことが出来る。また、アルゼンチンでは肉料理に合うワインも有名だ。国内にワイナリーが2000以上もあるワイン大国で、牛肉と並ぶ名産品となっている。日本と違い、ディナーが20時近くから始まるのも特徴。レストランなどでは分厚い肉料理を2時間ほどかけてゆっくり楽しむのがアルゼンチン流だ。</p>
+							<p class="text01">北から南に国土が長いアルゼンチンでは、地域によって気候・天候が大きく異なる。また、日本とは反対の季節感となっているので、渡航前にはしっかりとした情報収集や準備が必要だ。北部は亜熱帯性気候なので、１年を通じて降水量がある。雨が降ると湿度が上昇するので、薄手の服を持って行くのがいいだろう。中部は1年を通して過ごしやすく快適な気候に恵まれている。南部は亜北極圏の気温となるため、アルゼンチンとからは連想しにくい寒さを体験でき、冬のスポーツも楽しむことが出来るだろう。</p>
+							<p class="text01">アルゼンチンではスペイン語が公用語になっている。英語も地域によっては通じるが、現地で働くためにはスペイン語の習得が必須だ。また、アルゼンチンのスペイン語は、他地域のスペイン語とかなり違っていることで有名。アクセントやイントネーションの違いから、最初は聞き取るのに苦労してしまうかもしれない。</p>
+		</div>
+		
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-arg.html" title="アルゼンチンのワーキングホリデー（ワーホリ）ビザ情報へ">アルゼンチンのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+	  	<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+		<a href="../../visa/v-arg.html" class="btn-visa area-round-corner">
+			アルゼンチン<br />ビザ情報はこちらから
+		</a>
+	  	<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+
+
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'アルゼンチン';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display);
+            ?>
+    <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    
+      <p>&nbsp;</p>
+
+	
+	
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+
+<?php $links_obj->display_links(); ?>
+
+	</div><!-- /#maincontent -->
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

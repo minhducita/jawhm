@@ -1,0 +1,468 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'ワーホリ協定国・オーストラリアの基本情報';
+$header_obj->description_page = '日本とワーキングホリデー協定を結ぶオーストラリアについてご紹介します。オーストラリアならではの大自然の風景や現地の文化など、興味深い情報がもりだくさん。渡航される方は是非ご一読ください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/AU-countrypage.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'オーストラリア | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files = '
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files = '<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('country'); ?>
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../../../wh/australia/"><span>オーストラリアのワーキングホリデー（ワーホリ）</span></a></div>
+			<div class="btnarea"><a href="../../../wh/australia/sydney/"><span>シドニーのワーキングホリデー（ワーホリ）</span></a></div>
+			<div class="btnarea"><a href="../../../wh/australia/parth/"><span>パースのワーキングホリデー（ワーホリ）</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+	<div class="area-display-pc">
+		<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+		<p class="country-name-img"><img src="../../images/bflag01.gif" alt="" /></p>
+
+		<div id="area-map-img">
+			<img src="../images/map-aus.png" />
+		</div>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner mb_none">ワーホリ協定国一覧へ戻る</a>
+
+		<div id="area-map-img">
+			<img src="../images/map-aus-sp.png" />
+		</div>
+	</div>
+
+
+	<h2 class="h2-title"><span>オーストラリア人気都市　BEST3</span></h2>
+	<div class="area-main-content">
+		<ul class="list-best3">
+			<li><img src="../images/crown-1.gif" />Sydney</li>
+			<li><img src="../images/crown-2.gif" />Melbourne</li>
+			<li style="margin-right:0"><img src="../images/crown-3.gif" />Brisbane</li>
+		</ul>
+	</div>
+
+	<h2 class="h2-title"><span>オーストラリア基本情報</span></h2>
+	<div class="area-main-content clearfix">
+		<div class="area-display-pc">
+			<div class="area-left">
+				<table class="table-info">
+					<tr>
+						<th>首都</th>
+						<td id="td-capital">Canberra</td>
+					</tr>
+					<tr>
+						<th>言語</th>
+						<td id="td-language">English</td>
+					</tr>
+					<tr>
+						<th>面積</th>
+						<td>7,686,850 km&#178;<span>(世界6位)</span></td>
+					</tr>
+					<tr>
+						<th>人口</th>
+						<td>21,293,000人<span>(世界51位)</td>
+					</tr>
+					<tr>
+						<th>通貨</th>
+						<td>Australia Dollar (AUD)</td>
+					</tr>
+				</table>
+				<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+			</div>
+
+			<div class="area-right">
+				<table class="table-clock">
+					<caption>日本との時差</caption>
+					<tr>
+						<th>日本時間</th>
+						<th>PERTH</th>
+						<th>SYDNEY</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-aus-w.png" /><br />
+							1月1日<br />
+							08:00am
+						</td>
+						<td>
+							<img src="../images/clock-aus-e.png" /><br />
+							1月1日<br />
+							10:00am
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+		<div class="area-display-sp clearfix">
+			<table class="table-info">
+				<tr>
+					<th>首都</th>
+					<td id="td-capital">Canberra</td>
+				</tr>
+				<tr>
+					<th>面積</th>
+					<td>7,686,850 km&#178;<span>(世界6位)</span></td>
+				</tr>
+				<tr>
+					<th>人口</th>
+					<td>21,293,000人<span>(世界51位)</td>
+				</tr>
+			</table>
+			<table class="table-info" style="margin-right:0">
+				<tr>
+					<th>言語</th>
+					<td id="td-language">English</td>
+				</tr>
+				<tr>
+					<th>通貨</th>
+					<td>Australia Dollar (AUD)</td>
+				</tr>
+				<tr style="border-bottom:none">
+					<td colspan="2">
+						<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="area-display-sp clearfix">
+			<a href="../../../wh/australia/" style="color: #0E6EB8; font-size: 14px;">＞＞オーストラリアのワーキングホリデー（ワーホリ）情報はこちら</a>
+		</div>
+
+	</div>
+
+	<div class="area-display-sp">
+		<h2 class="h2-title"><span>日本との時差</span></h2>
+		<div class="area-main-content">
+			<table class="table-clock">
+				<tr>
+					<th>日本時間</th>
+					<th>PERTH</th>
+					<th>SYDNEY</th>
+				</tr>
+				<tr>
+					<td style="border-right:1px solid #000">
+						<img src="../images/clock-tokyo.png" /><br />
+						1月1日<br />
+						09:00am
+					</td>
+					<td>
+						<img src="../images/clock-aus-w.png" /><br />
+						1月1日<br />
+						08:00am
+					</td>
+					<td>
+						<img src="../images/clock-aus-e.png" /><br />
+						1月1日<br />
+						10:00am
+					</td>
+				</tr>
+			</table>
+			<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+		</div>
+	</div>
+
+	<h2 class="h2-title"><span>オーストラリアってどんな国？</span></h2>
+	<div class="area-main-content">
+		<style>
+			.p-title-2998 {
+				text-decoration: underline;
+				font-weight: bold;
+				padding-left: 20px;
+				margin-bottom: -7px;
+			}
+		</style>
+		<p class="p-title-2998">&#9632; 生活</p>
+		<p class="text01">
+			《交通機関》<br>
+			オーストラリアにバス、電車、フェリー、モノレールなど、多くの公共交通機関があります。都市や場所によって便利なものが異なりますが、どの都市でもよく使われているのがバスです。日本のように社内アナウンスをしてくれないので、最初は間違わないようにアプリなどを使うか、運転手にあらかじめ降車駅を伝えるようにしましょう。シドニーではバス、電車、フェリー、ライトレールで共通して使えるICカード「オパールカード」を使うことができます。
+		</p>
+
+		<p class="p-title-2998">&#9632; 医療</p>
+		<p class="text01">
+			《病院》<br>
+			日本では怪我や病気の症状で病院・医院を選んで受信しますが、オーストラリアでは体調の異変を感じたらまずGP(General Practitioner)と呼ばれる一般開業医を訪れます。予約なしで受診してくれるところもあれば、予約が必要なところもあります。診察もしくは治療後、必要であれば処方箋を書いてもらい、それを薬局(Pharmacy)に持って行き、薬を購入します。GPでは対応できない症状や特別な処置が必要な場合は、専門医(Specialist)への招待状(Referral Letter)をGPに書いてもらい、予約を取って専門医を訪ねましょう。各専門医の検査機関での結果は、すべてGPと共有することができるので、「かかりつけ医」のような感覚で自分が頼れるGPを決めておくと良いでしょう。
+		</p>
+		<p class="text01">
+			《保険》<br>
+			オーストラリアでは、市民権・永住権を持つ人向けの公的医療制度メディケア(Medicare)と、市民権・永住権を持たない人の医療費や、メディケアがカバーしない範囲の治療や入院・手術費を補うための保険である民間医療保険があり、留学生用健康保険OSHC(Overseas Student Health Cover)もここに含まれます。一時滞在の場合は海外傷害保険などに加入していただくのが一般的ですが、補償内容は会社やプランによって異なるので、自分に合ったものを選ぶようにしてください。
+		</p>
+
+		<p class="p-title-2998">&#9632; お金</p>
+		<p class="text01">
+			《通貨》<br>
+			オーストラリアの通貨は、オーストラリアドル (AUD: Australian Dollar)です。基本的にオーストラリア国内でのみ利用可能です。<br>
+			コイン：5セント、10セント、 20セント、50セント、1ドル、2ドル<br>
+			紙幣：5ドル、10ドル、20ドル、50ドル、100ドル
+		</p>
+		<p class="text01">
+			《銀行》<br>
+			ANZ（Australia and　New　Zealand　Banking　Group）<br>
+			WESTPAC（Westpac　Banking　Corporation）<br>
+			NAB（National　Australia　Bank）<br>
+			CBA（Commonwealth　bank of Australia）
+		</p>
+		<p class="text01">
+			《クレジットカード》<br>
+			オーストラリアはクレジットカード普及率が高いため、レストランやスーパーなど、多くの店舗でクレジットカードを利用することが可能です。また、身分証明書や支払い能力の証明としても認識されているので、必ず持って行きましょう。<br>
+			使用できるクレジットカードの国際ブランド：VISA、マスターカード、アメリカン・エキスプレス・カード、JCB、ダイナースクラブ
+		</p>
+
+		<p class="p-title-2998">&#9632; 電話</p>
+		<p class="text01">
+			予期せぬトラブルが発生した、クレジットカードを紛失したなどの緊急事態のための連絡先一覧です。<br>
+			いざという時に慌てないで済むよう、いつもしっかり備えておきましょう。
+		</p>
+		<p class="text01">
+			《市外局番》<br>
+			シドニー … 02<br>
+			メルボルン … 03<br>
+			ケアンズ・ブリスベン … 07<br>
+			パース … 08
+		</p>
+		<p class="text01">
+			《電話》<br>
+			24時間対応緊急連絡先<br>
+			警察・消防・救急 … 000<br>
+			電話通訳サービス … 13-1450
+		</p>
+		<p class="text01">
+			《公衆電話の使い方》<br>
+			左お写真は、町で一番よく見かけるタイプのテルストラ社の公衆電話です。通話料金は50セントから。コインでもかけることができますが、国際電話や相手が携帯電話の場合は、専用テレフォン・カードを用意する方が良いでしょう。テレフォン・カードはコンビニなどで購入可能です。
+		</p>
+		<p class="text01">
+			《国際電話》<br>
+			&#9733;） オーストラリアから日本かけるとき (日本の国番号は『81』)<br>
+			0011 – 国番号(81) – 市外局番（最初の0をとる）- 電話番号
+		</p>
+		<p class="text01">
+			&#9733;） 日本からオーストラリアかけるとき (オーストラリアの国番号は６１)<br>
+			001 – 国番号(61) – 市外局番（最初の0をとる）- 電話番号
+		</p>
+
+		<p class="p-title-2998">&#9632; インターネット</p>
+		<p class="text01">
+			《回線速度》<br>
+			オーストラリアではADSLなどのブロードバンド回線が主流となっています。最近では光ファイバー回線も利用できるようになりましたが、まだまだ利用できる地域が限られているのが現状です。オーストラリアのADSL回線速度は、2MBps～8MBpsくらい。日本のADSL回線速度は50Mbps～100Mbpsくらいなので、日本の回線と比べるとかなり遅いと感じてしまうと思います。
+		</p>
+		<p class="text01">
+			《無料WIFIスポット》<br>
+			オーストラリアでは、屋外に多くの無料WIFIスポットが設置されています。図書館、ファーストフード店、カフェ、ショッピングセンターだけでなく、個人店でも無料のWIFIが用意されていることがあります。利用に関するルールは店舗ごとに異なっていて、スタッフにパスワードを教えてもらったり、レシートに記載されているパスワードが必要だったりする場合があり、時間や使用データ量などに制限があることもあります。
+		</p>
+
+		<p class="text01" style="text-align: center;">
+			<img style="width: 20%;" src="/images/country/move_01.png">
+		</p>
+
+		<p class="p-title-2998">&#9632; ライフスタイル</p>
+		<p class="text01">
+			《食事》<br>
+			国内生産品、輸入品ともに、オーストラリアでは豊富な種類の食材が売られている。スーパーマーケットや市場には、エンダイブやフェンネル、セロリアック、アーティチョークといった日本人にはなじみの薄い野菜から、シイタケやえのきだけ、白菜のような日本やアジアの食材もそろいます。<br>
+			様々な文化背景や宗教の人が共に暮らすオーストラリアでは、街の中に多種多様なレストランが並ぶ風景もまた日常です。遠くまで足を延ばさなくても、イタリア、中国、タイ、マレーシア、韓国、日本など、本格的な各国料理を気軽に食べることができる。個人の自由を尊重するお国柄であることからも、食の選択肢は非常に多く選択されている印象です。
+		</p>
+		<p class="text01">
+			《カフェ》<br>
+			カフェ文化が盛んと言われるオーストラリア。どの街に行っても、いたるところにカフェがあり、おいしいコーヒーやドリンク、スイーツを楽しむことができます。オーストラリアのカフェ経営の特徴は、何と言っても家族や個人で経営する独立型カフェが圧倒的に多く、全店舗の約9割を占めていることでしょう。オーストラリアのコーヒーは、イタリアンスタイルの「Espresso（エスプレッソ）」をベースに、ミルクなどを組み合わせて提供されます。（図参照）
+		</p>
+
+		<p class="text01" style="text-align: center;">
+			<img style="width: 100%;" src="/images/country/coffee.jpg">
+
+		</p>
+
+		<p class="text01">
+			世代や住んでいる場所によってもコーヒーの味の好みが分かれるようで、カフェラテは一般的に女性、フラットホワイトは年配者、エスプレッソはシドニー中心部の男性、カプチーノはシドニー郊外の人に好まれているようです。「オーストラリアの朝はコーヒーから始まる」とも言われるだけあり、多くのカフェが朝6時ごろからオープンしています。
+		</p>
+
+		<p class="text01">
+			《大使館》<br>
+			在オーストラリア日本国大使館：<br>
+			112 Empire Circuit, Yarralumla ACT 2600, Australia
+		</p>
+
+		<p class="text01">
+			領事館：<br>
+			<a href="https://www.sydney.au.emb-japan.go.jp/index_j.htm" target="_blank">シドニー</a>&nbsp;&nbsp;
+			<a href="https://www.perth.au.emb-japan.go.jp/jp/index.html" target="_blank">パース</a>&nbsp;&nbsp;
+			<a href="https://www.brisbane.au.emb-japan.go.jp/jp/index.html" target="_blank">ブリスベン</a>&nbsp;&nbsp;
+			<a href="https://www.melbourne.au.emb-japan.go.jp/index_j.html" target="_blank">メルボルン</a>&nbsp;&nbsp;
+			<a href="https://www.brisbane.au.emb-japan.go.jp/jp/about/cairns.html" target="_blank">ケアンズ</a>
+		</p>
+
+	</div>
+
+	<h2 class="h2-title"><span>在メルボルン日本国領事館からのお知らせ</span></h2>
+	<div class="area-main-content">
+		<style>
+			.p-title-2998 {
+				text-decoration: underline;
+				font-weight: bold;
+				padding-left: 20px;
+				margin-bottom: -7px;
+			}
+		</style>
+		<p class="p-title-2998">ワーキングホリデーの方々から以下のようなトラブル報告が寄せられています。</p>
+		<p class="text01">
+			<b>（1）アパート契約をめぐる振り込め詐欺行為</b><br />
+			豪州（メルボルン等）へ渡航する前、到着後の住居をインターネットで検索し、
+			実際の物件を見ることなく申し込みを行って前家賃やボンド（敷金、保証金にあたるもの）を払い、
+			いざ入居しようとすると鍵が受け取れない、物件には既に別の人が住んでいる等の事態にいたる方が多くいらっしゃいます。
+			立地条件が良いにもかかわらず相場より家賃が安い、オーナーが海外に在住している、鍵は郵便で送付する、早く振り込まなければ他の人に貸すと送金を急かす、
+			日系情報サイトやGumtreeなどで広告掲載しその後オーナーとのやり取りは主にメールのみ等の特徴があります。
+			不動産会社を介すことなく、物件の下見よりも先に現金を振り込むように言われたら、詐欺の可能性を疑って下さい。<br />
+			<br />
+			被害報告は、以下の捜査機関へ届出てください。<br />
+			<br />
+			・<a href="https://www.cyber.gov.au/report" target="blank">オーストラリアン　サイバー　セキュリティセンター</a><br />
+			・ビクトリア州警察　ポリスアシスタンスライン（131　444）または、<a href="https://www.police.vic.gov.au/palolr" target="blank">リポートオンライン</a><br />
+			<br />
+			その上でビクトリア州では<a href="https://www.consumer.vic.gov.au/" target="blank">Consumer Affairs Victoria</a>にご相談ください。<br />
+			<br />
+			<br />
+			<b>（2）シェアハウスボンド金返金トラブル</b><br />
+			正式な契約書等を作成せずに入居し、インターネットの掲示板等で見た内容または条件とは違う、あるいは、退去時にボンドが返還されない等のトラブルが多く発生しています。
+			住居の選定時には十分確認を行った上で、正式な契約書を取り交わし、入居後は支払った家賃の領収書を保管して下さい。
+			オーナーが直接管理をするという物件は後日トラブルが発生しがちです。大手の不動産会社を使用されることをお勧めします。ボンド金はオーナーの口座ではなく、専門機関の口座に供託されるものですので、支払い後はしっかりと領収書をもらってください。
+			またシェアハウスの形態は、それぞれ異なります。形態によっては当地法令（Residential Tenancies Act 1997）で認められてない、またはシェアハウス事体（部分貸し）が無効である、こともあります。）
+			なお、この様なトラブルに遭った場合は、ビクトリア州では以下の機関が対応しますので、まず電話やホームページで確認し、相談、手続きをして下さい。<br />
+			<br />
+			・<a href="https://www.disputes.vic.gov.au/" target="blank">ディスピュート　セトルメントセンター</a>（仲裁につき、当事者双方の合意が必要）<br />
+			・<a href~=https://www.tuv.org.au/ target="blank">テナンツ　ビクトリア</a><br />
+			・<a=href="http://www.naclc.org.au/" target="blank">コミュニティ　リーガルセンター</a>（近くの無料法律相談所を検索）<br />
+				・<a href="https://www.vcat.vic.gov.au/" target="blank">ビクトリア民事調停所（Victoria Civil Administrative Tribunal）</a><br />
+				<br />
+				<br />
+				<b>（3） 労働搾取</b><br />
+				パートタイム労働に対する最低賃金より少ない賃金で働いているワーキングホリデーメーカーの方が多く見られます。当地の法律で定められている最低賃金が支払われるかを確かめた上で、合法な契約書を取り交わしてから就業を始めるようにしてください。労働者の権利についてはFair Work Ombudsmanのホームページで確認してください（日本語HP）。<br />
+				<br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese" target="blank">Fair Work Ombudsman </a><br />
+				<br />
+				新たな仕事に就く方は、以下を行うようお願いします。<br />
+				・自分の雇用形態を確認する。<br />
+				・自分の最低賃金を確認する。<br />
+				・自分の勤務時間や給与などの記録をつける。<br />
+				<br />
+				Fair Work Ombudsmanでは、<br />
+				・最低賃金、ペナルティー手当、その他の手当を知りたい方へ、給与カルキュレイター(<a href="https://calculate.fairwork.gov.au/findyouraward">Pay Calculator</a>)を提供しています。<br />
+				・職種ごとに異なる最低賃金が定められています。参考までに21歳以上の従業員の場合、最低時給は$19.49、有給休暇のない人の場合$24.36です（2019年9月現在）。最低賃金とは賃金総額（税引き前の金額）を指します。雇用者は従業員の給与から税金を控除しなければなりません。（<a href="https://www.fairwork.gov.au/language-help/japanese#pay">詳細</a>）<br />
+				・勤務時間の管理に「レコード・マイ・アワーズ」アプリ(<a href="https://www.fairwork.gov.au/how-we-will-help/how-we-help-you/record-my-hours-app">Record my hours app</a>)を提供しています。<br />
+				・給与明細書に記載されているべき事項を知りたい方、テンプレートを使用したい方は、「給与明細書」ページ(<a href="https://www.fairwork.gov.au/pay/pay-slips-and-record-keeping/pay-slips">pay slip page</a>)を参照してください 。<br />
+				<br />
+				<br />
+				<b>（4） 職場での問題が発生した場合、　Fair Work Ombudsmanは、問題を解決するため、以下の手順をとるよう助言しています。</b><br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese/issues-in-the-workplace/resolving-workplace-disputes#step-1" target="blank">ステップ1: 問題を特定する</a><br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese/issues-in-the-workplace/resolving-workplace-disputes#step-2" target="blank">ステップ2: 法律を確認する</a><br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese/issues-in-the-workplace/resolving-workplace-disputes#step-3" target="blank">ステップ3: 職場の問題を解決する</a><br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese/issues-in-the-workplace/resolving-workplace-disputes#step-4" target="blank">ステップ4: 私たち（フェアワークオンブズマン）に助けを求める</a><br />
+				<br />
+				もし、労働搾取の被害にあってしまった場合には、Fair Work Ombudsmanに違反を告発し、未払い分を請求することが可能です。実際に8,000ドル請求できた事例もあります。<br />
+				<br />
+				・<a href="https://www.fairwork.gov.au/language-help/japanese/issues-in-the-workplace" target="blank">職場の問題</a><br />
+				<br />
+				手続き方法は、1．<a href="https://www.fairwork.gov.au/my-account/fwosignin.aspx" target="blank">マイアカウントページ</a>から問い合わせる、2．電話で報告することが可能です。<br />
+				<br />
+				電話通訳が必要な方は、翻訳・通訳サービスTIS (Translating and Interpreting Service) National Contact Centre 131 450に連絡して、日本語で電話相談（無料）する日時を決めてください。 オペレーターに日本語と伝えて、Fair Work Ombudsmanの番号131 394に電話するよう依頼してください。<br />
+				<br />
+				<br />
+				<b>（5）危険を伴う労務環境</b><br />
+				農場（ファーム）等で働く際、重機や可燃物を取り扱う業務に従事する場合があります。いずれも危険が伴い怪我をされた等の報告も散見されますので労働内容及び労働環境を事前に問い合わせ、確認してください。農場の中には、合法な事業として登録を行っていないものもあり、労働災害保険（当地ではWork Safe）の対象とならないケースもあります。（1）と同様、必ず合法な契約書を取り交わしてから就業を始めるようにしてください。<br />
+				<br />
+				詳しい案内は、査証（VISA）やTax File Numberの申請時に表示される、WorkSafeからの危機喚起内容を確認するか、WorkSafeのホームページで確認してください。<br />
+				・<a href="https://www.worksafe.vic.gov.au/" target="blank">WorkSafe</a>
+				<br />
+				<br />
+				<a href="https://www.melbourne.au.emb-japan.go.jp/itpr_ja/towhmakers.html?fbclid=IwAR0uISJpCxL15FnXPoFIkJx9d0V_A_6pfDRdOdGCusOK7fNXNJcASZ9GO6o%EF%BC%89" target="blank">在メルボルン日本国総領事館ウェブサイトより</a>
+		</p>
+	</div>
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-aus.html" title="オーストラリアのワーキングホリデー（ワーホリ）ビザ情報へ">オーストラリアのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+		<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+		<a href="/wh/australia"><img src="../images/au_waku.jpg"></a>
+		<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+		<a href="../../visa/v-aus.html" class="btn-visa area-round-corner">
+			オーストラリアの<br />ビザ情報はこちらから
+		</a>
+		<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+	<?php
+	//settings for the calendar module display
+	$country_to_display = 'オーストラリア';
+	$number_to_display = '2';
+	$start_display_from = ''; //empty is begining
+
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+	?>
+	<div style="position:relative;text-align:center;">
+		<a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+		<p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞ 無料セミナー情報をもっと見る</a></p>
+	</div>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+	<div style="clear:both; height:20px;">&nbsp;</div>
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../../../wh/australia/sydney/"><span>シドニーでワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="../../../wh/australia/parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:30px;">&nbsp;</div>
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+	<?php $links_obj->display_links(); ?>
+
+</div><!-- /#maincontent -->
+
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+********************************************************************************
+■ PC
+********************************************************************************
+*/
+.sec-title {
+	margin-bottom: 1.8em !important;
+}
+#image-01 {
+	width: 240px;
+	height: auto;
+}
+#btn-seminar {
+	width: 342px;
+	height: auto;
+}
+#btn-seminar:hover {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+.pc_none{
+	display: none;
+}

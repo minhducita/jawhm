@@ -1,0 +1,189 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'スウェーデンリアのワーキングホリデービザ情報';
+$header_obj->description_page = 'チリのワーキングホリデービザ取得のステップや注意事項を掲載しています。チリへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（チリ） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+    <?php $header_obj->display_visa_links(); ?>
+    <img src="/country/images/sweden.gif" alt="" style="border: 1px solid #cbcbcb;" />
+    </br></br>
+    <div class="content-visa-new">
+        <div style="padding: 0 20px">
+            </br>
+            <p><b>スウェーデンのワーキングホリデービザの取得方法についてご案内します。</b></p>
+        </div>
+        </br>
+    </div>
+
+    <h2 class="sec-title">在留許可の要件</h2>
+    <h3 class="h3-01">ワーキングホリデーの居住許可を取得するには&nbsp;</h3>
+    <p>&nbsp;<br />
+        ・アルゼンチン、オーストラリア、チリ、香港、カナダ、日本、ニュージーランド、韓国、ウルグアイの市民である<br />
+        ・18歳から30歳の間<br />
+        ・有効なパスポートを持っている（パスポートの有効期限が近づいている場合は、パスポートが有効であるより長く許可を取得できないため、延長する必要があります）<br />
+        ・スウェーデンでの滞在期間中の滞在可能な資金を有していること。（少なくとも15,000 SEK）<br />
+        ・帰国のチケット、または購入するのに十分なお金があることの証明<br />
+        ・スウェーデンの医療をカバーする包括的な健康保険への加入（オーストラリア国民には適用されません）<br />
+        ・ワーキングホリデー申請料（1,500SEK）<a href="https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden/Fees.html" target="_blank"  rel="noreferrer">(
+            くわしくはこちらから)</a> <br />
+
+        ・子供はつれていけません。<br />
+        &nbsp;</p>
+
+    <h2 class="sec-title">eサービスを利用するための要件</h2>
+    <h3 class="h3-01">eサービスを利用するには、次のものが必要です。&nbsp;</h3>
+    <p>&nbsp;<br />
+        ・個人データ、写真、署名、パスポート番号、発行国、有効期間、および母国以外の国での居住許可がある場合は、パスポートのページのコピー<br />
+        ・スウェーデンで自分自身をサポートできることを示す銀行取引明細書<br />
+        ・帰りのチケットのコピーまたは購入するのに十分な資金があることを示す文書<br />
+        ・スウェーデンで有効な健康保険に加入していることを示す書類（オーストラリア国民には適用されません）。<br />
+
+        協定は、各国の健康保険に適用される規則を明確にします。
+
+        &nbsp;</p>
+
+    <h2 class="sec-title">申請書を提出したら</h2>
+    <h3 class="h3-01">アプリケーションを確認してください&nbsp;</h3>
+    <p>
+        ・申請がスウェーデン移民局に登録されていること、または申請の確認ページで決定を受け取ったかどうかを確認できます。<br />
+        許可証を取得するまでスウェーデンに入国できません。<br />
+        <br />
+        ・決定が下される前にスウェーデンに入国することはできません。<br />
+        ・もし入国を希望の場合は渡航する前に、許可をえる必要があります。<br />
+    </p>
+    <h2 class="sec-title">ビザ発給許可/不許可されたら</h2>
+    <p>・オンライン申請で選択した大使館または総領事館に送信されます。<br />
+        許可の決定を下す際に、パスポートを携帯する必要があります。<br />
+        ・1年間は許可証を取得できますが、パスポートが有効な期間を超えることはできません。<br /><br />
+
+        ・スウェーデンに入国する際、居住許可の決定と有効なパスポートを提示する必要があります。<br />
+    <h3 class="h3-01">居住許可カード&nbsp;</h3>
+    3か月を超える許可が与えられた場合、居住許可カードが与えられます。<br />
+    このカードは、スウェーデンに入国する許可があることを証明するもので、特に指紋と写真が含まれています。<br />
+    居住許可を受け取ってスウェーデンに来てからできるだけ早く、指紋と写真の撮影を予約する必要があります。<br />
+    <br />
+    ・ワーキングホリデー許可は延長できません。<br />
+    <h2 class="sec-title">スウェーデン移民局が申請を拒否した場合</h2>
+    ・スウェーデン移民局があなたの申請を拒否した場合、それはあなたがスウェーデンの居住許可の資格がないことを意味します。<br />
+    ・決定の通知を受け取った日から3週間以内に、決定に対する控訴を申し立てることができます。<br />
+    ・異議を申し立てる方法に関する情報は、あなたの決定にあります。<br />
+    代理人にあなたを代表する権限を与える委任状文書を渡した場合、この人はあなたに代わって控訴を申し立てることができます。
+    <a href="https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden/If-you-want-to-appeal.html" target="_blank"  rel="noreferrer">アピールする詳細を確認する</a>
+
+
+    ・申請が却下されたときにまだスウェーデンにいる場合は、決定で与えられた時間内に出国しなければなりません。
+    <a href="https://www.migrationsverket.se/English/Private-individuals/Leaving-Sweden/Rejection-of-residence-permit-application.html" target="_blank"  rel="noreferrer">申請が却下されていて、まだスウェーデンにいる場合に知っておくべきことの詳細を読む</a>
+
+    <h2 class="sec-title">もしオンラインでビザ申請ができない場合</h2>
+    <h3 class="h3-01">アプリケーションを確認してください&nbsp;</h3>
+    ・オンラインで申請できない場合は、フォーム「若年者のワーキングホリデービザの申請」（番号155011）に記入し、居住国のスウェーデン大使館または総領事館に提出してください。<br />申請書には、同封する必要がある書類が記載されています。申請書を提出する前に、大使館または総領事館にお問い合わせください。<br />
+    <a href="https://www.migrationsverket.se/download/18.4a5a58d51602d141cf4d0d/1583401862433/blferietillst_155011_en.pdf" target="_blank"  rel="noreferrer">ワーキングホリデービザの申請、フォーム番号155011</a> <br />
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+        <p>
+            <font size="1">※スウェーデン大使館が公開している英語文章を翻訳した内容となっています。現本は下記をご参照くださいませ。</font>
+        </p>
+    </div>
+    <h2 class="sec-title">Requirements for residence permit</h2>
+    <h3 class="h3-01">To obtain a residence permit for a working holiday, you must</h3>
+
+    ・be a citizen of Argentina, Australia, Chile, Hong Kong, Canada, Japan, New Zealand, South Korea or Uruguay</br>
+    ・be between 18 and 30 years old</br>
+    ・have a valid passport (if your passport is about to expire, you should extend it because you cannot get a permit
+    for longer than your passport is valid)</br>
+    ・have enough money so you can provide for yourself initially in Sweden (at least SEK 15,000)</br>
+    ・have a return ticket or enough money to buy one</br>
+    ・have comprehensive health insurance that covers healthcare in Sweden (not applicable to citizens of Australia)</br>
+    ・in most cases pay a fee <a href="https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden/Fees.html" target="_blank"  rel="noreferrer">(application fees for working holiday permits)</a> </br>
+    ・not have any accompanying children.</br>
+
+    <h2 class="sec-title">Requirements for using the e-service</h2>
+
+    <h3 class="h3-01">In order to use the e-service, you need</h3>
+
+    ・copies of the pages in your passport that show your personal data, photo, signature, passport number, issuing
+    country, validity period and if you have permission to live in countries other than your home country<br />
+    ・a bank statement showing you can support yourself initially in Sweden<br />
+    ・a copy of a return ticket or a document showing that you have sufficient funds to buy one<br />
+    ・documents showing that you have health insurance that is valid in Sweden (does not apply to citizens of
+    Australia).<br />
+    <br />
+    The various agreements clarify the rules that apply for health insurance in each country.<br />
+
+    <h2 class="sec-title">After you have submitted your application</h2>
+    <h3 class="h3-01">Check your application</h3>
+
+    ・You can check that your application has been registered with the Swedish Migration Agency or whether you have
+    received a decision on the page Check your application.<br />
+    You cannot enter Sweden until you have your permit<br />
+
+    You cannot enter Sweden before a decision has been made. Your permit must be granted before you travel to
+    Sweden<br />
+
+    <h2 class="sec-title">If you cannot apply online</h2>
+    If you cannot apply online, fill in the form "Application for working holiday visa for young people", number 155011,
+    and submit it to a Swedish embassy or consulate-general in the country where you live.<br />
+    The application form states which documents you must enclose. Contact the embassy or consulate-general before
+    submitting your application.<br />
+    <a href="https://www.migrationsverket.se/download/18.4a5a58d51602d141cf4d0d/1583401862433/blferietillst_155011_en.pdf" target="_blank"  rel="noreferrer">Application for working holiday visa for young people, form number 155011
+    </a> <br />
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+        <p>
+            <font size="1">※掲載されているビザ情報は、2021/1/21に確認した情報です</font>
+        </p>
+    </div>
+
+    <p class="bg-yellow"> スウェーデンワーキングホリデーに関する情報の詳細は<a href="https://www.swedenabroad.se/ja/embassies/japan-tokyo" target="_blank" rel="noreferrer">スウェーデン大使館</a> からご確認ください。<br></p>
+    <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+    <ul class="list-visabasic">
+        <li><a href="https://www.mofa.go.jp/mofaj/area/sweden/index.html" target="_blank" rel="noreferrer">基本情報</a></li>
+        <li><a href="https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_160.html#ad-image-0" target="_blank" rel="noreferrer">安全情報</a></li>
+        <li><a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/sweden.html" target="_blank" rel="noreferrer">在外公館</a></li>
+    </ul>
+    </br>
+    </br>
+    <div class="clear">&nbsp;</div>
+
+    <h3 class="h3-02">その他のワーキングホリデー協定国のビザ情報</h3>
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+    <style>
+        .linkbox {
+            margin: 15px 15px 15px 15px;
+            padding: 10px 20px 10px 20px;
+            background-color: #FFE4B5;
+            font-size: 10pt;
+        }
+    </style>
+    <br />
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

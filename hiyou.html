@@ -1,0 +1,380 @@
+<?php
+require_once 'include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function = true;
+
+$header_obj->title_page = 'ワーホリに必要な費用 ';
+$header_obj->description_page = 'ワーキングホリデー（ワーホリ）の費用、いくらかかるかご存知ですか？失敗しないために費用を知っておくことは重要です。ワーキングホリデー（ワーホリ）で必要な費用は、自分が行く国や地域、時期、目的や目標、期間によって大きく左右されるということです。しっかりとした語学や専門知識を学ぼうとすると語学学校に通う必要があり、費用的な面では高くなります。また費用を抑えて低予算で渡航してしまうと、ワーキングホリデー（ワーホリ）に行ったはいいけど生活が安定する前に予算が底をついて途中帰国を余儀なくされてしまう、といった場合もあります。 実際にワーキングホリデー（ワーホリ）で海外に渡航すると、どの程度の費用がかかるのか、目安でも良いので知っておくことは非常に重要です。';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+    $header_obj->add_css_files = '<link href="/css/step_sp.css" rel="stylesheet" type="text/css"/>';
+    $header_obj->add_js_files = '<script src="/js/step/jquery.jtruncsubstr-1.0rc.js" type="text/javascript"></script>
+    <script src="/js/step/script.js" type="text/javascript"></script>';
+} else {
+    $header_obj->add_css_files = '<link href="/css/step.css" rel="stylesheet" type="text/css"/>';
+}
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/top-mainimg.jpg" alt="" width="970" height="170"/>';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー（ワーホリ）に必要な費用';
+
+$header_obj->display_header_2();
+include('calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs(''); ?>
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+    <a href="/country/">
+        <p class="hiyou-country"><img src="images/hiyou_country_sp.jpg" alt="ワーホリ協定国を知ろう！"></p>
+    </a>
+    <div class="step_title">
+        ワーキングホリデー（ワーホリ）に必要な費用
+    </div>
+    <p class="text01">ワーキングホリデー（ワーホリ）に必要な費用を紹介</p>
+    <table class="tableofcontents">
+        <tr>
+            <th>目次</th>
+            <td>
+                <ul>
+                    <li><a href="#st1">1　ワーキングホリデー（ワーホリ）に必要な費用</a></li>
+                    <li><a href="#st2">2　ワーキングホリデー（ワーホリ）・留学に必要な費用</a></li>
+                    <li><a href="#st3">3　ワーホリ・留学費用の抑え方</a></li>
+                    <li><a href="#st4">4　具体的な費用の例（目安）</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h2 id="st1" class="sec-title">ワーキングホリデー（ワーホリ）に必要な費用</h2>
+    <p class="text01">
+        ワーキングホリデー（ワーホリ）や留学で海外に渡航する時に、一番気になるのはやっぱり「どれくらいの費用が必要なのか」だと思います。「どのくらい予算が必要なのか」「現地での物価はどのくらいなのか」「生活費は高いの？低いの？」とワーキングホリデー（ワーホリ）の予算と費用に関しては知っておきたいポイントがいくつもありますね。</p>
+    <p class="text01">
+        ワーキングホリデー（ワーホリ）の費用をお話させて頂く上でまず知っておいて頂きたい事は、ワーキングホリデー（ワーホリ）で必要な費用は、自分が行く国や地域、時期、目的や目標、期間によって大きく左右されるということです。しっかりとした語学や専門知識を学ぼうとすると語学学校に通う必要があり、費用的な面では高くなります。</p>
+    <p class="text01">
+        逆にお金がないからと言って低予算で渡航してしまうと、ワーキングホリデー（ワーホリ）に行ったはいいけど生活が安定する前に予算が底をついて途中帰国を余儀なくされてしまう、といった場合もあります。実際にワーキングホリデー（ワーホリ）で海外に渡航すると、どの程度の費用がかかるのか、目安でも良いので知っておくことは非常に重要です。</p>
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+    </div>
+
+    <h2 id="st2" class="sec-title">ワーキングホリデー（ワーホリ）・留学に必要な費用</h2>
+    <p class="text01">
+        ワーキングホリデー（ワーホリ）で渡航する際に必要となる費用は大きく分けて「ビザ申請料金」「航空チケット代」「海外留学保険」「学費」「生活費」の５つになります。</p>
+    <p class="text01 block01">
+        <b>「ビザ申請料金」</b></p>
+    <p class="text01">
+        ワーキングホリデー（ワーホリ）を使って渡航する時に、絶対必要な費用がビザ申請の際のビザ申請料金です。ビザがなければ国へ入ることができないので、ワーキングホリデー（ワーホリ）に行く人だけでなく留学や旅行の際でも必ずビザは必要になります。ワーキングホリデー（ワーホリ）ビザ申請に必要な費用は、渡航先の国によって大きく変わります。ワーキングホリデー（ワーホリ）ビザ以外にも、学生ビザや観光ビザなど、ビザにも様々な種類があります。予めどのビザにはいくら位費用がかかるか調べておきましょう。</p>
+    <p class="text01 block01">
+        <b>「航空チケット代」</b></p>
+    <p class="text01">
+        ビザ申請料金の次にかかる費用が航空チケット。海外へ渡航するにあたって、航空チケットも絶対に外せない費用ですね。国によってはワーキングホリデー（ワーホリ）やその他ビザを申請するにあたって、片道もしくは往復の航空チケットの提示が必要な場合もあります。航空チケットは利用する航空会社、渡航の時期、フライトの距離や乗り継ぎなど様々な要素で値段が変動します。飛行機の利用はワーキングホリデー（ワーホリ）に行く国によっては非常に長旅になることもあります。費用を抑える為とはいえ無理に格安チケットを購入するのは、一度考える必要があるかもしれませんね。</p>
+    <p class="text01 block01">
+        <b>「海外留学保険」</b></p>
+    <p class="text01">
+        海外留学保険に加入することも非常に重要です。留学時の保険への加入は領事館なのでも強く推奨されており、国によっては保険の加入がワーキングホリデー（ワーホリ）等のビザを申請する際の必須項目である場合もあります。海外保険への加入は、皆さまが考えられている以上に重要な項目です。費用を抑えたいから、自分は大丈夫だからと思わず、しっかりとしたサポート体制の整っている保険を選びましょう。</p>
+    <p class="text01 block01">
+        <b>「学費」</b></p>
+    <p class="text01">
+        ワーキングホリデー（ワーホリ）の期間や海外留学として語学学校に通う場合は、入学金や授業料が費用として発生します。語学学校は長期で契約すると、1週間当たりの授業料が安くなるなど費用を抑えられる様々な割引やオファーがある場合もあります。授業内容や獲得出来る資格など、ワーキングホリデー（ワーホリ）の期間中に自分が何をしたいかによって学校を選ぶとよいでしょう。無理に授業料の安い学校を選んでしまうと設備が整っていなかったり、教師の人数が足りていなかったり、きちんと自分にあったレベルにクラス分けがされていなかったりする学校もあります。しかし、授業料の高い学校だからといって自分に合った学校であるとは限りません。学校選びの際は選択基準としてまず自分が学びたいコースや自分が行きたい地域などから学校を絞っていくとよいです。</p>
+    <p class="text01 block01">
+        <b>「生活費」</b></p>
+    <p class="text01">
+        そして最後に当面の生活費です。ワーキングホリデー（ワーホリ）ビザでは、予め仕事を決めてから渡航することが出来ません。なでの最初から働くつもりで渡航されている場合でも、すぐに仕事が見つかる保証がありません。最低でも３ヶ月は働かずに生活出来るだけの生活費用を持っておくとよいでしょう。</p>
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+    </div>
+
+    <h2 id="st3" class="sec-title">ワーホリ・留学費用の抑え方</h2>
+    <p class="text01">
+        「ワーキングホリデー（ワーホリ）や留学はお金がかかる」と最初から決めつけて諦めている方もいるかもしれません。もちろん長期間海外に住み、場合によっては学校に通う為当然お金はかかります。しかし方法によってはワーキングホリデー（ワーホリ）や留学にかかる費用を大きく節約することも可能です。</p>
+    <p class="text01 block01">
+        <b>「渡航の時期」</b></p>
+    <p class="text01">
+        航空券は取得するタイミングによって大きく値段が変動します。特に連休や夏休み、年末年始などは航空券の値段が一気に高騰するばかりでなく、場合によっては席が確保できなくなる可能性もあります。なるべくピークの時期は避け、航空運賃の安いローシーズンに渡航することでワーキングホリデー（ワーホリ）・留学の費用を抑えることが出来ます。</p>
+    <p class="text01 block01">
+        <b>「国や都市」</b></p>
+    <p class="text01">
+        一般的に大都市と田舎では、大都市の方が生活費がかかります。また比較的物価の安い国であるニュージーランドやアイルランドを選択することで、ワーキングホリデー（ワーホリ）・留学の初期費用を抑えることが出来るでしょう。しかし、田舎は生活費が安い半面、仕事が探しにくいといった面もあるので、気をつけましょう</p>
+    <p class="text01 block01">
+        <b>「語学学校の長期割引」</b></p>
+    <p class="text01">
+        学校によっては、長期間留学する人の為に専用のプランが用意されていることもあります。また一定期間以上通う事で１週間当たりの授業料が安くなる場合もあり、お得です。</p>
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+    </div>
+
+    <h2 id="st4" class="sec-title">具体的な費用の例（目安）</h2>
+
+    <table class="tbl_hiyo">
+        <tr>
+            <td colspan="2">■オーストラリア（ワーキングホリデー）　１年間の目安</td>
+        </tr>
+        <tr>
+            <td class="hiyo_1">ビザ申請料金</td>
+            <td class="hiyo_2">３万５千円</td>
+        <tr>
+            <td class="hiyo_1">往復航空運賃</td>
+            <td class="hiyo_2">７～１０万円</td>
+        <tr>
+            <td class="hiyo_1">海外留学保険（年間）</td>
+            <td class="hiyo_2">２５万円</td>
+        <tr>
+            <td class="hiyo_1">学費（４ヶ月）</td>
+            <td class="hiyo_2">５０万円</td>
+        <tr>
+            <td class="hiyo_1">宿泊費/生活費（月１４万）</td>
+            <td class="hiyo_2">１６８万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2 text-red">出費　約２５７万円</td>
+        <tr>
+            <td class="hiyo_1">８ヶ月間アルバイト（月収２０万円）</td>
+            <td class="hiyo_2 text-blue">収入　約１６０万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2">合計　約９７万円</td>
+        </tr>
+    </table>
+
+    <p class="text01">オーストラリアは物価や生活費が高いイメージですが、その分お給料が高いです。<br />シドニーやゴールドコーストなどの都心部に行けば、語学力次第で様々な仕事を見つけることが出来るでしょう。</p>
+
+    <table class="tbl_hiyo">
+        <tr>
+            <td colspan="2">■カナダ（ワーキングホリデー）　１年間の目安</td>
+        </tr>
+        <tr>
+            <td class="hiyo_1">ビザ申請料金</td>
+            <td class="hiyo_2">２万５千円</td>
+        <tr>
+            <td class="hiyo_1">往復航空運賃</td>
+            <td class="hiyo_2">１０～１５万円</td>
+        <tr>
+            <td class="hiyo_1">海外留学保険（年間）</td>
+            <td class="hiyo_2">２５万円</td>
+        <tr>
+            <td class="hiyo_1">学費（４ヶ月）</td>
+            <td class="hiyo_2">５０万円</td>
+        <tr>
+            <td class="hiyo_1">宿泊費/生活費（月１４万）</td>
+            <td class="hiyo_2">１６８万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2 text-red">出費　約２６０万円</td>
+        <tr>
+            <td class="hiyo_1">８ヶ月間アルバイト（月収１７万円）</td>
+            <td class="hiyo_2 text-blue">収入　約１３６万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2">合計　約１２４万円</td>
+        </tr>
+    </table>
+
+    <p class="text01">
+        カナダは多国籍国家・移民の国なので、人種に関係なく仕事を探すことが出来ます。<br />また、チップがあるので実際のお給料より多く稼ぐことができるチャンスがあります。</p>
+
+    <table class="tbl_hiyo">
+        <tr>
+            <td colspan="2">■イギリス（ワーキングホリデー）　１年間の目安</td>
+        </tr>
+        <tr>
+            <td class="hiyo_1">ビザ申請料金</td>
+            <td class="hiyo_2">３万５千円</td>
+        <tr>
+            <td class="hiyo_1">IHS(健康保険料)</td>
+            <td class="hiyo_2">１３万５千円</td>
+        <tr>
+            <td class="hiyo_1">往復航空運賃</td>
+            <td class="hiyo_2">１４～１７万円</td>
+        <tr>
+            <td class="hiyo_1">海外留学保険（年間）</td>
+            <td class="hiyo_2">２５万円</td>
+        <tr>
+            <td class="hiyo_1">学費（４ヶ月）</td>
+            <td class="hiyo_2">６０万円</td>
+        <tr>
+            <td class="hiyo_1">宿泊費/生活費（月１６万）</td>
+            <td class="hiyo_2">１９２万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2 text-red">出費　約３１１万円</td>
+        <tr>
+            <td class="hiyo_1">８ヶ月間アルバイト（月収１５万円）</td>
+            <td class="hiyo_2 text-blue">収入　約１２０万円</td>
+        <tr>
+            <td></td>
+            <td class="gokei_2">合計　約１９１万円</td>
+        </tr>
+    </table>
+
+    <p class="text01">
+        イギリスはカナダ、オーストラリアと比べて生活費が高くなってしまうので、必然的に出費も上がってしまいます。<br />
+        また、ビザ申請の際にIHS(健康保険料)の支払いが必要となります。<br />
+        しかしイギリスのワーキングホリデー（ワーホリ）の期間は２年間あり、一定の場所で働くことに制限がないので他の国に比べてしっかり働くことが出来ます。
+    </p>
+
+
+    <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+    </div>
+
+    <div class="hiyou-off-work">
+        <div class="hiyou-title-offday">
+            <p>はじめての方は是非読みたい！</p>
+            <span>ワーキングホリデー人気コンテンツ</span>
+        </div>
+        <div class="hiyou-content-offday">
+            <a href="/start.html" class="sec01">
+                <div class="title-sec01">
+                    <span>
+                        <p>その１</p>はじめてのワーキングホリデー
+                    </span>
+                    <img src="/images/index/arrow.png" alt="arrow">
+                </div>
+                <div class="hiyou-content-sec01">
+                    <p>はじめての方はまずここから！ワーキングホリデーの準備から帰国後のことまで、ここを読めば全てが分かる！</p>
+                </div>
+            </a>
+            <a href="/system.html" class="sec01">
+                <div class="title-sec01">
+                    <span>
+                        <p>その２</p>ワーキングホリデー制度について
+                    </span>
+                    <img src="/images/index/arrow.png" alt="arrow">
+                </div>
+                <div class="hiyou-content-sec01">
+                    <p>ワーキングホリデーってそもそも何？興味はあるけど詳しくは分からない。そんな方はこちら。制度のことや手続きのことなどを詳しく解説！</p>
+                </div>
+            </a>
+            <a href="/ryugaku/ryugaku_hiyou.html" class="sec01">
+                <div class="title-sec01">
+                    <span>
+                        <p>その3</p>語学留学費用について
+                    </span>
+                    <img src="/images/index/arrow.png" alt="arrow">
+                </div>
+                <div class="sec01_01">
+                    <div class="hiyou-content-sec01">
+                        <p>語学学校の費用は期間によって異なり、国によっても制度の違いから費用も変わってきます。語学留学費用を安くする為のヒントを紹介します。</p>
+                    </div>
+                </div>
+            </a>
+            <a href="/qa.html" class="sec01">
+                <div class="title-sec01">
+                    <span>
+                        <p>その４</p>よくある質問
+                    </span>
+                    <img src="/images/index/arrow.png" alt="arrow">
+                </div>
+                <div class="hiyou-content-sec01">
+                    <p>協定国のこと、制度のこと、ビザのこと、わからないことがあったらまずはここを見てみて♪みなさんの疑問を解決します。</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="step_box">
+        <div class="step_box1" style="background-color:#fff">
+            <div class="step_div">
+                <a href="/ryugaku/ryugaku_eng.html" class="step_menu">
+                    <img src="../images/label_big_01.jpg" alt="大学留学に必要な英語力">
+                    <br />
+                    大学留学に必要な英語力
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/ryugaku_hiyou.html" class="step_menu">
+                    <img src="../images/label_big_02.jpg" alt="語学留学費用">
+                    <br />
+                    語学留学費用
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/usa_univ.html" class="step_menu">
+                    <img src="../images/label_big_03.jpg" alt="アメリカ留学">
+                    <br />
+                    アメリカ留学
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/aus_univ.html" class="step_menu">
+                    <img src="../images/label_big_01.jpg" alt="オーストラリア留学">
+                    <br />
+                    オーストラリア留学
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/can_lang.html" class="step_menu">
+                    <img src="../images/label_big_04.jpg" alt="カナダ留学">
+                    <br />
+                    カナダ留学
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/eng_univ.html" class="step_menu">
+                    <img src="../images/label_big_03.jpg" alt="イギリス留学">
+                    <br />
+                    イギリス留学
+                </a>
+            </div>
+            <div class="step_div">
+                <a href="/ryugaku/ryugaku_jawhm.html" class="step_menu">
+                    <img src="../images/label_big_02.jpg" alt="ワーホリ協会のサポート">
+                    <br />
+                    ワーホリ協会のサポート
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+    <div class="step_box">
+        <div class="step_box1 clearfix">
+            <div class="btnarea"><a href="./insurance/"><span>保険加入の手続き</span></a></div>
+            <div class="btnarea"><a href="./step/baggage.html"><span>手荷物について</span></a></div>
+            <div class="btnarea"><a href="./step/omiyage.html"><span>お土産</span></a></div>
+            <div class="btnarea"><a href="./step/electronics.html"><span>家電について</span></a></div>
+            <div class="btnarea"><a href="./rireki.html"><span>英文履歴書の作り方</span></a></div>
+            <div class="btnarea"><a href="./property.html"><span>ワーホリの持ち物</span></a></div>
+            <div class="btnarea"><a href="./planeticket.html"><span>ワーキングホリデー向けの航空券について</span></a></div>
+            <div class="btnarea"><a href="./tanki.html"><span>短期で行くワーキング・ホリデーについて</span></a></div>
+            <div class="btnarea"><a href="./wh/wh-movie/"><span> 映画が好きでワーキングホリデーへ出発した方の体験談</span></a></div>
+        </div>
+    </div>
+    <div style="clear:both; height:10px;">&nbsp;</div>
+
+    <a href="/mem/">
+        <p class="step1-mem"><img src="images/mem_sp.jpg" alt="メンバー登録をしてサポートを受ける方はこちらから"></p>
+    </a>
+    <div class="step_box">
+
+    </div>
+    <div style="clear:both; height:10px;">&nbsp;</div>
+
+    <div class="advbox03">
+        <?php
+        define('MAX_PATH', '/var/www/html/ad');
+        if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+            if (!isset($phpAds_context)) {
+                $phpAds_context = array();
+            }
+            // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+            $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+        }
+        echo $phpAds_raw['html'];
+        ?>
+    </div>
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+﻿<?php
+require_once '../../include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='アイルランドのワーキングホリデー（ワーホリ）';
+$header_obj->description_page='アイルランドはイギリスのお隣に位置している島国です。国土面積は日本の北海道よりも少し小さく、人口密度は北海道本土とほぼ同じくらいです。北海道よりもかなり北に位置していますが、冬に氷点下を下回ることはあまりなく、雪が積もることもほぼありません。そして夏はとても日が長いので、夜１１時近くまで明るいです。';
+$header_obj->keywords_page ='アイルランド,ワーキングホリデー,ワーホリ,留学,ビザ,方法';
+$header_obj->fncFacebookMeta_function = true;
+$header_obj->add_css_files='<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" />';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" /><link href="/sp/accordion/sp.css" rel="stylesheet" type="text/css" />';
+	$header_obj->add_js_files = '<script src="/sp/accordion/sp.js" type="text/javascript"></script>';
+}
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../../images/mainimg/ire-countrypage.jpg" alt="アイルランドのワーキングホリデー" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'アイルランドのワーキングホリデー（ワーホリ）';
+
+$header_obj->display_header_2();
+include('calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs(''); ?>
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../australia/"><span>オーストラリアのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../uk/"><span>イギリスのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../newzealand/"><span>ニュージーランドのワーホリ</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="step_title">
+		アイルランドのワーキングホリデー（ワーホリ）</div>
+	<p class="text01">ケルトの文化が息づく、緑豊かな美しい島。陽気で素朴な人々があなたを出迎えます。</p>
+
+	<table class="tableofcontents">
+		<tr>
+			<th>目次</th>
+			<td>
+				<ul>
+					<li><a href="#st1">１．アイルランドってどんな国？</a></li>
+					<li><a href="#st2">２．アイルランドの魅力溢れる都市紹介</a></li>
+					<li><a href="#st3">３．どうしてアイルランドでワーキングホリデー（ワーホリ）なの？</a></li>
+					<li><a href="#st4">４．アイルランドのワーキングホリデー（ワーホリ）ビザについて</a></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+	<h2 id="st1" class="sec-title">アイルランドってどんな国？</h2>
+	<p class="text01">アイルランドはイギリスのお隣に位置している島国です。国土面積は日本の北海道よりも少し小さく、人口密度は北海道本土とほぼ同じくらいです。</p>
+	<p class="text01">北海道よりもかなり北に位置していますが、冬に氷点下を下回ることはあまりなく、雪が積もることもほぼありません。そして夏はとても日が長いので、夜１１時近くまで明るいです。</p>
+	<p class="text01">公用語は英語に加えてアイルランドのゲール語です。現在はほとんどの人が話している英語は少し独自の単語や発音があるのが特徴です。</p>
+	<p class="text01">一年中緑が豊かでとても景色が良く、別名「エメラルドの島」とも呼ばれています。</p>
+
+	<center><img src="../img/iremap.gif" alt="アイルランドの地図"></center>
+
+	<p class="text01">
+		国内各地で神話や妖精のおはなしが受け継がれており、「妖精の国」とも呼ばれています。街中には「妖精に注意！」の看板があったり幻想的な自然の遺産に様々なストーリーが付けられていたりと、現地ではケルトの伝統文化を肌で感じることが出来るでしょう。
+	</p>
+	<p class="text01">豊かな自然であふれていて穏やかで明るくやさしい国民性から、外国人に対しても親切な対応をしてくれる人が多いです。そして、ヨーロッパ圏の中でも犯罪発生率が低く治安が良いことで知られています。</p>
+	<p class="text01">天候は土砂降りになったと思えば今度は快晴になっている、などと１日の中でもコロコロと天気が変わるのが特徴です。年間を通して梅雨時の日本の3分の1ほどの降水量が続きます。</p>
+	<p class="text01">アイルランド国内ではどこでものんびりとした田舎暮らしを楽しむことができ、アイルランドで1759年より生産されている黒ビールである「ギネスビール」を始め、パブでお酒を楽しむ文化が根付いています。
+	</p>
+	<p class="text01">アイルランドは素朴で陽気な人々と豊かな自然、伝統文化の中でゆったりと過ごしたい方に最適な国と言えるでしょう。</p>
+
+	<p style="color:red;text-align:center;">
+		▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+	</p>
+	<p style="text-align:right; color:green; margin-right:20px;">
+		<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+		<a href="/seminar/seminar">＞＞＞ ワーキングホリデー（ワーホリ）に関する無料セミナー情報をもっと見る</a>
+	</p>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+	<h2 id="st2" class="sec-title">アイルランドの魅力溢れる都市紹介</h2>
+	<p class="text01">アイルランド共和国はヨーロッパの国々の１つで首都は「ダブリン」です。ヨーロッパ諸国の中では治安が良く、近年ワーキングホリデー（ワーホリ）や留学先として人気上昇中の国です。</p>
+	<p class="text01">
+		アイルランドには現在でも歴史的建造物や遺跡が多く残っており、更に大自然も満喫することが出来るため、ヨーロッパ圏の観光地として世界中で人気な国です。法人税が他国と比べ低いこともあり、大手IT企業のヨーロッパ本社もアイルランドを拠点としています。また、アイルランド発祥のLCCを利用すれば低価格でお隣の国「イギリス」まで飛行機で約1時間半、その他ヨーロッパ諸国へ旅行する事が出来るためアイルランドは旅行が好きな方にもお勧めです。
+	</p>
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">ダブリン</p>
+	<p class="text01">アイルランドの「首都」であり、経済と政治の都市です。</p>
+	<p class="text01">アイルランド全人口の約30％がダブリン首都圏で生活をしていて、空港やスタジアム、大学、銀行、ショッピングストリートなど多くの建物が建ち並び、長期滞在の方にはぴったりの都市と言えます。</p>
+	<p class="text01">しかし、日本の東京や大阪の様なビル街は少なく、人口密度も高くないため、街並みは伝統的な建物が並んだ落ち着いた雰囲気があります。</p>
+	<p class="text01">ダブリンの観光名所は1204年に建設された「ダブリン城」やアイルランド発祥であるギネスビールの博物館「ギネス・ストアハウス」などアイルランド文化を肌で感じる事が出来ます。</p>
+	<p class="text01">アイルランド経済の中心地であるためワーキングホリデー（ワーホリ）の方はダブリンで現地の生活をスタートし、お仕事を探していく事をお勧めします。</p>
+	<p class="text01">また、人口の多さや都市としての利便性から多くの語学学校がダブリンにあるため、留学生の生活拠点はダブリンになるでしょう。</p>
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">コーク</p>
+	<p class="text01">アイルランドの南西部に位置した第二の都市です。</p>
+	<p class="text01">ダブリンに勝るとも劣らない歴史的建造物を堪能する事ができ、人口はダブリンの約6分の1に相当する約20万人になるため、ゆったりとした生活と自然を満喫したい方にはお勧めの都市となるでしょう。</p>
+	<p class="text01">コークの観光名所は中心部にある市場「イングリッシュマーケット」や1446年に建設された「ブラーニー城」などがあります。</p>
+	<p class="text01">
+		語学学校の数が少ないため、留学先の最初の拠点としては大変な部分もありますが、日本ではまだ知名度が高くない都市であるためワーキングホリデー（ワーホリ）の方はご自身の英語力をチャレンジしに行ってみるのもいいかもしれないですね。
+	</p>
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">ゴールウェイ</p>
+	<p class="text01">アイルランドの西部に位置した文化の港町です。</p>
+	<p class="text01">
+		ゴールウェイはアイルランドの中でも特に文化に触れることができる町として有名です。年間を通して「アートフェスティバル」、「ジャズフェスティバル」、「オイスターフェスティバル」など様々なイベントが開催されています。</p>
+	<p class="text01">
+		アイルランド人の国民性であるフレンドリーさ、音楽、芸術などを身近に体験したい方にはお勧めの町となるでしょう。ダブリンから電車やバスで簡単にアクセスする事が出来るため、足を延ばして週末観光を楽しんでみてはいかがでしょうか。
+	</p>
+
+	<p style="color:red;text-align:center;">
+		▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+	</p>
+	<p style="text-align:right; color:green; margin-right:20px;">
+		<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+		<a href="/seminar/seminar">＞＞＞ ワーキングホリデー（ワーホリ）に関する無料セミナー情報をもっと見る</a>
+	</p>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+
+	<h2 id="st3" class="sec-title">どうしてアイルランドでワーキングホリデー（ワーホリ）なの？</h2>
+	<p class="text01">近年、人気上昇中アイルランド・ワーキングホリデー（ワーホリ）。アイルランドの魅力とアイルランドのワーホリが人気の理由をご紹介します。</p>
+
+	<p class="text01 bold" style="text-decoration: underline;">アイルランドは日本人が少ない</p>
+	<p class="text01">アイルランドが人気の理由はずばり日本人の少なさです！ワーホリ３大国（オーストラリア・カナダ・ニュージーランド）に比べると、アイルランドでワーホリをしている日本人が少ないのです。</p>
+	<p class="text01">
+		アイルランドのワーホリは、毎年定員が800名と決まっています。オーストラリアは年間約1万人、カナダは6,500人、ニュージーランドは約3,000人となりますので日本人が少ないというの一目瞭然ですね。</p>
+	<p class="text01">日本人が少ない環境でワーホリをしたい方、しっかりと英語力を上げたい方、自分の力で生きていく力をつけたい方にはぴったりのプランがアイルランドのワーホリなのです。</p>
+
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">アイルランド人は陽気で明るい</p>
+	<p class="text01">アイルランド人は非常に陽気で明るい国民です。初めてのワーホリでわからないことや大変なことが多くありますが、いつも陽気で明るいアイルランド人に救われることもあるでしょう。</p>
+	<p class="text01">パブで一緒にお酒を楽しんだり、お店で定員さんと会話が弾んだり。いたるところでアイルランド人の明るさと優しさに触れることができ、アイルランドがもっと好きになります。</p>
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">アイルランドから様々な国に旅行に行ける</p>
+	<p class="text01">「ワーホリ中は様々な場所に旅行に行きたい！」という方も多いです。アイルランド国内はもちろんですが、イギリスやその他ヨーロッパ諸国、北欧など、ホリデーを利用しての旅行が可能です。</p>
+	<p class="text01">せっかくアイルランドにいるならワーホリ中に様々な国を訪れるのも楽しいですね</p>
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">アイルランドならではの仕事ができる</p>
+	<p class="text01">ワーホリ中は仕事ができますが、なにをするかは自分で自由に決めることができます。</p>
+	<p class="text01">
+		アイルランドで人気の職種はIT関係となります。アイルランドはIT分野の先進国と呼ばれています。Facebookの本社やGoogleの中心拠点となっています。日本で培ったIT技術をIT先進国のアイルランドで発揮したい方にはぴったりの国です。
+	</p>
+
+
+	<br>
+	<p class="text01 bold" style="text-decoration: underline;">アイルランド音楽が楽しめる</p>
+	<p class="text01">アイルランドならではの伝統的なアイリッシュミュージックを街中で楽しむことができます。定期的に街でコンサートが行われていたり、パブに入れば昔のアイリッシュミュージックも容易に楽しむことができます。
+	</p>
+	<p class="text01">また、世界中で人気のU2やEnyaの出身地でもあるので、故郷を訪れて音楽を楽しむこともできます。アイルランドには音楽好きのワーホリが集まります！</p>
+
+	<p style="color:red;text-align:center;">
+		▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+	</p>
+	<p style="text-align:right; color:green; margin-right:20px;">
+		<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+		<a href="/seminar/seminar">＞＞＞ ワーキングホリデー（ワーホリ）に関する無料セミナー情報をもっと見る</a>
+	</p>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+
+	<h2 id="st4" class="sec-title">アイルランドのワーキングホリデー（ワーホリ）ビザについて</h2>
+	<p class="text01">アイルランドのワーキングホリデー（ワーホリ）ビザは、イギリスと同様で抽選制です。2020年より、年間800名の応募が可能となりました。</p>
+	<p class="text01">アイルランドのワーキングホリデー（ワーホリ）は、申請時期が毎年異なります。渡航するタイミングに応じてビザ申込みの時期も異なるため、、まずはその年の申請時期を確認しましょう。</p>
+
+	<p class="text01">ここでアイルランドビザ申請の流れを解説します。</p>
+	<table class="nittei">
+		<tbody>
+			<tr>
+				<td class="nittei_span">
+					<p>ステップ1</p>
+				</td>
+				<td class="nittei_naiyou" style="border-top: 1px solid orange; border-right: 1px solid orange;">
+					<div class="nittei_title bold">
+						申請資格の確認する！
+					</div>
+					<div class="nittei_setumei">
+						アイルランドワーキングホリデー（ワーホリ）ビザ申請をする時、申請資格を満たしていなければ申請出来ません。特にアイルランドワーキングホリデー（ワーホリ）は条件が細かいので、しっかり確認しましょう
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="nittei_span">
+					<p>ステップ２</p>
+				</td>
+				<td class="nittei_naiyou" style="border-right: 1px solid orange;">
+					<div class="nittei_title bold">
+						申請時期を確認する！
+					</div>
+					<div class="nittei_setumei">
+						アイルランドでは、毎年ワーキングホリデー（ワーホリ）の申請受付期間を設けております。申請時期は
+						<a href="https://www.dfa.ie/irish-embassy/japan/our-services/visas/working-holiday-programme/"
+							rel="nofollow" style="color: blue">アイルランドの移民局のHP</a>をご確認ください。
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="nittei_span">
+					<p>ステップ３</p>
+				</td>
+				<td class="nittei_naiyou" style="border-right: 1px solid orange;">
+					<div class="nittei_title bold">
+						申請書を E-mail にて提出！
+					</div>
+					<div class="nittei_setumei">
+						申請書を<a
+							href="https://www.dfa.ie/irish-embassy/japan/our-services/visas/working-holiday-programme/"
+							rel="nofollow" style="color: blue">アイルランドの移民局のHP</a>
+						よりダウンロードし、必要事項を英文記入のうえ、申請書を添付ファイルにて下記Emailに提出してください。
+						<p>E-mail ：workingholiday.ie.jp@vfshelpline.com</p>
+						<p>※この時点で、写真貼付は必要なし。申請結果は、申請受付期間終了後の翌月中旬までに E-mail にてお知らせがくる。</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="nittei_span">
+					<p>ステップ４</p>
+				</td>
+				<td class="nittei_naiyou" style="border-right: 1px solid orange;">
+					<div class="nittei_title bold">
+						申請許可をE-mail にて受領した方は、必要書類の提出！
+					</div>
+					<div class="nittei_setumei">
+						提出書類に関して、<a
+							href="https://www.dfa.ie/irish-embassy/japan/our-services/visas/working-holiday-programme/"
+							rel="nofollow" style="color: blue">アイルランドの移民局のHP</a>
+						で確認してください。必要書類をそろえ、下記住所へ郵送してください。
+						<p>※書類に漏れが無いよう、何度もチェック必要です。</p>
+						<br>
+						<p>必要書類送付先: 〒105-0021</p>
+						<p>東京都港区東新橋 2-3-14 エディフィチオトーコー4F</p>
+						<p>合同会社 VFS サービシズ・ジャパン アイルランドワーキング・ホリデープログラム係</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="nittei_span">
+					<p>ステップ５</p>
+				</td>
+				<td class="nittei_naiyou" style="border-right: 1px solid orange;">
+					<div class="nittei_title bold">
+						必要書類受領、内容確認後、ワーキング・ホリデー・オーソリゼーション（許可証）を発給を確認！
+					</div>
+					<div class="nittei_setumei">
+						<p>※許可証/パスポートなど郵送にて自宅に送付されてきます。</p>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br />
+	<p class="text01">年々人気になってきているアイルランドのワーキングホリデー（ワーホリ）</p>
+	<p class="text01">他国のワーキングホリデー（ワーホリ）プログラムとは異なり、アイルランド滞在中に可能な仕事の種類に制限はありません。またフルタイム就労が可能で、1週間に最大39時間まで働けます。</p>
+	<p class="text01">世界で最も安全でフレンドリーな国の1つがアイルランド。仕事、文化体験以外にも自然、音楽などが楽しめるアイルランドのワーキングホリデー（ワーホリ）を楽しんでみてはいかがでしょうか。</p>
+	<p class="text01">
+		アイルランドのワーキングホリデー（ワーホリ）は定員が2019年までは400名だったのですが、2020年より年間800名応募が可能となりました。他の国とは異なりオンライン申請ではなく、移民局に直接必要書類の提出が必要となります。その為、提出期限等の確認は必ずしましょう。アイルランドのワーキングホリデー（ワーホリ）ビザを申請する際は、ある程度余裕を持って行動を始めるとよいでしょう。
+	</p>
+
+	<p style="color:red;text-align:center;">
+		▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+	</p>
+	<p style="text-align:right; color:green; margin-right:20px;">
+		<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+		<a href="/seminar/seminar">＞＞＞ ワーキングホリデー（ワーホリ）に関する無料セミナー情報をもっと見る</a>
+	</p>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../australia/"><span>オーストラリアのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../uk/"><span>イギリスのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../newzealand/"><span>ニュージーランドのワーホリ</span></a></div>
+		</div>
+	</div>
+
+	<? include('./step/memline.php'); ?>
+	<div class="step_box">
+
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="advbox03">
+		<?php
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	</div>
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

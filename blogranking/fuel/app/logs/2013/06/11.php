@@ -1,0 +1,6 @@
+<?php defined('COREPATH') or exit('No direct script access allowed'); ?>
+
+Error - 2013-06-11 16:50:08 --> 1146 - Table 'plate.t_resetpassword' doesn't exist [ SELECT * FROM `t_resetpassword` WHERE `key` = 'b0653dcd8136bab34fbeb9c3f9850b71dc75f346' ] in /var/www/html/blogranking/fuel/core/classes/database/mysqli/connection.php on line 243
+Error - 2013-06-11 16:52:40 --> 1052 - Column 'delete_flag' in where clause is ambiguous [ SELECT `t_ranking`.`blog_id` FROM `t_ranking` JOIN `m_blog` ON (`m_blog`.`blog_id` = `t_ranking`.`blog_id`) WHERE `status` = 3 AND `delete_flag` = '0' AND `quit_flag` = '0' ORDER BY `in01` DESC ] in /var/www/html/blogranking/fuel/core/classes/database/mysqli/connection.php on line 243
+Error - 2013-06-11 16:53:50 --> 1052 - Column 'delete_flag' in where clause is ambiguous [ SELECT `t_ranking`.`blog_id` FROM `t_ranking` JOIN `m_blog` ON (`m_blog`.`blog_id` = `t_ranking`.`blog_id`) WHERE `status` = 3 AND `delete_flag` = '0' AND `quit_flag` = '0' ORDER BY `in01` DESC ] in /var/www/html/blogranking/fuel/core/classes/database/mysqli/connection.php on line 243
+Error - 2013-06-11 17:51:55 --> Error - Allowed memory size of 268435456 bytes exhausted (tried to allocate 264509441 bytes) in /var/www/html/blogranking/fuel/app/tasks/rankingbatch.php on line 84

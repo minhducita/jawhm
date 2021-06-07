@@ -1,0 +1,260 @@
+@CHARSET "UTF-8";
+
+/***************************スクール*******************************/
+#div_school_edit textarea {
+	width:300px;
+	height:80px;
+	display: block;
+}
+#div_school_edit input.text {
+	width:300px;
+}
+#div_school_edit input.text.caption {
+	width:95%;
+}
+#div_school_edit button.add_button {
+	text-align: right;
+	border-radius: 5px;
+}
+#div_school_edit button.delete_field {
+	text-align: right;
+	border-radius: 5px;
+	float: right;
+    margin-bottom: 2px;
+}
+#div_school_edit button.delete_item {
+	text-align: right;
+	border-radius: 5px;
+	background-color: #fff;
+}
+#div_school_edit td.add_button {
+	text-align: right;
+	border-radius: 5px;
+}
+#school_tab {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-left: 8px;
+}
+#school_tab ul {
+	list-style: none;
+	padding:0px;
+	margin-bottom: 0px;
+}
+#school_tab li {
+	display: inline-block;
+	text-align: center;
+}
+#school_tab .list_area {
+	border-radius: 0px 0px 13px 13px;
+	border-left: solid 1px indigo;
+	border-right: solid 1px indigo;
+	border-bottom: solid 1px indigo;
+	text-align: center;
+}
+#school_tab .list_area {
+	width: 716px;
+	background-color: #fff;
+	padding-top: 10px;
+}
+#school_tab .tabs {
+	margin-left: 1px;
+	width: 158px;
+	border-radius: 13px 13px 0px 0px;
+    padding: 10px;
+    box-shadow: 0 0 0 1px indigo;
+    background-color: #d4d4d4;
+}
+#school_tab .tabs:hover {
+	cursor:pointer;
+	opacity:0.6;
+}
+#school_tab .tabs.active:hover {
+	cursor: default;
+	opacity:1;
+}
+#school_tab .tabs.active {
+	margin-left: 0px;
+	box-shadow: none;
+	background-color: #fff;
+	border-radius: 13px 13px 0px 0px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: indigo;
+	border-bottom: none;
+}
+#school_tab .tabs.active.last {
+	padding-right:11px;
+}
+.list_box {
+	padding: 20px;
+}
+
+.list_title {
+	width: 100px;
+	text-align: center;
+	font-weight: bold;
+	color: indigo;
+    font-size: 17px;
+    display: inline-block;
+    border: solid 2px indigo;
+    padding: 2px 50px;
+    background-color: #FFFFFF;
+}
+button.register {
+	width: 150px;
+	text-align: center;
+	background: -moz-linear-gradient(top,#FFF 0%,#EEE);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+	display: inline-block;
+    padding: 7px;
+    border-radius: 9px;
+    background-color: #F6F6F6;
+    border: solid 1px;
+    margin-left: 26px;
+}
+button.register:hover {
+	cursor:pointer;
+	opacity:0.6;
+}
+button.register.cancel,
+button.register.submit {
+	display: inline-block;
+}
+button.preview {
+	margin-left: 60px;
+}
+table.list_table,
+table.list_table th,
+table.list_table td {
+	border: solid 1px;
+	padding: 3px;
+}
+table.list_table td.border_none {
+	border: none;
+	padding: 0px;
+}
+table.list_table tr.head {
+	height:50px;
+	font-size: 16px;
+}
+table.list_table th.sort_number,
+table.list_table td.sort_number {
+	width:40px;
+}
+table.list_table th.list_name,
+table.list_table td.list_name {
+	width:337px;
+}
+table.list_table th.list_country,
+table.list_table td.list_country {
+	width:90px;
+	text-align: center;
+}
+table.list_table td.list_control {
+	width:90px;
+	text-align: center;
+}
+table.list_table {
+	font-size: 13px;
+	margin: 10px 0px 0px 26px;
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+table.list_table tr:nth-child(2n) {
+	background-color: #d4d4d4;
+}
+table.list_table thead {
+	background-color: #d4d4d4;
+}
+table.list_table button.edit,
+table.list_table button.delete {
+	background: -moz-linear-gradient(top,#FFF 0%,#EEE);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+	padding: 4px 2px;
+    border: solid 1px #000;
+    border-radius: 8px;
+    width: 75px;
+}
+table.list_table button.edit:hover,
+table.list_table button.delete:hover {
+	cursor: pointer;
+	opacity:0.6;
+}
+
+
+#school_table ,
+#school_table table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0px auto;
+}
+#school_table .label,
+#school_table table .label{
+	text-align: center;
+}
+#school_table .label {
+	background-color: #BFBFBF;
+}
+#school_table > td {
+	border: none;
+}
+#school_table table th,
+#school_table table td {
+	border: solid 1px;
+	padding: 3px;
+}
+#school_table table td.border_none {
+	border: none;
+	padding: 0px;
+}
+#school_table td.add_button {
+	border: none;
+}
+#first_table {
+	width: 1050px;
+}
+#first_table td.label {
+	width: 135px;
+}
+#school_table td.item_name {
+	width: 200px;
+}
+.item_table {
+	margin:0px auto;
+}
+#register_button {
+	position: fixed;
+	margin-left: -535px;
+	left: 50%;
+    display: block;
+    background-color: #fff;
+    width: 1054px;
+    padding-bottom: 15px;
+    border: solid 1px;
+    z-index: 1;
+}
+#form_school_edit {
+	margin-top: 85px;
+}
+td.border_none td.first {
+	width: 80px;
+}
+td.border_none td.second {
+	width: 152px;
+}
+td.border_none td.third {
+	width: 300px;
+}
+td.border_none table {
+	margin-top: 1px !important;
+}
+#slide_table {
+	width: 100%;
+}
+.slide_img {
+	max-width: 200px;
+}
+#logo_img {
+	max-width: 300px;
+}

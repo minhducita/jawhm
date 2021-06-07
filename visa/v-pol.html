@@ -1,0 +1,238 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ポーランドのワーキングホリデービザ情報';
+$header_obj->description_page='オーストラリアのワーキングホリデービザ取得のステップや注意事項を掲載しています。オーストラリアへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（オーストラリア） | ワーホリビザ情報';
+
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+		<?php $header_obj->display_visa_links(); ?>
+		<img src="../images/bflag13.gif" alt="" />
+		<p class="text01">
+			<span class="centered-btn"><a class="visa-btn country-info" href="../country/poland" title="ポーランド">ポーランド</a></span>
+			<b>ポーランド共和国　ワーキングホリデービザ要項。</b>
+		</p>
+
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/************************
+
+	// 067
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 64, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 068
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 65, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 069
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 66, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 070
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 67, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 071
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 68, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+***************************/
+
+?>
+<!--
+	</div>
+-->
+<style>
+.visa_content{font-size:1.2em;}
+.visa_content p{line-height:25px;}
+.visa_content ul {clear:both}
+.visa_content .visa1_left{width:90px;margin-right:20px;float:left;}
+.visa_content ul li{padding:5px;font-size:12px}
+.visa_content .visa3{ margin-left:0px}
+.visa_content .visa3 li,.visa_content .visa3 li h3{padding-left:0px;margin-left:0px}
+.visa_content .visa3>li p{padding-left:15px;}
+.visa_content .visa3 .visa_sub{margin-left:40px;list-style-type:disc;list-style-position:top;}
+.visa4{clear:both;}
+.visa4 p{padding-left:15px;}
+</style>
+<div class='visa_content'>
+	 <h2 class="sec-title"> ビザについて </h2>
+	 <ul class='visa1'>
+		<li> 
+			<span class="visa1_left">滞在可能日数</span> <span class="visa1_right">最長365日</span>
+		</li>
+		<li> 
+			<span class="visa1_left">料金</span> <span class="visa1_right">無料</span>
+		</li>
+		<li> 
+			<span class="visa1_left">代理申請</span> <span class="visa1_right">1週間以上</span>
+		</li>
+		<li>
+			※査証に記載された滞在可能日数を超えてポーランドに滞在する場合、滞在許可（滞在カード）を県庁に申請することが必要。
+		</li>
+	 </ul>
+<h2 class="sec-title"> ワーキングホリデービザ（ナショナル） </h2>
+	 <ul class='visa1'>
+<li>ビザの申請書は、事前にオンラインシステム「e-Konsulat」（リンク: https://www.e-konsulat.gov.pl/）で来館日の予約と共に作成・登録する必要があります。登録されていない申請書（手書き等）は受理できませんのでご注意ください。<br>
+<br>
+公式書類や証明書等はすべて、確認のための原本と提出用のコピーを併せてお持ちください。<br>
+<br>
+    書類は、可能な限りポーランド語または英語のものをご用意ください（日本語でしか発行できないものについては日本語でも問題ありません）。</li>
+	 </ul>
+	 <h2 class="sec-title">資格要件</h2>
+	 <ul class='visa2'>
+		<li> (1) 査証申請時に日本国内に居住していること。 </li>
+		<li> (2) ポーランド入国の主たる目的が休暇であること。 </li>
+		<li> (3) 査証申請時の年齢は満18歳から満30歳までであること。	</li>
+		<li> (4) 申請者に被扶養者が同行しないこと。 </li>
+		<li> (5) 有効な旅券を所持していること。（下記の要件を満たしていること。） </li>
+		<li> (6) 往復航空券の購入を証明できること。（詳細は下記参照） </li>
+		<li> (7) ポーランド滞在の当初の期間に必要な生活費として、少なくとも2000米ドル相当額を所持すること。 </li>
+		<li> (8) 査証の有効期限に従い、ポーランドを出国すること。 </li>
+		<li> (9) 「ワーキング・ホリデー」査証でポーランドに滞在中、査証の種類を変更しないこと。 </li>
+		<li> (10) 過去にポーランドの「ワーキング・ホリデー」査証を取得したことが無いこと。 </li>
+		<li> (11) 良好な健康状態にあること。 </li>
+		<li> (12) 健康保険に加入する意思があること。（就労しない場合は、任意保険に加入すること。就労する場合は「ワーキング・ホリデー制度を利用する日本人の方のためのポーランド滞在に関する情報」を参照）</li>
+	 </ul>
+	 <h2 class="sec-title">必要書類</h2>
+	 <ul class='visa3'>
+		<li> <h3 class='h3-01'>ビザ申請書</h3>  <p> オンラインシステムで必要事項を全て記入のうえ、印刷・署名（パスポートと同じもの）したもの </p> </li>
+		<li> <h3 class='h3-01'> 写真1枚</h3>  <p>3ヶ月以内に撮影された、フルカラーでパスポート規格を満たすもの（35mm×45mm）。背景は白色のみ可。顔は全体が写っており、高さが写真の70%（32mm）以上を占めていること</p> </li>
+		<li> <h3 class='h3-01'>パスポート（旅券）</h3>
+			<p> 過去 10年以内に発行されており、有効期間が目的地からの出国日より3ヶ月以上残っているもの。未使用ページが最低2ページ必要</p> 
+		</li>
+        <li> <h3 class='h3-01'>パスポートの顔写真ページのコピー</h3></li>
+        <li> <h3 class='h3-01'>過去に取得したポーランド/シェンゲンビザがある場合、そのコピー</h3></li>
+        <li> <h3 class='h3-01'>ワーキング・ホリデー制度利用に際しての動機作文</h3><p>A4用紙1枚程度、書式自由、英語・ポーランド語のいずれかの言語で作成すること</p> </li>
+        <li>　<h3 class='h3-01'>滞在計画書</h3>
+        <p>書式自由、英語・ポーランド語のいずれかの言語で作成すること</p>
+         </li>
+        <li> <h3 class='h3-01'>往復予約済み航空券または予約確認書</h3>
+        <p>搭乗者名・日時およびフライトナンバーの記載があり、日本‐ポーランド間の全ての経路が確認できるもの。復路の航空券を未購入または日程を変更する予定の場合、自筆署名入りの宣誓書（申請時点で復路の航空券を所持していない理由と、復路の航空券を後日購入する用意があり、滞在の目的が終了した後はポーランドから出国する意思を記したもの）を併せて提出
+        </p>
+        <p>※往路の航空券または予約確認書は必須です。</p>
+        <p>※復路航空券を未購入の場合、相当額として10万円が必要最低資金額に加算されます。</p>
+        <p>※復路航空券はワーキングホリデーの終了後、日本に帰国する際のものを指します。往復の予約をお持ちでも復路の航空券がワーキングホリデー期間中の一時帰国用である場合、最終的な帰国のフライトは未定とみなされ、上記の宣誓書が必要となります。</p></li>
+        <li> <h3 class='h3-01'>滞在場所の証明書類</h3>
+        <p>賃貸契約書 / ポーランド在住の友人・知人宅に滞在する場合はその友人・知人からの自筆署名入りレター（住所・連絡先・滞在期間が記載されたもの）。<br>申請時点で決まっていない場合、渡航初日を含む当初の期間のホテル予約確認書と、それ以降の住居を確保する意志を記した自筆書名入りの宣誓書を併せて提出する</p></li>
+        <li> <h3 class='h3-01'>海外旅行傷害保険の加入証明書</h3>
+        <p>ポーランドを含むシェンゲン圏で有効な、緊急一時帰国・救援・治療・入院や死亡などの費用を補償するもの。補償額は上述の医療項目の合計について最低30,000ユーロ以上必要。<br>
+        滞在の全ての期間をカバーするもの。<br>
+        保険会社が発効する、被保険者氏名・有効地域・有効期限および補償項目と補償額が確認できる証明書を提出する</p></li>
+		<li> <h3 class='h3-01'>直近3ヶ月分の銀行口座の残高の証明</h3>
+		<p>滞在資金の証明 - 1ヶ月以内に発行された、以下のいずれかを提出：</p>
+		<p>　- 申請者名義のクレジットカードの利用可能額（限度額）を証明する書類；カード会社が発行する証明書原本（オンラインで取得した証明書やスクリーンショット等のプリントアウトは不可）</p>
+		<p>　- 申請者名義の、ポーランドの銀行（またはポーランドに支店を有するEU加盟国の銀行）の残高証明書原本</p>
+         </li>
+	 </ul>
+	 <div class='visa4'>
+		<h2 class='sec-title'> 駐日ポーランド共和国大使館 </h2>
+		<p>ワーキング・ホリデー制度を利用する日本人の方のための、ポーランド滞在に関する情報。</p><br>
+		<p>ポーランドに14日間以上滞在される方は、入国の日から遅くとも4日以内に、定住先または一時滞在先で住民登録をしなければなりません。住民登録は、居住する建物の所在地を管轄する郡役所で行います。 </p><br>
+		 <p class="bg-yellow">
+			 駐日ポーランド共和国大使館
+			<br>
+			 〒153-0062　東京都目黒区三田2-13-5
+	  </p>
+	  <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+	   <ul class="list-visabasic">
+          <a href="https://www.mofa.go.jp/mofaj/area/poland/index.html" target="_blank">外務省基本情報</a>
+          <a href="https://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=173#ad-image-0" target="_blank">安全情報</a>
+          <a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/poland.html" target="_blank">在外公館</a>
+       </ul>
+	   <br>
+		<h3 class="h3-01"> 就労について </h3>
+		<p>  ポーランドにおいて就労するワーキング・ホリデー制度の利用者は、ポーランド共和国における滞在および就労を許可する査証を雇用者に提示します。就労許可証の申請は必要ありません。 </p>
+		
+		<h3 class="h3-01"> 社会保険について </h3>
+		<p> 雇用契約に基づきポーランドにおいて就労する、ワーキング・ホリデー制度の利用者（以下、被雇用者）は、年金保険と傷害年金保険に加入する義務があります。上記保険には、民法の「委託に関する規定」が適用される、代理店契約や委託契約、または他の業務請負契約に基づき就労する方（以下、被委託者）にも加入する義務があります。なお、被雇用者は傷害・疾病保険、そして被委託者は傷害保険に加入する義務があります。</p><br>
+		<p> 就労の際に、中学校・高等学校の児童生徒、及び26才以下の大学生である被委託者は、年金保険と傷害年金保険への加入が免除されます。年金保険と傷害年金保険へ加入する義務のある方は、保険への加入義務が生じる日付から7日以内に届出が行わなければなりません。</p><br>
+		<p> 届出手続きの義務は、保険契約者（保険料の負担者）にあるため、雇用契約の場合は「雇用者」、委託契約の場合は「委託者」が負います。 </p>
+		
+		<h3 class="h3-01"> 健康保険について </h3>
+		<p> ワーキング・ホリデー制度の利用者が、ポーランド入国前に商業健康保険に加入していたとしても、ポーランドで就労する場合には、雇用者にはその利用者を健 康保険に加入させる義務があります。そのために雇用者は、社会保険事務所（ZUS）に申請を行い、被雇用者の収入から徴収する保険料を、国立健康基金 （NFZ）に毎月納めます。被委託者の場合には、委託者が保険料を徴収し納めます。 </p>
+		
+		<h3 class="h3-01">  納税義務について </h3>
+		<p> 雇用契約に基づき就労する場合、雇用者は、被雇用者に対する納税者番号（NIP）の指定を申請し、源泉徴収します。その際、所得税申告書PIT－11と年間所得税申告書PIT－37を被雇用者に発行します。</p><br>
+		<p>一般的な雇用契約とは異なる他の契約の場合、雇用者は、被雇用者の給与・報酬から一律の所得税額を控除し納めます。日本人の方が、ポーランドに183日間以上滞在する場合は、ポーランドと日本の二国間の二重課税防止条約に基づき、当該の年間所得税をポーランドで申告する義務があります。</p><br>
+		<p>ポーランド国内で就労する外国人を支援及び指導する税務署長が所在する税務署は、各県に一ヵ所あります。  </p>
+		
+		<h3 class="h3-01"> ポーランド共和国の法律及び／またはワーキング・ホリデー協定で定められたその他の義務  </h3>
+		<p> ポーランド共和国の法律とワーキング・ホリデー協定に基づき、ワーキング・ホリデー制度を利用する日本人の方は、ポーランド滞在の当初の期間に必要な最低 額として2000米ドル相当の資金の預金証明書を提示する必要があります。</p><br>
+		<p> 査証の申請手続きの際には、復路の航空券の予約が成されている証明書、または航空券を購入するための十分な資金を所持することを証明し、健康保険に加入する意思を表示しなければなりません。 </p>
+	 </div>
+</div>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2019/06/12に確認した情報です。</font></p>
+	  </div>
+	  
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+<br />
+
+
+	  <?php $header_obj->display_visa_links(); ?>
+		<?php $links_obj->display_links(); ?>
+
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

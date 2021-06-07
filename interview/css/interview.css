@@ -1,0 +1,276 @@
+/*=========I N T E R V I E W  FIX  20-06-2016===========*/
+li.ichiran img,
+li.ichiran span.motto,
+p.midashi{
+	box-shadow: 0px 0px  1px 4px #fff;
+}
+span.english{
+	padding-bottom: 5px;
+	color: #efeded;
+}
+p.name{
+	color: #fff;
+}
+p.midashi{
+	padding-bottom: 5px;
+}
+li.ichiran span.motto{
+	height: 30px !important;
+	background: #fff;
+	border: none;
+	width: 195px;
+	bolder:none !important;
+}
+li.ichiran:hover span.motto p{
+	-webkit-transition: all ease 0.5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+}
+li.ichiran:hover span.motto p,
+li.ichiran:focus span.motto p{
+	transform: rotateY(40deg);
+	font-weight: bold;
+}
+li.ichiran.tokyo{
+	border-color:#0062b3; 
+	background:  rgba(0, 98, 179, 0.8);
+}
+li.ichiran .tokyo{
+	background: #fff;
+	border-bottom: solid 1px #0062b3;
+}
+li.ichiran.osaka{
+	border-color: #f66f92;
+	background: rgba(246, 111, 146, 0.8);
+}
+li.ichiran .osaka{
+	background: #fff;
+	border-bottom: solid 1px #f66f92;
+}
+li.ichiran.nagoya{
+	border-color: #00b38c;
+	background: rgba(0, 179, 140, 0.8);
+}
+li.ichiran .nagoya{
+	background: #fff;
+	border-bottom: solid 1px #00b38c;
+}
+li.ichiran.fukuoka{
+	border-color:  #ffbb37;
+	background: rgba(255, 187, 55, 0.8);
+}
+li.ichiran .fukuoka{
+	background: #fff;
+	border-bottom: solid 1px #ffbb37;
+}
+
+/*===========================*/
+
+
+.interview>h2,
+.interview section>h2:not(:first-child){
+	font-size: 14px;
+    color: #000033;
+    background-image: url(../images/sec-title.gif);
+    background-repeat: no-repeat;
+    font-weight: bold;
+    height: 25px;
+    width: 660px;
+    padding-left: 20px;
+    padding-top: 6px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    clear: both;
+    float: left;
+}
+.interview>p>a,
+.interview section>a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #0062B3;
+}
+.interview section>h2:first-child{
+    
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.interview section>h2:first-child>span{
+    width: 80px;
+    height: auto;
+    font-size: 14px;
+    margin: 5px 10px 0px 0px;
+    color: #fff;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4px 0px 5px;
+    float: left;
+}
+/*****************Color fix 06-07-2016**********************/
+.interview.tokyo section>h2:first-child{
+    color: #0062b3;
+    border-bottom: 1px solid #0062b3;
+}
+.interview.tokyo section>h2:first-child>span{
+    background-color: #0062b3;
+}
+.interview.osaka section>h2:first-child{
+    color: #f66f92;
+    border-bottom: 1px solid #f66f92;
+}
+.interview.osaka section>h2:first-child>span{
+    background-color: #f66f92;
+}
+.interview.nagoya section>h2:first-child{
+    color: #00b38c;
+    border-bottom: 1px solid #00b38c;
+}
+.interview.nagoya section>h2:first-child>span{
+    background-color: #00b38c;
+}
+.interview.fukuoka section>h2:first-child{
+    color: #ffbb37;
+    border-bottom: 1px solid #ffbb37;
+}
+.interview.fukuoka section>h2:first-child>span{
+    background-color: #ffbb37;
+}
+/*****************End Color fix 06-07-2016**********************/
+.interview section>img{
+    float: left;
+    margin: 10px 20px 0px 10px;
+}
+.interview section>h3{
+	font-size: 28px;
+    color: #3b3b3b;
+    float: left;
+    margin-left: 25px;
+}
+.interview section>span{
+	font-size: 14px;
+    color: #c3c3c3;
+    float: right;
+    position: relative;
+    top: 10px;
+    margin-right: 3px;
+}
+.interview section table:nth-child(5){
+	width: 369px;
+    height: 169px;
+    margin: 20px auto;
+    font-size: 16px;
+    border: 3px solid #e1e1e1;
+    position: relative;
+    color: #3b3b3b;
+    float: right;
+}
+.interview section table:nth-child(5) tr{
+	border-bottom: 1px dashed #e1e1e1;
+}
+.interview section table:nth-child(5) tr th:first-child{
+	border-right: 1px dashed #e1e1e1;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0px 20px;
+    width: 38%;
+}
+.interview section table:nth-child(6) tr th:first-child{
+    width: 38%;
+}
+.interview section table:nth-child(5) tr th:last-child{
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0px 20px;
+}
+.interview section div>ul{
+	font-size: 16px;
+    color: #3b3b3b;
+    border: 5px solid #e1e1e1;
+    margin-left: 10px;
+    clear: both;
+}
+.interview section div>ul li{
+	padding: 10px;
+    border-bottom: 1px dotted #e1e1e1;
+    margin-left: 10px;
+}
+.interview section div>ul li:not(:first-child) span{
+    font-size: 30px;
+    margin-right: 10px;
+    color: #ffffff;
+    background-color: #ffbc09;
+    padding: 3px 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.interview section div>ul li:first-child{
+    margin: 0px 10px;
+    padding: 20px 10px;
+    border-bottom: 3px solid #e1e1e1;
+}
+.interview section div>ul li:first-child span{
+	float: right;
+    color: #0062b3;
+    background-image: url(../images/counselor/plane.png);
+    background-repeat: no-repeat;
+    background-position: 200px;
+    padding-right: 65px;
+}
+.interview section div>ul li:last-child{
+	padding: 10px 10px 20px;
+}
+.interview section div h3{
+	font-size: 16px;
+    padding: 5px 0px 5px 10px;
+    margin: 20px 0px 20px 10px;
+	clear: both;
+}
+/***********Color office 06-70-2016*************/
+.interview.tokyo section div h3{
+    border-left: 10px solid #0062b3;
+    color: #0062b3;
+}
+.interview.osaka section div h3{
+    border-left: 10px solid #f66f92;
+    color: #f66f92;
+}
+.interview.nagoya section div h3{
+    border-left: 10px solid #00b38c;
+    color: #00b38c;
+}
+.interview.fukuoka section div h3{
+    border-left: 10px solid #ffbb37;
+    color: #ffbb37;
+}
+/***********END Color office 06-70-2016*************/
+.interview section div img{
+    float: left;
+    margin: 0px 20px 10px 20px;
+}
+.interview section div p{
+	font-size: 14px;
+    padding: 0px 20px 30px 20px;
+}
+.interview section center a span{
+    font-size: 14px;
+    font-weight: bold;
+    background: #ff9900;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+    vertical-align: middle;
+	padding:12px
+}
+

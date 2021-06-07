@@ -1,0 +1,76 @@
+<?php
+require_once '../include/header.php';
+$header_obj = new Header();
+$header_obj->title_page = 'ワーキングホリデー・セミナー診断';
+$header_obj->fncMenubar_function = false;
+$header_obj->description_page = 'あなたにオススメのセミナーが分かる！ワーホリ協会監修 ワーホリ・留学を考えている人のためのセミナー診断';
+$header_obj->keywords_page = 'ワーキングホリデー,ワーホリ,留学,セミナー診断';
+$header_obj->fncFacebookMeta_function = true;
+//$header_obj->add_css_files = '<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー・セミナー診断';
+
+if ($header_obj->computer_use() == false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="/shindan/css/style_sp.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+
+?>
+
+<div id="area-body">
+
+	<div id="area-panel-header" class="pcview">
+    <div id="area-panel">
+  
+      <div id="panel-main">
+        <img id="panel-top-title" src="/shindan/images/panel-top-title.png" alt="セミナー診断～あなたにオススメのセミナーが分かる！ワーホリ協会監修 ワーホリ・留学を考えている人のためのセミナー診断" />
+  
+        <div id="area-panel-top-text">
+          <p class="color-pink">「<strong>ワーホリ協会</strong>にはどんな<strong>セミナー</strong>があるの？」</p>
+          <p class="color-pink">「<strong>どのセミナー</strong>から参加したらいいの？」</p>
+          <p>&nbsp;</p>
+          <p><strong>あなたに合ったセミナー</strong>に参加することで</p>
+          <p>もっと楽しく、出発までの準備を進めることができます！</p>
+          <p><strong class="color-pink">あなたにオススメなセミナー</strong>を一緒に探しましょう♬</p>
+        </div>
+  
+        <img id="panel-top-pam" src="/shindan/images/panel-top-pam.png" alt="ワーホリ協会サポートキャラクターぱむくん" />
+  
+        <div id="panel-top-btn">
+          <a href="/shindan/question01.html"><img class="btn-hover" src="/shindan/images/panel-top-btn.png" alt="診断をはじめる！" /></a>
+        </div>
+      </div>
+  
+    </div><!-- /.area-panel -->
+    <div id="area-panel-footer">&nbsp;</div>
+	</div><!-- /.area-panel-header -->
+  
+  <div class="spview">  
+  	<h3><a href="/shindan/">あなたにオススメのセミナーが分かる！ワーホリ・留学を考えている人のためのセミナー診断</a></h3>
+    <div class="mainBox">
+    	<p>
+        <span class="pink">「ワーホリ協会にはどんなセミナーがあるの？」<br>
+        「どのセミナーから参加したらいいの？」</span><br><br>      
+        <span class="bold">あなたに合ったセミナー</span>に参加することで<br>
+        もっと楽しく、<br>
+        出発までの準備を進めることができます！<br>
+        <span class="pink">あなたにオススメなセミナー</span>を一緒に探しましょう♬
+      </p>      
+      <a class="startBtn" href="/shindan/question01.html">診断をはじめる！</a>
+      <img class="bamkun" src="/shindan/images/sp/bamImg.png" alt="あなたの診断を一緒にサポート！ワーホリ協会サポートキャラクターばむくん">      
+    </div><!-- /.mainBox -->      
+  </div><!-- /.spview -->
+
+</div><!-- /.area-body -->
+
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

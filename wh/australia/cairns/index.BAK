@@ -1,0 +1,427 @@
+﻿<?php
+
+require_once '../../../include/header.php';
+
+require_once '../../../include/links.php';
+
+
+
+$links_obj = new Links();
+
+$header_obj = new Header();
+
+
+
+
+
+$header_obj->title_page='ケアンズでワーキングホリデー';
+
+$header_obj->description_page='オーストラリアの都市・ケアンズへワーホリ（ワーキングホリデー）に行く方に向けて、ビザの取得と準備、ワーホリでの注意点、現地の特徴、語学学校・仕事の選び方、帰国後の就職など、必要な情報を掲載しています。';
+
+$header_obj->keywords_page ='ケアンズ,ワーホリ,オーストラリア,情報,英語';
+
+$header_obj->fncFacebookMeta_function = true;
+
+$header_obj->add_css_files='<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" />';
+
+
+
+$header_obj->fncMenuHead_imghtml='<img id="top-mainimg" src="../../../../images/mainimg/AU-countrypage.gif" alt="" width="970" height="170" />';
+
+$header_obj->fncMenuHead_h1text='ケアンズでワーキングホリデー | ワーホリについて';
+
+
+
+$header_obj->display_header();
+
+
+
+include('../../../calendar_module/mod_event_horizontal.php');
+
+
+
+?>
+
+	<div id="maincontent">
+
+	  <?php echo $header_obj->breadcrumbs(); ?>
+
+
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+
+	<div class="step_title">
+
+		ケアンズでワーキングホリデー
+
+	</div>
+
+	  <table class="tableofcontents">
+
+	    <tr>
+
+		  <th>目次</th>
+
+		  <td>
+
+		    <ul>
+
+			  <li><a href="#st1-1">ワーホリでケアンズが人気を集める理由</a></li>
+
+			  <li><a href="#st1-2">ケアンズの魅力を紹介！</a></li>
+
+			  <li><a href="#st1-3">ケアンズにワーホリに行く前の準備</a></li>
+
+			  <li><a href="#st1-4">ケアンズでのワーホリ生活の楽しみ方</a></li>
+
+		    </ul>
+
+		  </td>
+
+		</tr>
+
+	  </table>
+
+
+
+
+
+
+
+	<h2 id="st1-1" class="sec-title">ワーホリでケアンズが人気を集める理由</h2>
+	<h3 class="h3-01">ケアンズはどんな都市？</h3>
+	<p class="text01">
+		日本全体のワーホリ利用者の実に半分以上が、オーストラリアを目的地に選んでいます。<br/>
+		そのオーストラリアで特に人気がある都市がケアンズです。<br/>
+		ケアンズの気候は雨季と乾季の2種類に分かれており、日中はどの時期でも半袖で過ごすことができるくらい陽気で快適に暮らせるでしょう。<br/>
+		また、ケアンズの治安はよく、オーストラリア全体でも生活しやすい都市といえます。<br/>
+		ケアンズは、観光業が盛んな場所です。仕事探しには、現地の求人サイトや店舗などで情報を得るのがいいでしょう。<br/>
+		ただ、ワーホリでは、同じ雇用主の元で働けるのは６ヶ月まで、と定められているので注意が必要です。<br/>
+	</p>
+
+	<h3 class="h3-01">語学留学体験</h3>
+	<p class="text01">
+		英語を勉強する為に、オーストラリアへワーホリに行く方も多いと思います。<br/>
+		ケアンズで英語を学ぶ魅力は、授業以外でのアクティビティーが多いから英語を使う機会が自然と増えることでしょう。<br/>
+		日本以外からの留学生もおり、彼らとの意思疎通にも、もちろん英語が必要です。<br/>
+		ケアンズの特徴であるアクティビティーの多さを利用して、ご自身の勉強に役立てて下さい。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズを観光してみよう</h3>
+	<p class="text01">
+		観光都市としても、ケアンズはとても魅力に溢れた都市です。<br/>
+		ケアンズといえば、グレートバリアリーフへ訪れる方が多くいらっしゃいます。<br/>
+		ケアンズの中心地にはビーチはありませんが、代わりにラグーンという誰でも無料で使うことができる人工のプールがあります。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズ周辺を回る</h3>
+	<p class="text01">
+		ケアンズからそんなに遠くない場所にキュランダという有名な高原があります。<br/>
+		レトロな電車があり、熱帯雨林を大満喫を列車に乗りながら満喫できます。<br/>
+		<br/>
+		また無料で訪れることができるボタニックガーデンズではオーストラリア特有の植物を見ることができます。<br/>
+		治安がよく気候が安定していること、仕事がみつかりやすいこと、周辺にも観光地が多いこと等々…。のワーホリの渡航先として、ケアンズはとても魅力的な都市です。<br/>
+	</p>
+
+	<center><img src="../../img/ausmap.gif" alt="ケアンズの地図"></center>
+
+	<p style="color:red;text-align:center;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ケアンズ';
+
+	$number_to_display = '2';
+
+	$start_display_from = ''; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+	<h2 id="st1-2" class="sec-title">ケアンズの魅力を紹介！</h2>
+
+	<h3 class="h3-01">ケアンズの基本情報</h3>
+	<p class="text01">
+		南半球にあるオーストラリアは、日本とほぼ変わらない経度にありますが、季節が逆になっています。<br/>
+		ニュー・サウス・ウェールズ州に属するケアンズの時間帯は、日本時間＋１時間です（サマータイム中は２時間）。<br/>
+		<br/>
+		ケアンズは熱帯性気候で、1年を通して安定した温暖な気候が特徴です。雨季と乾季に分かれており、雨季は12月から3月頃まで、乾季は4月から11月頃までとなっています。<br/>
+		雨季といっても毎日雨が1日中降り続くというわけではなく、夕方に夕立のように激しいスコールに襲われることがある程度です。<br/>
+		<br/>
+		ケアンズの治安は安定していますが、やはり日本とは違う国です。<br/>
+		落ち着いている雰囲気に気を許してしまいがちになりますが、油断はしないようにしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズは見どころ満載！</h3>
+	<p class="text01">
+		ケアンズでもっとも有名な観光場所は、ラグーンです。
+		ビーチが近くにないケアンズのために作られた人口のプールです。誰でも無料で利用することができ、場所によっては砂浜をのようになっています。<br/>
+		オーストラリアでよくニュースになるサメやワニの危険が少なく、ライフセーバーもいるので安心して利用できます。<br/>
+		<br/>
+		パロネラパークは、日本のアニメ映画に出てくる場所に似ていると言われたから日本人に人気が高いです。<br/>
+		また、クイーンズランド州の重要文化財にも指定されています。夜間にはライトアップされているので、是非昼と夜の雰囲気を楽しんでみてください。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズでのスポーツ体験</h3>
+	<p class="text01">
+		ケアンズでは、マリンスポーツが盛んです。<br/>
+		グレートバリアリーフをはじめとして、マリンスポーツも盛んです。サーフィン、ボディーボード、スキューバダイビング、釣りなどが目的で訪れる方も多いです。<br/>
+	</p>
+
+	<p style="color:red;text-align:center;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ケアンズ';
+
+	$number_to_display = '2';
+
+	$start_display_from = '2'; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+
+
+	<h2 id="st1-3" class="sec-title">ケアンズにワーホリに行く前の準備</h2>
+
+	<p class="text01">
+		ここでは、日本でやっておくべき下準備について考えていくことにしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">航空券の取得</h3>
+	<p class="text01">
+		ケアンズ国際空港へは、成田空港と関西国際空港から直行便が就航しています。成田発・関空発ともにケアンズまでは7時間くらいのフライトとなります。<br/>
+		航空券は往復を取得しても構いませんが、帰国時期が分からないのであれば片道航空券を取得しておく方が安上がりかもしれません。<br/>
+		出発のぎりぎりになって航空券を取得しようとすると高額になるため、休暇時期を避け、早めに予約をすることで、比較的安く入手することもできるでしょう。<br/>
+		また、ケアンズに何時に着くのかも事前に確認しておきましょう。日本との時差は＋１時間（サマータイムでは２時間）ですが、夜の到着は何かと面倒です。<br/>
+		万が一のトラブルに備えて、ケアンズに日中に到着する便がオススメです。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズでオージーイングリッシュを学ぼう！</h3>
+	<p class="text01">
+		「英語圏だから」という理由でオーストラリアを選ぶ方も多いと思いますが、同じ英語でも国や地方独自の違いがあります。<br/>
+		オーストラリアの「オージーイングリッシュ」はその代表例といえるでしょう。<br/>
+		語学学校での授業を終えたあとは、ぜひケアンズの言葉に触れてみてください。<br/>
+		ケアンズで行われる多数のアクティビティーを体験し、オーストラリアでしか聞けない英語を学んでみてください。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズの学校について</h3>
+	<p class="text01">
+		観光地として人気が高い都市なので、ワーホリや観光方面に特化している語学学校も多いです。<br/>
+		勉強だけでなくアクティビティなども充実している学校が多いですが、長期留学するためのクラスも充実しています。<br/>
+		<br/>
+		ワーホリでの渡航の場合、オーストラリアの学校に通えるのは、４ヶ月までと決まっています。<br/>
+		この機会を無駄にせず、学校で実力をつけ、現地での就労に備えましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">ワーホリ最大の魅力・現地での就労</h3>
+	<p class="text01">
+		一般的に、ワーホリでの滞在中の仕事を探す方法は、日本人向けの情報を得ることが一番です。<br/>
+		ワーホリ大国であるのオーストラリアの大都市・ケアンズでは、ワーホリ用の仕事を見つけるのは難しくありません。<br/>
+		ただ、２度目のワーホリ申請を出すためには、農業、漁業、林業など、政府指定の第一次産業に88日以上従事する必要があります。<br/>
+		広大な大地を誇るオーストラリアでの大規模な農作業は、ワーホリならではの体験といえるでしょう。<br/>
+	</p>
+
+	<h2 id="st1-4" class="sec-title">ケアンズでのワーホリ生活の楽しみ方</h2>
+
+	<p class="text01">
+		ケアンズでのワーホリ生活を充実させるためには、何を心がければいいのでしょうか。<br/>
+	</p>
+
+	<h3 class="h3-01">自然とアクティビティーを楽しもう！</h3>
+	<p class="text01">
+		ケアンズは小さな都市なので、大きなイベントの頻度は他都市よりも少なくですが、自然がほかの都市よりもあふれています。<br/>
+		グレートバリアリーフでのマリンスポーツや、バリー川やタリー川でのラフティング、ほかにも乗馬やハングライダーなどアクティビティが盛りだくさんです。<br/>
+		<br/>
+		また観光業で働いた場合は多くの観光外国人と会話をする機会があるので語学力を学べるでしょう。<br/>
+	</p>
+
+	<h3 class="h3-01">ケアンズでの就労</h3>
+	<p class="text01">
+		ケアンズは世界中から観光客が集まる都市なので、サービス業をはじめとした観光客向けの求人が比較的多いです。<br/>
+		主な職種は、お土産屋さんや免税店、レストラン、ツアーガイド等などがあり、ケアンズ市内に設置されている情報掲示板や新聞で求人情報を見つけることができます。<br/>
+		ケアンズは一年を通して比較的仕事が見つけやすいと思います。<br/>
+	</p>
+
+	<h3 class="h3-01">季節労働から２度目のオージーワーホリへ</h3>
+	<p class="text01">
+		政府が指定した一次産業の現場で８８日以上働くことで、オーストラリアの２回目のワーホリ申請を出すことが出来るようになります。<br/>
+		このような肉体労働は比較的賃金が高いため、集中的に働いて旅行の資金する人もいます。<br/>
+		季節労働を申請する場合は、就労場所や気候条件、ご自身の体力を事前に考慮する必要があります。<br/>
+		労働時のトラブルや勘違いを避けるためにも、公式HPを参照にしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">多国籍文化との交流をすすめよう！</h3>
+	<p class="text01">
+		ワーホリ大国オーストラリアには、さまざまな国の人がやってきます。<br/>
+		大都市のケアンズにはチャイナタウンがあり、日本を含めた他国の祭典が行われます。<br/>
+		それらのイベントを手始めに、他国の方と積極的に交流してみましょう。<br/>
+		ワーホリという同じ立場でケアンズにいて、話す言葉も同じ英語です。<br/>
+		それらのイベントを通して、オーストラリア以外の国の人と触れ合うことはワーホリの醍醐味といえるでしょう。<br/>
+	</p>
+
+	<h3 class="h3-01">しっかりとした準備があってこその充実したワーホリ生活</h3>
+	<p class="text01">
+		海外生活にトラブルはつきものです。<br/>
+		語学の問題でも日常生活でも、思ってもないことが起きてしまうことがあります。<br/>
+		それを自分で解決するのが勉強ですが、事前の準備をしっかり行うことが解決への近道になります。<br/>
+		ワーキングホリデー協会では、様々な無料セミナーを用意しています。<br/>
+		初心者セミナーから始まり、語学学校の選び方、懇談形式のカウンセリングもあり、ワーホリ体験談を聞くことも出来ます。<br/>
+		また、ワーキングホリデー協会では、メンバー登録も行っています。<br/>
+		登録すれば、協会と密に連絡がとれ、個別カウンセリングや特別セミナーへの参加など、様々なサポートを受けることが出来ます。<br/>
+		ワーキングホリデー協会の充実したサポートを受け、目標の実現に動き出してください！<br/>
+	</p>
+
+
+	<p style="color:red;text-align:center;margin-top:8px;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ケアンズ';
+
+	$number_to_display = '2';
+
+	$start_display_from = '6'; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+
+
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+
+	  <div class="advbox03">
+
+<?php
+
+	// 111
+
+  define('MAX_PATH', '/var/www/html/ad');
+
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+
+    if (!isset($phpAds_context)) {
+
+      $phpAds_context = array();
+
+    }
+
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+
+  }
+
+  echo $phpAds_raw['html'];
+
+?>
+
+	  </div>
+
+
+
+<?php $links_obj->display_links(); ?>
+
+
+
+	</div>
+
+  </div>
+
+  </div>
+
+
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+
+
+</body>
+
+</html>

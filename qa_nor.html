@@ -1,0 +1,96 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='ノルウェー　ワーキングホリデービザ';
+$header_obj->description_page='ワーキングホリデー（ワーホリ）や留学などの海外生活でよるある質問をまとめました。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、ノルウェー、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ノルウェーワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('qa'); ?>
+	  <h2 class="sec-title">ノルウェー　留学・ワーキングホリデー</h2>
+	  <table class="qatable-aus">
+	    <tr>
+		  <th><img src="images/mflag12.gif" alt="" /><br />ノルウェー</th>
+		  <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+		</tr>
+	  </table>
+      <p>&nbsp;</p>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'ノルウェー';
+            $number_to_display = '6';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <h2 class="sec-title">よくある質問と回答</h2>
+      <p>&nbsp;</p>
+	  <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ１. ノルウェー語ができませんがノルウェーワーキングホリデーは可能ですか？</h3>
+		<p class="text01">ノルウェー語ができないという理由でワーキングホリデービザが許可されないことはありません。また、ノルウェーの公用語はノルウェー語ですが、英語でも話をすることが出来ます。ビザ申請も英語で進めることが出来ますのでご安心ください。しかし、事前にノルウェーの言葉を学んでおく方が現地に到着してから楽になりますよ。
+		</p>
+	    <h3 class="q-title">Ｑ２. ノルウェーへの渡航はいつ頃がオススメですか？</h3>
+		<p class="text01">
+			ノルウェーは5月～7月にかけて夜になっても太陽が沈まない「白夜（ミッドナイト・サン）」のシーズンになります。短期滞在であればさほど気にならないかもしれませんが、長期滞在となると白夜を経験したことがない日本人はストレスから不眠症などになってしまうかもしれません。不安な方はこのシーズンをずらして渡航するとよいでしょう。</p>
+	  </div>
+	     <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ３.ノルウェーで働く前にしなければならない手続きはありますか？</h3>
+		<p class="text01m30">ノルウェーで働く前に、必ず「Tax Deduction Card　(課税控除を証明するカード)」を取得してください。ノルウェーの「Tax Region Office」にて申請することが出来ます。この「Tax Deducation Card」には「Norwegian Personal Identification Number (ノルウェーでの身分を証明する番号)」が記載されるので、ノルウェーでの身分証明書としても使うことが出来ます。
+		</p>
+	  </div>
+	      <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ４.ノルウェーワーキングホリデーで注意することはありますか？</h3>
+		<p class="text01m30">ワーキングホリデービザでの滞在はシェンゲン協定の定めるビザ免除規定の期間（６ヶ月内９０日間）を含みます。シェンゲン協定加盟国外で6ヶ月過ごさなければ、ノルウェーも含むシェンゲン条約加盟国の再入国はできません。　シェンゲン協定加盟国に6カ月入国できないのでノルウェーワーキングホリデー終了後にシェンゲン協定国へのヨーロッパ旅行はできません。</p>
+	  </div>
+	  <div class="qa-abox-country">
+		<h3 class="q-title">Ｑ５.ノルウェーで働くのは難しいですか？</h3>
+		<p class="text01m30">ノルウェーで働く為には、ノルウェー語と英語の両方を高い水準で使いこなせるスキルが必要です。特に日本人はノルウェー語に関する知識が少ないので、ゼロからのスタートではノルウェーワーキングホリデー中に仕事に就くことは難しいと言えるでしょう。<br /><br />しかしノルウェーは女性の社会進出がとても進んでいるので、女性でも業種を選ばず働くことが出来ます。また、業務時間なども徹底して守られるので時間外労働や無理な出勤を求められることはありませんので、スキルさえあればとても働きやすい環境と言えるでしょう。ノルウェーでの就職に関しては、<a href="https://www.workinnorway.no/en/Guide+for+citizens+from+countries+outside+EU+and+EEA/Living+and+working+in+Norway/Working+conditions" target="blank">こちら（リンク先英語）</a>で詳細を確認することが出来ます。
+		</p>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+	  
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'ノルウェー';
+            $number_to_display = '6';
+            $start_display_from = '6'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <div class="advbox03">
+<?php
+	// 131
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 108, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

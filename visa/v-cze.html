@@ -1,0 +1,72 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='チェコのワーキングホリデービザ情報';
+$header_obj->description_page='チェコのワーキングホリデービザ取得のステップや注意事項を掲載しています。チェコへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（チェコ） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+    	  <?php echo $header_obj->breadcrumbs('country'); ?>
+
+			<div style="clear:both; height:10px;">&nbsp;</div>
+      <?php $header_obj->display_visa_links(); ?>
+	  <img src="/images/flag-cze.gif" alt="" style="border: 1px solid #cbcbcb;" />
+	</br></br></br></br>
+    <p style="text-align: center">２０１７年１２月１日現在、詳細なビザの情報が公開されておりません。<br>
+情報のアップデートがあり次第、こちらでのページでご案内いたします。</p>
+	</br></br>
+
+	<h3 class="h3-01">その他のワーキングホリデー協定国のビザ情報</h3>
+
+	<div class="clear">&nbsp;</div>
+    
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+	<style>
+	.linkbox	{
+		margin : 15px 15px 15px 15px;
+		padding	: 10px 20px 10px 20px;
+		background-color : #FFE4B5;
+		font-size:10pt;
+	}
+	</style>
+    
+    <div class="beige-box">
+    海外での医療費はかなり高額で、救急車の利用にも料金がかかります。<br/>
+    オーストラリアにワーキングホリデーで行く場合は、何らかしらの保険に必ず加入してください。<br/>
+    &nbsp;<br/>
+    <?php
+      //<!--/* OpenX Local Mode Tag v2.8.8 */-->
+    
+      // The MAX_PATH below should point to the base of your OpenX installation
+      define('MAX_PATH', '/var/www/html/ad');
+      if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+        if (!isset($phpAds_context)) {
+          $phpAds_context = array();
+        }
+        // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+        $phpAds_raw = view_local('', 130, 0, 0, '', '', '0', $phpAds_context, '');
+      }
+      echo $phpAds_raw['html'];
+    ?>
+        <br/><span style="font-size:8pt;">AIU保険会社のサイトへジャンプします</span>
+    </div><!-- / .beige-box -->
+    &nbsp;<br/>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

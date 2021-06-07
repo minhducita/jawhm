@@ -1,0 +1,221 @@
+﻿<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・オーストリアの基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶオーストリアについてご紹介します。オーストリアならではの大自然の風景や現地の文化など、興味深い情報がもりだくさん。渡航される方は是非ご一読ください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/banner-aut.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'オーストリア | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+
+
+    <div class="area-display-pc">
+        <a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+        <p class="country-name-img"><img src="../../images/bflag15.gif" alt="" /></p>
+
+        <div id="area-map-img">
+            <img src="../images/AUT_PC.png" />
+        </div>
+    </div>
+    <div class="area-display-sp">
+        <a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+        <div id="area-map-img">
+            <img src="../images/AUT_SP.png" />
+        </div>
+    </div>
+
+
+    <h2 class="h2-title"><span>人気都市　BEST3</span></h2>
+    <div class="area-main-content">
+        <ul class="list-best3">
+            <li><img src="../images/crown-1.gif" />Vienna</li>
+            <li><img src="../images/crown-2.gif" />Graz</li>
+            <li style="margin-right:0"><img src="../images/crown-3.gif" />Linz</li>
+        </ul>
+    </div>
+
+    <h2 class="h2-title"><span>基本情報</span></h2>
+    <div class="area-main-content clearfix">
+
+        <div class="area-display-pc">
+            <div class="area-left">
+                <table class="table-info">
+                    <tr>
+                        <th>首都</th><td id="td-capital">Vienna</td>
+                    </tr>
+                    <tr>
+                        <th>言語</th><td id="td-language">German</td>
+                    </tr>
+                    <tr>
+                        <th>面積</th><td>83,870km2&#178;<span>（112位）</span></td>
+                    </tr>
+                    <tr>
+                        <th>人口</th><td>約8,364,000人<span>（88位）</td>
+                    </tr>
+                    <tr>
+                        <th>通貨</th><td>Euro (EUR)</td>
+                    </tr>
+                </table>
+                <p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+            </div>
+
+            <div class="area-right">
+                <table class="table-clock">
+                    <caption>日本との時差</caption>
+                    <tr>
+                        <th>日本時間</th><th>Vienna</th>
+                    </tr>
+                    <tr>
+                        <td style="border-right:1px solid #000">
+                            <img src="../images/clock-tokyo.png" /><br />
+                            1月1日<br />
+                            09:00am
+                        </td>
+                        <td>
+                            <img src="../images/clock-aut.png" /><br />
+                            1月1日<br />
+                            02:00am
+                        </td>
+                    </tr>
+                </table>
+                <p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+            </div>
+        </div>
+
+        <div class="area-display-sp clearfix">
+            <table class="table-info">
+                <tr>
+                    <th>首都</th><td id="td-capital">Vienna</td>
+                </tr>
+                <tr>
+                    <th>面積</th><td>83,870km2&#178;<span>（112位）</span></td>
+                </tr>
+                <tr>
+                    <th>人口</th><td>約8,364,000人<span>（88位）</td>
+                </tr>
+            </table>
+            <table class="table-info" style="margin-right:0">
+                <tr>
+                    <th>言語</th><td id="td-language">German</td>
+                </tr>
+                <tr>
+                    <th>通貨</th><td>Euro (EUR)</td>
+                </tr>
+                <tr style="border-bottom:none">
+                    <td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="area-display-sp">
+        <h2 class="h2-title"><span>日本との時差</span></h2>
+        <div class="area-main-content">
+            <table class="table-clock">
+                <tr>
+                    <th>日本時間</th><th>Vienna</th>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #000">
+                        <img src="../images/clock-tokyo.png" /><br />
+                        1月1日<br />
+                        09:00am
+                    </td>
+                    <td>
+                        <img src="../images/clock-aut.png" /><br />
+                        1月1日<br />
+                        02:00am
+                    </td>
+                </tr>
+            </table>
+            <p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+        </div>
+    </div>
+    <h2 class="h2-title"><span>オーストリアってどんな国？</span></h2>
+    <div class="area-main-content">
+        <p class="text01">
+            ヨーロッパのほぼ中央に位置するオーストリアは、8つの国に囲まれる内陸国です。国土は日本の約4分の１程ですが、そのほとんどがアルプスの美しく壮大な自然に包まれています。高原にはいくつもの湖があり、その大自然の美しさはヨーロッパでも随一と言われます。
+        </p>
+        <p class="text01">
+            オーストリアの公用語はドイツ語です。これは、元々オーストリアとドイツが同じ1つの国だった事が理由です。ただ、ドイツで使われているドイツ語とは若干の違いがあり、細かく分類すると「オーストリアドイツ語」として扱われます。
+        </p>
+        <p class="text01">
+            オーストリアは上記のように公用語がドイツ語であるため、ドイツ語留学の渡航先として人気があります。特にオーストリアは音楽分野に長けているので、留学しながら音楽を学びたい、音楽に触れあいたいと考えている人にオススメされます。
+        </p>
+        <p class="text01">
+            オーストリアは湿度の低い大陸性気候なので、夏は気温が高く、冬には激しく冷え込みます。渡航にオススメなのは4月から8月にかけて。天候的に暖かく過ごしやすい日が続き、春の音楽祭などのイベントも開催されます。だたし、日中と日没後では気温差が激しいので注意が必要です。
+        </p>
+        <p class="text01">
+            オーストリアの首都　ウィーンは「音楽の街」「楽都」と呼ばれるほどに音楽が盛んな街です。クラシックコンサートや音楽祭はもちろん、有名なウィーン少年合唱団や、国立オペラ座でのオペラも見所です。また、モーツァルト、シューベルト、ハイドンなど、数多くの有名作曲家を生み出した国でもあり、街の至る場所で彼らも足跡を辿ることができます。
+        </p>
+        <p class="text01">
+            オーストリアに点在する数多くの歴史ある劇場では、今でも世界最高峰のオペラやバレエ、コンサートが上映されています。1年を通して様々な演目が上映されるので、ワーキングホリデーや留学で滞在中にいくつの演目を見ることが試してみるのもいいかもしれません。
+        </p>
+    </div>
+
+    <div class="area-display-pc">
+        <div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-aut.html" title="オーストリアのワーキングホリデー（ワーホリ）ビザ情報へ">オーストリアのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+        <div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+    </div>
+    <div class="area-display-sp">
+	  	<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+	        <a href="../../visa/v-aut.html" class="btn-visa area-round-corner">
+            オーストリアの<br />ビザ情報はこちらから
+        </a>
+        <div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+    </div>
+    <div style="position:relative;text-align:center;">
+        <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+        <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div>
+    <div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+    <div style="clear:both; height:30px;">&nbsp;</div>
+
+
+    <div class="area-display-pc">
+        <h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+        <?php include('../flags_country_list.php'); ?>
+    </div>
+    <div class="area-display-sp">
+        <a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+    </div>
+
+    <?php $links_obj->display_links(); ?>
+
+</div><!-- /#maincontent -->
+
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

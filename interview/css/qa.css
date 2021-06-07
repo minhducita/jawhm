@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+.qa-new,
+.qa-new a,
+.qa-new .qa-nbox li,
+.qa-new .qa-nbox ul,
+.qa-new h3 {
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* body,div,p,form,input,select,option,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,address{
+    margin:0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+} */
+.qa-new a{
+    text-decoration: none;
+    color: #000;
+}
+
+.qa-new a:hover{
+    text-decoration:underline;
+    color: #000;
+}
+
+.qa-new h3 a{
+    color: #fff;
+}
+/**************************************************************/
+.qa-new{
+    width: 680px;
+    margin: 0px auto;
+}
+.qa-new .qa-nbox {
+    margin-bottom: 25px;
+    clear: both;
+}
+.qa-new .qa-ntitle {
+    display: inline-block;
+    width: 100%;
+    font: 16px / 35px 'Kozuka Gothic Pr6N';
+    
+    background: url(/interview/images/qa/new-qa-title.png) repeat;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+.qa-new .qa-ntitle:before{
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 6px 10px;
+    display: inline-block;
+    background: url(/interview/images/qa/qa-quote.png) no-repeat;
+    vertical-align: middle;
+}
+.qa-new .qa-ntitle:after{
+    content: '\f067';
+    font-family: FontAwesome;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 3px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    background:transparent url(/interview/images/qa/top-right-border.png) no-repeat top right;
+}
+.qa-new .qa-nbox ul{
+    border: 1px solid #ebebeb;
+    margin-top: 5px;
+}
+.qa-new .qa-nbox li{
+    list-style: url(/interview/images/qa/Layer-4.png) ;
+    list-style-position: inside;
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 0px 20px;
+    color: #000;
+    font: 12px / 36px 'Kozuka Gothic Pr6N';
+    border-bottom: 1px solid #fff;
+}
+.qa-new .qa-nbox li:last-child{
+    border-bottom: none;
+}
+/********************************************************/
+@media only screen and (max-width: 768px) {
+    .qa-new{
+        width: 100%;
+    }
+}
+

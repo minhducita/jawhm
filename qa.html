@@ -1,0 +1,608 @@
+<?php
+require_once 'include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='ワーキングホリデー協定国別・よくある質問';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶ国ごとの”よくある質問”にお答えします。協定内容は、国ごとによってことなりますので、渡航前の準備にお役立てください。';
+
+$header_obj->add_js_files="<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-1.12.0.min.js\"></script>\n
+<script>
+	$(function() {
+		$('#maincontent a[href^=\"#ans\"]').click(function() {
+			var str = ($(this).attr('href'));
+			var res = str.substring(4, 7);
+			$('.qa-ans' + res).slideToggle(\"slow\");
+		});
+		$('#maincontent a[href^=\"#semians\"]').click(function() {
+			var str = ($(this).attr('href'));
+			var res = str.substring(8, 10);
+			$('.qa-seminar-ans' + res).slideToggle(\"slow\");
+		});
+	});
+</script>
+";
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデーのよくある質問 Q&amp;A';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+    <div id="maincontent">
+      <?php echo $header_obj->breadcrumbs(); ?>
+      <h2 class="sec-title">協定国別 Q&amp;A</h2>
+      <p class="text01">ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</p>
+      <div class="mcontent-country-box">
+        <ul class="country-box-01 clearfix">
+          <li class="c-01">
+            <a href="/qa_aus.html">
+              <img src="images/coBtn_aus.gif">
+            </a>
+          </li>
+          <li class="c-02">
+            <a href="/qa_kor.html">
+              <img src="images/coBtn_kor.gif">
+            </a>
+          </li>
+          <li class="c-03">
+            <a href="/qa_uk.html">
+               <img src="images/coBtn_uk.gif">
+            </a>
+          </li>
+          <li class="c-04">
+            <a href="/qa_ywn.html">
+               <img src="images/coBtn_ywn.gif">
+            </a>
+          </li>
+          <li class="c-14">
+            <a href="/qa_pol.html">
+              <img src="images/coBtn_pol.gif">
+            </a>
+          </li>
+          <li class="c-05">
+            <a href="/qa_nz.html">
+               <img src="images/coBtn_nz.gif">
+            </a>
+          </li>
+          <li class="c-06">
+            <a href="/qa_fra.html">
+               <img src="images/coBtn_fra.gif">
+            </a>
+          </li>
+          <li class="c-07">
+            <a href="/qa_ire.html">
+               <img src="images/coBtn_ire.gif">
+            </a>
+          </li>
+          <li class="c-08">
+            <a href="/qa_hkg.html">
+              <img src="images/coBtn_hkg.gif">
+            </a>
+          </li>
+          <li class="c-15">
+            <a href="/qa_prt.html">
+              <img src="images/coBtn_por.gif">
+            </a>
+          </li>
+          <li class="c-09">
+            <a href="/qa_can.html">
+              <img src="images/coBtn_can.gif">
+            </a>
+          </li>
+          <li class="c-10">
+            <a href="/qa_deu.html">
+              <img src="images/coBtn_deu.gif">
+            </a>
+          </li>
+          <li class="c-11">
+            <a href="/qa_dnk.html">
+              <img src="images/coBtn_dnk.gif">
+            </a>
+          </li>
+          <li class="c-12">
+            <a href="/qa_nor.html">
+              <img src="images/coBtn_nor.gif">
+            </a>
+          </li>
+        </ul>
+		 <div class="clear"></div>
+      </div>
+      <p>&nbsp;<br /></p>
+
+      <div>
+      <?php
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '6';
+            
+            display_horizontal_calendar($country_to_display,$number_to_display);
+      ?>
+      </div>
+	   <div class="clear"></div>
+      <h2 id="question" class="sec-title">よくある質問 Q&amp;A</h2>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">ビザについて</h3>
+        <ul>
+          <li>
+          	<a href="#ans01"><img class="qa-drop" src="../images/golink-drop-black.png">  何カ国もＷＨビザを同時に申請し、利用することは可能でしょうか？</a>
+          	<p class="text-answer qa-ans01" style="display: none;">出来ます。しかし国によって申請時にパスポートが必要だったり、申請からビザ発給までにかかる期間が異なりますのでしっかりとその国のワーキングホリデービザ申請要項を調べたうえで計画を立ててから実行してください。　
+よく自分で申請して失敗する人から問い合わせがありますが、失敗した後に直すことほど時間とお金がかかるものはありません。最初から日本ワーキングホリデー協会にてビザの申請をお任せください。ビザは各国が入国の為に審査をする厳しい基準があります。なんとなくネットで見た通りにやって申請失敗しても国は相手にしてくれません。よく注意して申請してください。
+</p>
+          </li>
+          <li>
+          	<a href="#ans02"><img class="qa-drop" src="../images/golink-drop-black.png">ワーキングホリデービザの年齢制限は？3１歳でも問題ありませんか?</a>
+          	<p class="text-answer qa-ans02" style="display: none;">ワーキングホリデービザの年令制限は国によって異なります。多くの国では　31歳になるまでに申請をしてビザを取得すればその日から１年間以内に入国すればいいので３１歳になってからでも１年間のワーキングホリデーがスタートできます。２年間ワーキングホリデーの出来る国では３２歳でワーキングホリデーという方もいますので３０歳になったからと言って諦めないでください。</p>
+          </li>
+          <li>
+          	<a href="#ans03"><img class="qa-drop" src="../images/golink-drop-black.png">ビザは自分で申請するものですか？</a>
+          	<p class="text-answer qa-ans03" style="display: none;">ワーキングホリデービザを自分で申請して失敗する人は意外と多いです。心配であれば日本ワーキングホリデー協会にてお手伝いしますのでご連絡ください。特にネットだけで申請が終わるオーストラリアやニュージーランドはメールにてワーキングホリデービザの合否が送られてきます。合格ならいいのですが　失敗してるメールも英語で届きます。よくわからないというお問い合わせが多くあります。毎年ワーキングホリデービザが取得できていないのにメールが来たのを取得できたと勘違いして現地に渡航される方もいます。現地の入管にて引っかかりそのままとんぼ返り、もしくはその場で観光ビザを取得しても入国するという方もいます。その場合はもう一度日本に帰国してからの再申請になります。しかしすでに３１歳になってから渡航していたのでもう二度とワーキングホリデービザが申請・取得ができないという方もいらっしゃいました。英語に自信がないのならすべてお任せください。それくらい慎重に申請、取得をオススメします。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">協会のサービスについて</h3>
+        <ul>
+          <li>
+          	<a href="#ans04"><img class="qa-drop" src="../images/golink-drop-black.png"> メンバーサポート制度とはなんですか？</a>
+          	<p class="text-answer qa-ans04" style="display: none;">日本ワーキング・ホリデー協会では、ワーキングホリデーに行こうとしている方への準備や手続き、費用などのお困りごとをサポートするためにメンバーサポート制度をご用意しております。メンバーになると「カウンセリングの実施」「ワーキングホリデービザ取得のお手伝い」「特別セミナーへのご参加」「メンバー専用ページのご提供」など４つの特典に加え、出発から到着後まで様々なことをお手伝いいたします。5,000円で３年間有効のメンバー登録で、充実したサポートを受けることができます。  <br/></p>
+          </li>
+          <center><a href="/mem/register.php" style="background : none"><img src="/mem/images/form_link_off.png" title="メンバー登録フォームはこちら" width="75%" /></a></center>
+          <li>
+          	<a href="#ans05"><img class="qa-drop" src="../images/golink-drop-black.png">協会のメンバーになると、どんなメリット（何ができる）があるのですか？</a>
+          	<p class="text-answer qa-ans05" style="display: none;">日本ワーキングホリデー協会ではビザの申請手続き及び渡航サポートを行っております。会員様限定のサービスとなっておりますので、詳しくは<a href="../mem/index.php" style="background : none;">成功のためのフルサポート≪協会サポートのご案内≫</a>をご覧ください。</p>
+          </li>
+          <li>
+          	<a href="#ans06"><img class="qa-drop" src="../images/golink-drop-black.png">海外（ワーホリ対象国）に日本ワーキング・ホリデー協会の支部はありますか？</a>
+          	<p class="text-answer qa-ans06" style="display: none;">当協会の海外サポートオフィスは渡航者の多いオーストラリア、カナダにあります。すべての国ではないのですが、安心して渡航していただくために現地でのサポートオフィスも今後拡大していきます。もちろんメンバーの方は現地からもメールや電話でお問い合わせいただくことも出来ます。</p>
+          </li>
+          <li>
+          	<a href="#ans07"><img class="qa-drop" src="../images/golink-drop-black.png">学生ビザで語学留学を考えています。ビザ申請や学校手続きなど協会のサポートを受けることができますか？</a>
+          	<p class="text-answer qa-ans07" style="display: none;">はい、当協会では学生ビザなどでの語学留学のお手伝いも行っております。ワーキングホリデービザを有効活用するために、まず学生ビザなどで語学力を身につけるため留学をする方が増えております。お気軽にご相談くださいませ。<br/><a href="/ryugakusupport/" target="_blank" style="background : none">当協会の留学サポートについての詳細はこちらをご覧ください。</a><br/>（［ご注意］渡航国(アジア、ヨーロッパなど)、また状況によってサポート対象外となる場合がございます。事前にお問い合わせ下さい。）</p>
+          </li>
+          <li>
+          	<a href="#ans08"><img class="qa-drop" src="../images/golink-drop-black.png">直接お話を聞くことはできますか？</a>
+          	<p class="text-answer qa-ans08" style="display: none;">はい、できます。現在日本ワーキングホリデー協会では「ワーキングホリデーセミナー」と称して東京をメインに全国で無料でセミナーを開催しております。出来るだけ地方でも開催できるように準備しております。出来るだけ多くの人に海外生活体験をしていただきたいので是非ともお友達もお誘いの上無料のセミナーにいらしてください。無料のセミナーですので毎回会場の定員以上に申し込みがありますので人数制限をしております。早めのご予約をお勧めいたします。またご要望があれば学校法人等での学生向けグループセミナーも開催しておりますのでご連絡ください。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">エージェントについて</h3>
+        <ul>
+          <li>
+          	<a href="#ans09"><img class="qa-drop" src="../images/golink-drop-black.png">留学エージェントを使った方がいいのでしょうか？</a>
+          	<p class="text-answer qa-ans09" style="display: none;">とても多いお問い合わせの一つが「ビザの申請をしたが大使館から返事がない」というものです。このような失敗をしないためにも留学エージェントの利用はオススメです。それでワーキングホリデーに行けなくなってしまうのは人生にとって残念なことです。地方では留学会社はなく情報収集も大変ですし、心配も多いです。もし料金が高いや評判が気になるのであればご相談ください。ワーキングホリデーで人生で最高の時を体験するために、留学エージェントも賢く利用して出発に向けて準備をしましょう。</p>
+          </li>
+          <li>
+          	<a href="#ans10"><img class="qa-drop" src="../images/golink-drop-black.png">留学エージェントにある英会話コースのようなサービスはワーキングホリデー協会にもありますか？</a>
+          	<p class="text-answer qa-ans10" style="display: none;">留学エージェントでは手数料の中に英会話コースが含まれている会社もあります。日本ワーキング・ホリデー協会では手数料や手続き料は頂いていない代わりにそのような本格的な英会話サービスは行っておりません。ご了承ください。簡易的な英語レッスン等のセミナーを定期的に開催しておりますので、ぜひご利用くださいませ。（メンバー会員限定/オフィスによって開催の有無等異なりますので事前にお問い合わせください。）</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">渡航準備の流れについて</h3>
+        <ul>
+          <li>
+          	<a href="#ans11"><img class="qa-drop" src="../images/golink-drop-black.png">とりあえず行けばなんとかなりますか？</a>
+          	<p class="text-answer qa-ans11" style="display: none;">「行けばなんとかなる」というのは会話も海外も慣れてる人には良いでしょう。行動力も日本人以上にあれば可能かもしれませんが、初めての海外滞在にはお勧めはできません。日本よりは盗難も犯罪も多い国に行くという意識は持っておきましょう。言葉も土地勘もない場所にいくのでそこで何とかできる人は限られてきます。現地で友達を作るためには現地で語学学校に通ったりホームステイをしたりとあらかじめ準備をすることもあります。１年~２年間の目的を達成する為には「とりあえず行く」では時間はあっという間に過ぎてしまいます。 </p>
+          </li>
+          <li>
+          	<a href="#ans12"><img class="qa-drop" src="../images/golink-drop-black.png">何を準備すればいいですか？</a>
+          	<p class="text-answer qa-ans12" style="display: none;">ワーキングホリデー制度を利用して海外に渡航するのに最低限必要なものはパスポート、お金、ビザ、航空券、保険です。そして必ずスーツケースには入りきらないくらいの大きな夢を持って行ってください。<br />最低限、上記が揃えば出発することは可能です。</p>
+          </li>
+          <li>
+          	<a href="#ans13"><img class="qa-drop" src="../images/golink-drop-black.png">出発のどれくらい前から準備を始めればよいですか？</a>
+          	<p class="text-answer qa-ans13" style="display: none;">オーストラリアのビザですと１０分で取得出来た人もいます。しかし２カ月かかる国もあります。日本で貯金をどこまで増やすか？会社をいつ辞めるか、休学を始める時期は？荷物の準備期間は仕事をされている方だと3カ月くらい前からスーツケースを買ったりコンタクトレンズを用意したり少しずつ始めましょう。そして1カ月前には現地の語学学校やホームステイ、航空券、海外ワーキングホリデー保険も決まっていて残るは持って行く衣類だけにしておくといいですね。 </p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">荷物について</h3>
+        <ul>
+          <li>
+          	<a href="#ans14"><img class="qa-drop" src="../images/golink-drop-black.png">荷物はどのように持っていきますか？スーツケースとバックパックどちらがいいのでしょうか？</a>
+          	<p class="text-answer qa-ans14" style="display: none;">スーツケースを購入する方は多いですね。飛行機に預けられる重量が20キロですと（航空会社によって異なります）スーツケースが6キロもあると荷物が詰め込めるのが14キロになりますね。ソフトケースのスーツケースや最近の軽量のスーツケースですと3キロくらいのものもあります。一番大きいものに服を目いっぱい入れると20キロを超えます。バックパックで行く人も最近増えてきましたが、60～80リットルくらいが目安ではないでしょうか？ヨーロッパ人であれば女性でも大きなバックパックを背中とおなかに担いでいる人も見ますが日本ではスーツケースの方が主流です。</p>
+          </li>                
+          <li>
+          	<a href="#ans15"><img class="qa-drop" src="../images/golink-drop-black.png">荷物は何を持っていけばいいですか？</a>
+          	<p class="text-answer qa-ans15" style="display: none;">海外留学保険の保険証はスーツケースに入れておきましょう。そして財布には簡易的な契約番号がわかるものを入れておくといいです。そのほかにスーツケースに入れるものとしては、耳かき、爪切り、電子辞書・日本語旅行ガイドブック・デジカメ・ノートパソコン、海外電圧のドライヤー。衣料はきまわして1週間着れる分と下着も7日分でいいでしょう。圧縮袋に服を詰めてスーツケースに入れると20キロは超えると思います。 </p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">公的手続きについて</h3>
+        <ul>
+          <li>
+          	<a href="#ans16"><img class="qa-drop" src="../images/golink-drop-black.png">渡航前の公的手続きは何をどこですればいいですか？</a>
+          	<p class="text-answer qa-ans16" style="display: none;">日本を離れる間の年金、健康保険の保険料、住民税などの税金、転出届を提出する必要があります。　自治体によって取り扱いが異なるため、所轄の自治体の窓口に確認してください。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">お金の持ち込み方について</h3>
+        <ul>
+          <li>
+          	<a href="#ans17"><img class="qa-drop" src="../images/golink-drop-black.png">海外にお金はどのように持っていけばいいですか？</a>
+          	<p class="text-answer qa-ans17" style="display: none;">トラベラーズチェックは最近海外で使えなくなってきています。クレジットカードは必ず作って持って行きましょう。国際キャッシュカードとキャッシュパスポートを持って行きましょう。現地での為替レートがいいので現金を持って行く人もいます、その場合は到着した日に現地で銀行口座を開設してすぐに入金しましょう。そして現地銀行口座とキャッシュパスポートと国際キャッシュカードに関しては、日本から送金することができるので重宝します。いざとなったらご両親に電話して送金をお願いすることも可能です。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">住居について</h3>
+        <ul>
+          <li>
+          	<a href="#ans18"><img class="qa-drop" src="../images/golink-drop-black.png">ホームステイ？シェア？スチューデントハウス？住む場所って簡単に見つかりますか？</a>
+          	<p class="text-answer qa-ans18" style="display: none;">最初の１ヶ月はホームステイやスチューデントハウスがオススメ。日本から語学学校を申し込むと同時に申し込む事ができます。ホームステイをしてい間にシェアハウスを探しましょう。新聞やネットで探します。韓国では下宿が多く、学校の周りに多く見られます。　学校の紹介や口コミなどで探すことが多い。現地の掲示板を使って部屋を探す場合は現地留学サポート会社の掲示板や、日本食料品店、語学学校、スーパーのレジの外、大学構内、バックパッカー、お肉屋さんに掲示板があります。そして掲示板のいい点はその場所に掲示物を持ってきているので比較的近隣の物件が見つけられるでしょう。そして広く探すのであれば現地の新聞です。家を売ります買いますの貸しますに　share house, room mate という欄があります。英語での連絡になるので最初はしゃべれない聞き取れないなので電話での問い合わせが難しいと思います。そんな時には現地日本語新聞です。日本語新聞だと日本語での問い合わせができる物件が多いでしょう。最近ではネットで見つける場合も多いようですが実は一番多いのは口コミです。友達から紹介された部屋や家です。仕事と一緒で友達や学校の先生から紹介されるのが多いみたいですね。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">学校について</h3>
+        <ul>
+          <li>
+          	<a href="#ans19"><img class="qa-drop" src="../images/golink-drop-black.png">語学学校ってどんなところですか？</a>
+          	<p class="text-answer qa-ans19" style="display: none;">日本人だけではなく世界中からの留学生やワーホリ生が語学を学ぶために学校に通っています。初級からネイティブレベルまでになる為にみんなが頑張っています。日本で考える「勉強」ではなく、語学学校では言葉を使うことに重点を置いて上達させていきます。教室で聞いてるだけでは言葉は伸びません。諸外国の生徒のように積極的に発言をし話せるように伸ばしてください。話して失敗するほど英語は上手になっていきます。ワーキングホリデーで到着して入る教室は最初の友達ができる場所です。クラス中の生徒が友達になり、情報交換やお互いの悩み相談ができる親友ができやすいのもこの時期です。この友達が仕事を紹介してくれたり部屋を紹介してくれたりと、滞在中にはお世話になると思います。</p>
+          </li>
+          <li>
+          	<a href="#ans20"><img class="qa-drop" src="../images/golink-drop-black.png">語学学校はどうやって決めたらいいでしょうか？</a>
+          	<p class="text-answer qa-ans20" style="display: none;">目的に合わせて学校を選んでください。目的は語学を伸ばすことですよね？その目標を忘れずに語学学校の特色やロケーション、１クラスあたりの人数、インターネットの設備やビジネス英語コース、進学英語コース、ケンブリッジ英語検定の有無、生徒のモチベーションの高さ。インターンシップをやっている学校、仕事紹介をしている学校、スチューデントハウス、ホームステイに力を入れている学校留学の本や、インターネット、留学エージェント、大使館などで情報を得たら日本ワーキングホリデー協会でも学校の実際の評判や考えている語学学校の相談が行えます。</p>
+          </li>
+          <li>
+          	<a href="#ans21"><img class="qa-drop" src="../images/golink-drop-black.png">学校はいつぐらいのタイミングで申し込めばいいですか？</a>
+          	<p class="text-answer qa-ans21" style="display: none;">出発時期に合わせて語学学校の申し込みをしましょう。学生ビザの場合、学校のお申し込みが必須となり、申し込みを完了させていないとビザ申請ができませんのでご注意ください。手配に時間がかかる可能性も踏まえて、余裕をもって６ヶ月前〜遅くても３ヶ月前には申し込みを済ませましょう。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">仕事の探し方について</h3>
+        <ul>
+          <li>
+          	<a href="#ans22"><img class="qa-drop" src="../images/golink-drop-black.png">現地で仕事は見つかりますか？</a>
+          	<p class="text-answer qa-ans22" style="display: none;">現地にて仕事を探す方法として一番多いのは働きたいお店への直接の飛び込みです。　Resumeをワードで作りそれを100部印刷して1部ずつお店に配っていきます。10~200件では確率的に難しいでしょう。100件配ると3~5件良い返事がもらえるようです。このほかネットで探す、掲示板で探す、新聞の仕事欄JOBで探します。しかし想像以上に大変です。 しかし仕事探しでも家探しと同じように友達からの情報提供、友達からの紹介が大きな要素となっています。語学学校の先生経由で仕事がもらえた、クラスの友達から紹介してもらったという話はよく耳にするでしょう。現地では語学学校でも多くの友達を作る努力をしましょう。現地の職業紹介所を利用することもできます。</p>
+          </li>
+          <li>
+          	<a href="#ans23"><img class="qa-drop" src="../images/golink-drop-black.png">現地で日本人が働くことのできる職種を教えてください。</a>
+          	<p class="text-answer qa-ans23" style="display: none;">日本人だからと言って出来ない仕事はありません。唯一難しいのは空港などテロのセキュリティーが厳しい場所などです。「○○人だからこの仕事には就けない」というのは人種差別的なおかしな考えです。海外では思いっきり自分がしたいことにチャレンジしてください。英語やその国の言語ができるようになると今度は日本語が上手な人として売り込むことができます。外国人から無くてはならない存在になるには日本語のような特技をアピールできると良いですよ。</p>
+          </li>
+          <li>
+          	<a href="#ans24"><img class="qa-drop" src="../images/golink-drop-black.png">ファームの仕事(ピッキングなど)の探し方は？</a>
+          	<p class="text-answer qa-ans24" style="display: none;">ファームでの仕事はオーストラリアでは時給が高く力仕事でも女性も16ドル～20ドルと高い時給を貰っていて人気を博しています。天候に左右されるファームの仕事は雨が降ったら休みになります。雨が続くとその次の日も足場が悪くて休みになります。天候に左右されるのでセカンドワーホリの為に必要な3カ月のファームの為に4カ月は見ておいた方がいいです。</p>
+          </li>
+          <li>
+          	<a href="#ans25"><img class="qa-drop" src="../images/golink-drop-black.png">ファームで働くと２年目のワーキングホリデービザが取得できると聞いたのですが…</a>
+          	<p class="text-answer qa-ans25" style="display: none;">オーストラリアだけは滞在期間を２年間に延長可能なセカンドワーキングホリデービザがあります。セカンドワーキングホリデビザを申請するためには、「政府が認めている地域にて第一次産業に関わる仕事を３カ月以上働く事」が条件ととなります。ファームの仕事は天候に左右されるため予定をしていた期間どおりにセカンドワーキングホリデービザを取得できない人もいます。セカンドワーキングホリデービザを取得希望の方は、余裕を持って行動しましょう。また、ファームで働く形態として”Willing Workers On Organic Farms”略してWWOOF（ウーフ）と呼ぶものがあります。1日４〜６時間程度の仕事を行う代わりに、雇い主が滞在施設と食事を提供するという無給のシステムです。以前はこのWWOOFでもセカンドワーキングホリデービザを申請する事ができましたが、２０１５年８月３１日以降「給与明細票（Payslip）がない仕事はセカンドワーキングホリデービザ申請書類として認めない」とオーストラリア政府より発表され、現在はセカンドワーキングホリデービザを申請する事ができません。セカンドワーキングホリデービザ取得は、政府が認めている地域にて「有給」の第一次産業に関わる仕事を３カ月以上働らく事と覚えておきましょう。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">パソコン、ネット環境について</h3>
+        <ul>
+          <li>
+          	<a href="#ans26"><img class="qa-drop" src="../images/golink-drop-black.png">パソコンは持っていったほうがいいですか？</a>
+          	<p class="text-answer qa-ans26" style="display: none;">パソコンを毎日使う人ですか？検索したりブログを書いたりと現在日本にいても毎日使う人には持って行くことをオススメしています。最近では街中のコーヒーショップでコーヒーを買うとパスワードを教えてくれてネットが無料で使えたり、ホームステイやシェアハウスでも無線でインターネットが使える家も増えています。しかしネット環境は非常に悪いと感じるでしょう。日本ほどスピードはありませんし使い放題の国は日本だけと思った方がいい位です。課金制と言って使えば使うほどお金がかかります。最近ではホームステイでもシェアでもネットが使える無線LANも販売されているので利用してみても良いでしょう。 </p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">携帯電話について</h3>
+        <ul>
+          <li>
+          	<a href="#ans27"><img class="qa-drop" src="../images/golink-drop-black.png">現地で携帯電話を持った方がいいですか？</a>
+          	<p class="text-answer qa-ans27" style="display: none;">はい、必ず必要です。海外でも携帯電話なくして生活はできません。友達ができたら待ち合わせ、仕事探しや部屋さがしには必ず携帯電話が必要になりますので絶対に早めに手に入れましょう。日本から海外対応携帯電話を持って行くと通話料が高く発信しても受信しても毎分100円以上かかるので（詳しくはお持ちの携帯電話キャリアにお聞きください）現地で契約した方がいいです。2年契約、プリペイド契約、レンタル契約などがあります。様々なお得なサービスが受けられるプランがありますが、国によってはワーキングホリデーメーカーには契約が難しい国もあります。プリペイド方式は日本と同じように本体とプリペイドカードを買ってその都度チャージして利用します。いざ必要と言う時にチャージがなくて電話が使えないということになるので　レンタル携帯電話がお勧めです。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">航空券・海外旅行保険について</h3>
+        <ul>
+          <li>
+          	<a href="#ans28"><img class="qa-drop" src="../images/golink-drop-black.png">航空券はいくらぐらいで購入できますか？ 片道航空券でもいいですか？</a>
+          	<p class="text-answer qa-ans28" style="display: none;">国によっては片道航空券で入国できる国もあります。オーストラリアやニュージーランドなどは片道航空券で入国して帰国時にアジアのタイやカンボジアによって帰ってくるというワーキングホリデーもいます。そうすると最初から計画が立てられないので片道航空券で行きます。そしてLCCとして有名なジェットスターが一人3万円～航空券を販売しているので往復で買う必要もないという事情もあります。航空券は6か月前や4カ月前に購入すると安い航空券が手に入りやすいです。　イギリスも片道航空券で入国できます。カナダは原則往復航空券での入国となっています。</p>
+          </li>
+<?php
+/*
+          <li>
+          	<a href="#ans29"><img class="qa-drop" src="../images/golink-drop-black.png">海外旅行保険は、いくらぐらいかかりますか？</a>
+          	<p class="text-answer qa-ans29" style="display: none;">海外旅行保険、海外留学保険、海外ワーキングホリデー保険について、補償内容によってお勧めも変わりますが、料金が安いからと言って保険を選ぶのは賢明ではありません。違っても3,4万円の違いです。　海外で一度病院にかかるとすぐに５万円かかったり検査だけで６０万円請求された人もいます。昨今の災害に対応していて、ご家族も安心、何かあった時にご家族が現地に助けに行ける保険、そして自分の怪我や病気だけでなく他人への怪我、他人の物の破損など賠償責任は裁判費用もカバーされるものがいいでしょう。海外旅行保険は出発当日の家を出た時から補償されます。そのため必ず出発の１か月前には手元に保険証が届いており出発当日家を出た時から保険が適用されるようにしておきましょう。 ワーキングホリデーで行く場合のお勧めは　アパート借家プランの　治療、救援費用を無制限に補償してくれるIS4プランがお勧めです。http://www.aiu.co.jp/travel/price/?p=oA41F201 必ず出発の３カ月前には手続きをして１か月前には手元に保険証がある状態にしておきましょう。</p>
+          </li>
+*/
+?>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">トラブルに関して</h3>
+        <ul>
+          <li>
+          	<a href="#ans30"><img class="qa-drop" src="../images/golink-drop-black.png">どんなトラブルがよくありますか？</a>
+          	<p class="text-answer qa-ans30" style="display: none;">出発前からビザの取得に関するトラブルは多く、毎日電話がかかってきます。ビザの相談はメールでお願いいたします。　日本ワーキングホリデー協会ではビザの取得手伝いをしておりますので自分でする前にご連絡ください。　到着後に多いトラブルはやはり盗難です。日本では考えられないものが盗まれたり考えられない場所でなくしたりします。住居に関するトラブルで多いのはボンド（敷金）の返却に関することです。最初は返すと言われたのに返してくれないなど他人事と思わずに自分も巻き込まれる可能性を常に考えておいてください。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="qa-qbox">
+        <h3 class="qa-qtitle">帰国後に関して</h3>
+        <ul>
+          <li>
+          	<a href="#ans31"><img class="qa-drop" src="../images/golink-drop-black.png">ワーキング・ホリデー帰国後の就職は難しいですか？</a>
+          	<p class="text-answer qa-ans31" style="display: none;">ワーキングホリデーというのは言葉にホリデーがついているためか、遊んできたと思われがちですが、変化し続ける現在の社会において海外でやってきたことや目標を達成したことはちゃんと評価されています。 大学生の就職が７割を切ったと報道されていますが普通の大学では５割を切っているところもあります。それは学生が仕事出来ないからです。あなたが何ができるのか、その会社にとって何が貢献できるのか。これはワーキングホリデーに行った人に限ることではありません。アメリカに留学にったからと言って仕事ができるわけではありません。就職活動の場では同じ条件です。日本の雇用が海外のようにスキル重視、実力経験重視になってきていることを気付きましょう。英語の仕事に就けない言う声を多く聞きますがTOEIC９００点以上を目指すのはどうでしょうか？　ただ海外体験をしたというだけでは企業にとっても面白くありません。２０年後、３０年後その会社にとって必要なのは海外でも活躍できる人です。そうしないと企業は人口が減少する日本では生きていけません。　自信をもってアピールできるものを作る！そして海外でチャレンジしている企業に挑戦することが大切です。あなた以上に国際感覚がついて帰って来た人がいるでしょうか？　チャレンジした人がいるでしょうか？積極的な人がいますか？</p>
+          </li>
+        </ul>
+  </div>
+        
+        	  <h2 id="question_seminar" class="sec-title" >日本ワーキング・ホリデー協会の無料セミナー</h2>
+
+	<p class="text01">
+	日本ワーキング・ホリデー協会では毎日無料セミナーを開催しています！<br/>
+	セミナーに関してよくある質問をまとめましたので、セミナーに関するご質問はまずこのQ&Aをご確認ください。<br/>
+	<br/>
+	・<a href="../qa.html#question01" style="text-decoration: none; color:#006699;">日本ワーキング・ホリデー協会のセミナーに関するQ&A</a><br/>
+	・<a href="../qa.html#question03" style="text-decoration: none; color:#006699;">参加するセミナーの選び方に関するQ&A</a><br/>
+	</p>
+
+	  <h2 class="sec-title">日本ワーキング・ホリデー協会のセミナーに関するQ&A</h2>
+
+	  <div class="qa-qbox">
+	    <h3 id="question01" class="qa-qtitle">日本ワーキング・ホリデー協会のセミナーについて</h3>
+	    <ul>
+		<li>
+			<a href="#semians01"><img class="qa-drop" src="../images/golink-drop-black.png">セミナーはすべて無料ですか？</a>
+			<p class="text-answer qa-seminar-ans01" style="display: none;">日本ワーキング・ホリデー協会で開催しているセミナーは、すべて無料でご参加頂けます。<br />英語の勉強法セミナーや出発前準備セミナーなど、より具体的なサポートをメンバー限定で開催しているセミナーもございます。<br /><a style="background: none;" href="https://www.jawhm.or.jp/mem/">>> メンバー登録を活用しよう！</a></p>
+		</li>
+		<li>
+			<a href="#semians02"><img class="qa-drop" src="../images/golink-drop-black.png">まだ何も決まっていないけど、セミナーに参加しても大丈夫ですか？</a>
+			<p class="text-answer qa-seminar-ans02" style="display: none;">もちろんです！<br />ワーキングホリデー＆留学成功のカギは、情報収集。留学・ワーキングホリデーの基礎知識はワーキングホリデーセミナーで身につけましょう！気になっていた事、質問や不安などを解消する絶好のチャンスですよ。</p>
+		</li>
+		<li>
+			<a href="#semians03"><img class="qa-drop" src="../images/golink-drop-black.png">どんな服装で行けばいいですか？持って行く物はありますか？</a>
+			<p class="text-answer qa-seminar-ans03" style="display: none;">服装に指定はありませんので、ラフな格好でお越しください。<br />セミナーにお越しになる時は、筆記用具とスケジュール帳、そして「海外に行きたい！」と思う気持ちをお持ちになってください！</p>
+		</li>
+		<li>
+			<a href="#semians04"><img class="qa-drop" src="../images/golink-drop-black.png">1人で行っても大丈夫ですか？</a>
+			<p class="text-answer qa-seminar-ans04" style="display: none;">セミナーに参加される方の多くは１人でのご参加ですので、ご安心ください。<br />友達やご家族様との参加も大歓迎です。</p>
+		</li>
+		<li>
+			<a href="#semians05"><img class="qa-drop" src="../images/golink-drop-black.png">セミナーに遅れそうな時はどうしたらいいですか？</a>
+			<p class="text-answer qa-seminar-ans05" style="display: none;">セミナーは途中からでも参加可能ですが、セミナー自体はスタートしてしまいます。セミナーでは短い時間で多くの事をご説明いたしますので、もし20分以上セミナーに遅れてしまう場合は別の日時で再度ご予約をお取りいただくことをお勧め致します。</p>
+		</li>
+		<li>
+			<a href="#semians06"><img class="qa-drop" src="../images/golink-drop-black.png">会場の場所が分からないです。</a>
+			<p class="text-answer qa-seminar-ans06" style="display: none;">各会場へのアクセス方法は、下記のリンクをご参考ください。<br />また、事前にお送りしているメールにも会場へのアクセス方法が詳細に記載されておりますので、そちらも併せてご参考ください。<br /><br />【各会場の詳細情報】<br />
+			　<a style="background: none;" href="http://www.jawhm.or.jp/office/tokyo/">・東京会場</a><br />
+			　<a style="background: none;" href="http://www.jawhm.or.jp/office/osaka/">・大阪会場</a><br />
+			　<a style="background: none;" href="http://www.jawhm.or.jp/office/nagoya/">・名古屋会場</a><br />
+			　<a style="background: none;" href="http://www.jawhm.or.jp/office/fukuoka/">・福岡会場</a><br />
+			　<a style="background: none;" href="http://www.jawhm.or.jp/office/okinawa/">・沖縄会場</a><br />
+			</p>
+		</li>
+	    </ul>
+	  </div>
+
+	  <div class="qa-qbox">
+	    <h3 id="question02" class="qa-qtitle">セミナーの予約ついて</h3>
+	    <ul>
+			<li>
+				<a href="#semians07"><img class="qa-drop" src="../images/golink-drop-black.png">セミナーを予約したいです。予約方法を教えてください。</a>
+				<p class="text-answer qa-seminar-ans07" style="display: none;"><a style="background: none;" href="http://www.jawhm.or.jp/seminar/seminar">当協会のセミナー予約ページ</a>から予約したいセミナーを選択し、フォームに必要情報を入力してご予約ください。<br /><br />登録が完了すると、仮予約の完了をご案内するメールが届きます。メール内に記載されている内容をご確認いただき、<strong>予約を確定してください</strong>。予約が確定されると予約確定メールが自動返信されます。予約確定メールには予約されたセミナーの詳細な日時や、会場までのアクセス方法などが記載されているので消さないように保存をしてください。<br /><br /><strong>※予約したセミナーの前日になったら</strong><br />予約されたセミナーの開催日前日に、再度協会から予約確認のメールをお送りいたします。このメールにもご予約されたセミナーの詳細やオフィスまでのアクセス方法を記載致しますので、必ず事前にご確認ください。<br /></p>
+			</li>
+	<!--		<li><a href="qa_seminar_a.html#ans08">予約したらメールが届いたけど、どうしたらいいの？</a></li>
+			<li><a href="qa_seminar_a.html#ans09">セミナーの前日になったら</a></li>
+	-->		<li>
+				<a href="#semians10"><img class="qa-drop" src="../images/golink-drop-black.png">セミナーを予約したのに何も連絡がきません。予約はとれていますか？</a>
+				<p class="text-answer qa-seminar-ans10" style="display: none;">
+				いくつか協会から連絡が届かない理由が考えられます。下記の方法をお試しください。<br /><br />
+				<strong>１．協会からの案内メールが迷惑メールフィルターにひっかかってしまう</strong><br />
+				協会から送られるメールが、迷惑メールとして弾かれてしまう場合がございます。迷惑メールフォルダなどをご確認いただき、「@jawhm.or.jp」ドメインからのメールを受信できるように再設定したうえで再度セミナーをご予約ください。<br /><br />
+				<strong>２．予約時に間違ったメールアドレスを入力してしまっている</strong><br />
+				セミナー予約時に入力して頂くメールアドレスを再度ご確認いただき、もう一度セミナーを予約してください。<br /><br />
+				<strong>３．その他の場合</strong><br />
+				上記の方法をお試し頂いたうえで協会から何も連絡がこない場合は、<a style="background: none;" href="mailto:toiawase@jawhm.or.jp?subject=【お名前】セミナー予約の問い合わせ&amp;body=・お名前%20：%20%0d%0a・フリガナ%20：%20%0d%0a・メールアドレス%20：%20%0d%0a・電話番号%20：%20%0d%0a・セミナー名%20：%20%0d%0a・日時%20：%20%0d%0a・開催地%20：%20%0d%0a・ご用件%20：%20">toiawase@jawhm.or.jp</a>に下記情報をお送りください。<br /><br />
+				　　・件名：【お名前】セミナー予約の問い合わせ<br />
+				　　・お名前 : <br />
+				　　・フリガナ : <br />
+				　　・メールアドレス : <br />
+				　　・電話番号 : <br />
+				　　・セミナー名 ： <br />
+				　　・日時 ： <br />
+				　　・開催地 ： <br />
+				　　・ご用件　：
+				</p>
+			</li>
+			<li>
+				<a href="#semians11"><img class="qa-drop" src="../images/golink-drop-black.png">予約をキャンセルしたいです。どこに連絡すればいいですか？</a>
+				<p class="text-answer qa-seminar-ans11" style="display: none;">
+				予約を確定した際に届くメールに、予約キャンセル用のURLが記載されております。そちらへアクセス頂き、ご予約のキャンセルをお願致します。<br/>
+	                <br/>
+	                <font color="red">ご注意：<b>当日のキャンセルや、キャンセル手続き無くセミナーへの欠席が続いた場合、その後のご予約をご遠慮する場合もございます。</b>多くの方に情報提供をさせていただくためのセミナーとなりますので、どうぞご理解ください。</font>
+				</p>
+			</li>
+			<li>
+				<a href="#semians25"><img class="qa-drop" src="../images/golink-drop-black.png">予約が満席だったので「キャンセル待ち」になりました。この後はどうしたらいいですか？</a>
+				<p class="text-answer qa-seminar-ans25" style="display: none;">
+				すでに予約が満席のセミナーに予約をすると「イベントセミナーキャンセル待ちのご案内」のメールが届き、キャンセル待ちリストに登録されます。その後、他のお客様が予約をキャンセルされ席に空きが出た場合、順番に改めてご案内のメールをお送り致します。<br /><br />
+				なお、他のイベントセミナーに興味がある場合は、そちらのご予約をすることも可能です。
+				</p>
+			</li>
+	    </ul>
+	  </div>
+            <div class="top-move">
+	    <p><a href="#question_seminar">▲セミナーに関するQ&A TOPへ</a></p>
+    </div>
+	  <h2 id="question03" class="sec-title">参加するセミナーの選び方に関するQ&A</h2>
+
+	  <p class="text01">日本ワーキング・ホリデー協会のセミナーには様々な種類があり、自分の準備状況に合ったセミナーに参加して頂くことで最適なプラン作りやアドバイスを受けることが出来ます。
+				では、今のアナタにピッタリなのはどのセミナーでしょうか？セミナーを選んでいる時によくある質問と、そんな状況に応じたオススメのセミナーをご紹介いたします。<br />
+				<br />
+				初めて日本ワーキング・ホリデー協会のセミナーに参加される方は、まず<a href="http://www.jawhm.or.jp/seminar/seminar_01"><font color="red">初心者向けセミナー</font></a>からご参加ください！
+	  </p>
+
+	  <div class="qa-qbox">
+	    <h3 class="qa-qtitle">ワーキングホリデー＆留学の準備・情報収集を始めたい</h3>
+	    <ul>
+		<li>
+			<a href="#semians12"><img class="qa-drop" src="../images/golink-drop-black.png">とりあえず、何から始めればいいか分かりません。初歩的なことから聞きたいです。</a>
+			<p class="text-answer qa-seminar-ans12" style="display: none;">
+				あなたには<strong>「初心者向けセミナー」</strong>がお勧めです。<br /><br />
+				「何から始めたらいいか分からない」<br />
+				「何を聞いたらいいか分からない」<br />
+				「ネットの情報だけでは納得できない」<br />
+				<br />
+				こんな人は、まずワーキングホリデー協会の初心者向けセミナーに参加して、ワーキングホリデー＆留学の基本的な情報を学びましょう。
+				初心者向けセミナーでは、ワーキングホリデー＆留学の基礎知識はもちろん、国や都市の紹介、予算やビザの紹介など、準備を始める前に知っておきたい情報が盛りだくさんです！<br />
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","初心者向け");
+      ?>
+		<li>
+			<a href="#semians13"><img class="qa-drop" src="../images/golink-drop-black.png">初心者向けのセミナーに参加しました。<br />　より詳しくワーキングホリデーや留学について説明してくれるセミナーはありますか？</a>
+			<p class="text-answer qa-seminar-ans13" style="display: none;">
+				あなたには<strong>「海外渡航プランニング法セミナー」</strong>がオススメです。<br/><br/>
+				海外渡航プランニング法セミナーでは初心者セミナーで詳しくお話しできなかったビザ取得の詳細、渡航までのプランニングや海外で取得できる資格、具体的な費用のご紹介などを中心に実際にプランニングをしていくために必要な情報を、皆様に提供致します。<br/>
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","海外渡航プランニング法");
+    ?>
+<!--		<li><a href="qa_seminar_a.html#ans14">どの国に行こうか悩んでいます / どの都市に行こうか悩んでいます。<br />　国や都市ごとの違いや特徴を教えてくれるセミナーはありますか？</a></li>
+-->		<li>
+			<a href="#semians17"><img class="qa-drop" src="../images/golink-drop-black.png">現地での生活や仕事探しについて教えてくれるセミナーはありますか？</a>
+			<p class="text-answer qa-seminar-ans17" style="display: none;">
+				あなたには<strong>「現地お住まい/仕事セミナー」</strong>がお勧めです。<br />
+				<br />
+				ワーキングホリデー渡航希望者から一番多いのが、「住む場所」と「仕事」に関する質問です！
+				住む場所に関しては、ホームステイ・シェアハウス・学校寮それぞれのメリット＆デメリット紹介や、家の探し方、家賃、契約時の注意点などをご紹介します。
+				仕事については、どのような仕事があるのか、お給料、履歴書に書ける資格、仕事探しに強い学校のコースのご案内など海外仕事のいろはをお伝えいたします。
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","現地お住まい/仕事セミナー");
+      ?>
+	    </ul>
+	  </div>
+	  <div class="qa-qbox">
+	    <h3 class="qa-qtitle">悩みがある、相談をしたい</h3>
+	    <ul>
+		<li>
+			<a href="#semians15"><img class="qa-drop" src="../images/golink-drop-black.png">色々と相談したいのですが、男性が一緒だと質問し辛いです。</a>
+			<p class="text-answer qa-seminar-ans15" style="display: none;">
+				あなたには<strong>「女性限定お悩み解決セミナー」</strong>がお勧めです。<br /><br />
+				ワーキングホリデーを使って海外へ渡航される方の、実に約6割が女性なんです。
+				このセミナーでは普段なかなか聞き辛い女性ならではのご相談にお答えします！担当スタッフももちろん女性。ワーキングホリデー準備の女子会へ参加してみませんか？
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","女性限定");
+      ?>
+		<li>
+			<a href="#semians16"><img class="qa-drop" src="../images/golink-drop-black.png">仕事を辞めてワーキングホリデーに行ってみたいと考えています。<br />　辞職のタイミングやきっかけ、帰国後の再就職について聞くことが出来るセミナーはありますか？</a>
+			<p class="text-answer qa-seminar-ans16" style="display: none;">
+			あなたには<strong>「休職ワーキングホリデー。仕事を退職し留学へ」</strong>がお勧めです。<br />
+			<br />
+			ワーキングホリデーへ行ける30歳前に行きたいと興味はあるけれど、行くきっかけがつかめない。
+			就職をしたけれど、今のままでいいのか自分に問いかけることがある。生活に不満があるわけじゃないけど環境を変えてみたい。
+			そんな方に参加して頂きたいセミナーです。
+			仕事を退職して海外へ出発した経験者が、海外に興味をもったきっかけ、今現在の仕事、不安だった事についてお話をさせて頂き、
+			参加者同士の交流、海外経験者の体験を通しての情報収集が出来るセミナーです。
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","休職ワーキングホリデー");
+      ?>
+<!--		<li><a href="qa_seminar_a.html#ans18">帰国後の就職や渡航前の心構えなどを聞いて、留学前にモチベーションをあげたい！</a></li>
+-->		<li>
+			<a href="#semians19"><img class="qa-drop" src="../images/golink-drop-black.png">ワーキングホリデーや留学を経験した人の体験談を聞いてみたいです。<br />　海外での生活について色々質問できるセミナーはありますか？</a>
+			<p class="text-answer qa-seminar-ans19" style="display: none;">
+				あなたには<strong>「体験談セミナー」</strong>がお勧めです。<br />
+				<br>
+				経験者から海外での実際の生活について、仕事の探し方、持って行って良かったもの、楽しかった経験や辛かった経験など、
+				様々なことを皆様にお伝えいたします。海外へ行く前に経験者の話を聞ける数少ないチャンスなので、是非活用ください！
+				<br />
+				<a style="background: none" href="http://www.jawhm.or.jp/interview/">当協会のカウンセラー紹介ページ</a>
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","体験談セミナー");
+      ?>
+	    </ul>
+	  </div>	
+	  <div class="qa-qbox">
+	    <h3 class="qa-qtitle">より具体的な質問をしたい</h3>
+	    <ul>
+		<li>
+			<a href="#semians20"><img class="qa-drop" src="../images/golink-drop-black.png">出発までのプラン設定、ビザ申請のしくみ紹介、学校の案内などを、まとめてしてくれるセミナーってありますか？</a>
+			<p class="text-answer qa-seminar-ans20" style="display: none;">
+				あなたには<strong>「懇談カウンセリング：年内渡航計画相談会」</strong>がお勧めです。<br /><br />
+				インターネットや協会のセミナーを通して集めた情報を整理するセミナーです。
+				少人数制のグループカウンセリングなので、相談をしながら自分のプランを作うことができ、気になったこともその場で聞くことが出来ます。
+				同じセミナーに参加している人が「あ、そんな質問もあったな」と思える質問をしてくれたりするので、ひとりで悩むよりもお勧めです。<br />
+				<br />
+				また渡航先の国ごとにセミナーが設定してあるので、自分が行きたい国のセミナーを選べます。
+				セミナーではその国ごとの都市紹介や、あなたに合った留学・ワーキングホリデープランのご紹介など、
+				よりワーキングホリデーを現実的なものにする情報盛りだくさんです。
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","懇談カウンセリング");
+      ?>
+<!--		<li><a href="qa_seminar_a.html#ans21">ビザの申請方法や、出発までの具体的な流れなどを知りたいです。</a></li>	-->
+	    </ul>
+	  </div>
+
+	  <div class="qa-qbox">
+	    <h3 class="qa-qtitle">海外の学校について知りたい</h3>
+	    <ul>
+<!--		<li><a href="qa_seminar_a.html#ans22">海外の学校について調べたいのですが、何から始めればいいか分かりません。</a></li>
+-->		<li>
+			<a href="#semians23"><img class="qa-drop" src="../images/golink-drop-black.png">海外の語学学校についてもっとよく知りたいです。<br />　せっかく海外へ行くんだから、語学学校で英語を伸ばしたいです。自分に合った学校を紹介してくれませんか？</a>
+			<p class="text-answer qa-seminar-ans23" style="display: none;">
+				あなたには<strong>「語学学校比較セミナー」</strong>がお勧めです。<br />
+				<br />
+				海外には語学学校が沢山あります。料金の安い学校、キャンパス数の多い学校、コースが豊富な学校、資格に強い学校、インターンシップに強い学校…
+				ひとりではとても選びきれないかもしれませんが、その為に私達がいます！
+				語学学校比較セミナーでは、皆さんに学校情報などをお伝えすると同時に、皆さんの目的・目標に合った学校の紹介も行っています。<br /><br />
+				また、どうして海外に行ってから学校に通う必要があるのか、気になる語学学校の内容や学校選びのポイントなどもご紹介します。
+				学校紹介と併せて体験談もお話しいたしますので、学校に対するイメージをより具体化できます。
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","語学学校選び方");
+      ?>
+		<li>
+			<a href="#semians24"><img class="qa-drop" src="../images/golink-drop-black.png">興味がある学校があります。もっと詳しくその学校についてお話を聞くことは出来ますか？</a>
+			<p class="text-answer qa-seminar-ans24" style="display: none;">
+			あなたには<strong>「語学学校セミナー」</strong>がお勧めです。<br />
+			<br />
+			このセミナーには、実際に海外の学校では働く学校スタッフ様を特別講師としてお招きします。
+			学校についてもっと詳しくお話を聞いてみたい方や、学校に通いながらの生活に興味がある方にお勧めです。
+			またセミナーに参加された方には特別な特典もご用意されていますので、お得に海外留学したい人は必ずチェックしましょう。
+			</p>
+		</li>
+    <?php
+        display_horizontal_calendar("該当なし",2,0,"","学校名");
+      ?>
+	    </ul>
+	  </div>	  
+    <div class="top-move">
+	    <p><a href="#question_seminar">▲セミナーに関するQ&A TOPへ</a></p>
+    </div>
+      <div class="advbox03">
+<?php
+    // 121
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 99, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+      </div>
+    </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

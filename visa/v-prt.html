@@ -1,0 +1,185 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='ポルトガルのワーキングホリデービザ情報';
+$header_obj->description_page='オーストラリアのワーキングホリデービザ取得のステップや注意事項を掲載しています。オーストラリアへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（オーストラリア） | ワーホリビザ情報';
+
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	 <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag14.gif" alt="" />
+	 <p class="text01">
+			<span class="centered-btn"><a class="visa-btn country-info" href="../country/portugal" title="ポーランド">ポルトガル</a></span>
+			<b>ポルトガルのワーキングホリデービザの取得方法についてご案内します。</b>
+	 </p> 
+	 <div class='clear'></div>
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/************************
+
+	// 067
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 64, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 068
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 65, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 069
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 66, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 070
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 67, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 071
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 68, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+***************************/
+
+?>
+<!--
+	</div>
+	 <p style="margin:20px 0px">
+		現在、ビザ情報を確認中です。正式な情報が公表され次第、こちらのページでご案内します。
+	 </p>-->
+	  
+	  <!-- new content add -->
+	<div class="content-visa-new">
+	  <h2 class="sec-title"> ビザについて </h2>	
+	  <p>
+	  	２０１５年３月に署名調印され、同年７月１日から開始された本制度は、日本の青少年がポルトガルに渡航滞在し、同国との文化交流や相互理解を深めることを目的として入国からの一年間の滞在を許可し、かつ、休暇の付随的な活動としての就労を認めるものとなります。本制度は、その開始を契機として、両国の青少年の交流や相互理解が促進され、両国の友好親善が一層強化されることを目的としています。
+	   </p>
+		<div class="yellow-box">
+			<p><a href="http://embaixadadeportugal.jp/jp/" target="_blank">ポルトガル大使館</a></p>
+			<p>102-0083</p>
+			<p>東京都千代田区麹町3-10-3　神浦麹町ビル5階</p>
+		</div>
+	   <h3 class="h3-01">申請可能な方</h3>
+	   <p>本制度でポルトガルに渡航し、１年間まで滞在することができます。</p>
+	   <ul class="">
+			<li> 1. 申請時に、日本国内に住居をもち、日本国旅券を保持する日本国籍者であること</li>
+			<li> 2. ポルトガルにおいての休暇を第一の目的とすること</li>
+			<li> 3. 申請時に満１８歳以上３０歳以下であること</li>
+			<li> 4. 子どもの同伴はしないこと、但しポルトガル滞在が許可された家族は例外とする</li>
+			<li> 5. 往復の航空券あるいは、往路片道のみの場合は、帰国のための航空券購入可能な費用を証明する書類が必要となる</li>
+			<li> 6. ポルトガル滞在を可能とするに十分と判断しうる金額の明記された英文残高証明書書</li>
+			<li> 7. 本目的終了後は、ポルトガル滞在の延長をせずに速やかに帰国すること</li>
+			<li> 8. 本目的以外の査証取得は行わない</li>
+			<li> 9. 健康であって過去に犯罪経歴が記録されていないこと</li>
+			<li> 10. 海外旅行傷害保険に加入していること</li>
+	 	</ul>
+		<h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		<ul class="list-visabasic">
+	          <a href="http://www.mofa.go.jp/mofaj/area/portugal/index.html" target="_blank">外務省基本情報</a>
+	          <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=174#ad-image-0" target="_blank">安全情報</a>
+	          <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/portugal.html" target="_blank">在外公館</a>
+	    </ul>
+
+	    <h2 class="sec-title" style="margin-bottom: 35px">申請について</h2>
+
+		<h3 class="h3-01">申請に必要な書類</h3>
+		<p>申請者本人が、 下記に記された書類を、当大使館領事部へ提出しなければならない。</p>
+		<ul class="">
+			<li> a) ビザ申請申込書（オリジナル）</li>
+			<li> b) １２ヶ月以上の残存有効期間があるパスポート（原本およびコピー１枚）</li>
+			<li> c) 証明写真１枚（サイズ３ｘ４ｃｍ、無背景で良質であり最近撮影された顔写真）</li>
+			<li> d) 往復航空券の予約確認書（原本）。あるいは、往路のみの航空券の場合、帰国する航空券を購入できる費用の証明書が必要となる</li>
+			<li> e) 申請者が健康であることが明記された英文健康診断書</li>
+			<li> f) ポルトガル滞在中の緊急治療、および日本へ送還費用を含む病気や怪我の治療費を保障する海外旅行傷害保険証明書類</li>
+			<li> g) ポルトガルでの犯罪有無を確認する要請書</li>
+			<li> h) ３ヶ月以内に発行された犯罪経歴証明書、取得後、日本国外務省によるアポスティーユ証明が必要となる。（外務省窓口：電話番号東京０３－３５８０－３３１１
+					（証明班）、大阪０６－６９４１－４７００）</li>
+			<li> i) ポルトガル滞在を可能とする経済状況を証明する書類（１年間で１６０００ユーロほどの金融機関が発行する英文残高証明書、あるいは同等の証明書）</li>
+			<li> j) 申請者が適切な査証でポルトガルに入国しなかった場合、如何なる状況であっても、その責任を申請者本人が負うことを表す宣言書</li>
+	 	</ul>
+	 	<h3 class="h3-01">申請費用</h3>
+	 	<p>日本国籍者が査証申請する場合は無料であるが、領事部にて翻訳が必要とされる場合、１ページにつき７４０３ 円、送料としてレターパック５１０（５１０円）が必要となる.</p>
+
+	 	<h3 class="h3-01">補足</h3>
+	 	<p>ポルトガル滞在について、より多くの情報を得たい場合、下記のポルトガル移民局（略称SEF）ＨＰを参照のこと）ＨＰを参照のこと.</p>
+	 	<span>
+	 		<a href="http://www.sef.pt/portal/V10/EN/aspx/page.aspx" target="_blank" class="link-vs">&nbsp; &nbsp; &nbsp;http://www.sef.pt/portal/V10/EN/aspx/page.aspx</a>
+	 		(英語ページ)
+	 	</span>
+	 	
+	 	<p style="margin-top: 30px; font-weight: bold; text-align: center">申請を希望される場合、事前に、お電話あるいはメールにてご予約ください。</p>
+	 	<br>
+
+	</div>
+	  
+	  <!-- ========== -->
+	  
+	 <!--  <p style='text-align:center;font-size:20px'> 大使館からの情報が発表され次第、お知らせいたします。</p> -->
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2016/04/05に確認した情報です。</font></p>
+	  </div>
+	  
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+		<br />
+	 	<?php $header_obj->display_visa_links(); ?>
+		<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

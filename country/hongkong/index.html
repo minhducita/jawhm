@@ -1,0 +1,218 @@
+﻿<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・香港の基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶ香港は、イギリスと中国の文化が入り混じった独特の空気感が魅力です。香港にワーホリを考えている方は、是非参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/HK-countrypage.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '香港 | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/bflag11.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/map-hkg.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/map-hkg-sp.png" />
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>香港人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />西環</li>
+				<li><img src="../images/crown-2.gif" />馬料水</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" />湾仔</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>香港基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Central and Western District</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">Chinese, English</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>1,104 km&#178;<span>(世界180位)</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>7,053,189人<span>(世界98位)</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>Hong Kong Dollar (HKD)</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Central and <br />Western District</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-hkg.png" /><br />
+								1月1日<br />
+								08:00am
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Central and Western District</td>
+					</tr>
+					<tr>
+						<th>面積</th><td>1,104 km&#178;<span>(世界180位)</span></td>
+					</tr>
+					<tr>
+						<th>人口</th><td>7,053,189人<span>(世界98位)</td>
+					</tr>
+				</table>
+				<table class="table-info" style="margin-right:0;margin-top:15px">
+					<tr>
+						<th>言語</th><td id="td-language">Chinese, English</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>Hong Kong Dollar (HKD)</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Central and <br />Western District</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-hkg.png" /><br />
+							1月1日<br />
+							08:00am
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+
+		<h2 class="h2-title"><span>香港ってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			香港人が自分たちで言うようにうるさいくらい良くしゃべる。飲茶文化を発展させたように外食文化が発展しており、家で料理をしないという家庭で驚いてはいけないキッチンがない家もある。　フリーポートとして日本企業も多く進出しておりそのビル群の夜景は100万ドルの夜景と呼ばれている。　都市部の若者文化は日本と類似しておりウェスタナイズされている。　マンゴーデザート店やドリアンが食べられるように熱帯地方の気候はトロピカルな食べ物が多く、ちょっと田舎方面に出向くとヤシの木やうっそうと茂った草木に都市部では感じられない香港が見える。　大陸中国には電車を利用し陸路で行ける。税関もあるが毎日買い物や仕事で行き来する人もいるほど行き易い。　発展し続ける香港と、今まさに建設ラッシュの中国を見比べるとそのギャップや貧困の差には感じることも多いだろう。　観光都市、アジアの流通ハブとして経済が発展している姿は日本の未来形かもしれない。　古くから中東やインドからの移民、イギリスの植民地時代と移民が多く、いろいろな人種がビジネスを通して英語を使っている。　ビジネスでは英語は出来て当たり前で香港を楽しむためには広東語も勉強しよう。
+			</p>
+		</div>
+
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-hkg.html" title="香港のワーキングホリデー（ワーホリ）ビザ情報へ">香港のワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+	  	<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+	  	<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+		<a href="../../visa/v-hkg.html" class="btn-visa area-round-corner">
+			香港の<br />ビザ情報はこちらから
+		</a>
+	  	<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+
+	 <?php 
+			//settings for the calendar module display
+            $country_to_display = '香港';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+
+    <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    <div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>  
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+
+<?php $links_obj->display_links(); ?>
+
+	</div><!-- /#maincontent -->
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

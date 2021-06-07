@@ -1,0 +1,78 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='ポーランドへの留学・ワーホリでよくある質問';
+$header_obj->description_page='ポーランドのワーホリでよく頂く質問にお答えしています。ビザの申請や現地での仕事探しに関することなど、具体的に掲載しているのでオーストラリアへ渡航される方は参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ポーランドワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+    <div id="maincontent">
+      <?php echo $header_obj->breadcrumbs('qa'); ?>
+      <h2 class="sec-title">ポーランド　留学・ワーキングホリデー</h2>
+
+      <table class="qatable-aus">
+        <tr>
+          <th><img src="images/polflag.png" alt="" /><br />ポーランド</th>
+          <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+        <h2 class="sec-title">ポーランドの良くある質問</h2>
+      <p>&nbsp;</p>
+      <div class="qa-abox-country">
+        <h3 class="q-title">Ｑ１. ポーランド語ができませんが、ポーランド ワーキングホリデーは可能ですか？</h3>
+        <p class="text01m30">ポーランドの公用語はポーランド語です。ポーランド語ができないからといってワーキングホリデービザが許可されないわけではありません。都心に行けばある程度英語が通じるエリアもありますが、ポーランド語が全く分からない状態では仕事に就くこともできないので注意しましょう。</p>
+      </div>
+        <div class="qa-abox-country">
+        <h3 class="q-title">Ｑ２. ポーランドへの渡航はいつ頃がオススメですか？</h3>
+        <p class="text01m30">ポーランドは大陸性気候なので、日本と同じくはっきりとした四季があります。夏も冬も日本より気温が低いので、夏は涼しく過ごしやすいですが、冬はしっかりと防寒対策が必要になります。ポーランドへ渡航するなら、春～夏がオススメ。日中でも涼しく過ごしやすく、様々な祭典も開催されます。
+      </p>
+        </div>
+            <div class="qa-abox-country">
+            <h3 class="q-title">Ｑ３. ポーランドで働く前にしなければならない手続きはありますか？</h3>
+            <p class="text01m30">ポーランドに14日間以上滞在される方は、入国の日から遅くとも4日以内に、定住先または一時滞在先で住民登録をしなければなりません。住民登録は、居住する建物の所在地を管轄する郡役所で行います。また、雇用契約に基づきポーランドにおいて就労する、ワーキングホリデー制度の利用者は、年金保険と傷害年金保険に加入する義務があります。
+            </p>
+        </div>
+        <div class="qa-abox-country">
+            <h3 class="q-title">Ｑ４. ポーランドワーキングホリデーで注意することはありますか？</h3>
+            <p class="text01m30">ワーキングホリデービザでの滞在はシェンゲン協定の定めるビザ免除規定の期間（６ヶ月内９０日間）を含みます。シェンゲン協定加盟国外で6ヶ月過ごさなければ、ポーランドも含むシェンゲン条約加盟国の再入国はできません。　シェンゲン協定加盟国に6カ月入国できないのでポーランドワーキングホリデー終了後にシェンゲン協定国へのヨーロッパ旅行はできません。
+            </p>
+        </div>
+
+        <div class="top-move">
+            <p><a href="#header">▲ページのＴＯＰへ</a></p>
+        </div>
+      <div class="advbox03">
+<?php
+    // 122
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 100, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+      </div>
+
+<?php $links_obj->display_links(); ?>
+
+  </div>
+  </div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

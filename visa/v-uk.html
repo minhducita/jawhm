@@ -1,0 +1,278 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'イギリスのワーキングホリデービザ情報';
+$header_obj->description_page = 'イギリスのワーホリビザ情報・取得は日本ワーキング・ホリデー協会のこちらをご覧ください。ビザ取得までのステップや注意点についてなど詳しく掲載しています。渡航前の準備にお役立てください。ワーキングホリデー協会は留学に行く方向けに準備・手続きの手順をわかりやすくご案内しています。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970"
+                                         height="170"/>';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（イギリス） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+
+?>
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+    <?php $header_obj->display_visa_links(); ?>
+    <img src="../images/bflag07.gif" alt="" />
+
+    <div class="visa-country">
+        <p class="text01 bold">イギリスのワーキングホリデービザの取得方法についてご案内します。</p>
+        <a class="visa-btn country-info" href="../country/unitedkingdom" title="イギリス国情報へ">イギリス国情報へ</a>
+    </div>
+
+    <div style="margin:20px auto 20px auto; padding:20px 20px 20px 20px; border: 2px dotted navy;">
+        <div class="text01">
+            <div class="text-red" style="font-size: large;">
+                イギリス ワーキングホリデー YMS 2021 (日本国籍者) の情報が公開されました（2020.12.20更新）
+            </div>
+            <div style="font-size: medium;">
+                <br>
+                例年通り日本国籍者が対象となる定員は1,000名で、この定員が「1月」と「7月」に行われる2回の抽選へ分けられます。
+                <br>
+                <br>
+                800名が1回目に行われる2021年1月の抽選にて選ばれます。申請が許可されると、英国に最長2年間の滞在、また就労及び就学が可能です。Youth Mobility Schemeビザは、希望渡英予定日の6か月前より申請ができます。
+            </div>
+        </div>
+        <p class="text01">
+            <a href="https://www.jawhm.or.jp/wh/uk2021/" target="_blank" style="font-size: large;" rel="noreferrer">イギリス ワーキングホリデー YMS 2021 特設サイトも合わせてご確認ください。</a>
+        </p>
+    </div>
+
+    <a href="/wh/uk">
+        <p class="v-uk_whuk text-center">
+            <img src="/images/whuk_SP.jpg" alt="人気国で英語を学ぼう！イギリスワーホリをチェック">
+        </p>
+    </a>
+    <br>
+
+    <div class="section">
+        <h2 class="sec-title">イギリス ワーキングホリデービザ申請の手引き</h2>
+
+        <h3 class="h3-01">2021年度 YMSについて（2020.12.20現在）</h3>
+        <div class="text01">
+            Youth Mobility Scheme 2021 (日本国籍者) (イギリス大使館公式ページ)<br>
+            <a href="https://www.gov.uk/government/news/first-ballot-of-the-2021-youth-mobility-scheme-for-japanese-nationals.ja" target="_blank" rel="noreferrer">
+                https://www.gov.uk/government/news/first-ballot-of-the-2021-youth-mobility-scheme-for-japanese-nationals.ja
+            </a><br>
+            <br>
+            日本国籍者が対象となる定員は1,000名です。<br>
+            1月に行われる第1回抽選で800名が選ばれ、残った枠が2021年7月に行われる第2回抽選で選ばれます。<br>
+            申請が許可されると、英国に最長2年間の滞在、就労及び就学が可能です。<br>
+            <br>
+            <p class="bg-yellow" style="width: auto;"> イギリス ワーキングホリデービザに関する情報の詳細は <a href="https://www.gov.uk/government/news/youth-mobility-scheme-2020-for-japanese-nationals.ja" target="_blank" rel="noreferrer">英国大使館</a> からご確認ください。</p>
+        </div>
+
+        <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+        <div class="text01">
+            <ul class="list-visabasic">
+                <a href="http://www.mofa.go.jp/mofaj/area/uk/data.html" target="_blank" rel="noreferrer">基本情報</a>
+                <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=154" target="_blank" rel="noreferrer">安全情報</a>
+                <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/uk.html" target="_blank" rel="noreferrer">在外公館</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="sec-title">ビザ取得までのステップ （2020.12.20現在）</h2>
+        <h3 class="h3-01">参加可能年齢　18～30歳（申請時30歳であれば31歳での入国が可能）</h3>
+        <p class="text01">
+            2021年Youth Mobility Schemeの申請を希望される方は、
+            日本時間2021年1月25日（月）12時（正午）から2021年1月27日（水）12時（正午）の間に、
+            Japan.YMS2021@fcdo.gov.uk宛てにEメールを1通のみお送りください。 
+        </p>
+        <p class="text01">
+            メールの件名にはパスポートと同じ表記の申請者氏名、生年月日（日／月／年）およびパスポート番号を必ず英語で明記してください。 
+        </p>
+        <p class="text01">
+            例：SUZUKI Miyu - 31/01/1995 - Passport123456789 
+        </p>
+        <p class="text01">
+            Eメール本文には、英語でご自身の下記情報を明記してください。
+            <br>
+            Name:
+            <br>
+            Date of birth:
+            <br>
+            Passport Number:
+            <br>
+            Mobile phone number:
+        </p>
+        <p class="text01">
+            上記Eメールアカウントでの受付期間は48時間のみで、この時間内に受信された全てのEメールに対して、受信確認の自動返信が送られます。
+        </p>
+        <p class="text01">
+            受付期間終了後に、800名がUKVIによって無作為に選ばれます。選ばれた申請者には、予約方法の詳細とYouth Mobility Schemeビザ申請に必要な書類に関する2通目のEメールを2月1日の週までにお送りします。 
+        </p>
+        <p class="text01">
+            当選された方は、2021年3月1日（月）までにオンライン申請、クレジットカードによるオンラインでの申請料金の支払いを完了する必要があります。この期日までに申請料金の支払いが完了されていない場合、自動的に当選リストより名前が削除され、当選が取り消されます。オンラインで申請料金の支払いを済ませた後、90日以内に書類を提出してください。 
+        </p>
+        <p class="text01">
+            海外在住の日本国籍者も上記の方法でお申し込みください。当選した申請者は在住国での申請が可能です。 Youth Mobility Schemeビザを英国内から申請することはできませんので予めご注意ください。
+        </p>
+        <p class="text01">
+            なお、当選されなかった場合には、2月5日（金）までにメールでご連絡いたしますので、その後の対応は必要ありません。 
+        </p>
+        <p class="text01">
+            YMSの詳細は<a href="https://www.gov.uk/tier-5-youth-mobility" target="_blank" rel="noreferrer">GOV.UK</a>に掲載されています。申請方法、オンライン申請書、一般的な質問に関しては、<a href="https://www.gov.uk/contact-ukvi-inside-outside-uk" target="_blank" rel="noreferrer">UKVI International Enquiry Line</a>にご照会ください。
+        </p>
+
+        <br>
+        <div class="register">
+            <p class="text01">ビザの詳細につきましてはイギリスセミナーにてお知らせしてまいりますので奮ってご参加下さいませ。</p>
+            <?php
+            //settings for the calendar module display
+            $country_to_display = 'イギリス';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+
+            display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+            ?>
+
+            <div class="text-center">
+                <p style="color: orangered;">ビザの申請、ひとりでできますか？</p>
+                <a href="/mem/#meritt"><img src="images/memline5_off.gif" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="sec-title">イギリスワーキングホリデービザ応募に関しての注意点</h2>
+        <p class="text01">
+            ・イギリスのワーキングホリデーは、正式にはTier 5(Youth Mobility
+            Scheme/YMS)ビザと呼ばれる、短期の就労を目的としたビザのことを指します。日本とイギリスはワーキングホリデー協定を結んでいるので、YMSもワーキングホリデーと同等の制度ではありますが、他国と異なり、休暇ではなく就労が目的の制度となっています。
+        </p>
+        <p class="text01">
+            ・出来るだけ早くから、イギリスワーキングホリデーの準備を心掛ける事は大変良い事ですが、憶測や非公式な情報に振り回されては全く意味がありません。
+        </p>
+        <p class="text01">
+            ・
+            イギリスワーキングホリデービザの応募情報は毎年１０～１２月に発表されます。それまではいろいろな噂が飛びますが噂には振り回されないようにして下さい。　もしイギリスワーキングホリデーに関してそのような噂をお聞きになって不安になられたら、当協会にメールでお問い合わせ下さい。当協会スタッフが調査します。
+        </p>
+        <p class="text01">
+            ・イギリスワーキングホリデービザの応募要項が発表されてからでも十分な準備期間はあります。あせらずに準備を進めましょう。
+        </p>
+
+        <h3 class="h3-01">要注意！イギリスワーキングホリデービザ</h3>
+        <p class="text01">
+            イギリスワーキングホリデービザ（ワーホリビザ）は毎年取りにくくなっています。
+            2011年までは先着順となっており、開始日の1月1日になった途端にイギリスのワーキングホリデービザシステムが停止してしまうほど、多人数の方が一斉にイギリス移民局へ応募されました。システム復旧に数日かかったこともあり、2012年からイギリスビザセンターに48時間以内にメールを送った人の中から抽選で1000名にイギリスワーキングホリデービザ（ワーホリビザ）申請の権利が与えられました。
+            <br><br>
+            1000名の日本人イギリスワーキングホリデー（ワーホリビザ）枠に対して１～２万人の応募者があるとも言われており、宝くじのようだと言われています。もしかしたらそれ以上の応募者がいるかも知れません。
+            <br><br>
+            そんなイギリスのビザ取得が困難な状況を利用して「業者に手数料を払うとイギリスワーキングホリデービザが取れやすくなる」と謳う業者が出ています。
+            <br><br>
+
+            イギリスワーキングホリデービザの発表の前に日本ワーキングホリデー協会にある女性から電話を頂きました。
+            <br><br>
+            「私、イギリスのワーホリビザを取得しました。イギリスの学校とホームステイの手続きをお願いしたいのですが．．．」
+            <br><br>
+            当協会スタッフはイギリスワーキングホリデービザ（ワーホリビザ）当選発表前にこのような電話を受けて驚き、すぐにイギリス大使館、イギリスビザセンター、
+            イギリス現地サポートオフィスなどに確認を行ったのですが全くそのような事実はなく、分かったことはその方は「ある業者に”イギリスワーホリビザ取得に強い”と言われ、手数料数万円を払いました。」とのことでした。
+            <br><br>
+            残念ながらその女性はイギリスワーキングホリデービザが当選しませんでした。
+            <br>
+            「必ずイギリスのワーキングホリデービザが取得できる方法を教えます。」<br>
+            「イギリスのビザの抽選に有利です。」<br>
+            などと言って、手数料を取ったり、何らかしらの契約を迫る個人や団体があるようですが、
+            イギリスのワーキングホリデービザは正しい手順で手続きを行えば、全ての方が公平に抽選を受ける権利がありますので、
+            イギリスのビザ申請を予定している方は、正確な情報収集を行うように努めてください。
+        </p>
+        <br>
+        <div style="padding: 20px; background-color: #efefef;">
+            <p>
+                <span style="color: #000000; font-weight: bold">イギリスワーキングホリデービザ取得において業者を利用する方は下記の点に特に注意してください。</span>
+            </p>
+            <br>
+            <ul class="list-disc">
+                <li>イギリスのワーキングホリデービザ取得に強い業者というのは一切ありません。</li>
+                <li>手数料を払ったからといって、ビザ取得において特別扱いされることはありません。</li>
+                <li>イギリスワーキングホリデービザ取得発表の前にビザ取得が確定することはありません。</li>
+            </ul>
+        </div>
+        <br><br>
+
+        <h3 class="h3-01">日本ワーキングホリデー協会では</h3>
+        <p class="text01">
+            イギリスワーキングホリデービザ（ワーホリビザ）取得のためのセミナーを行っていきます。
+            <br><br>
+            2021年 イギリスワーキングホリデービザ（ワーホリビザ） 応募要項が発表されましたら、
+            イギリスワーキングホリデービザに関する無料セミナーを開催する予定です。
+            イギリスワーキングホリデービザ応募や申請においての今までの失敗例や注意点をふまえセミナーでお伝えします。
+            イギリスセミナーは毎年多くの方の参加があり、満員でご予約がとりにくくなる傾向にございますので、 お早めのご予約をお勧めしております。
+            一人でも多くの方にイギリスワーキングホリデーの可能性を広げていただけるように願っています。
+        </p>
+
+        <?php
+        //settings for the calendar module display
+        $country_to_display = 'イギリス';
+        $number_to_display = '2';
+        $start_display_from = ''; //empty is begining
+        display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+        ?>
+
+        <div class="text-center">
+            <a href="http://www.jawhm.or.jp/seminar/seminar" rel="lightbox">
+                <img class="alignnone size-full wp-image-2490" title="ワーキングホリデー（ワーホリ）＆留学無料セミナー開催中" src="https://www.jawhm.or.jp/ja/wp-content/uploads/2012/11/2d0cb765a6f4fdf2006e3bb114cd5ee0.png" alt="ワーキングホリデー（ワーホリ）＆留学無料セミナー開催中" />
+            </a>
+        </div>
+
+        <br>
+        <p style="font-size: x-small;">
+            ＊ 日本ワーキングホリデー協会でも毎年多くのイギリスワーキングホリデービザ取得のお手伝いをしております。
+            <br>
+            お手伝い件数は日本で一番多いかもしれませんし 応募者数が多いので取得される方もその分多くなりますが、当協会がお手伝いするから、もしくは当協会のビザ取扱い件数が多いからという理由で取得する確率 も高くなると言う事もありません。　
+            <br>
+            協会はあくまでもお手伝いですのでいかなるビザの取得を保障するものではありません。
+        </p>
+
+        <div class="top-move">
+            <p><a href="#header">▲ページのＴＯＰへ</a></p>
+            <p style="font-size: small;">※掲載されているビザ情報は、2020/12/20に確認した情報です。</p>
+        </div>
+
+        <div class="text-center">
+            <p style="color: orangered">ビザの申請、ひとりでできますか？</p>
+            <a href="/mem/#meritt"><img src="images/memline3_off.gif" alt="ビザの申請、ひとりでできますか？"></a>
+        </div>
+        <br>
+        <div class="text-center">
+            <a href="/wh/uk">
+                <img src="/images/whuk_SP.jpg" alt="人気国で英語を学ぼう！イギリスワーホリをチェック">
+            </a>
+        </div>
+        <br>
+        <?php $header_obj->display_visa_links(); ?>
+        <?php $links_obj->display_links(); ?>
+    </div>
+
+</div>
+</div>
+</div>
+
+<?php
+$header_obj->add_js_files .= '
+	<script>(function(){
+		var w=window,d=document;
+		var s="https://app.chatplus.jp/cp.js";
+		d["__cp_d"]="https://app.chatplus.jp";
+		d["__cp_c"]="eaf57958_4";
+		var a=d.createElement("script"), m=d.getElementsByTagName("script")[0];
+		a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();
+	</script>
+  ';
+?>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+</body>
+
+</html>

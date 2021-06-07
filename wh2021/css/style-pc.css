@@ -1,0 +1,263 @@
+.top-text {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #f5411a;
+    text-align: center;
+}
+
+#maincontent .tableofcontents th {
+    background-color: #f4ed2f !important;
+}
+
+mark {
+    background: linear-gradient(transparent 60%, #FFF100 0%);
+}
+
+mark.pink {
+    background: linear-gradient(transparent 60%, rgb(246 158 154) 0%);
+}
+
+.points-block {
+    display: inline-flex;
+    flex-flow: wrap;
+}
+.points-block .title {
+    font-weight: bold;
+    font-size: 20px;
+    align-self: center;
+    padding-left: 20px;
+    margin-top: -10px;
+}
+
+.points-block .img > img {
+    width: 184px;
+}
+.points-block .content {
+    margin: 10px 0;
+}
+.countryx-block {
+    display: inline-flex;
+    flex-flow: row;
+    border-bottom: 2px solid #615e5e;
+    padding-bottom: 10px;
+}
+.countryx-block.last-child {
+    border-bottom: 0;
+}
+.countryx-block .header {
+    align-self: center;
+}
+.countryx-block .header > img {
+    width: 184px;
+}
+.countryx-block .body{
+    padding-left: 20px;
+}
+.countryx-block .body .title {
+    font-weight: bold;
+    font-size: 20px;
+    align-self: center;
+}
+.countryx-block .body .content {
+    margin: 10px 0;
+}
+.countryx-block .body .linkbox {
+    padding: 10px;
+    background-color: #FFE4B5;
+    font-size: 10pt;
+}
+
+.steps-block {
+    width: 100%;
+    text-align: center;
+    clear: both;
+    border: 1px solid #000000;
+}
+.steps-block .header {
+    background: #3e72b9;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.steps-block .body {
+    padding: 10px 20px;
+}
+
+.steps-block .body .content {
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.steps-block .labelct {
+    background: #fbb03f;
+    color: #ffffff;
+    width: 65%;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+.arrow-bottom {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 50px 0 50px;
+    border-color: #ee1d24 transparent transparent transparent;
+    margin: auto;
+}
+
+ul.plan-block {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+ul.plan-block > li:hover {
+    opacity: 0.8;
+}
+
+
+/* Message box starts here */
+.msg {
+    display: flex;
+    padding: 0 40px;
+}
+
+.msg-box {
+    clear: both;
+    position: relative;
+    padding-top: 15px;
+}
+
+.msg-box .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    top: 20px;
+    right: -1px;
+}
+
+.msg-box .arrow .outer {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.msg-box .arrow .inner {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #e6e7e9;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
+
+.msg-box .message-body {
+    float: left;
+    width: 480px;
+    height: auto;
+    border: 1px solid #CCC;
+    background-color: #e6e7e9;
+    border: 1px solid #000000;
+    padding: 6px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.msg-box .message-body p {
+    margin: 0;
+}
+
+.linkbox > a {
+    display: block;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 15px 40px;
+    background: #fedc9f;
+    color:#78512b !important;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.linkbox > a::after {
+    content: "▶";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.linkbox > a:hover {
+    opacity: 0.8;
+}
+
+.support-block ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.support-block li {
+    border: 1px solid #24aae1;
+    padding: 10px;
+    margin: 10px;
+    width: calc(100%/3 - 45px);
+}
+
+.support-block li .header {
+    text-align: center;
+}
+
+.support-block .header p {
+    color: #1074bc;
+    font-weight: bold;
+}
+
+.support-block .body {
+    padding: 15px 0px;
+}
+
+.links-block li > a {
+    clear: both;
+    background-color: #24aae1;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    max-width: 375px;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.links-block li > a::after {
+    content: "►";
+    float: right;
+}
+
+.links-block li > a:hover {
+    opacity: 0.8;
+}
+
+.link-img > a:hover {
+    opacity: 0.8;
+}

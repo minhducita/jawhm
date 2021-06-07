@@ -1,0 +1,183 @@
+<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->title_page='メール会員登録';
+$header_obj->description_page='日本ワーキングホリデー協会では、ワーキングホリデービザの情報や、留学・ワーホリに役立つ情報をメールで毎週配信しています。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'メール会員登録';
+
+$header_obj->display_header();
+?>
+
+<style>
+.label{border:1px solid #000}
+.table{border-collapse:collapse!important}
+.table td,.table th{background-color:#fff!important}
+.table-bordered td,.table-bordered th{border:1px solid #ddd!important}
+
+.label-danger{background-color:#d9534f; border:solid #d9534f;}
+.label-danger[href]:focus,
+.label-danger[href]:hover{background-color:#c9302c}
+
+.form-control{display:block;width:90%;margin-left:5px; height:30px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}
+.form-control::-moz-placeholder{color:#999;opacity:1}
+.form-control:-ms-input-placeholder{color:#999}
+.form-control::-webkit-input-placeholder{color:#999}
+.form-control::-ms-expand{background-color:transparent;border:0}
+.form-control[disabled],
+.form-control[readonly],fieldset[disabled] 
+.form-control{background-color:#eee;opacity:1}
+.form-control[disabled],fieldset[disabled] 
+.form-control{cursor:not-allowed}
+
+.btn-default{
+	width:180px;
+	height:42px;
+}
+
+.control-label{	
+	font-size:14pt;
+
+}
+</style>
+
+	<div id="maincontent">
+         <?php echo $header_obj->breadcrumbs(); ?>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	  <table class="tableofcontents">
+	    <tr>
+		  <th>目次</th>
+		  <td>
+		    <ul>
+			  <li><a href="#st1-1">メール会員に登録しよう</a></li>
+			  <li><a href="#st1-2">メール会員のメリット</a></li>
+		    </ul>
+		  </td>
+		</tr>
+	  </table>
+
+
+	<h2 id="st1-2" class="sec-title">メール会員に登録しよう</h2>
+
+	<p class="text01">
+		メール会員への登録は簡単！！<br/>
+		&nbsp;<br/>
+		お名前と、メールアドレスを登録するだけです。<br/>
+		もちろん、登録料などは一切ありません。無料です。<br/>
+<?php
+
+	$namae = @$_POST['namae'];
+	$email = @$_POST['email'];
+
+	if ($namae <> '' && $email <> '')	{
+?>
+		<div style="width:100%; background-color:orange; font-size:14pt; padding-left:10px; margin:0 0 20px 0;">
+			ご登録ありがとうございました
+		</div>
+
+<?php
+	}
+
+?>
+		<form class="form-horizontal" action="https://go.pardot.com/l/401302/2017-12-07/9d718t" method="post">
+			<label class="col-sm-2 control-label">　お名前 <span class="label label-danger">必須</span></label>
+			<input type="text" name="namae" autocomplete="namae" class="form-control" placeholder="お名前" required/>
+			<label class="col-sm-2 control-label">　メールアドレス <span class="label label-danger">必須</span></label>
+			<input type="email" name="email" autocomplete="email" class="form-control" placeholder="メールアドレス" required/>
+			<div style="text-align:center; width:100%; margin:10px 0 20px 0;">
+				<button type="submit" class="btn-default">登録する</button>
+			</div>
+		</form>
+	</p>
+
+
+
+	<h2 id="st1-2" class="sec-title">メール会員のメリット</h2>
+
+	<h3 class="h3-01">ワーホリ・留学には最新の正確な情報を入手することが大切</h3>
+	<p class="text01">
+		ワーホリや留学で海外の生活を夢見ている方。とても素晴らしい夢です。<br/>
+		その夢を現実のものにする際は、最新で正確な情報を入手することが一番大切だということは解っていますか？<br/>
+		&nbsp;<br/>
+		長期間、海外に滞在する場合、ビザが必要ですが、このビザというのがちょっと厄介。<br/>
+		申請に必要な書類が変わったり、申請可能な期間が決まっていたり、<br/>
+		ビザが発給される数が決まっていたりするのですが、<br/>
+		これが、コロコロ変わる場合があるんです。<br/>
+		&nbsp;<br/>
+		せっかく、インターネットで調べた情報が、昔の情報で書類の書き方を間違えてしまったり、<br/>
+		準備不足で申請したのに却下されてしまったりしては大変です。<br/>
+		&nbsp;<br/>
+		また、見知らぬ海外に旅立つのですから、その国の風土文化、物価、治安などなど色々な条件を知っておかないといけません。<br/>
+		言葉を勉強しにいくとなればなお更です。<br/>
+		言葉が不自由な分、先に関連する情報をより多く知っておいた方が、ワーホリや留学で渡航した後も大きく役立ちます。<br/>
+	</p>
+
+	<h3 class="h3-01">定期的にメールでワーホリ・留学に役立つ情報を配信します</h3>
+	<p class="text01">
+		ワーホリや留学に役立つ情報はいろいろあります。<br/>
+		&nbsp;<br/>
+		　・　ビザの情報<br/>
+		　・　航空券の情報<br/>
+		　・　保険の情報<br/>
+		　・　英語勉強の情報<br/>
+		　・　仕事の探し方<br/>
+		　・　住まいの探し方<br/>
+		　・　お金の事<br/>
+		&nbsp;<br/>
+		正直な事を言います。<br/>
+		当協会のＷＥＢサイトを全部見て下さい。全部書いてあります。知りたいことは全部解ります。<br/>
+		&nbsp;<br/>
+		で・す・が．．．<br/>
+		当協会のＷＥＢサイト、約６０００ページあります。多分、全部見たことがある方は居ないと思います。<br/>
+		&nbsp;<br/>
+		これらの情報を、順番に定期的に皆様にお届けするのがメール会員です。<br/>
+	</p>
+
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	  <div class="advbox03">
+<?php
+	// 111
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+        <div style="height:20px;">&nbsp;</div>
+<?php
+  //ryugaku_bottom
+  // The MAX_PATH below should point to the base of your OpenX installation
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 170, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+        <div style="height:20px;">&nbsp;</div>
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

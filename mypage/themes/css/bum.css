@@ -1,0 +1,69 @@
+/* IE */
+@font-face {
+    font-family: Kodomo;
+    src: url('../themes/font/KodomoRounded.otf');
+}
+
+/* Firefox, Opera, Safari */
+@font-face {
+    font-family: Kodomo;
+    src: url(../themes/font/KodomoRounded.otf'');
+}
+
+.kodomo {
+    font-family: Kodomo !important;
+    font-size: 14px;
+}
+
+.bum-slide-size {
+    max-width: 320px;
+    margin: auto;
+
+.bum-image {
+    width: 250px;
+    height: 250px;
+    max-width: 320px;
+Å@Å@  margin: auto;
+}
+
+.bum-margin {
+    margin-bottom: 40px;
+}
+
+.country-bunner-margin {
+    margin-bottom: 20px;
+}
+
+/* IE */
+@font-face {
+
+    font-family: Kodomo;
+
+    src: url('../../themes/font/KodomoRounded.otf');
+
+}
+
+
+/* Firefox, Opera, Safari */
+
+@font-face {
+
+    font-family: Kodomo;
+
+    src: url(../../themes/font/KodomoRounded.otf'');
+
+}
+
+
+
+
+div.kodomo {
+
+    font-family: Kodomo !important;
+    color: #f3b520;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}

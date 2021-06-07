@@ -1,0 +1,48 @@
+﻿<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->title_page='職業紹介システム';
+$header_obj->description_page='ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/recruit-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '一般社団法人 日本ワーキング・ホリデー協会';
+
+$header_obj->display_header();
+
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('recruit'); ?>
+	  <h2 class="sec-title">職業紹介システムについて</h2>
+	  <p class="text01">正社員及び契約社員での就職・転職を希望される方へ企業をご紹介するシステムです。<br />
+      丁寧なカウンセリングにより、あなたのスキルやキャリアを把握。あなたにマッチするお仕事をご紹介いたします。</p>
+	  <div class="recruit-chart-sec01">
+	    <p class="rec-cha-sec">海外体験帰国者の皆様に滞在先で学んできた知識や経験をどのような企業でどのように役立てるのかをアドバイスすることができます。<br />
+私たちには知識と経験があります。</p>
+        <p class="rec-cha-sec2">就職支援の経験・知識が豊富なスタッフが応募書類の作成方法や面接に関しての注意点などをきめ細かくアドバイスします。<br />
+        あなたと一緒にあなたの適正を考えて企業へあなたをアピールします。</p>
+	  </div>
+	  <div class="advbox03">
+	  <img src="../images/recruit-chart-img01.gif" alt="" />
+	  </div>
+      <p class="text01">※求職者への職業紹介に関しての手数料は無料です。 海外体験者の方でなくても、ご利用いただけます。</p>
+	  <h2 class="sec-title">キャリアナビ職業紹介の流れ</h2>
+	  <div class="recruit-chart-list">
+	    <ul>
+		  <li>キャリナビ会員としてウェブ上から求職者登録をします。</li>
+		  <li>条件の合う求人に求職申込みをして下さい。求人企業からスカウトメールが届くこともあります。当協会からもすぐに紹介できるお仕事があれば紹介いたします。</li>
+		  <li>求職者の登録情報（非個人特定情報）を求人企業に提供し、書類選考していただきます。</li>
+		  <li>書類選考に合格した場合、協会より面接日時の連絡をします。</li>
+		  <li>求人企業または当協会より採否の通知連絡が届きます。</li>
+		  <li class="nyusya">入社日・雇用条件等を調整し、求職者と求人企業の合意の上、雇用契約を締結します。</li>
+		</ul>
+	  </div>
+  </div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

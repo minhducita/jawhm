@@ -1,0 +1,156 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'エストニアリアのワーキングホリデービザ情報';
+$header_obj->description_page = 'チリのワーキングホリデービザ取得のステップや注意事項を掲載しています。チリへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.webp" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（エストニア） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+  <?php echo $header_obj->breadcrumbs('country'); ?>
+
+  <div style="clear:both; height:10px;">&nbsp;</div>
+  <?php $header_obj->display_visa_links(); ?>
+  <img src="/images/bflag26.gif" alt="" style="border: 1px solid #cbcbcb;" />
+  </br></br>
+
+  <h2 class="sec-title">ビザについて</h2>
+  <p class="text01">1.エストニア共和国政府は次の要件をすべて満たす日本国民の申請に基づき，<br>
+    申請者が入国予定日を指定した場合には入国予定日から12か月間、<br>
+    申請者が入国予定日を指定しなかった場合には発給日から12か月間有効なワーキングホリデービザを無償で発給します。
+  </p>
+
+  <h2 class="sec-title">申請条件</h2>
+  <p class="text01">
+    (i) ビザ申請時に日本に居住していること。<br>
+    (ii) 主として入国日から1年間、エストニア共和国で休暇を過ごすことを目的としていること。<br>
+    (iii) ビザ申請時に18歳以上30歳以下であること。<br>
+    (iv) 被扶養者がエストニア共和国に入国する権利を有している場合を除き、被扶養者を同伴していないこと。<br>
+    (v) 日本の有効なパスポート及び往復の航空券又は、その航空券を購入するための十分な資金を所持していること。<br>
+    (vi) エストニア共和国への最初の滞在期間中の生活維持のための資金を有していること。<br>
+    (vii) 滞在期間終了時にエストニア共和国を出国すること<br>
+    (viii) 以前に当該ビザが発給されていないこと。<br>
+    (ix) 健康状態が良好で、健全な経歴を有し、犯罪歴がないこと。<br>
+    (x) エストニア共和国に滞在する間、有効な医療保険および入院保険に加入していること。<br>
+    (xi) エストニア共和国に滞在する間、法令を遵守しようとすること。<br>
+  </p>
+  <br>
+  <p class="text01">2.第１項のビザの申請はこれらの手続に従い、日本のエストニア共和国大使館に提出する必要があります。<br>
+    必要に応じて大使館の代表者による面接を受け、申請者の適格性を判断します。<br>
+    <br>
+    3.申請者がエストニア語の知識がないという理由のみで上記1項のビザを拒否することはありません。<br>
+    <br>
+    4.エストニア共和国政府は、上記第１項のビザを有する日本国民に対し、12ヶ月以内の期間（上記第１項の査証により定められた条件の下で）エストニア共和国で就労し、居住することを許可します。これらの者は許可された期間を超えて滞在を延長することはできません。<br>
+    <br>
+    5.参加者はエストニア共和国での滞在中の旅行資金を補うために、休暇に付随して仕事をすることができます。<br>
+    <br>
+    6.エストニア共和国政府は、本協定に基づきエストニア共和国に入国した日本国籍者に対し、エストニア共和国の法令を遵守し、本協定の目的に反する雇用に従事しないことを求めます。<br>
+    <br>
+    7.参加者は、エストニア共和国の関連法令に従い、エストニア共和国の文化及び一般的な生活様式を学ぶことを目的として、語学コース、これに類するコースに入学することができます。<br>
+    <br>
+    8.エストニア共和国政府は、治安、公序良俗、公衆衛生または移民の危険性を理由に、上記の措置の全部または一部を一時的に停止することができます。このような措置の一時停止は、外交ルートを通じて直ちに日本国政府に通知されます。<br>
+    <br>
+    9.エストニア共和国政府は、日本国政府に3ヶ月前から書面で通知することにより、上記の措置を終了することができます。<br>
+    <br>
+    10.上記の措置は、エストニア共和国が日本国籍を有する者にワーキングホリデービザを発給するためのエストニア共和国の内部手続が完了したことを確認する通知の日（2020年3月11日）から120日目に開始されます。<br>
+    <br>
+    申請者は、在日エストニア共和国大使館に直接Dビザ申請書を提出する必要があります。<br>
+    必要書類を準備し、オンラインビザフォームに必要事項を記入した後、オンラインで領事への予約を行う必要があります。
+  </p>
+
+  <div class="top-move">
+    <p><a href="#header">▲ページのＴＯＰへ</a>
+      <br>
+      ※エストニア大使館が公開している英語文章を翻訳した内容となっています。現本は下記をご参照くださいませ。
+    </p>
+  </div>
+
+  <br>
+  <p class="text01">
+    The Government of the Republic of Estonia will issue, free of charge, a working holiday visa valid for a period of twelve (12) months from the intended date of entry in case the applicant specifies the intended date of entry, or twelve (12) months from the date of issuance in case the applicant does not specify the intended date of entry on application from a national of Japan who satisfies all of the following requirements:
+  </p>
+  <P class="text01">
+    (i) is resident in Japan at the time of the application for the aid visa;<br>
+    (ii) intends primarily to spend holidays in the Republic of Estonia for a period of up to one (1) year from the date of entry;<br>
+    (iii) is between eighteen (18) and thirty (30) years of age both inclusive at the time of application for the said visa;<br>
+    (iv) is not accompanied by dependents unless those dependents are also entitled to enter the Republic of Estonia on their own grounds;<br>
+    (v) possesses a valid passport of Japan, and a return travel ticket or sufficient funds to purchase such a ticket;<br>
+    (vi) possesses reasonable funds for his or her maintenance during the initial period of stay in the Republic of Estonia;<br>
+    (vii) intends to leave the Republic of Estonia at the end of his or her stay;<br>
+    (viii) has not previously been issued the said visa;<br>
+    (ix) has good health, a sound background and no criminal record;<br>
+    (x) holds medical and comprehensive hospitalisation insurance to remain in force throughout his/her stay in Estonia; and<br>
+    (xi) intends to comply with the laws and regulations in force in the Republic of Estonia during his or her stay in the Republic of Estonia.<br>
+  </P>
+  <p class="text01">
+    2. Application for the visa mentioned in paragraph 1 above will be required to be submitted to the Embassy of the Republic of Estonia in Japan in accordance with procedures specific to these arrangements. When necessary, the applicants will be interviewed by the representatives of the Embassy to determine their eligibility.<br>
+    <br>
+    3 . Applicants will not be refused the visa mentioned in paragraph 1 above solely on the grounds of their lack of knowledge of the Estonian language.<br>
+    <br>
+    4. The Government of the Republic of Estonia will grant nationals of Japan who have the visas mentioned in paragraph 1 above to work and reside in the Republic of Estonia for a period not more than twelve (12) months (under the terms and conditions determined by the visa mentioned in paragraph 1). They may not extend their stay beyond the period authorized.<br>
+    <br>
+    5 . Participants from Japan in these arrangements will, during their stay in the Republic of Estonia, be able to take work incidental to their holiday in order to supplement their travel funds.<br>
+    <br>
+    6. The Government of the Republic of Estonia will require nationals of Japan who have entered the Republic of Estonia under these arrangements to comply with the laws and regulations of the Republic of Estonia and not to engage in employment that is inconsistent with the purpose of these arrangements.<br>
+    <br>
+    7. Participants from Japan in these arrangements may, subject to the relevant laws and regulations of the Republic of Estonia, enroll in language courses and/or similar courses for the purpose of learning the culture and general way of life in the Republic of Estonia.<br>
+    <br>
+    8. The Government of the Republic of Estonia may suspend the foregoing measures in whole or in part temporarily for reasons of public security, public order, public health or immigration risk. Any such suspension will be notified immediately to the Government of Japan through diplomatic channels.<br>
+    <br>
+    9. The Government of the Republic of Estonia may terminate the foregoing measures by giving three (3) months’ written notice to the Government of Japan.<br>
+    <br>
+    10. The foregoing measures will commence on the 120th day from the date of the notification confirming the completion of the internal procedures of the Republic of Estonia for the issuance of working holiday visas to nationals of Japan (11.03.2020).<br>
+    <br>
+    Applicants are required to submit a D-visa application in person to the Embassy of the Republic of Estonia in Tokyo. After preparing the required documents and filling out the online visa form, an appointment to the consul should be made online.<br>
+  </p>
+
+  <div class="top-move">
+    <p><a href="#header">▲ページのＴＯＰへ</a>
+      <br>
+      ※掲載されているビザ情報は、2021/01/28に確認した情報です
+    </p>
+  </div>
+
+  <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+  <ul class="list-visabasic">
+    <li><a href="https://www.mofa.go.jp/mofaj/area/estonia/index.html" target="_blank" rel="noreferrer">基本情報</a></li>
+    <li><a href="https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_155.html#ad-image-0" target="_blank" rel="noreferrer">安全情報</a></li>
+    <li><a href="https://www.ee.emb-japan.go.jp/itprtop_ja/index.html" rel="noreferrer" target="_blank">在外公館</a></li>
+  </ul>
+  </br>
+  </br>
+  <div class="clear">&nbsp;</div>
+
+  <h3 class="h3-02">その他のワーキングホリデー協定国のビザ情報</h3>
+  <?php $header_obj->display_visa_links(); ?>
+  <?php $links_obj->display_links(); ?>
+  <style>
+    .linkbox {
+      margin: 15px 15px 15px 15px;
+      padding: 10px 20px 10px 20px;
+      background-color: #FFE4B5;
+      font-size: 10pt;
+    }
+  </style>
+  <br />
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

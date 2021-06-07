@@ -1,0 +1,147 @@
+﻿body{
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 14px;
+  color: #343434;
+  line-height: 1.5;
+  margin: 0;
+  
+}
+header{
+  background: url("../images/header.png") no-repeat;
+  background-position: center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  width: 100%;
+  height: 150px;
+}
+h2{
+  margin: 0;
+}
+header h2{
+  color: #fff;
+  font-size: 27px;
+  text-align: center;
+  padding-top: 30px;
+}
+.content{
+ background: url("../images/bg.png") no-repeat center center;
+    background-position: center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 618px;
+}
+.content .content404{
+  text-align: center;
+      padding-top: 87px;
+}
+.content .content404 .text06{
+  margin-bottom: 30px;
+}
+.content404 span {
+    font-size: 25px;
+}
+.content404 .btn-backhome {
+    background-color: #f88817;
+    width: 210px;
+    height: 35px;
+    border-radius: 30px;
+    border: 3px solid #D7EBF5;
+    margin: 0 auto;
+}
+.content404 .btn-backhome a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 33px;
+}
+footer{
+   background-color: #284189;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+footer p{
+  padding-top: 10px;
+}
+footer div a{
+    text-decoration: none;
+}
+footer div {
+    background-color: #152c71;
+    padding: 12px 25px 12px 25px;
+    text-align: center;
+    margin: 0 auto 15px auto;
+    width: 20%;
+    font-weight: normal;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+footer .btn span {
+    background: url("http://www.jawhm.or.jp/fairevent/testfair/wp-content/themes/fair/css/../images/icon_home_pc.png") no-repeat left center;
+    -webkit-background-size: 16px 15px;
+    -moz-background-size: 16px 15px;
+    background-size: 16px 15px;
+    padding-left: 23px;
+    color: #fff;
+
+}
+@media screen and (max-width:480px){
+    header{
+    background: url("../images/headerc480.png") no-repeat;
+    background-position: center bottom;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    width: 100%;
+    height: 100px;
+  }
+  .content{
+   background: url("../images/bg480.png") no-repeat center center;
+      background-position: center bottom;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: contain;
+      height: 468px;
+  }
+  .content .content404 {
+    padding-top: 35px;
+}
+  .content404 img{
+    width: 70%
+  }
+  .content404 .btn-backhome{
+    width: 163px;
+    height: 29px;
+  }
+  .content404 .btn-backhome a {
+    font-size: 13px;
+    line-height: 29px;
+  }
+  .content .content404 .text06 {
+    font-size: 12PX;
+  }  
+  header h2{
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  footer p{
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  footer div{
+    width: 56%;
+    padding: 8px 25px 8px 25px;
+  }
+  .content404 span {
+    font-size: 20px;
+  }   
+}

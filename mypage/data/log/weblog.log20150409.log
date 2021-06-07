@@ -1,0 +1,1077 @@
+2015-04-09T10:12:06+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T10:57:10+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:11:01+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:12:23+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:12:58+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:14:17+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:15:13+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and ( event_list.k_desc2 = '初心者') and entrylist.stat = 2) ORDER BY `even' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `entryli...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `entryli...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `entryli...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(555): BaseModel->getSearchSortJoin(Array, Array, Array, 'event_list.hidu...', 'event_list.id A...', NULL)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1345): IndexModel->getAtendSeminar(Array, Array, Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(1198): IndexController->loginCommon(Array, 'facebookauth', 'Facebook')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->facebookauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('facebookauthAct...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T11:33:13+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T11:33:29+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T11:36:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T11:46:14+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T11:48:40+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T11:48:50+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 11:48:50' and starttime <= '2015-05-09 11:48:50'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 11:48:50' and starttime <= '2015-05-09 11:48:50'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T11:50:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T12:10:35+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T12:20:08+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T12:41:35+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T12:47:31+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 12:47:31' and starttime <= '2015-05-09 12:47:31'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 12:47:31' and starttime <= '2015-05-09 12:47:31'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T13:11:29+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:11:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:12:00+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:12:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:13:36+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:13:50+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:19:14+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;/var/www/html/mypage/application/modules/staff/views/client/clientindex.tpl&quot;  on line 166 &quot;&amp;lt;a href=&amp;quot;seminar/index&amp;quot; class=&amp;quot;list-group-item&amp;quot;&amp;gt;&atilde;�&raquo;&atilde;��&atilde;��&atilde;�&frac14; {if isset($next_seminar)}&amp;lt;span class=&amp;quot;text-notice&amp;quot;&amp;gt;&aelig;&not;&iexcl;&aring;��&auml;&ordm;�&ccedil;&acute;�: {$next_seminar.starttime|date_format:%m&aelig;��%d&aelig;�&yen; %H:%M&amp;quot; }&iuml;&frac12;�&amp;lt;/span&amp;gt;{/if}&amp;lt;/a&amp;gt;&quot;  - Unexpected &quot;%&quot;' in /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php:719
+Stack trace:
+#0 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11787): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11845): Smarty_Internal_Templateparser->yy_syntax_error(40, '%')
+#2 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(108): Smarty_Internal_Templateparser->doParse(40, '%')
+#3 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(210): Smarty_Internal_SmartyTemplateCompiler->doCompile('{include file=$...')
+#4 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_template.php(220): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatebase.php(170): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/html/mypage/library/Smarty/Zend_View_Smarty.php(181): Smarty_Internal_TemplateBase->fetch('/var/www/html/m...')
+#7 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Smarty->render('/var/www/html/m...')
+#8 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('/var/www/html/m...', NULL)
+#9 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#10 /var/www/html/mypage/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#11 /var/www/html/mypage/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#12 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('clientindexActi...')
+#13 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#15 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:31+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:32+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:20:33+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-09T13:23:34+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:23:56+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T13:36:47+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 13:36:46' and starttime <= '2015-05-09 13:36:46'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 13:36:46' and starttime <= '2015-05-09 13:36:46'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T14:42:16+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T14:44:18+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T15:01:25+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:01:25' and starttime <= '2015-05-09 15:01:25'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:01:25' and starttime <= '2015-05-09 15:01:25'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T15:05:03+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Method "getMailList" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:488
+Stack trace:
+#0 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(531): Zend_Controller_Action->__call('getMailList', Array)
+#1 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(531): Staff_FileController->getMailList('ZZ1407-001')
+#2 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(244): Staff_FileController->alertMail(Object(Staff_FileController), Array, '????????????')
+#3 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Staff_FileController->clientprocessAction()
+#4 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('clientprocessAc...')
+#5 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#7 {main}
+2015-04-09T15:14:50+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:14:50' and starttime <= '2015-05-09 15:14:50'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:14:50' and starttime <= '2015-05-09 15:14:50'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T15:16:48+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:16:48' and starttime <= '2015-05-09 15:16:48'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 15:16:48' and starttime <= '2015-05-09 15:16:48'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T15:24:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T16:28:01+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 16:28:01' and starttime <= '2015-05-09 16:28:01'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 16:28:01' and starttime <= '2015-05-09 16:28:01'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T16:31:06+09:00 ALERT (1): exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;/var/www/html/mypage/application/modules/school/views/client/filelist.tpl&quot;  on line 50 &quot;{if $item.class!=97 || ($item.class==97 &amp;amp;&amp;amp; $item.comment|regex_replace:&amp;quot;/\d+/&amp;quot;:&amp;quot;&amp;quot; === $school_name}&quot;  - Unexpected &quot;}&quot;' in /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php:719
+Stack trace:
+#0 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11787): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11845): Smarty_Internal_Templateparser->yy_syntax_error(17, '}')
+#2 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(108): Smarty_Internal_Templateparser->doParse(17, '}')
+#3 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(210): Smarty_Internal_SmartyTemplateCompiler->doCompile('???{include fil...')
+#4 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_template.php(220): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatebase.php(170): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/html/mypage/library/Smarty/Zend_View_Smarty.php(181): Smarty_Internal_TemplateBase->fetch('/var/www/html/m...')
+#7 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Smarty->render('/var/www/html/m...')
+#8 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('/var/www/html/m...', NULL)
+#9 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#10 /var/www/html/mypage/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#11 /var/www/html/mypage/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#12 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('filelistAction')
+#13 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#15 {main}
+2015-04-09T16:36:37+09:00 ALERT (1): exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;/var/www/html/mypage/application/modules/school/views/client/filelist.tpl&quot;  on line 34 &quot;{$school_name = 'PGIC}&quot;  - Unexpected &quot;'&quot;' in /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php:719
+Stack trace:
+#0 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11787): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11845): Smarty_Internal_Templateparser->yy_syntax_error(10, ''')
+#2 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(108): Smarty_Internal_Templateparser->doParse(10, ''')
+#3 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(210): Smarty_Internal_SmartyTemplateCompiler->doCompile('???{include fil...')
+#4 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_template.php(220): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatebase.php(170): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/html/mypage/library/Smarty/Zend_View_Smarty.php(181): Smarty_Internal_TemplateBase->fetch('/var/www/html/m...')
+#7 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Smarty->render('/var/www/html/m...')
+#8 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('/var/www/html/m...', NULL)
+#9 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#10 /var/www/html/mypage/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#11 /var/www/html/mypage/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#12 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('filelistAction')
+#13 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#15 {main}
+2015-04-09T17:41:20+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'school_id' in order clause is ambiguous' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `mypage_...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `mypage_...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `mypage_...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `mypage_...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/staff/models/FileModel.php(28): BaseModel->getSearchSortJoin(Array, Array, Array, 'school_no = ''', NULL)
+#8 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(575): FileModel->getSchoolMail('mypage_school_m...', NULL)
+#9 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(301): Staff_FileController->writeSchoolEmail(Object(Staff_FileController), Array, '???????????????...')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Staff_FileController->fileprocessAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('fileprocessActi...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'school_id' in order clause is ambiguous' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `mypage_...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `mypage_...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `mypage_...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/staff/models/FileModel.php(28): BaseModel->getSearchSortJoin(Array, Array, Array, 'school_no = ''', NULL)
+#7 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(575): FileModel->getSchoolMail('mypage_school_m...', NULL)
+#8 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(301): Staff_FileController->writeSchoolEmail(Object(Staff_FileController), Array, '???????????????...')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Staff_FileController->fileprocessAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('fileprocessActi...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T17:47:48+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mypage_school_memlist.school_no' in 'order clause'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `mypage_...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `mypage_...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `mypage_...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `mypage_...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/staff/models/FileModel.php(29): BaseModel->getSearchSortJoin(Array, Array, Array, 'school_no = ''', 'mypage_school_m...')
+#8 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(575): FileModel->getSchoolMail('mypage_school_m...', NULL)
+#9 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(301): Staff_FileController->writeSchoolEmail(Object(Staff_FileController), Array, '???????????????...')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Staff_FileController->fileprocessAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('fileprocessActi...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mypage_school_memlist.school_no' in 'order clause'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `mypage_...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `mypage_...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `mypage_...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(299): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/staff/models/FileModel.php(29): BaseModel->getSearchSortJoin(Array, Array, Array, 'school_no = ''', 'mypage_school_m...')
+#7 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(575): FileModel->getSchoolMail('mypage_school_m...', NULL)
+#8 /var/www/html/mypage/application/modules/staff/controllers/FileController.php(301): Staff_FileController->writeSchoolEmail(Object(Staff_FileController), Array, '???????????????...')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Staff_FileController->fileprocessAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('fileprocessActi...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2015-04-09T18:29:01+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:01' and starttime <= '2015-05-09 18:29:01'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:01' and starttime <= '2015-05-09 18:29:01'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T18:29:02+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:02' and starttime <= '2015-05-09 18:29:02'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:02' and starttime <= '2015-05-09 18:29:02'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T18:29:08+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:08' and starttime <= '2015-05-09 18:29:08'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:08' and starttime <= '2015-05-09 18:29:08'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T18:29:08+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:08' and starttime <= '2015-05-09 18:29:08'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#8 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and (starttime >= '2015-04-09 18:29:08' and starttime <= '2015-05-09 18:29:08'' at line 1' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `event_l...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `event_l...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `event_l...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/school/models/IndexModel.php(102): BaseModel->searchList(Array, ') and (starttim...', Array, 'starttime ASC')
+#7 /var/www/html/mypage/application/modules/school/controllers/IndexController.php(127): School_IndexModel->seminarIntend(Array, Array)
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): School_IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-09T18:31:12+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:39:47+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:43:19+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:43:50+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:46:06+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:46:26+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:46:26+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:46:58+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:51:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:51:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:51:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:51:58+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:52:15+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:52:36+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:52:36+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:55:56+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T18:57:13+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-09T19:04:00+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}

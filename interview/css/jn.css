@@ -1,0 +1,137 @@
+/*////////Common//////////*/
+.jn_form{
+    background: #fff;
+    padding: 7px;
+}
+.btn_sort{
+    float: right;
+    margin-bottom: 7px;
+}
+.width100{
+    width: 100%;
+}
+/*////////////////////////*/
+.jn_table_interview{
+    background: #fff;
+    padding: 7px;
+}
+.jn_table_interview table{
+    width: 100%;
+}
+.jn_table_interview input{
+    width: 100%;
+}
+.jn_table_interview select{
+    width: 100%;
+}
+.jn_table_interview table tr :nth-child(8){
+    width: 40px;
+}
+.jn_table_interview table tr :nth-child(1){
+    vertical-align: middle;
+}
+.jn_table_interview table tr :nth-child(2){
+    width: 13%;
+}
+.jn_table_interview table tr :nth-child(3){
+    width: 16%;
+}
+.jn_table_interview table tr :nth-child(4){
+    width: 16%;
+}
+.jn_table_interview table tr :nth-child(5){
+    width: 13%;
+}
+.jn_table_interview table tr :nth-child(6){
+    width: 16%;
+}
+.jn_table_interview table tr :nth-child(7){
+    width: 13%;
+}
+.jn_table_interview table tr :nth-child(8){
+    width: 7%;
+}
+.jn_table_interview table tr :nth-child(8) span{
+    width: 30px;
+    height:30px;
+    margin:0;
+    padding:0;
+    padding-left: 4px;
+}
+.jn_table_interview table tr :nth-child(8) form{
+    width: 30px;
+    height:30px;
+    margin:0;
+    padding:0;
+}
+.jn_table_interview table tr :nth-child(8) form button{
+    font-size:1.5em;
+    width: 30px;
+    height:30px;
+    padding: 0;
+    margin: 0;
+}
+.jn_table_interview table tr :nth-child(8) a {
+    padding-left: 4px;
+}
+
+.jn_form label{
+    margin-top: 15px;
+}
+/*//////////Category/////////////*/
+.jn_table_category{
+    margin-top: 10px;
+}
+.jn_table_category table {
+    width:100%;
+}
+
+.jn_table_category table :nth-child(7){
+    width: 10%;
+}
+.jn_table_category table :nth-child(7) span{
+    width: 30px;
+    height:30px;
+    margin:0;
+    padding:0;
+    padding-left: 4px;
+}
+.jn_table_category table :nth-child(7) form{
+    width: 30px;
+    height:30px;
+    margin:0;
+    padding:0;
+}
+.jn_table_category table :nth-child(7) form button{
+    font-size:1.5em;
+    width: 30px;
+    height:30px;
+    padding: 0;
+    margin: 0;
+}
+.jn_table_category table :nth-child(7) a {
+    padding-left: 4px;
+}
+.jn_table_category table tr :nth-child(6){
+    text-align:center;
+    vertical-align:middle;
+    width: 16%;
+}
+.jn_table_category select{
+    width: 100%;
+}
+.jn_table_category input {
+    width:100%;
+}
+.jn_table_category table tr :nth-child(2) {
+    width:7%
+}
+.jn_table_category table tr :nth-child(3) {
+    width:20%
+}
+.jn_table_category table tr :nth-child(4) {
+    width:20%
+}
+.jn_table_category table tr :nth-child(5) {
+    width:20%
+}

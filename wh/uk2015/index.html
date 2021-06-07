@@ -1,0 +1,391 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='イギリスのワーキングホリデー（ワーホリ）2015';
+$header_obj->description_page='イギリスは伝統ある歴史と近代的な文化が混ざり合う国です。
+				イギリスには世界最高峰の博物館や美術館、美しく歴史ある街並みがあり、
+				留学生やワーキングホリデー（ワーホリ）での渡航先としてはもちろん、観光旅行の目的地としても非常に人気の高い国です。
+				またイギリスは伝統文化や歴史だけでなくファッションや音楽などのエンターテイメントの都市としても有名で、
+				ワーキングホリデー（ワーホリ）制度を使いイギリスで生活するだけでも常に最先端の文化に触れることができるでしょう。';
+$header_obj->keywords_page ='イギリス,ワーキングホリデー,ワーホリ,留学,ビザ,方法';
+$header_obj->fncFacebookMeta_function = true;
+$header_obj->add_css_files='<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" />';
+$header_obj->add_style='<style>
+.bl	{
+	color : black;
+	font-size : 10pt;
+	font-weight: bold;
+}
+</style>
+';
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" /><link href="/wh/css-sp/style.css" rel="stylesheet" type="text/css" />';
+	$header_obj->add_js_files = '<script src="/wh/js-sp/jquery.jtruncsubstr-1.0rc.js" type="text/javascript"></script><script src="/wh/js-sp/script.js" type="text/javascript"></script>';
+} else {
+	$header_obj->add_css_files = '<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" /><link href="/wh/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+
+$header_obj->fncMenuHead_imghtml='<img id="top-mainimg" src="../../../images/mainimg/GB-countrypage.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text='イギリスのワーキングホリデー（ワーホリ）2015';
+
+$header_obj->display_header();
+
+include('../../calendar_module/mod_event_horizontal.php');
+
+?>
+
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs(); ?>
+
+
+<!--
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../canada/"><span>カナダのワーホリ</span></a></div>
+      <div class="btnarea"><a href="./sydney/"><span>シドニーでワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="../singapore/"><span>シンガポールで初めてのワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="./parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+-->
+
+	<br />
+		<center><font size="4" color="red">***　注意　***</font></center>
+		<center>
+            <p>
+                <font color="red">
+                    このページでは、2015年度イギリスワーキングホリデー（イギリスワーホリ2015YMS）について解説をしています。
+                </font>
+            </p>
+        </center>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+	<center>
+        <a href="/visa/v-uk.html" target="_blank">
+            <img src="/images/uk_new.png">
+        </a>
+    </center>
+	<div style="clear:both; height:20px;">&nbsp;</div>
+
+	<div class="step_title">
+		2015年度イギリスワーキングホリデー（イギリスワーホリ2015YMS）情報
+	</div>
+
+	<div class="area-main-image">
+		<img src="/wh/img-sp/main-uk.jpg" class="responsive-img" />
+	</div>
+
+<!--
+	<p class="text01">初めての海外でも安全で安心のオーストラリア。生きた英語と豊な自然を堪能できるオーストラリアでのワーキングホリデー生活。</p>
+
+	<table class="tableofcontents">
+		<tr>
+		<th>目次</th>
+		<td>
+		<ul>
+		<li><a href="#st1-1">なぜオーストラリアでワーホリ（ワーキングホリデー）なのか？</a></li>
+		<li><a href="#st1-2">オーストラリアの英語と国民性</a></li>
+		<li><a href="#st1-3">オーストラリア・ワーキングホリデーの楽しみ方</a></li>
+		<li><a href="#st1-4">オーストラリア・ワーキングホリデービザの特長</a></li>
+		</ul>
+		</td>
+		</tr>
+	</table>
+
+
+	<div class="area-banner-seminar">
+		<div class="area-banner-seminar-title">
+			まずは無料セミナーへ！<br />
+			ワーキングホリデー＆留学の無料セミナーはこちら！
+		</div>
+		<p class="link-free-seminar"><img src="/wh/img-sp/arrow-1.gif" /><a href="/seminar/seminar">無料セミナー情報をもっと見る</a></p>
+	</div>
+-->
+<br/>
+<div style="border: 2px dotted navy; padding: 15px 5px 15px 5px;">
+	<p class="text01">
+
+		<font size="4">2015年イギリスワーキングホリデービザ（イギリスワーホリ2015YMS）の要項が発表されました(2014.11.07)</font>
+	</p>
+<!--	<p class="text01">
+			<font size="4.5"><strong>公式アナウンスが入り次第、このページにて詳細をお知らせします。</strong></font><br/>
+	</p>
+-->
+		<p class="text01">
+			<font size="3">
+				<strong>Youth Mobility Scheme 2015 (日本国籍者)(イギリス大使館公式ページ)</strong>	<br/>
+				<a href="https://www.gov.uk/government/world-location-news/youth-mobility-scheme-2015-for-japanese-nationals.ja" target="_blank"><font color="blue">https://www.gov.uk/government/<br/>world-location-news/youth-mobility-scheme-2015-for-japanese-nationals.ja</font></a>
+				</font>
+		</p>
+</div><br/>
+
+
+	<h2 id="st1-2" class="sec-title">Youth Mobility Scheme 2015 (日本国籍者)(イギリス大使館公式ページより引用)</h2>
+	<div class="area-accordion" id="area-accordion-australia-02">
+		<p class="text01">
+			2015年度Youth Mobility Scheme　は2015年1月に開始されます。定員1000名で、英国に最長2年間滞在でき、就労及び就学が可能です。<br/>
+		</p><br/>
+		<center><img src="images/uk2.jpg" width="50%"></center>
+		<h3 class="h3-01">申請方法</h3>
+		<p class="text01" style="margin-bottom:20px; color: red; text-align: center;">
+				※2014.11.07時点の情報です。予告無く変更になる場合もございますので申請時には必ず<a href="https://www.gov.uk/government/world-location-news/youth-mobility-scheme-2015-for-japanese-nationals.ja" target="_blank">公式ウェブページ</a>を一度ご確認下さい。
+		<p>
+		<p class="text01">
+			2015年度Youth Mobility Scheme　に申請予約を希望される方は、Eメールを日本時間2015年1月5日月曜日12時 (正午) から2015年1月7日水曜日12時 (正午) の間にYMS2015-APPOINTMENT@vfshelpline.com 宛てに1通のみお送りください。メールの題名には必ず申請者の氏名（パスポートと同じ表記）、生年月日、及びパスポート番号を明記してください。<br/>
+			<br/>
+			例：YAMADA Taro – 31/01/1990 – TH123456789<br/>
+			<br/>
+			また、送付されるEメール本文には、ご自身の下記情報を必ず明記してください。<br/>
+			<br/>
+			Name　（名前）<br/>
+			Date of birth（生年月日）<br/>
+			Passport Number（パスポート番号）<br/>
+			Country to submit the application （申請手続きを行う国）<br/>
+			Home and mobile phone number　（電話番号・携帯電話番号）<br/>
+			上記Eメールアカウントの受付期間は48時間となり、日本時間2015年1月5日月曜日12時（正午）から1月7日水曜日12時（正午）までとなります。この時間内に受信された全てのEメールに対して、確認の自動返信が送られます。<br/>
+			<br/>
+			上記Eメールアカウントでの受付期間終了後に、1000名の申請者がランダム抽選で選ばれます。抽選で選ばれた申請者には1月14日水曜日に、申請可能通知、予約方法の詳細及びYouth Mobility Scheme　ビザ申請に必要な書類に関するEメールが送られます。抽選で選ばれた場合のみ、この申請可能通知のEメールを受け取ることができます。<br/>
+			<br/>
+			海外在住の日本国籍者も上記の方法でお申し込みください。抽選で選ばれた申請者は在住国での申請が可能です。2015年度 Youth Mobility Scheme　ビザを英国内から申請することはできませんので、予めご注意ください。抽選で選ばれた場合、在マニラUK Visas and Immigrationは申請者が在住する国　（英国以外）の申請センターへ、その方が抽選で選ばれており、申請可能であることを連絡致します。<br/>
+			<br/>
+			2つ目に送られる申請可能通知Eメールを受け取られていない場合は申請はできませんので予めご了承ください。
+		</p><br/>
+
+<div style="clear:both; height:40px;">&nbsp;</div>
+	<center>
+        <a href="/mem/" target="_blank">
+            <img src="/images/mem_btn01.png">
+        </a>
+        <a href="/seminar/seminar" target="_blank">
+            <img src="/images/sem_btn01.png">
+        </a>
+    </center>
+		<p style="color: red; text-align: center;">
+			※日本ワーキング・ホリデー協会ではイギリスワーキングホリデーに関しての電話お問い合わせは受け付けておりませんのでご了承下さい。当協会イギリス無料セミナーでは質疑応答のお時間もございますのでご活用下さいませ。
+		<p>
+
+
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+	</div>
+
+
+	<h2 id="st1-3" class="sec-title">2015年度イギリスワーキングホリデー　募集が始まる前に必ず知っておきたいポイント</h2>
+	<div class="area-accordion" id="area-accordion-australia-03">
+		
+	<p class="text01">
+	イギリスワーキングホリデーはYouth Mobility Schemeと呼ばれます。
+	イギリスワーキングホリデーは毎年絶大な人気があり、イギリス　ワーキングホリデービザの定員に対し多くの応募があります。
+	イギリスワーキングホリデーの申請要項は例年１０月〜１２月に発表され、抽選などの手続きを経て選ばれた人だけが
+	イギリスワーキングホリデーの申請を行うことができます。</p>
+	
+	<p class="text01">
+	
+	イギリス ワーキングホリデーが人気な理由には以下の要因があげられるでしょう。</p>
+	<br/>
+			<ul class="list-disc">
+			  <li>他国のワーキングホリデービザと違い、イギリスワーキングホリデーは２年間滞在が可能（前年度要項）</li>
+			  <li>他国のワーキングホリデービザと違い、イギリスワーキングホリデーは就労・就学に制限がない（前年度要項）</li>
+			  <li>ファッション・音楽・芸術など最先端のトレンドと伝統が入り交じったイギリスならではの文化に触れることができる。</li>
+			  <li>ヨーロッパ圏でありながら英語を学ぶことができ、本場のブリティッシュイングリッシュを学ぶことができる。</li>
+			  <li>イギリスから他ヨーロッパ圏へ旅行に行きやすい。</li>
+		    </ul>
+	<br/>
+	<p class="text01">その他にもイギリスには様々な魅力があります。<br/></p><br/>
+
+
+	<center><img src="images/uk1.jpg" width="50%"></center>
+	<div style="margin-bottom:35px; color: red; text-align: center;">※日本ワーキング・ホリデー協会ではイギリスワーキングホリデーに関しての電話お問い合わせは受け付けておりませんのでご了承くださいませ。</div>
+
+	<h3 class="h3-01">倍率の高い2015年度イギリスワーキングホリデー（2015YMS）、取得ができなかったら？</h3>
+	<p class="text01">
+	2011年までのイギリスワーキングホリデーは先着順、2012年以降のイギリスワーキングホリデーは抽選方式をとっています。
+	2015年度イギリスワーキングホリデー（2015YMS）に応募した全員がビザを取得できるわけではありません。
+	残念ながらイギリスワーキングホリデー抽選に漏れてしまった方から、当協会にも毎年多くのご相談をいただきました。
+	2015年度イギリスワーキングホリデー（2015YMS）が取得できなかったから渡航を全て諦めてしまうのは非常に勿体ないことです。
+	その場合次のような選択肢があるでしょう。
+	</p>
+		<br/>
+			<ul class="list-disc">
+			  <li>学生ビザでイギリスに渡航する。</li>
+			  <li>オーストラリアやカナダなど他英語圏にワーキングホリデービザで渡航する。</li>
+			  <li>次年度のイギリスワーキングホリデーに応募する</li>
+		    </ul>
+	<br/>
+	<p class="text01">
+	イギリスの語学学校に通う場合、学生ビザが発行されイギリスに長期滞在することができます。その場合、イギリスで仕事をすることはできませんが、イギリスに学生ビザで渡航し
+	英語を身につけてから次年度のイギリスワーキングホリデーに応募する方も多くいらっしゃいます。また、同じような理由で他英語圏で英語や海外での仕事や生活を学び、次年度のイギリスワーキングホリデーで渡航後すぐにお仕事をしたり海外生活を有意義に過ごす方もいます。またもちろん2015年度イギリスワーキングホリデーに応募して外れた場合は2015年度イギリスワーキングホリデー（2015YMS）をしたことにはなりません。次年度以降のイギリスワーキングホリデーに挑戦することもできます。予算やご都合で難しい場合は渡航を延期し2016年度以降のイギリスワーキングホリデーに応募することも一つの手です。
+	</p>
+	
+	<center><img src="images/uk3.jpg" width="50%"></center>
+	<div style="margin-bottom:35px; color: red; text-align: center;">※日本ワーキング・ホリデー協会ではイギリスワーキングホリデーに関しての電話お問い合わせは受け付けておりませんのでご了承くださいませ。</div>
+
+	<h3 class="h3-01">2015年度イギリスワーキングホリデー取得において業者をご利用される方はご注意ください。</h3>
+
+	<p class="text01">
+	「必ずビザが取得できる方法を教えます。」「ビザの抽選に有利です。」
+	の謳い文句で手続きをして膨大な手数料をとったり、様々な契約を迫る個人や団体が増えることがあります。
+	手数料を払ったり特別な団体や個人を通して手続きを行ったとしても、ビザ取得において特別扱いされることはまずありません。
+	それはイギリスだけでなくどの国でも同じです。2015年度イギリスワーキングホリデー（2015YMS）は正しい手順で手続きを行えば、全ての方が公平に抽選を受ける権利があります。
+	惑わされず正確な情報収集を行うよう努めましょう。
+	</p>
+
+	<h3 class="h3-01">昨年度の情報に注意！2015年度イギリスワーキングホリデー　発表の前にビザ要項が確定することはありません。</h3>
+	<p class="text01">
+	出来るだけ早くから、2015年度イギリスワーキングホリデー（2015YMS）の準備を心掛ける事は大変良い事ですが、憶測や非公式な情報に振り回されては全く意味がありません。
+	2015年度イギリスワーキングホリデー（2015YMS）の募集要項は恐らく例年通り１０～１２月に発表されます。
+	それまではネット上でいろいろな噂が飛び交うことが予想されます。公式な発表があるまで鵜呑みにしないようにして下さい。
+	</p>
+	<p class="text01">
+	2015年度イギリスワーキングホリデー（2015YMS）の募集要項や申請手順は年度によって変わる可能性が高いです。
+	2011年までのイギリスワーキングホリデーは先着順、2012年以降のイギリスワーキングホリデーは抽選方式をとっています。
+	個人のサイトなどから前年度のイギリスワーキングホリデー情報を得て、焦って先に準備を進めてしまう方も少なくありません。
+	2015年度イギリスワーキングホリデー（2015YMS）に変更があった場合、それら全てが無駄になってしまいます。
+	必ず最新の公式の情報を確認しましょう。
+	</p>
+	
+	<h3 class="h3-01">一番大切なのは正しい情報を得て正しく2015年度イギリスワーキングホリデービザの申請を行うこと。</h3>
+	<p class="text01">
+	イギリスワーキングホリデービザの募集要項が発表されてからでも、もちろん十分な準備期間はあります。
+	一番大切なのは、正しい情報で正しく2015年度イギリスワーキングホリデー（2015YMS）の申請を行うことです。
+	2015年度イギリスワーキングホリデー（2015YMS）のためにあせらずに準備を進めましょう。
+	</p>
+
+<br/>
+
+<div style="clear:both; height:40px;">&nbsp;</div>
+	<center>
+        <a href="/mem/" target="_blank">
+            <img src="/images/mem_btn01.png">
+        </a>
+        <a href="/seminar/seminar" target="_blank">
+            <img src="/images/sem_btn01.png">
+        </a>
+    </center>
+		<p style="color: red; text-align: center;">
+			※日本ワーキング・ホリデー協会ではイギリスワーキングホリデーに関しての電話お問い合わせは受け付けておりませんのでご了承下さい。当協会イギリス無料セミナーでは質疑応答のお時間もございますのでご活用下さいませ。
+		<p>
+
+
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+	</div>
+
+
+	<h2 id="st1-4" class="sec-title">イギリスワーキングホリデービザ2015（ワーホリビザ）のためのセミナーを行っています</h2>
+	<div class="area-accordion" id="area-accordion-australia-04">
+		<p class="text01">
+		2015年度イギリスワーキングホリデー（2015YMS）
+		日本ワーキング・ホリデー協会では2015年度イギリスワーキングホリデー（2015YMS）についてのセミナーを開催しています。
+		2015年度イギリスワーキングホリデー（2015YMS）の申請においての今までの失敗例や注意点をふまえ応募方法や概要を詳しく最新情報をお伝えします。
+		</p>
+        <a href="/seminar/seminar" target="_blank">
+            <img src="/images/sem_btn01.png">
+        </a>
+		<br/>
+        <br/>
+
+		<h3 class="h3-01">イギリスワーキングホリデービザ2015（ワーホリビザ）についてワーキングホリデー協会のサポート</h3>
+
+		<p class="text01">
+		当協会では上記セミナーに加え、メンバー様に向けたセミナーサポートを１２月より多く開催いたします。<br/>
+		<br/>
+		こちらのメンバー様限定セミナーでは、
+			<ul class="list-disc">
+			  <li>お勧め都市のご相談</li>
+			  <li>語学学校のご案内(具体的なプログラムや特色のご紹介）</li>
+			  <li>宿泊方法のアドバイス、ご提案</li>
+			  <li>具体的な予算、いつまでに何をしなければいけないかのご案内</li>
+		    </ul>
+		<p class="text01">
+		などカウンセラーによるプランニングのご提案、具体的なご予算等お話しするカウンセリング形式のセミナー「イギリス渡航計画相談会(1年以内)
+		」や、実際の2015年イギリスワーキングホリデービザ（イギリスワーホリ2015YMS）申請（抽選手続き）のセミナーも開催いたします。<br/>
+		<br/>
+		ご予約・ご参加にはワーキング・ホリデー協会メンバー登録が必要となりますので是非ご検討ください。<br/>
+		</p>
+		<center>
+			<a href="/mem/"><img src="images/member.jpg" width="70%"><br/>
+			▲　メンバー登録の詳細・お手続きはこちらをクリック　▲<br/>
+			</a>
+		</center>
+		<br/>
+		<p class="text01">
+		ワーキング・ホリデー協会メンバーはご登録日より３年間有効になりますので、今回2015年イギリスワーキングホリデービザ（イギリスワーホリ2015YMS）の
+		抽選に漏れてしまったとしても、来年の2015年イギリスワーキングホリデービザ（イギリスワーホリ2015YMS）申請や、別のビザでのイギリスへのご渡航、他英語圏へのワーキングホリデーのお手伝いも可能となります、実際昨年度もイギリスワーキングホリデービザ(ワーホリビザ）の抽選に漏れてしまい、別のプランでご渡航された方々のサポートも多くさせていただきました。
+		<br/>
+		<h3 class="h3-01">イギリスワーキングホリデービザ2015（ワーホリビザ）についてワーキングホリデー協会からのお願い</h3>
+		<p class="text01">
+		日本ワーキング・ホリデー協会ではイギリスワーキングホリデービザ2015（ワーホリビザ）に関しての電話・メール・ご予約なしのご来店等でのお問い合わせは一切受け付けておりません。<br/>
+		<br/>
+		また、イギリスワーキングホリデーセミナーは毎年多くの方の参加があり、2015年度イギリスワーキングホリデー（2015YMS）セミナーも満員でご予約がすぐに埋まってしまう場合もございますので、ご参加の方はお早めのご予約をオススメいたします。<br/>
+		<br/>
+		一人でも多くの方に2015年度イギリスワーキングホリデー（2015YMS）の可能性を広げていただけるように願っています。
+		何卒ご了承のほどよろしくお願いいたします。
+		</p>
+
+	</div>
+
+<div style="clear:both; height:40px;">&nbsp;</div>
+	<center>
+        <a href="/mem/" target="_blank">
+            <img src="/images/mem_btn01.png">
+        </a>
+        <a href="/seminar/seminar" target="_blank">
+            <img src="/images/sem_btn01.png">
+        </a>
+    </center>
+		<p style="color: red; text-align: center;">
+			※日本ワーキング・ホリデー協会ではイギリスワーキングホリデーに関しての電話お問い合わせは受け付けておりませんのでご了承下さい。当協会イギリス無料セミナーでは質疑応答のお時間もございますのでご活用下さいませ。
+		<p>
+
+		<p>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+<!--
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../canada/"><span>カナダのワーホリ</span></a></div>
+      <div class="btnarea"><a href="./sydney/"><span>シドニーでワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="../singapore/"><span>シンガポールで初めてのワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="./parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+	-->
+
+	  <div class="advbox03">
+<?php
+	// 111
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

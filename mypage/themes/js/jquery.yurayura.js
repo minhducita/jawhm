@@ -1,0 +1,1 @@
+jQuery(function(e){e.fn.yurayura=function(t){var n=this;var r=0;var i={move:5,duration:1e3,delay:0};var s=e.extend(i,t);return n.each(function(){(function t(){r=r>0?-1:1;var i=n.position().top;e(n).delay(s.delay).animate({top:i+r*s.move},{duration:s.duration,complete:t})})()})}})

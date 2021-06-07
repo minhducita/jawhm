@@ -1,0 +1,693 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+
+$header_obj->title_page='カナダでワーキングホリデー';
+$header_obj->description_page='カナダへワーキングホリデー（ワーホリ）や留学に行く方向けに準備・手続きの手順をご案内しています。その他様々な国でワーホリのビザの取得が可能で、最新のビザ取得方法や渡航情報などを発信しています。また、各種無料セミナーも開催しています。';
+$header_obj->keywords_page ='カナダ,ワーキングホリデー,ワーホリ,留学,ビザ,方法';
+$header_obj->fncFacebookMeta_function = true;
+$header_obj->add_css_files='<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" />';
+$header_obj->add_style='<style>
+.bl	{
+	color : black;
+	font-size : 10pt;
+	font-weight: bold;
+}
+</style>
+';
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" /><link href="/wh/css-sp/style.css" rel="stylesheet" type="text/css" />';
+	$header_obj->add_js_files = '<script src="/wh/js-sp/jquery.jtruncsubstr-1.0rc.js" type="text/javascript"></script><script src="/wh/js-sp/script.js" type="text/javascript"></script>';
+} else {
+	$header_obj->add_css_files = '<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" /><link href="/wh/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+
+$header_obj->fncMenuHead_imghtml='<img id="top-mainimg" src="../../images/mainimg/CA-countrypage.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text='カナダでワーキングホリデー | ワーホリについて';
+
+$header_obj->display_header();
+
+include('../../calendar_module/mod_event_horizontal.php');
+
+?>
+
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs(); ?>
+
+	<div class="step_box mb_none">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://jawhm.bluecloud.tokyo/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://jawhm.bluecloud.tokyo/visa/v-can.html"><span>ワーホリビザの申請手順</span></a>
+			</div>
+			<div class="btnarea"><a href="../australia/"><span>オーストラリアのワーホリ</span></a></div>
+			<div class="btnarea"><a href="./toronto/"><span>トロントのワーホリ（ワーキングホリデー）</span></a></div>
+			<div class="btnarea"><a href="./vancouver/"><span>バンクーバーのワーホリ（ワーキングホリデー）</span></a></div>
+			<div class="btnarea"><a href="../singapore/"><span>シンガポールで初めてのワーキングホリデー</span></a></div>
+			<div class="btnarea"><a href="../ireland/"><span>アイルランドのワーホリ</span></a></div>
+		</div>
+	</div>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+	<div class="text-center">
+		<a href="/visa/v-can.html" target="_blank">
+			<img src="/images/can_new.png" alt="カナダワーキングホリデー最新情報はこちら">
+		</a>
+	</div>
+	<div style="clear:both; height:20px;">&nbsp;</div>
+
+
+	<div class="step_title">
+		カナダでワーキングホリデー
+	</div>
+
+	<div class="area-main-image">
+		<img src="/wh/img-sp/main-canada.jpg" class="responsive-img" alt="canada" />
+	</div>
+
+	<p class="text01">初めての海外でも安全で安心のカナダ。生きた英語と豊な自然を堪能できるカナダでのワーキングホリデー生活。</p>
+
+	<table class="tableofcontents">
+		<tr>
+			<th>目次</th>
+			<td>
+				<ul>
+					<li><a href="#st1-1">カナダワーキングホリデーとは</a></li>
+					<li><a href="#st1-2">カナダの英語と国民性</a></li>
+					<li><a href="#st1-3">カナダワーキングホリデーの仕事</a></li>
+					<li><a href="#st1-4">カナダワーキングホリデービザ申請</a></li>
+					<li><a href="#st1-5">カナダワーキングホリデーの保険</a></li>
+					<li><a href="#st1-6">カナダワーキングホリデー費用</a></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+	<div class="area-banner-seminar">
+		<div class="area-banner-seminar-title">
+			まずは無料セミナーへ！<br />
+			ワーキングホリデー＆留学の無料セミナーはこちら！
+		</div>
+		<?php 
+			//settings for the calendar module display
+			$country_to_display = 'カナダ';
+			$number_to_display = '2';
+			$start_display_from = ''; //empty is begining
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg" alt="ca_banner"></a>
+		<p class="link-free-seminar">
+			<img src="/wh/img-sp/arrow-1.gif" alt="" /><a href="/seminar/seminar">無料セミナー情報をもっと見る</a>
+		</p>
+	</div>
+
+
+	<h2 id="st1-1" class="sec-title">カナダワーキングホリデーとは</h2>
+	<div class="area-accordion" id="area-accordion-canada-01">
+		<p class="text01">
+			カナダワーキングホリデーで一番多い渡航先は<span
+				class="bl">バンクーバー</span>です。トロントよりも冬は寒くなく、日本からも飛行機の便数が多く冬季オリンピックの開催などで日本人観光客にも人気の都市です。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーの傾向としては<span class="bl">3月、4月</span>に出発する人が多いです。春を迎え寒さも軽減され、快適な夏を迎えるからです。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデー希望者のアンケート結果にカナダワーキングホリデーを選んだ理由として多かった理由として、<span
+				class="bl">「アメリカに近い」「ウィンタースポーツが盛ん」「アメリカ留学よりも安全」</span>ということがあります。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーは<span class="bl">バンクーバー</span>、<span
+				class="bl">トロント</span>に最も留学生・ワーキングホリデーが多く渡航します。　そのほかの地域ではバンクーバーからフェリーで3時間の<span
+				class="bl">ビクトリア</span>、フランス語圏になる<span class="bl">モントリオール</span>、　赤毛のアンで有名な<span
+				class="bl">ハリファックス</span>、などが有名な渡航先です。<br />
+		</p>
+		<br />
+		<p class="text01">
+			下の地図を見れば一目瞭然ですが、みなさんもご存じのとおり、カナダとアメリカはびっくりするほど長い国境線で区切られた隣同士の国です。その距離、なんと<span
+				class="bl">８８９１Ｋｍ</span>にもなるそうです。 北海道から沖縄までの距離が約２５００Ｋｍなので、<span class="bl">約３．５倍</span>もあるんです。<br />
+		</p>
+		<br />
+		<div class="text-center area-image">
+			<img src="../img/canmap.gif" alt="カナダの地図" class="mgb10 responsive-img" style="margin:15px;">
+		</div>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーに9月や10月に出発をすると日本人の体感温度ではトロントでは既に冬に入っており、更に<span
+				class="bl">11月からはマイナスの気温</span>になり3月くらいまではそのような気温が続きます。<br />
+			<span class="bl">冬が好き</span>な方や<span
+				class="bl">ウィンタースポーツ</span>を毎日したい方には楽しいですが普通ですと渡航最初の方は海外生活のストレスや英語のストレスに更に寒さが気を滅入らせます。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーの最も人気の街の<span class="bl">バンクーバー</span>は東京と同じような気温でたまに<span
+				class="bl">マイナス10度</span>になったりします。　寒い日は雪が降りますが1日で終わったりして東京のように雪が降ると公共交通網が混乱しストップするほど雪には慣れていません。　太平洋に面しているので暖かい風によってロッキー山脈の雪が解けて雨に変わります。その為<span
+				class="bl">9月から3月</span>の冬の間は毎日のように<span class="bl">雨模様</span>の天気が続きます。<span
+				class="bl">バンクーバーはシアトルからバスで3時間</span>です。シアトルに野球観戦にいく留学生も多いほど近いです。<br />
+		</p>
+		<br />
+		<p class="text01">
+			この<span class="bl">アメリカが近い</span>という理由で、カナダワーキングホリデーを選ぶ方も多くいます。カナダの東側。ナイアガラの滝の近くの街である<span
+				class="bl">トロント</span>であれば、 ニューヨークまで飛行機でたったの<span
+				class="bl">１時間３０分と</span>いう距離。もちろん、ワシントンＤＣや、ボストンなども２時間程度で移動することが可能です。ニューヨークまで夜行バスで10時間ほどで行けますので<span
+				class="bl">ニューヨークが好きな人</span>がトロントにカナダワーキングホリデーに行くことも有ります。ちょうど東京から広島くらいの距離です。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダで一番大きな都市の<span class="bl">トロント</span>は<span
+				class="bl">ナイアガラの滝</span>を有している五大湖に面しいるので冬の間は冷たい風が吹きトロント市内でも<span
+				class="bl">マイナス30度</span>に達します。冬は日本よりも長く6ヶ月続きます。<br />
+		</p>
+		<br />
+		<p class="text01">
+			また<span class="bl">ウィンタースポーツ</span>が好きなカナダワーキングホリデーには、<span
+				class="bl">バンクーバー</span>がおススメです。カナダ・バンクーバーは２０１０年の冬季オリンピックとして世界中から注目を集め、<span
+				class="bl">世界でも有数のスキー場ウィスラーまでバスで約３時間</span>と、週末のスキー・スノーボードには最高のロケーションです。カナダワーキングホリデーでウィスラーやバンフで働きたいとう若者が世界中から集まるので高英語力は必須です。このようにスキー場まで近い場所でありながら、<span
+				class="bl">バンクーバーは冬でもあまり雪が降りません。</span>また、バンクーバーからアメリカにという話になると、<span
+				class="bl">シアトル</span>がいいでしょう。車で行ききするのが一般的ですが、本数は少ないながらも電車が通っているので約４時間２０分で到着します。　カナダワーキングホリデーをしながらアメリカに行くことも可能ですがその際は、アメリカに入国時にアメリカのビザが必要になりますので注意しましょう。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーの注意点と言うか面白い点は<span class="bl">時差</span>です。最初は時差ぼけに悩まされるかも知れません。
+			<span class="bl">日本で朝9時にバンクーバーで１７時</span>になり通常のビジネス時間が終わります。
+			御両親と連絡を取る時にはバンクーバーの語学学校が終わったあと、もしくはカナダの朝一番で日本はこれから夜になっていきます。<br />
+		</p>
+		<br />
+		<p class="text01">
+			実はあまり知られていませんがカナダで<span class="bl">一番大きな街はトロントで、2番目がモントリオール、3番目がバンクーバーで4番目に首都のオタワ</span>の順番です。
+			バンクーバーが一番大きいと思われている方も多いですね。<br />
+		</p>
+		<br />
+		<p class="text01">
+			<span
+				class="bl">モントリオールはフランス語圏</span>になるのでフランス語も英語も勉強するには良い街ですね。おもしろいことにモントリオールの英語学校に留学するとカナダ人が英語を勉強しています。カナダ人は英語しゃべれると思ったらフランス語圏では本当にフランス語ばかりで、運転をしていて看板が全く読めなくなります。カナダワーキングホリデーでモントリオールを選ぶ方はフランス語を勉強されていた方が多いです。英語は中学校である程度は見て分かったり、調べることもできますが<span
+				class="bl">全く分からないフランス語をカナダワーキングホリデーの1年間で覚えるのは全く上達せず辛いです。</span><br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーを楽しむためには<span
+				class="bl">カナダの文化を楽しんで下さい。</span>寒いからと言って家でばかり過ごしては日本の生活と変わりません。移民が多く英語を母国語とするカナダ国民も6割と言われるほど2カ国や3カ国語を話す人も多いです。どんどんいろいろな人と友達に成る積極性を身に付けて下さい。<span
+				class="bl">ワーキングホリデーで受け身は絶対にいけません。</span><br />
+		</p>
+		<br />
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = ''; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg" alt="ca_banner"></a>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+
+
+		<a href="/wh/australia">
+			<p class="whcan-aus"><img src="/images/whaus_SP.jpg" alt=""> </p>
+		</a>
+
+	</div>
+
+	<h2 id="st1-2" class="sec-title">カナダの英語と国民性</h2>
+	<div class="area-accordion" id="area-accordion-canada-02">
+		<p class="text01">
+			ワーキングホリデーで海外に行くという場合、多くの方が<span
+				class="bl">語学力（英語）</span>を身に着けたいと考えると思います。われわれ日本人は中学校・高校とアメリカ英語を基本とした英語教育を受けています。
+			カナダは物理的にアメリカに近いこともあってアメリカ英語を話す傾向にありますがアメリカ英語とカナダ英語はネイティブに取っては違いアメリカ人はいつもカナダ英語か。。。と馬鹿にしますが、カナダの英語は日本人にとっても<span
+				class="bl">理解し易く、勉強しやすい英語</span>であるとも言えると思います。　1年や2年では日本語英語が抜けずカナダ英語になっちゃうと言う事はありません。<br />
+		</p>
+		<br />
+		<p class="text01">
+			但し、単語のスペルについては、イギリス英語とアメリカ英語の影響を受け、ある意味<span class="bl">カナダ英語</span>という独自の形態を成型しているという言い方もあります。
+			しかしながら、カナダも多くの移民を受け入れている国です。移民者が多い、つまり<span
+				class="bl">母国語が英語でない方が多い</span>ので、より簡単に、そして確実にコミュニケーションを取るために、解りやすい簡単な英語が使われるようになっているとも感じられます。　自分のジャパニーズイングリッシュを恥ずかしがることなくカナダで<span
+				class="bl">積極的に発言して行かないと英語は伸びません。</span><br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーでカナダに行く目的の１つに、<span
+				class="bl">語学の習得</span>があります。いまどき英語の１つも喋れないとやっていけないよ。と言われ始めて何年経つでしょうか？人・物・金が世界中を簡単に移動できる現代において、より一層の国際化は否めません。
+			そこで必要なのが英語になるかと思いますが、<span class="bl">言語を学ぶ事はその国の文化を学ぶ事</span>でもあります。<br />
+		</p>
+		<br />
+		<p class="text01">
+			もともとイギリスの植民地であったカナダでは、英語が母国語として使用されています。 しかし、イギリスやアメリカに比べて<span
+				class="bl">カナダの英語は解りやすい</span>とも言われます。それは、カナダが多民族国家であることがその要因でしょう。言葉の違う民族同士が、より確実・簡単にコミュニケーションを図るために解りやすい英語が使われるようになった。
+			言い換えると、もともと英語が母国語ではない方も多く暮らしている為、<span
+				class="bl">言語・語学習得の苦労も分かち合え、つたない語学力であっても、それを受け入れ理解してくれる文化</span>がカナダにはあります。これは、カナダで英語を勉強し上達させる上で、大変重要な要素です。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーでは<span class="bl">6ヶ月</span>の英語学習が認められています。ワーキングホリデー前に観光ビザや学生ビザで渡航してカナダで<span
+				class="bl">1年間や2年間英語の勉強</span>をする方もいらっしゃいます。普通の日本人ですと全くできなくても、初級からスタートして1年後には上級になり仕事に行かせる英語力に成ります。<span
+				class="bl">TOEICで850~900点</span>を狙う事も可能です。　是非目標を高く持ってカナダワーキングホリデーで英語を伸ばしましょう。　帰国後に友達が羨ましがるようになりましょうね。<br />
+		</p>
+		<br />
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = '2'; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg" alt=""></a>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+	</div>
+
+
+	<h2 id="st1-3" class="sec-title">カナダワーキングホリデーの仕事</h2>
+	<div class="area-accordion" id="area-accordion-canada-03">
+		<p class="text01">
+			ワーキングホリデーの仕事はカナダ・バンクーバーが多いイメージを持っている方が多いようですが、都市的にはカナダ・トロントの方が大きく仕事が多いです。しかし<span
+				class="bl">英語力の無い日本人がバイトのできる環境はカナダ・バンクーバー</span>の方が多いです。それは日本人観光客が多いので日本語の需要が高いから。<span
+				class="bl">日本語環境では働きたくないと言う人はカナダ・トロント</span>でもがんばってみましょう。しかし英語力が原因でワーキングホリデースタートから6ヶ月たってもバイトが見つからないと言う事もあるので生活資金は十二分に用意しておいて下さい。<br />
+		</p>
+		<br />
+		<p class="text01">
+			観光ビザとカナダ留学生ビザでは就労が認められていないのでバイトはできません。そこで最初の6ヶ月を働かないのであれば<span
+				class="bl">最初はカナダ留学生ビザで、その後カナダ国内でカナダワーキングホリデー</span>に変更する方法等もお手伝いしていますので、どんどんご質問下さい。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーでのアルバイト時の最低時給は最近までは<span class="bl">6ドル</span>が認められていましたが今後は<span
+				class="bl">10ドル</span>に成ります。そして<span class="bl">英語力に不安ならカナダ・バンクーバー</span>、それ以上に負けない気持ちを持ってる人、<span
+				class="bl">がんばる人はカナダ・トロントやカナダ・ビクトリア</span>を選択しても良いでしょう。カナダワーキングホリデーに行けば優しいカナダ人が面倒を見てくれて仕事を紹介してくれたってブログを読んだから私も行けるかな。。とは考えずにカナダワーキングホリデーではすべて<span
+				class="bl">自分で積極的に動いた人のみが理想のカナダワーキングホリデー</span>を実現しています。天気が悪いや寒いからというのを理由にして動かないのであれば暖かい国の留学ワーキングホリデーに行って言い訳をできなくすることも考えましょう。<br />
+		</p>
+		<br />
+		<p class="text01">
+			それでもバイトが見つかり易い時期と言うのがあります。それは<span class="bl">夏前とクリスマス前</span>です。<br />
+		</p>
+		<p class="text01">
+			カナダではクリスマスを盛大に祝います。クリスマスプレゼントを家族一人一人が全員の人数分買ったり、クリスマス、ニューイヤーパーティーと１１月と１２月は購買意欲が高くなります。　カナダの高校の夏休みが７月と８月なので７月、８月には購買力が増します。その時期に合わせてカナダワーキングホリデーをスタートさせるのではなくその<span
+				class="bl">4カ月前くらいがおススメ</span>です。<span
+				class="bl">２月終わり、３月あたま</span>からカナダワーキングホリデーをスタートさせれば３、４、５、６月と英語を伸ばす期間と慣れて仕事を探す期間として利用できます。<br />
+		</p>
+		<br />
+		<p class="text01">
+			１１月に合わせる場合も<span class="bl">７月、８月</span>にカナダワーキングホリデーをスタートするとよいでしょう。<br />
+			９月、１０月にカナダワーキングホリデーをする人は冬からスタートになります。6カ月間寒い間はカナダ全体の経済も落ち込むほどですので英語力がない人のバイトは最初は難しいかもしれません。しかし英語の勉強期間として充てる人も多いので春のバイト探しに向けて英語力を磨きましょう。<br />
+		</p>
+		<br />
+		<p class="text01">
+			<span
+				class="bl">スキー場でのバイトを希望する人は夏には行動して下さい。</span>通常１０月にはスキー場がオープンしますがその3カ月前にはスタッフ募集がネットや新聞などに掲載されます。そして面接日がカナダ・バンクーバーやカナダ・トロント市内で開催され<span
+				class="bl">１０月や１１月</span>にはスキー場でバイトが開始されます。日本人でもスノボインストラクターやリフト管理などでバイトする人を見かけます。スキー場内のレストランや駐車場と言う仕事もあります。またスキー場周辺のホテルやコッテージやレンタル屋さんは個人オーナーが多いので一軒一軒仕事探しに回ることも必要です。カナダワーキングホリデーで世界レベルのボーダーとからんでビデオ出演なんてことも。。。
+			仕事をすることが許されたワーキングホリデーの魅力ですね。<br />
+		</p>
+		<br />
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = '4'; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg" alt="ca_banner"></a>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+
+
+		<a href="/wh/australia">
+			<p class="whcan-aus"><img src="/images/whaus_SP.jpg" alt="whaus_SP"> </p>
+		</a>
+	</div>
+
+	<h2 id="st1-4" class="sec-title">カナダワーキングホリデービザ申請</h2>
+	<div class="area-accordion" id="area-accordion-canada-04">
+		<p class="text01">
+			カナダワーキングホリデーは2012年度で<span
+				class="bl">年間6500名</span>の定員がありますがほぼ定員に達することはございませんので安心してワーキングホリデービザの申請をしてください。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーの申請者数は2010年より毎年減少していますので定員には達しないと言われています。例え、もしカナダワーキングホリデーの定員に達したとしても11月や12月に達するようなかたちで数字的には推移しています。でも年末には来年度の新規申請方法が発表され、新年から新規の受け付けが行われるので、カナダワーキングホリデーを申請しましょう。カナダワーキングホリデーの申請はいつも年初の１月、２月にばかり集中する傾向が見られます。
+			カナダワーキングホリデービザ申請もご覧ください。<br />
+		</p>
+		<br />
+		<p class="text01">
+			<span class="bl">カナダワーキングホリデービザ申請方法</span>は日本ワーキングホリデー協会でも<a
+				href="http://jawhm.bluecloud.tokyo/seminar.html"><span
+					style="color: royalblue; font-weight: bold;">無料セミナー</span></a>をしていますので是非ご参加ください。<br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデービザ申請の方法は年に数回変更等がありますので誰かのを<span class="bl">ネットでコピー等は絶対にしないように</span>しましょう。
+			申請内容は<span class="bl">毎年10月</span>くらいに新年度のカナダワーキングホリデー申請方法が発表されます。ここ数年毎回変わっていますし、１年の途中に変更があったりします。<br />
+		</p>
+		<br />
+		<p class="text01">
+			有名な変更点は2011年の途中からカナダワーキングホリデービザの期間中（滞在期間ではなくビザの長さ分）、<span
+				class="bl">ワーキングホリデー保険に加入しておかないといけない</span>と言う事が加わりました。<br />
+		</p>
+		<br />
+		<p class="text01">
+			この様に、重要なワーキングホリデー申請条件などが変更される場合もありますので、ワーキングホリデービザ申請時には、必ず<span class="bl">最新情報</span>を入手してください。
+			実際に空港で入国できずに日本にとんぼ返りさせられた人もいます。　しかし入国拒否やビザ却下などは通常理由を教えてもらえないためはっきりとした理由は分かりませんがワーキングホリデー保険に加入していなかったことが要因として考えられています。<br />
+		</p>
+		<br />
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = '6'; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg" alt=""></a>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+
+
+		<a href="/wh/australia">
+			<p class="whcan-aus"><img src="/images/whaus_SP.jpg" alt=""> </p>
+		</a>
+	</div>
+
+	<h2 id="st1-5" class="sec-title">カナダワーキングホリデー保険</h2>
+	<div class="area-accordion" id="area-accordion-canada-05">
+		<p class="text01">
+			カナダワーキングホリデービザの条件に「<span class="bl">カナダワーキングホリデービザの期間中、ワーキングホリデー保険に加入している事</span>」という条件が2011年から加わりました。<br />
+		</p>
+		<br />
+		<p class="text01">
+			つまり「私は暖かい時期の6ヶ月しか居ない予定だからワーキングホリデー保険も6ヶ月しか入らない」はアウトです！カナダワーキングホリデービザ自体は1年間有効なので1年間のワーキングホリデー保険に必ず加入する必要があります。<span
+				class="bl">入国拒否、入国後に強制送還、今後カナダへの入国が一切認められなくなる恐れ</span>が十分にあります。<br />
+		</p>
+		<p class="text01">
+			この場合、先に１年間のワーキングホリデー保険に加入しておき、帰国後にワーキングホリデー保険を<span class="bl">解約（清算）</span>するということが可能です。
+			もしビザミックスをして最初の半年をカナダ留学生ビザでそしてその後1年間をカナダワーキングホリデービザにして1年半滞在する場合は1年半のワーキングホリデー保険に加入されることをお勧めします。<br />
+		</p>
+		<br />
+		<p class="text01">
+			留学保険、ワーキングホリデー保険は日本を出国した後には加入ができませんので<span
+				class="bl">出発前から加入</span>しておく必要があります。1年半滞在の場合、最初の1年しか保険に入っていないと最後の6ヶ月にワーキングホリデー保険に入っていないのでその時点でビザが無効となり強制送還、今後のカナダ入国拒否、罰金数百万円となりかねません。
+			<span class="bl">不法滞在や不法就労はどの国も一番厳しく取り締まっていますので甘い考えは決してしないでください。</span><br />
+		</p>
+		<br />
+		<p class="text01">
+			カナダワーキングホリデーの保険には　<span class="bl">ワーキングホリデー保険</span>をお勧めしています。<br />
+			資料請求も受け付けておりますのでお問い合わせください。<br />
+		</p>
+		<br />
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = '8'; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<a class="pc_none" href="/guidebook"><img src="/country/images/ca_banner.jpg"></a>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+	</div>
+
+
+	<h2 id="st1-6" class="sec-title">カナダワーキングホリデーの費用</h2>
+	<div class="area-accordion" id="area-accordion-canada-06">
+		<p class="text01">
+			カナダ留学・ワーキングホリデーの費用は生活費と学費で<span
+				class="bl">年間２００万円～</span>です。しかしワーキングホリデー費用では払う出費だけでなく仕事で入ってくる収入も計算に入れて準備をするとよいでしょう。収入を計算できるのがワーキングホリデーの特徴だからです。　しかも留学と同じように勉強もできます。
+			日本ワーキングホリデー協会では仕事も絡めたカナダワーキングホリデー費用の算出をお勧めしております。<br />
+		</p>
+		<br />
+
+		<p class="text01 block01">
+			<span class="bl">カナダワーキングホリデー生活費</span>
+		</p>
+		<div class="area-sub-accordion">
+			<p class="text01">
+				カナダワーキングホリデーで1ヵ月　家賃、光熱費　自炊食費で<span class="bl">600ドル～1000ドル</span>です。<br />
+			</p>
+			<p class="text01">
+				<span class="bl">ホームステイ</span>は食事がランチ以外付いて<span class="bl">月700～800ドル</span>です。<br />
+			</p>
+			<p class="text01">
+				家賃は<span class="bl">アパートシェア、貸し部屋</span>で<span
+					class="bl">月400～600ドル</span>（ルームシェアや立地条件でもっと安い場合やもっと高いのも有ります。）<br />
+			</p>
+			<br />
+			<p class="text01">
+				カナダワーキングホリデーの最初から<span class="bl">ネット等でアパートシェアを探すのは決してしないでください。</span>毎年数件のトラブルが報告されています。<br />
+				日本ワーキングホリデー協会のバンクーバーオフィスからも日本でネットで探した家に実際に行ってみたら無かったと、しかもデポジットとして1か月分の家賃を日本から払っていた。。という問題が報告されています。<br />
+			</p>
+			<br />
+			<p class="text01">
+				カナダワーキングホリデーの最初は<span
+					class="bl">ホームステイや学生寮</span>が良いでしょう。ホームステイや学生寮には150～200ドル程度の紹介料がかかります。　学生寮もワーキングホリデーでもその学校に通っていれば利用できます。<br />
+			</p>
+			<br />
+			<p class="text01">
+				アパートシェアだと<span class="bl">デポジット（敷金のようなもの）</span>が約1か月分の家賃ほどかかります。<span
+					class="bl">約500～1000ドル</span>ですがデポジットは基本的にその家を出る時に返金されるものですが英語ができずに言いくるめられて返金されていない人もいます。領収書などをもらうよう注意して下さい。<br />
+			</p>
+			<br />
+			<p class="text01">
+				携帯電話や、国際電話、インターネットなどの通信費も日本と同じようにかかります。<br />
+				<span
+					class="bl">携帯電話は1ヵ月４０～７０ドル程</span>で日本でも通話料金の高い人はカナダでも高いようです。最近はスマホを買う人もいますが五万円～しますので費用に入れておきましょう。<br />
+			</p>
+			<br />
+			<p class="text01">
+				<span class="bl">インターネット</span>は接続タイプによって<span
+					class="bl">月15ドル～40ドル程度</span>ですが日本ほどスピードは早くなくストレスを感じるでしょう。ホームステイによってはネット環境がないところも有りますがそれがカナダだと思っておいてください。カナダでは日本と違うからと文句を言ってはいけません。またアパートシェアの場合も既にネットがあり無料で使える場合とみんなでネット費用を分ける場合があります。<br />
+			</p>
+			<br />
+		</div>
+
+		<p class="text01 block01">
+			<span class="bl">カナダ留学・ワーキングホリデーの学費</span>
+		</p>
+		<div class="area-sub-accordion">
+			<p class="text01">
+				<span class="bl">語学学校：月1000～1300ドル</span><br />
+				<span class="bl">専門学校：年間8000～12000ドルなど</span><br />
+				<span class="bl">大学やカレッジ付属語学学校は授業料が年間10,000ドル～15,000ドル</span><br />
+			</p>
+			<br />
+			<p class="text01">
+				カナダワーキングホリデーで通える語学学校は<span
+					class="bl">１週間に25時間での料金計算</span>です。100~200ドル程度の入学金やコピー、教科書代金も数十ドル毎月かかる学校もあります。<br />
+			</p>
+			<br />
+			<p class="text01">
+				カナダワーキングホリデーで英語が伸びた人が<span class="bl">専門学校やカレッジ</span>に進学をする方もいます。<br />
+				専門学校（ビジネス、IT、ツーリズム他）やカレッジはは語学学校よりも高く、<span
+					class="bl">月1000ドル</span>以上。教材費が数百ドルと大学と同じくらい掛かりますが、それでも大学よりも安いのです。<br />
+				カレッジは大学よりも学費が安いので大学進学を考えているカナダ人学生も留学生のみならず進学します。<br />
+				大学やカレッジでの１セメスターは四ヶ月です。　大学の場合は試験期間に入ると授業が殆ど無いので約10週間で授業が終わります。
+				前期に教科書代が500ドル、後期にも教科書代が500ドルといった具合でしょうか。<br />
+			</p>
+			<br />
+		</div>
+
+		<p class="text01 block01">
+			<span class="bl">カナダワーキングホリデーの食費</span>
+		</p>
+		<div class="area-sub-accordion">
+			<p class="text01">
+				カナダワーキングホリデーの飲食系のバイトでは<span class="bl">チップ</span>も収入に見込めます。同じように支出の時もチップを求められますし、払わないと本気で怒られたりします。<br />
+			</p>
+			<br />
+			<p class="text01">
+				<span class="bl">ランチはチップ混みで10ドル弱。</span>フードコートやテイクアウトではチップは払わなくても良いです。
+				カナダのフードコートでもハンバーガー、中華、日本食、韓国料理、タイ料理などその他アジア系が食べられます。　<span class="bl">ディナー</span>は食事だけでチップを入れて<span
+					class="bl">１０～２０ドル</span>になります。お酒を飲むと日本と同じよう<span
+					class="bl">３０～５０ドル</span>かかります。バンクーバーのラーメン屋さんで8ドルのラーメンを食べたら2ドルのチップを付けて10ドルと言う感じです。<br />
+			</p>
+			<br />
+			<p class="text01">
+				カナダで語学学校に通っていると毎月クラス替えがあり、学校主催のアクティビティでも知り合いが増え、<span
+					class="bl">学校にいる時間が長いほど友達が増えてゆきます。</span>　仲良くなった友達とランチや夕食を食べに行き英語を使う事も大事ですし、他国の友達が出来れば日本食レストランに連れて行って英語の練習になります。また各国の友達が自分の国に帰るときの涙のお別れフェアウェルパーティーが毎月のようにあります。それだけ友達が増えたと言う事ですね。そこでもお酒代やホームパーティーの割り勘などで10ドルから30ドルかかります。<br />
+			</p>
+			<br />
+			<p class="text01">
+				バンクーバーやトロントは移民が非常に多いので日本よりも<span
+					class="bl">多国籍料理</span>も多いです。いろいろな食事をトライするのも英語の勉強の為にも外食は楽しみの一つになるでしょう。<br />
+			</p>
+			<br />
+		</div>
+
+		<p class="text01 block01">
+			<span class="bl">禁煙しましょう</span>
+		</p>
+		<div class="area-sub-accordion">
+			<p class="text01">
+				カナダワーキングホリデーでタバコは高すぎです。カナダワーキングホリデーで禁煙を始める人もいます。<br />
+				<span class="bl">タバコは一箱８ドル。</span>円高だからと言っても高いです。1週間に2~3箱吸う人は1ヵ月100ドル、年間1200ドルもタバコ代に無くしてしまいます。<br />
+				禁煙をしてカナダのおいしい空気を吸いましょう。<br />
+			</p>
+			<br />
+		</div>
+
+		<p class="text01 block01">
+			<span class="bl">節約の仕方について</span>
+		</p>
+		<div class="area-sub-accordion">
+			<p class="text01">
+				1年間のカナダ留学・ワーキングホリデーは<span class="bl">２００万円</span>くらいです。<span class="bl">学費と生活費</span>になります。<br />
+				<br />
+				しかしワーキングホリデーであれば、仕事（ワーキング）か可能ですので<span class="bl">生活費が稼げます。</span>ワーキングホリデーなら<span
+					class="bl">予算も半分</span>で留学出来ます。現地で過ごせば過ごすほど節約術は覚えてきます。例えばスーパーの総菜売り場（と言ってもサラダバーやチキンなど）も夜中には安売りをします。チキンの丸焼きが5ドル400円になったり、安いお店を覚えてきたり自炊もうまくなり節約が上手になってきます。<br />
+			</p>
+			<br />
+			<p class="text01">
+				出費が気になるワーキングホリデーですが、家賃や学校を値段だけで決めると<span class="bl">治安の悪い場所</span>や、<span
+					class="bl">語学学校の質を著しく落としかねず、</span>昼間でも歩くのを避けた方が良い地域に家や学校を決める人もいますが<span
+					class="bl">「安全は買え」</span>と言われるほど海外での危険は日本では考えられないほどなので要注意です。<br />
+			</p>
+			<br />
+			<p class="text01">
+				またそこでできる友達も同じようなひとが集まってきます、それは<span
+					class="bl">自分の将来を決める大事な選択</span>だと言う事も覚えておきましょう。ワーキングホリデー生活では、今まででは到底出会うことのなかったであろう人々と友達になる事が多いです。海外ではその辺は日本よりも顕著に表れます。カナダワーキングホリデーで学ぶのは英語だけでなく、<span
+					class="bl">そこで出来た友達との体験</span>が大きな比重を占めます。<br />
+			</p>
+			<br />
+			<p class="text01">
+				友達ができない人は早々に帰国する人もいるんですよ。せっかくの海外・ワーキングホリデー生活もつまらないものになってしまいますからね。<br />
+				カナダで<span class="bl">オーロラツアー</span>や<span class="bl">スノーボード</span>（絶景です）、<span
+					class="bl">友達のフェアウェルパーティー</span>とチャレンジして下さい。それには出費が発生しますが感動や一生の友達を数十ドルの為にチャンスを無くすのは勿体ないことです。　自分の考えや行動を変えてしまうほどの感動を受ける事が毎日のように待ちうけています。
+				<span class="bl">投資だと思ってお金をかけるものには掛けて、英語を伸ばして友達を増やして感動の1年にしましょう。</span><br />
+			</p>
+			<br />
+		</div>
+	</div>
+
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="area-wh-footer">
+		<p style="color:red;text-align:center;">
+			▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+		</p>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'カナダ';
+		$number_to_display = '2';
+		$start_display_from = '10'; //empty is begining
+		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+	?>
+		<p style="text-align:right; color:green; margin-right:20px;">
+			<a href="/seminar/seminar"><img src="../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"
+					alt="ワーキングホリデー＆留学無料セミナー毎日開催中！" /></a>
+			<a href="/seminar/seminar">＞＞＞ 無料セミナー情報をもっと見る</a>
+		</p>
+		<div class="top-move">
+			<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+	</div>
+
+	<div class="area-banner-seminar">
+		<div class="area-banner-seminar-title">
+			まずは無料セミナーへ！<br />
+			ワーキングホリデー＆留学の無料セミナーはこちら！
+		</div>
+		<?php 
+			//settings for the calendar module display
+			$country_to_display = 'カナダ';
+			$number_to_display = '2';
+			$start_display_from = ''; //empty is begining
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);
+		?>
+		<p class="link-free-seminar"><img src="/wh/img-sp/arrow-1.gif" alt="" /><a
+				href="/seminar/seminar">無料セミナー情報をもっと見る</a>
+		</p>
+	</div>
+
+	<a href="/wh/australia">
+		<p class="whcan-aus"><img src="/images/whaus_SP.jpg" alt=""> </p>
+	</a>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://jawhm.bluecloud.tokyo/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://jawhm.bluecloud.tokyo/visa/v-can.html"><span>ワーホリビザの申請手順</span></a>
+			</div>
+			<div class="btnarea"><a href="../australia/"><span>オーストラリアのワーホリ</span></a></div>
+			<div class="btnarea"><a href="./toronto/"><span>トロントのワーホリ（ワーキングホリデー）</span></a></div>
+			<div class="btnarea"><a href="./vancouver/"><span>バンクーバーのワーホリ（ワーキングホリデー）</span></a></div>
+			<div class="btnarea"><a href="../singapore/"><span>シンガポールで初めてのワーキングホリデー</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+	<div class="advbox03">
+		<?php
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	</div>
+
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+
+</html>

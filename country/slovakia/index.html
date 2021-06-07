@@ -1,0 +1,219 @@
+﻿<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・スロバキアの基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶスロバキアについてご紹介します。スロバキアならではの大自然の風景や現地の文化など、興味深い情報がもりだくさん。渡航される方は是非ご一読ください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/banner-svk.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'スロバキア | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+    <?php echo $header_obj->breadcrumbs('country'); ?>
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+
+
+    <div class="area-display-pc">
+        <a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+        <p class="country-name-img"><img src="../../images/bflag16.gif" alt="" /></p>
+
+        <div id="area-map-img">
+            <img src="../images/SVK_PC.png" />
+        </div>
+    </div>
+    <div class="area-display-sp">
+        <a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+        <div id="area-map-img">
+            <img src="../images/SVK_SP.png" />
+        </div>
+    </div>
+
+
+    <h2 class="h2-title"><span>人気都市　BEST3</span></h2>
+    <div class="area-main-content">
+        <ul class="list-best3">
+            <li><img src="../images/crown-1.gif" />Bratislava</li>
+            <li><img src="../images/crown-2.gif" />Košice</li>
+            <li style="margin-right:0"><img src="../images/crown-3.gif" />Levoča</li>
+        </ul>
+    </div>
+
+    <h2 class="h2-title"><span>基本情報</span></h2>
+    <div class="area-main-content clearfix">
+
+        <div class="area-display-pc">
+            <div class="area-left">
+                <table class="table-info">
+                    <tr>
+                        <th>首都</th><td id="td-capital">Bratislava</td>
+                    </tr>
+                    <tr>
+                        <th>言語</th><td id="td-language">Slovak</td>
+                    </tr>
+                    <tr>
+                        <th>面積</th><td>49,036km2&#178;<span>（126位）</span></td>
+                    </tr>
+                    <tr>
+                        <th>人口</th><td>約5,445,000人<span>（106位）</td>
+                    </tr>
+                    <tr>
+                        <th>通貨</th><td>Euro (EUR)</td>
+                    </tr>
+                </table>
+                <p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+            </div>
+
+            <div class="area-right">
+                <table class="table-clock">
+                    <caption>日本との時差</caption>
+                    <tr>
+                        <th>日本時間</th><th>Bratislava</th>
+                    </tr>
+                    <tr>
+                        <td style="border-right:1px solid #000">
+                            <img src="../images/clock-tokyo.png" /><br />
+                            1月1日<br />
+                            09:00am
+                        </td>
+                        <td>
+                            <img src="../images/clock-svk.png" /><br />
+                            1月1日<br />
+                            02:00am
+                        </td>
+                    </tr>
+                </table>
+                <p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+            </div>
+        </div>
+
+        <div class="area-display-sp clearfix">
+            <table class="table-info">
+                <tr>
+                    <th>首都</th><td id="td-capital">Bratislava</td>
+                </tr>
+                <tr>
+                    <th>面積</th><td>49,036km2&#178;<span>（126位）</span></td>
+                </tr>
+                <tr>
+                    <th>人口</th><td>約5,445,000人<span>（106位）</td>
+                </tr>
+            </table>
+            <table class="table-info" style="margin-right:0">
+                <tr>
+                    <th>言語</th><td id="td-language">Slovak</td>
+                </tr>
+                <tr>
+                    <th>通貨</th><td>Euro (EUR)</td>
+                </tr>
+                <tr style="border-bottom:none">
+                    <td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="area-display-sp">
+        <h2 class="h2-title"><span>日本との時差</span></h2>
+        <div class="area-main-content">
+            <table class="table-clock">
+                <tr>
+                    <th>日本時間</th><th>Bratislava</th>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #000">
+                        <img src="../images/clock-tokyo.png" /><br />
+                        1月1日<br />
+                        09:00am
+                    </td>
+                    <td>
+                        <img src="../images/clock-svk.png" /><br />
+                        1月1日<br />
+                        02:00am
+                    </td>
+                </tr>
+            </table>
+            <p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+        </div>
+    </div>
+
+    <h2 class="h2-title"><span>スロバキアってどんな国？</span></h2>
+    <div class="area-main-content">
+        <p class="text01">
+            スロバキアはオーストリア、ポーランド、ハンガリーなどと隣接する小さな国で、国土は日本の約7分の1。国土のほとんどが山岳地帯からなっており、北部のタトラ山脈や南部の緩やかな低地地域などが観光地として人気がある。
+        </p>
+        <p class="text01">
+            スロバキアには日本と同じくはっきりとした四季があり、夏は暑く、冬は寒い。内陸部のため気温や天気の変化が激しいので、服装には気を配らなくてはならない。
+        </p>
+        <p class="text01">
+            スロバキアの公用語はスロバキア語。チェコ語と類似している点が多く、チェコ語とスロバキア語で会話が成立してしまうこともある。近年は英語もしっかり通じるようになっているが、しっかり仕事をするためにはスロバキア語の習得が必須となるだろう。
+        </p>
+        <p class="text01">
+            スロバキアの首都はブラチスラバ。非常に落ち着いた街で、「ヨーロッパ圏で最も退屈な街」とも呼ばれる事がある。これは、スロバキアが東欧の中心に位置し、ハンガリー、オーストリア、ポーランドといった東欧主要国に囲まれていることが要因だ。スロバキアには背の高い建物が少なく、街並みや建築物は淡い色合いで小さくかわいらしいものが多い。そのため、東欧を観光している人達には「地味」と受け取られてしまうようだ。また、スロバキアは人口の少ない国だ。首都のブラチスラバでも騒がしくない、ゆったりとした時間が流れているため、どうしても「田舎っぽい」というイメージがついている。
+        </p>
+        <p class="text01">
+            しかし、ブラチスラバ最大の魅力は、その「田舎っぽさ」にある。建物や街並みはオモチャのようにかわいらしく、どこを切り取っても絵になる。街にはスロバキアの国土料理を振る舞うレストランも多く点在し、ゆったりとした雰囲気を堪能しつつ、徒歩で様々な場所へアクセスすることも出来るだろう。また、ブラチスラバとオーストリアの首都 ウィーンは「世界一距離が近い首都」として知られていて、鉄道やバスを使うと１時間ほどで移動することができる。スロバキアは東欧でも物価の安い国なので、普段はブラチスラバに住み、週末はウィーンへ日帰りで遊びに行くことも容易にできるのだ。
+        </p>
+    </div>
+
+    <div class="area-display-pc">
+        <div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-svk.html" title="スロバキアのワーキングホリデー（ワーホリ）ビザ情報へ">スロバキアのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+        <div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+    </div>
+    <div class="area-display-sp">
+	  	<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+	        <a href="../../visa/v-svk.html" class="btn-visa area-round-corner">
+            スロバキアの<br />ビザ情報はこちらから
+        </a>
+        <div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+    </div>
+    <div style="position:relative;text-align:center;">
+        <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+        <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div>
+    <div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+    <div style="clear:both; height:30px;">&nbsp;</div>
+
+
+    <div class="area-display-pc">
+        <h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+        <?php include('../flags_country_list.php'); ?>
+    </div>
+    <div class="area-display-sp">
+        <a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+    </div>
+
+    <?php $links_obj->display_links(); ?>
+
+</div><!-- /#maincontent -->
+
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

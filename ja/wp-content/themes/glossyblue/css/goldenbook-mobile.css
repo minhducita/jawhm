@@ -1,0 +1,356 @@
+/*
+Theme Name: GoldenBook
+Theme URI: 
+Description: A theme fpr guest reviews.
+Version: 1
+Author: AntoineMichael, JAWHM
+Author URI: http://www.jawhm.or.jp
+*/
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:9px;
+/*	background:url('img/bgw.jpg') #F5F1E8 no-repeat center top;
+*/}
+
+#content {
+	position:relative;
+	width:100%; /**/
+	height:auto;/**/
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+/*	background:url('img/notebook.png') no-repeat center top;
+*/}
+
+a {
+	color: #CC6600;
+	text-decoration: none;
+}
+a:visited {
+	color: #CC6633;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF6600;
+	text-decoration: underline;
+}
+
+.top-move a:link,
+.top-move a:visited{
+	color:#000;
+	text-decoration:underline;
+	font-size:9px;
+}
+
+/*------------------*/
+/* START Right part */
+/*------------------*/
+
+#right-box {
+	position:relative;
+	margin-left:0px;
+	width:100%;
+	height:auto;
+}
+.content-box{
+	position:relative;
+	height:auto;
+	width:100%;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+.content-box h3 {
+	display:block;
+	height:73px;
+	padding-top:10px;
+	padding-left:90px;
+	padding-right:0.1em;
+	margin-bottom:10px;
+	width:auto;
+	
+	font-size:1.7em;
+	font-weight:normal;
+	text-align:right;
+	color:#333;
+	
+	background-color:#FBFBFB;
+	background-repeat:no-repeat;
+	background-position:left center;
+	border:1px solid #DCDCDC;
+	
+	word-wrap: normal;
+	word-break:keep-all;
+
+}
+
+h3.map-ca {
+	background-image:url('img/ca-map.png');
+}
+h3.map-au {
+	background-image:url('img/au-map.png');
+}
+h3.map-nz {
+	background-image:url('img/nz-map.png');
+	background-position: -20px center;
+}
+h3.map-uk {
+	background-image:url('img/uk-map.png');
+	background-position: -20px center;
+}
+h3.map-fr {
+	background-image:url('img/fr-map.png');
+}
+h3.map-de {
+	background-image:url('img/de-map.png');
+	background-position: -10px center;
+}
+h3.map-dk {
+	background-image:url('img/dk-map.png');
+	background-position: -10px center;
+}
+h3.map-photo {
+	background-image:url('img/big-photo.png');
+}
+
+/*------------------*/
+/*     Gallery      */
+
+div.gallery {
+	padding-left:15px;
+}
+div.gallery img {
+	text-align:center;
+	padding:5px;
+	background-color:#ffffff;
+	margin:0px 2px 0px 2px;
+	border:1px solid #E7E7E7;
+}
+
+/*------------------*/
+/*  END Right part  */
+/*------------------*/
+
+/*------------------*/
+/* START Left part  */
+/*------------------*/
+
+#left-box {
+	position:relative;
+	width:100%;/**/
+	height:auto;/**/
+	margin-top:0px;
+}
+
+#links {
+	position:relative;
+	margin-top:20px;
+	height:auto;/**/
+	padding-left:5px;
+}
+
+/* List of title */
+/*---------------*/
+
+a.list-post-au:link,
+a.list-post-au:visited,
+a.list-post-ca:link,
+a.list-post-ca:visited,
+a.list-post-de:link,
+a.list-post-de:visited,
+a.list-post-dk:link,
+a.list-post-dk:visited,
+a.list-post-fr:link,
+a.list-post-fr:visited,
+a.list-post-nz:link,
+a.list-post-nz:visited,
+a.list-post-uk:link,
+a.list-post-uk:visited,
+a.list-post-photo:link,
+a.list-post-photo:visited{
+	margin-top:0px;
+	margin-bottom:8px;
+	padding-top:0px;
+	padding-left:20px;
+	
+	display:block;
+	position:relative;
+	min-height:22px;
+	height:auto;
+	width:auto;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:1.2em;
+	clear:both;
+}
+a.list-post-au{
+	background:url('img/au.png') no-repeat left center;
+}
+a.list-post-ca{
+	background:url('img/ca.png') no-repeat left center;
+}
+a.list-post-de{
+	background:url('img/de.png') no-repeat left center;
+}
+a.list-post-dk{
+	background:url('img/dk.png') no-repeat left center;
+}
+a.list-post-fr{
+	background:url('img/fr.png') no-repeat left center;
+}
+a.list-post-nz{
+	background:url('img/nz.png') no-repeat left center;
+}
+a.list-post-uk{
+	background:url('img/uk.png') no-repeat left center;
+}
+a.list-post-photo{
+	background:url('img/camera.png') no-repeat left center;
+}
+
+a:hover span.titlename{
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+span.titlename {
+	float:left;
+	display:inline-block;
+	padding:0px;
+	padding-top:5px;
+	height:auto;
+	width:auto;
+}
+
+span.both-gender,
+span.male-gender,
+span.female-gender{
+	float:left;
+	display:inline-block;
+	margin-left:5px;
+	height:22px;
+	background-image:url('img/gender.png');
+	background-repeat:no-repeat;
+}
+
+span.both-gender{
+	width:29px;
+	background-position:left center;
+	margin-top:3px;
+}
+span.male-gender{
+	width:15px;
+	background-position:left 3px;
+}
+span.female-gender{
+	width:14px;
+	background-position:right -1px;
+	margin-top:3px;
+}
+
+/* Div Navigation */
+/*----------------*/
+
+.navigation {
+	position:relative;
+	height:50px;
+	line-height:50px;
+	/*border:1px solid orange;*/
+	text-align:center;
+	clear:both;
+}
+
+#girouette {
+	display:none;
+}
+
+.navigation a {
+	display:block;
+}
+
+.navigation a.previous-posts-link {
+	float:right;
+}
+
+.navigation a.next-posts-link {
+	float:left;
+}
+
+/*----------------*/
+
+#logo {
+	display:none;
+}
+/*----------------*/
+/* END Left part  */
+/*----------------*/
+
+/*-----------------*/
+/* START FLAG menu */
+/*-----------------*/
+div#filter, div#filter-top {
+	position:relative;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+}
+
+div#filter-top {
+	margin-bottom:10px;	
+}
+
+div#filter ul, div#filter-top ul{
+	display:inline-block;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+div#filter ul li, div#filter-top ul li {
+	display:inline-block;
+	list-style-type:none;
+	margin:0px;
+	margin-right:5px;
+	padding:0px;
+	padding-bottom:3px;
+	height:16px;
+	text-align:center;
+	font-size:12px;
+}
+
+div#filter ul li a, div#filter-top ul li a {
+	margin:0px;
+	padding-right:20px;
+	height:16px;
+	color:#555555;
+}
+
+a.ALL{
+	background:url('img/United-Nations-16.png') no-repeat right center;
+}
+a.AUS{
+	background:url('img/Australia-16.png') no-repeat right center;
+}
+a.CAN{
+	background:url('img/Canada-16.png') no-repeat right center;
+}
+a.NZL{
+	background:url('img/New-Zealand-16.png') no-repeat right center;
+}
+a.GBR{
+	background:url('img/United-Kingdom-16.png') no-repeat right center;
+}
+a.DEU{
+	background:url('img/Germany-16.png') no-repeat right center;
+}
+a.FRA{
+	background:url('img/France-16.png') no-repeat right center;
+}
+a.DNK{
+	background:url('img/Denmark-16.png') no-repeat right center;
+}
+
+/*----------------*/
+/* END FLAG menu  */
+/*----------------*/

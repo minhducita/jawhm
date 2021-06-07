@@ -1,0 +1,259 @@
+<?php
+//require_once 'include/header.php';
+//$redirection='/event/map/mob.php?p=nagoya';
+
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+$header_obj->mobileredirect=$redirection;
+$header_obj->title_page='日本ワーキングホリデー協会へのお問い合わせ';
+$header_obj->description_page='ワーキングホリデー（ワーホリ）協会名古屋オフィスのご案内です。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。';
+$header_obj->keywords_page='オフィス,海外,留学,ワーホリ,セミナー会場,ワーキングホリデー,ワーホリ,日本ワーキングホリデー協会';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/access-mainimg.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '日本ワーキング・ホリデー協会へのお問い合わせ';
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+
+$p = @$_GET['p'];
+
+$style = 'display:none;';
+function show3778()	{
+
+global $style;
+echo '
+<a name="com"></a>
+<h2 class="sec-title">企業・団体からのご連絡</h2>
+<p class="text01">
+	セミナーのご用命、賛助会員のご相談など企業・団体の方よりのお問い合わせは、東京本部にて承ります。<br/>
+	個人賛助会員のご相談や、個人事業主様からのビジネスパートナーとしてのご連絡も、こちらにお願い致します。<br/>
+</p>
+<p class="text01">
+	メールでお問い合わせ先　：　<span style="font-size:15pt;">info@jawhm.or.jp</span><br/>
+</p>
+<p class="text01">
+	<span style="cursor: pointer; text-decoration: underline;" onclick="jQuery(\'#showtel2\').show(\'slow\');">お電話でのお問い合わせ</span>はこちら
+</p>
+<div id="showtel2" style="'.$style.'border:1px dotted navy; padding: 10px 10xp 10px 10px; margin:0 20px 15px 20px;">
+	<p class="text01">
+		企業・団体の方向け専用番号　：　<span style="font-size:15pt; font-weight:bold;">０３－５９０９－３７７８</span><br/>
+			<span style="color:red; font-weight:bold;">
+				※ この電話番号で、ビザのご相談やセミナー等のご予約など、個人の方からのご連絡はお受けできません。
+			</span>
+	</p>
+	<p class="text01">
+		ご注意：お電話の受付時間は、平日１０時～１８時となります。土日、祝日はお休みをいただいております。<br/>
+	</p>
+</div>
+';
+}
+?>
+
+<script>
+	function showtel2()	{
+
+	}
+</script>
+
+<style>
+	.otoiawase, .otoiawase:visited{
+		font-size:14px;
+		font-weight:bold;
+		background:#45bcd2;
+		display:inline-block;
+		padding:10px 30px 8px 28px;
+		color:#ffffff;
+		text-decoration:none;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		border:none;
+		position:relative;
+		cursor:pointer;
+		margin:10px 10px 10px 0;
+		vertical-align: middle;
+	}
+	a.otoiawase {
+		color:#ffffff;
+	}
+	.otoiawase a:link{
+		color:#ffffff;
+	}
+	.otoiawase:hover{
+		background:navy;color:#fff;
+	}
+</style>
+
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('access'); ?>
+
+	<?php if($p == "com")	{	show3778();	}	?>
+
+	<h2 class="sec-title">お問い合わせ</h2>
+	<p class="text01"></p>
+	<div style="background:#FFF1F1; padding:10px;">
+
+
+		<img src="/images/caution.gif">
+		<span style="font-size:14pt; font-weight:bold;">　お問い合わせ前に必ずお読みください</span>
+
+		<ol style="font-size:9pt; margin:12px 0 0 20px;">
+			<li style="margin-top:3px;">
+				「<a href="/visa/visa_top.html">各国のワーキングホリデービザ申請方法</a>」、
+				「<a href="/country/">渡航先の国情報</a>」、
+				「<a href="/qa.html">よくある質問</a>」の内容をお問い合わせ前にご確認ください。
+			</li>
+			<li style="margin-top:5px;">
+				ワーキングホリデービザは、各国の大使館・領事館等が管理・発給するものであり、当協会では審査・発給の状況などをお答えする事はできません。
+			</li>
+			<li style="margin-top:5px;">
+				個別のビザ相談・渡航内容の相談の際は、事前にご予約が必要です。<br />
+				また、これらのサービスは<a href="/mem">メンバー登録</a>をされた方向けのサービスとなります。
+			</li>
+			<li style="margin-top:5px;">
+				「<a href="/seminar/seminar/">留学やワーホリが良く解る無料セミナー</a>」を開催しております。<br />
+				初めての方は、「<a href="/seminar/seminar_syoshin.php">初心者セミナー</a>」にご参加ください。<br/>
+			</li>
+			<li style="margin-top:5px;">
+				企業・団体等（個人以外）の方からのお問い合わせは、<a href="#com">東京本部</a>にご連絡ください。
+			</li>
+		</ol>
+	</div>
+
+	<h2 class="sec-title">メールでのお問い合わせ</h2>
+	<p class="text01">
+		個人の方のお問い合わせ先は以下の通りです。
+	</p>
+	<p class="text01">
+		メールでお問い合わせ先　：　<span style="font-size:15pt;">info@jawhm.or.jp</span><br/>
+	</p>
+	<p class="text01">
+		お願い：<br />
+		　・　メンバー登録済みの方は、メンバーズカード裏に記載のメールアドレスにご連絡ください。<br/>
+		　・　メンバー様からのご連絡を優先してご回答させて頂いております。ご了承ください。<br/>
+	</p>
+
+	<h2 class="sec-title">ＦＡＸでのお問い合わせ</h2>
+	<p class="text01">
+		ＦＡＸでのお問い合わせ先は以下の通りです。
+	</p>
+	<p class="text01">
+		東京・大阪・名古屋・沖縄宛てＦＡＸ　：　<p style="font-size:15pt; font-weight:bold;">０３－６７４５－１５６２</p>
+	</p>
+	<p class="text01">
+		福岡オフィス宛てＦＡＸ　：　<p style="font-size:15pt; font-weight:bold;">０９２－７３９－０７０８</p>
+	</p>
+	<p class="text01">
+		※　当協会の東京、大阪、名古屋、沖縄オフィスでは、統一のＦＡＸ番号を使用しております。<br/>
+		　　どちらのオフィス宛てであっても、上記のＦＡＸ番号をご利用頂けます。<br/>
+	</p>
+
+	<h2 class="sec-title">お電話でのお問い合わせ</h2>
+	<div class="text01">
+		日本ワーキング・ホリデー協会のＷＥＢサイトでは、
+		<ul class="contact-list">
+			<li>・<a href="/system.html">ワーキングホリデー制度について</a></li>
+			<li>・<a href="/visa/visa_top.html">ワーキングホリデービザの申請方法や必要書類のご案内</a></li>
+			<li>・<a href="/country/">ワーキングホリデー協定国のご案内</a></li>
+			<li>・<a href="/qa.html">ワーホリのよくある質問</a></li>
+			<li>・<a href="/about.html">日本ワーキングホリデー協会について</a></li>
+		</ul>
+		などをご案内しております。お問い合わせの前に、是非ご一読ください。
+	</div>
+
+	<p class="text01">
+		また、<a href="/seminar/seminar">ワーキングホリデーが良く解るセミナー（参加無料）</a>を各オフィスで行っております。<br/>
+		お気軽に「<a href="/seminar/seminar_syoshin.php">初心者セミナー（参加無料）</a>」にご予約の上、ご参加ください。<br/>
+	</p>
+	<?php
+	switch($p)	{
+		case 'osaka':
+			$office = '大阪オフィス';
+			$telno = '０６－６３４６－３７７４';
+			break;
+		case 'nagoya':
+			$office = '名古屋オフィス';
+			$telno = '０５２－４６２－１５８５';
+			break;
+		case 'fukuoka':
+			$office = '福岡オフィス';
+			$telno = '０９２－７３９－０７０７';
+			break;
+		case 'okinawa':
+			$office = '沖縄オフィス';
+			$telno = '０９８－９２７－５３８８';
+			break;
+		default:
+			$office = '新宿オフィス';
+			$telno = '０３－６３０４－５８５８';
+			break;
+	}
+?>
+	<p class="text01">
+		<span style="cursor: pointer; text-decoration: underline;" onclick="jQuery('#showtel1').show('slow');">お電話でのお問い合わせ</span>はこちら
+	</p>
+	<div id="showtel1" style="<?php echo $style; ?>border:1px dotted navy; padding: 20px 10xp 10px 10px; margin:0 20px 15px 20px;">
+		<p class="text01">
+			<?php echo $office; ?>　：　<span style="font-size:15pt; font-weight:bold;"><?php echo $telno; ?></span> （個人の方専用番号）<br/>
+			受付時間：１０時～１８時（各オフィスの定休日を除く）<br/>
+		</p>
+		<p class="text01">
+			企業・団体からのお問い合わせ（東京本部）　：　<span style="font-size:15pt; font-weight:bold;">０３－５９０９－３７７８</span><br/>
+			受付時間：平日１０時～１８時（土曜・日曜・祝日はお休みとなります）<br/>
+			<span style="color:red; font-weight:bold;">
+				※ この電話番号で、ビザのご相談やセミナー等のご予約など、個人の方からのご連絡はお受けできません。
+			</span>
+		</p>
+	</div>
+
+	<?php if($p != "com")	{	show3778();	}	?>
+
+	<div style="margin-top:20px;">&nbsp;</div>
+
+	<!-- *********************** ページ下のセミナー一覧 start ************************ -->
+	<h3 class="osusume_seminar_title_list">おススメの無料セミナー情報</h3>
+	<?php
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '6';
+			display_horizontal_calendar($country_to_display,$number_to_display);
+      ?>
+	<span class="bottom_osusume_seminar">★★★　留学・ワーホリの無料セミナー連日開催中！！　気になるセミナーをクリック！！　★★★</span>
+	<div class="advbox03">
+
+		<?php
+	// 101
+  define('MAX_PATH', '/var/www/vhosts/jawhm.or.jp/httpdocs/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 84, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	</div>
+
+	<!-- *********************** ページ下のセミナー一覧 end ************************ -->
+
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+	<?php $links_obj->display_links(); ?>
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

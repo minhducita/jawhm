@@ -1,0 +1,221 @@
+﻿<?php
+header('Location: https://www.jawhm.or.jp/visa/v-twn.html');
+die();
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='台湾のワーキングホリデービザ情報';
+$header_obj->description_page='台湾のビザ。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（台湾） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	  <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag10.gif" alt="" />
+	<p class="text01">
+		<span class="centered-btn"><a class="visa-btn country-info" href="../country/taiwan" title="台湾国情報へ">台湾国情報へ</a></span>
+	<b>台湾のワーキングホリデービザの取得方法についてご案内します。</b>	</p>
+
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/***********************
+
+	// 079
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 74, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 080
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 75, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 081
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 76, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 082
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 77, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 083
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 78, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+*************************/
+
+?>
+<!--
+	  </div>
+-->
+
+	  <h2 class="sec-title">ビザについて</h2>
+	  <p class="text01"> 2009年6月、日本交流協会と台北駐日経済文化代表処の協定により「ワーキング・ホリデー制度」が導入されました。この制度は、日本と台湾の青少年が、それぞれの文化及び一般的な生活様式を理解することを目的として、1年間の長期休暇を過ごすことに付随し、その間の滞在費・旅行資金を補うために必要な範囲での就労を認めています。 </p>
+	  <h3 class="h3-01"> 「ワーキング・ホリデー」査証とは </h3>
+	  <p class="text01"> ワーキング・ホリデー査証は、あくまでも長期休暇中に国際的視野を広めることを目的とするもので、ワーキング（就労）査証や観光査証ではありません。 </p>
+	  <h3 class="h3-01"> 台湾の「ワーキング・ホリデー」査証発給要件 </h3>
+	  <ul class="list-number">
+	  <li> 申請時に日本在住の日本国民であること。 </li>
+	  <li> 過去にワーキング・ホリデー査証の発給を受けていないこと。 </li>
+	  <li> 申請時の年齢が18歳以上30歳以下であること。 </li>
+	  <li> 休暇は台湾入国の目的で、ワーキングは付随するものに過ぎない。なお、査証有効期限満了前に出国すること。 </li>
+	  <li> 被扶養者を同伴しないこと（被扶養者が同じ査証又は他の査証を取得した場合を除く）。 </li>
+	  <li> 下記の必要資料を提出すること。 </li>
+	  </ul>
+	  <h3 class="h3-01"> 必要書類 </h3>
+	  <ul class="list-number">
+	  <li> ワーキング・ホリデー査証専用申請書（申請者本人の署名が必要）。
+          <p>◎2012年4月から申請書はウェブサイトで作成することになりました。<br>
+専用ウェブサイト（http://visawebapp.boca.gov.tw）</p></li>
+	  <li> 履歴及び台湾における活動の概要（所定フォームあり）。 </li>
+	  <li> 日本旅券（申請時残存期限６ケ月以上）。 </li>
+	  <li> 申請日より６ケ月以内に撮った４ｃｍ×５ｃｍのカラー写真２枚。 </li>
+	  <li> 一年以上の海外旅行健康保険加入証明書（原本と写し1通）。 </li>
+	  <li> 往復の航空券 </li>
+	  <li> 20万円以上又はそれに該当する財力の証明書。
+          <p>（銀行の残高証明書等）。</p>
+          <p>（30万円以上の財力証明書があれば、6.往復の航空券は不要）</p>
+</li>
+	  <li> 査証料金：無料。 </li>
+	  </ul>
+	  <h3 class="h3-01"> 申請手続 </h3>
+	  <ul class="list-number">
+	  <li> 申請者本人が申請を行うこと。（代理申請は不可） </li>
+	  <li> 中華民国駐日代表処及び各弁事処において申請する。 </li>
+	  <li> 状況により上記以外の書類の提出が必要となる場合、または審査官による面接が要求される場合がある。</li>
+	  </ul>
+	  <h3 class="h3-01"> 発行査証種類 </h3>
+	  <ul class="list-number">
+	  <li> 種類：停留査証（VISITOR VISA）/ 数次使用（MULTIPLE)。 </li>
+	  <li> 滞在日数：180日（現地で一回の延長が可能。最大一年間の滞在ができる)。 </li>
+	  <li> 延長手続：滞在期限が切れる15日前から、居住地の内政部入出国移民署のサービスステーションで更新手続をすれば、最大180日の延長ができる。その後の更新及び変更は不可。</li>
+	  </ul>
+<br />
+	  <p class="bg-yellow"> <a href="http://www.taiwanembassy.org/jp/" target="_blank">台北駐日経済文化代表処</a> <br />
+〒108-0071 東京都港区白金台5-20-2 </p>
+	  <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		    <ul class="list-visabasic">
+			  <a href="http://www.mofa.go.jp/mofaj/area/taiwan/data.html" target="_blank">基本情報</a></li>
+			  <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=8"  target="_blank">安全情報</a></li>
+			</ul>
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = '台湾';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline5_off.gif"></a></center>
+
+	  <h3 class="h3-01"> 申請から発給までに必要な時間 </h3>
+	  <p class="text01"> 一般的には、午前中に申請すれば、翌日の午前中に発給されます。 </p>
+	  <h3 class="h3-01"> 査証の期限 </h3>
+	  <p class="text01"> ワーキング・ホリデーとしては、1年間（査証発行日よりの計算）の滞在が許可されていますが、まず180日間のビザが発行されます。その180日の滞在期限が切れる15日前に居住地の“内政部入出国移民署のサービスステーション”にて更新手続を行えば、再度、最大180日の延長が認められます（手数料は無料）。 </p>
+	  <h3 class="h3-01"> 台湾入国には </h3>
+	  <p class="text01"> ユースホステルや国際学舎若しくはホテルを事前に予約すること、往路の機内で出入国カードが配布され、宿泊場所の記入が求められます。 </p>
+	  <h3 class="h3-01"> 就学について </h3>
+	  <p class="text01"> 就学期間は、原則3カ月までです。</p>
+	  <h3 class="h3-01"> <strong>就労について</strong> </h3>
+	  <p class="text01"> 「ワーキング・ホリデー」査証は「労働許可」が認められ、職種（風俗関係除く）や時間等に制限はありません。しかし、１年間フルに就労することは原則許可されません。 </p>
+	  <h3 class="h3-01"> 台湾の行政院青年輔導委員会の青少年のための旅行専用ホームページ </h3>
+	  <p class="text01"> 留学生や観光旅行する青少年を対象に観光情報や下記５つのサービスを提供しています。 </p>
+	  <ul class="list-number">
+	  <li> 青少年旅行カードの無料申請（500種目以上の旅行優遇が受けられる） </li>
+	  <li> 携帯電話の無料貸し出し </li>
+	  <li> 青年旅館（1泊500台湾ドル） </li>
+	  <li> 「タイワン・レール・パス」（以下、TRパス　鉄道旅行割引券） </li>
+	  <li>「国際青年の旅Tour Buddyサービス網計画」<br />世界からのバックパッカーに現地の解説ガイドと関連問い合わせサービスを提供しています（電話または電子メールでガイドの予約可）。
+	  </li>
+	  </ul>
+	  <p class="text01"> 詳しくは<a href="http://youthtravel.tw/" target="_blank">（ホームページ：http://youthtravel.tw）</a>。 </p>
+
+	&nbsp;<br/>
+	&nbsp;<br/>
+	<p class="text01">
+	【注意】<br/>
+	ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+	また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+	正確なものであることを保証するものではありません。<br/>
+	ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+	</p>
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = '台湾';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2019/06/12に確認した情報です。</font></p>
+	  </div>
+	  		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline3_off.gif"></a></center>
+<br/>
+	  <?php $header_obj->display_visa_links(); ?>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

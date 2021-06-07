@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+
+
+/********************************************/
+
+/**********  MODULE VERTICAL ****************/
+
+/********************************************/
+
+
+
+#vertical_module{
+
+	width:100%;
+
+}
+
+
+
+#title_module {
+
+	width:auto;
+
+}
+
+
+
+
+
+#content_vertical_module {
+
+	width:auto;
+
+}
+
+
+
+/********************************************/
+
+/**********  MODULE HORIZONTAL **************/
+
+/********************************************/
+
+
+
+.main_module_content{
+
+	width:100%;
+
+	height:auto;
+
+	/* padding:10px 0px 10px 0px; */
+
+	text-align:center;
+	
+	margin-left: -13px;
+
+}
+
+
+
+.event {
+	text-align:left;
+	height: auto!important;
+    padding-bottom: 3px;
+}
+.event .date{
+	width:20%;
+	height: 100%;	
+}
+.event .month {		
+	height: 30%;		
+}
+.event .day{		
+	height: 70%;		
+}
+div.vertical_title_event {		
+	display: initial!important;		
+	white-space: normal;		
+}
+.event .event_info_vertical-fix{
+	width:75% !important;
+}
+
+.event_info_vertical{		
+	width: 75%!important;		
+}
+
+
+.event_info {
+
+	width:202px;
+
+	font-size:8pt;
+
+}
+
+
+
+.event_info span {
+
+	font-size:8pt;
+
+	padding:1px 0 0 0;
+
+}
+

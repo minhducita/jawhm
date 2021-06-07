@@ -1,0 +1,240 @@
+#maincontent .contents {
+    padding: 10px;
+}
+
+#maincontent .contents p {
+    font-size: 14px !important;
+}
+
+.contents .bl-contents {
+    margin-bottom: 20px !important;
+}
+
+.contents .bn-block-lists {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.contents .bn-block-lists .bn-lists {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contents .bn-block-lists .bn-lists a {
+    width: 50%;
+    text-align: center;
+    display: block;
+}   
+
+.contents .bn-blue {
+    background-color: #2e2e92;
+    color: #fff;
+    padding: 20px;
+    height: 80px;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.contents .bn-red {
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    height: 80px;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.contents .sub-contents {
+    display: flex;
+    width: 100%;
+}
+
+.contents .sub-contents .content {
+    width: 45%;
+}
+
+.contents .sub-contents .bl-img {
+    margin-right: 5%;
+}
+
+.contents .sub-contents .bl-img img {
+    width: 100%;
+}
+
+.contents .sub-contents .content .bn-link-2site {
+    padding: 10px;
+    background-color: #2e2e92;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.contents .text-center {
+    text-align: center;
+}
+
+.contents .text-center .bn-adv {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sub-title {
+    padding-left: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #cac7c7;
+}
+
+.otoiawase, .otoiawase:visited{
+    font-size:14px;
+    font-weight:bold;
+    background:#45bcd2;
+    display:inline-block;
+    padding:10px 30px 8px 28px;
+    color:#ffffff;
+    text-decoration:none;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:none;
+    position:relative;
+    cursor:pointer;
+    margin:10px 10px 10px 0;
+    vertical-align: middle;
+}
+a.otoiawase {
+    color:#ffffff;
+}
+.otoiawase a:link{
+    color:#ffffff;
+}
+.otoiawase:hover{
+    background:navy;color:#fff;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.table .text-required {
+    float: right;
+    background-color: rgba(241, 113, 171, 1);
+    padding: 3px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.table .text-title {
+    padding: 3px;
+    float: left;
+}
+
+.table-bordered {
+    border: 1px solid #444;
+}
+
+.width-30 {
+    width: 30%;
+    background-color: rgba(221, 222, 224, 1);
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.table-bordered>tbody>tr>td {
+    border: 1px solid #444;
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: top;
+    font-size: 14px;
+}
+.table-bordered>tbody>tr>td>input {
+    width: 100%;
+}
+
+.table .bl-ratio {
+    display: flex;
+    border: none;
+    width: 100%;
+    padding-top: 14px;
+}
+
+.table .in-ratio {
+    width: auto !important;
+}
+
+.table .text-ratio {
+    margin-right: 20px;
+    margin-left: 5px;
+    line-height: 1em;
+}
+
+.margin-right-50 {
+    margin-right: 50px;
+}
+
+.table .text-name {
+    font-size: 12px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.table .div-address {
+    width: 15%;
+    margin: 0px 10px;
+}
+
+.table .div-address.first {
+    margin-right: 12px;
+    margin-left: 0px;
+}
+
+.table .div-address input {
+    width: 100%;
+}
+
+.table .ren-address {
+    border: none;
+    background-color: rgba(168, 169, 173, 1);
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: #f3f3f3;
+}
+
+.table .txt-inquiry {
+    width: 98%;
+    margin: 0px;
+    height: 100px;
+    resize: none;
+}
+
+#inquiry .bn-submit {
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    height: 80px;
+    border: none;
+    width: 32%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.has-errors {
+    display: none;
+    text-align: center;
+}
+
+.errors {
+    color: red;
+}
+
+.lb-checkbox {
+    cursor: pointer;
+}

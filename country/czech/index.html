@@ -1,0 +1,241 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・チェコの基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶアイルランドの食文化や緑が広がる風景など、現地の情報を掲載しています。渡航をされる前の準備にお役立てください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="banner_czech.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'アイルランド | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/flag-cze.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/SVK_PC.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/SVK_SP.png" />
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>チェコ人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />Praha</li>
+				<li><img src="../images/crown-2.gif" />Brno</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" />Ostrava</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>チェコ基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Praha</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">Czech</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>78,866km2;<span>（九州と同じくらい）</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>約10,369,000人<span>（79位）</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>チェコ・コルナ(CZK)</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Praha</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-cze.png" /><br />
+								1月1日<br />
+								02:00am
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Praha</td>
+					</tr>
+					<tr>
+							<th>面積</th><td>78,866km2;<span>（九州と同じくらい）</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>約10,369,000人<span>（79位）</td>
+						</tr>
+				</table>
+				<table class="table-info" style="margin-right:0">
+					<tr>
+						<th>言語</th><td id="td-language">Czech</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>チェコ・コルナ(CZK)</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Praha</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-cze.png" /><br />
+							1月1日<br />
+							02:00am
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>チェコってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			
+			</p>
+			<p class="text01">
+			チェコはヨーロッパの中心に位置し、ドイツ・オーストリア・ポーランド・スロバキアの4カ国に囲まれた内陸国だ。チェコの地形は変化に富んでおり、西に隣接するドイツとの国境線から東のスロバキアまで広がるボヘミア高原は、ボヘミアの森と呼ばれる広大な森林におおわれている。
+			</p>
+			<p class="text01">
+			チェコの首都プラハは「百塔の街」「建築博物館の街」「ヨーロッパの魔法の都」「北のローマ」など数多くの異名を持ち、絵本のように美しい中世ヨーロッパの街並みがそのままの姿で残されていることで有名だ。世界を旅した人に、どの街が一番美しかったかを聞くと「プラハ」と答える方がとても多いと言われており、どこを切り取っても絵になる街を歩くだけでもタイムスリップしたような感覚を味わうことが出来るだろう。
+			</p>
+			<p class="text01">
+			「チェコの特産品は何か」と聞かれれば、「ビール」と「ボヘミアンガラス」の２つが挙げられる。特にチェコはビールの国民一人当たりの年間消費量が世界一位と言われており、コーラや水よりもビールが安く販売されている。ビール工場も数多く点在しているので、ビール好きな人はそれらを巡るツアーに参加してみてはどうだろうか。
+			</p>
+			<p class="text01">
+			チェコは元々ハンガリーの一部であり、「上部ハンガリー」と呼ばれていた。しかし18世紀に同じくハンガリーの一部だった東隣のスロバキア共和国と統合され「チェコスロバキア連邦共和国」となり、その後改めて分離したことで現在の「チェコ共和国」という形になった。元々ハンガリーの一部だったこともあり、今もなおハンガリーの文化が根強く残っている。
+			</p>
+			<p class="text01">
+			ドイツからも大きな影響を受けており、チェコではドイツ料理に近い肉料理がメインで食べられている。魚も食べられているが、内陸国なので魚料理は淡水魚が中心となっている。
+			</p>
+			<p class="text01">
+			チェコも日本と同じく1年を通して四季がある国。夏は梅雨こそないものの気温が30度を超えることがあり、一方で冬はマイナスまで落ち込み、雪が積もることも多い。春と秋の季節がしっかりしているため、お花見や紅葉狩りなどを楽しむこともできるだろう。
+			</p>
+			<p class="text01">
+			チェコの公用語はチェコ語。スロバキア語に似ており、チェコ語とスロバキア語で会話が成り立つこともあるとか。チェコにワーキングホリデーする際は、英語だけでなくチェコ語の習得が必須となるだろう。
+			</p>
+		</div>
+
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-cze.html" title="チェコのワーキングホリデー（ワーホリ）ビザ情報へ">チェコのワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+	  	<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+		<a href="../../visa/v-cze.html" class="btn-visa area-round-corner">
+			アイルランドの<br />ビザ情報はこちらから
+		</a>
+	  	<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+
+
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'チェコ';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display);
+            ?>
+    <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    
+      <p>&nbsp;</p>
+
+	
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+
+<?php $links_obj->display_links(); ?>
+
+	</div><!-- /#maincontent -->
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

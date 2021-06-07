@@ -1,0 +1,446 @@
+@import url("common.css");
+
+.wrapper {
+	margin-top: 60px;
+}
+.contents-wrapper {
+	background: none repeat scroll 0 0 #FCFCFC;
+	border: 1px solid #BBBBBB;
+	margin: 10px auto;
+	overflow: auto;
+	padding: 20px;
+	padding-top: 0px;
+	text-align: left;
+	border: 1px solid #DDDDDD;
+	box-shadow: 0 0 5px #CCCCCC, 0 0 0 #000000 inset;
+}
+
+.footer-margin {
+	margin-bottom: 80px;
+}
+
+body.login {
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height: 1.4em;
+	background-color: white;
+}
+
+#intro {
+	background-color: white;
+	height: 100%;
+	color: #666666;      
+	font-size: 16px;
+}
+
+#jawhmBanner {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px; 
+	line-height: 1.4em;
+}
+    
+.button-login {
+	background-color: #6CC655;
+	color: white;
+	font-size: 16px;
+	line-height: 44px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	padding-left: 44px;
+	background-position: 7px 7px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+}
+
+.button.jawhm {
+	background-color: #261147;
+	color: white;
+	background-image: url('/mypage/themes/images/jawhm.png');
+}
+
+.button.jawhm:hover {
+	background-color: #000033;
+}
+
+.button.google {
+	background-color: #DF4B31;
+	color: white;
+	background-image: url('/mypage/themes/images/g+.png');
+}
+
+.button.google:hover {
+	background-color: #B9341D;
+}
+
+.button.twitter {
+	background-color: #55ACEE;
+	color: white;
+	background-image: url('/mypage/themes/images/twitter.png');
+}
+
+.button.twitter:hover {
+	background-color: #178DE8;
+}
+
+.button.facebook {
+	background-color: #4963A4;
+	color: white;
+	background-image: url('/mypage/themes/images/f.png');
+}
+
+.button.facebook:hover {
+	background-color: #3A4F82;
+}
+
+.button.microsoft {
+	background-color: #0072C6;
+	color: white;
+	background-image: url('/images/mobile-icon-toolbar-windows_2x.png');
+}
+
+.button.microsoft:hover {
+	background-color: #005C9E;
+}
+
+.button.evernote {
+	background-color: #5CB52B;
+	color: white;
+	background-image: url('/images/mobile-icon-toolbar-evernote_2x.png');
+}
+
+.button.evernote:hover {
+	background-color: #499122;
+}
+
+/* list */
+table {
+	width: 100%;
+}
+
+table thead{
+	color: #fff8dc;
+	background-color: #4169e1;
+}
+
+table tbody {
+	background-color: #ffffff;
+}
+
+table tbody.even {
+	background-color: #7fffd4;
+}
+
+table tbody.list:hover {
+	background-color: #66cdaa;
+}
+
+#suggest {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCFF;
+    font-size: 90%;
+    width: 200px;
+}
+#suggest div {
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#suggest div.select{ /* キー上下で選択した場合のスタイル */
+    color: #FFFFFF;
+    background-color: #3366FF;
+}
+#suggest div.over{ /* マウスオーバ時のスタイル */
+    background-color: #99CCFF;
+}
+
+.result-container {
+	margin-top: 70px;
+}
+
+.fixed-top {
+	margin-top: 70px;
+}
+
+.bottom-up {
+	margin-bottom: 70px;
+}
+
+/* agreement */
+table.agreement {
+	width: 80%;
+}
+
+table.agreement thead.agreement{
+	color: #000;
+	background-color: #fff;
+}
+
+table.agreement tbody.agreement {
+	background-color: #fff;
+}
+
+table.agreement, td.agreement, th.agreement {
+	border: 1px #000 solid;
+	border-collapse: collapse;
+}
+
+p.agreement {
+	text-indent: 1em;
+	text-size: 8px;
+}
+
+p.insurance {
+	text-size: 8px;
+	padding-left: 64px;
+}
+
+.agreement-date {
+	vertical-align: top;
+}
+
+.agreement-centerize {
+    display: block;
+	margin-left: 110px;
+}
+
+.agreement-pdf {
+    display: block;
+	margin-left: 60px;
+}
+.agreement-smp {
+    display: block;
+	margin-left: 0px;
+}
+
+.pdf-font .pdf-smaller-font {
+	font-family: "メイリオ"
+}
+.pdf-smaller-font {
+	font-size: 10px;
+}
+
+.image-view {
+	width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.iphone-notice {
+	font-size: 8pt;
+	margin-left: 160px;
+}
+
+.datepicker {
+	z-index: 11151 !important;
+}
+
+.japanese-date {
+	width: 75px; 
+}
+
+.japanese-fulldate {
+	width: 110px;
+}
+
+.calendar-editable, .calendar-close {
+	text-align: center;
+	background-color: #003aff;
+    background-image: -moz-linear-gradient(center top , #6699d9, #336791);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.calendar-editable:hover, .calendar-close:hover {
+	background: none repeat scroll 0 0 #339fff;
+}
+
+.calendar-close {
+	font-size: 14px;
+	height: 20px !important;
+	line-height: 20px !important;
+}
+
+.calendar-selected {
+	text-align: center;
+	background-color: #ddd;
+    background-image: -moz-linear-gradient(center top , #ddd, #fff);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+.calendar-selected:hover {
+	background: none repeat scroll 0 0 #ccc;
+}
+
+.calendar-current {
+	text-align: center;
+	background-color: #99cfff;
+    background-image: -moz-linear-gradient(center top , #9cf, #fff);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+th.switch:hover {
+	background-color: transparent !important;
+	cursor: default !important;
+}
+
+.comment-wrapper, .comment, 
+.client-comment, .staff-comment {
+	box-sizing: border-box;
+}
+
+.comment-wrapper {
+	padding: 30px;
+	position: relative;
+	z-index: 1;
+}
+.client-comment,
+.staff-comment {
+	background: #ccc;
+	max-width: 100%;
+	width: auto;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	z-index: -1;
+	position: relative;
+	padding: 6px;
+	padding-left: 8px;
+}
+
+.client-comment {
+	margin-right: 60px;
+}
+
+.staff-comment {
+	margin-left: 60px;
+}
+
+
+.client-comment:after,
+.staff-comment:after {
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-width: 15px; 
+	margin-top: -15px;
+}
+
+.client-comment:after {
+	left: 100%;
+	border-left-color: #ccc;
+}
+
+.staff-comment:after {
+	right: 100%;
+	border-right-color: #ccc;
+}
+
+.comment-top-padding {
+	padding-top: 10px;
+}
+
+.comment-bottom-padding {
+	padding-bottom: 10px;
+}
+
+.msgspan-topleft {
+    padding-left: 14px;
+}
+
+.msgspan-bottomright {
+	margin-top: 3px;
+	padding-bottom: 6px;
+	padding-right: 6px;
+}
+
+.client-image {
+	position: absolute;
+	left: 93%;
+	top: 16%;
+}
+
+.staff-image {
+	left: 1%;
+	bottom: 10%;
+	position: absolute;
+}
+
+.combo_select{
+  opacity:0;
+  filter: alpha(opacity=0);
+  -ms-filter: "alpha(opacity=0)";
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  margin-bottom: 2px;
+}
+
+.combo_arrow{
+  float: right;
+  margin-bottom: -30px !important;
+  padding: 4px 8px !important;
+  width: 25px;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 9px !important;
+  height: 34px;
+}
+
+div.combo_wrapper div {
+  position: relative;
+  margin-right: 20px;
+  top: -40px;
+  margin-bottom: -40px;
+}
+
+.combo_text{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rstbtn-toppad {
+	position: relative;
+	top: 15px;
+}
+.delbtn-centering {
+	position: relative;
+	top: 15px;
+	left: 89px;
+}
+
+.span-date {
+	padding-left: 46px;
+}
+
+.icon {
+	width: 16px;
+	height: 16px;
+}
+
+.editable {
+	width: 30px;
+}

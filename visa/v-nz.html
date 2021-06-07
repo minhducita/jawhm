@@ -1,0 +1,256 @@
+﻿<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'ニュージーランドのワーキングホリデービザ情報';
+$header_obj->description_page = 'ニュージーランドの最新ビザ情報はこちら。日本ワーキング・ホリデー協会がワーキングホリデー協定国の最新ビザ取得方法や渡航情報などを掲載しています。ビザ取得のステップチャート形式で掲載しているので、ニュージーランドビザを取得される方は参考になさってください。ワーホリは留学に必要な準備・手続きをわかりやすくご案内しています。年間25,000人以上の方にセミナーに参加いただいています。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（ニュージーランド） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('country'); ?>
+	<?php $header_obj->display_visa_links(); ?>
+	<img src="../images/bflag02.gif" alt="" />
+
+	<?php
+	if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+		echo ('
+			<p class="text01">
+			<span class="centered-btn" style="padding-top:0;margin-bottom:0"><a class="visa-btn country-info" href="../country/newzealand" title="ニュージーランド国情報へ">ニュージーランド国情報へ</a></span>
+			<b style="display:block;margin-top:1em">ニュージーランドのワーキングホリデービザの取得方法についてご案内します。</b><br>
+			<a style="display:block" href="https://www.jawhm.or.jp/wh/newzealand/">ニュージーランドのワーキングホリデー情報はこちら</a><br>
+			在日韓国人の方のワーキング・ホリデービザ申請は<a href="v-nz-k.html">こちら&gt;&gt;</a></p>
+		');
+	} else {
+		echo ('
+			<p class="text01">
+			<span class="centered-btn"><a class="visa-btn country-info" href="../country/newzealand" title="ニュージーランド国情報へ">ニュージーランド国情報へ</a></span>
+			<b>ニュージーランドのワーキングホリデービザの取得方法についてご案内します。</b>	<br/>
+			在日韓国人の方のワーキング・ホリデービザ申請は<a href="v-nz-k.html">こちら&gt;&gt;</a></p>
+		');
+	}
+	?>
+
+	<div class="visa-wh">
+		<a href="/wh/newzealand/">
+			<img src="/images/whnz_SP.jpg" style="border-radius: 0;" alt="ニュージーランドワーホリをチェック！">
+		</a>
+	</div>
+
+	<h3 class="h3-01">ニュージーランドのおすすめ語学学校</h3>
+
+	<!-- AD031 -->
+	<div class="advbox04">
+		<?php
+		// 031
+		define('MAX_PATH', '/var/www/html/ad');
+		if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+			if (!isset($phpAds_context)) {
+				$phpAds_context = array();
+			}
+			// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+			$phpAds_raw = view_local('', 34, 0, 0, '', '', '0', $phpAds_context, '');
+		}
+		echo $phpAds_raw['html'];
+
+		// 032
+		if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+			if (!isset($phpAds_context)) {
+				$phpAds_context = array();
+			}
+			// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+			$phpAds_raw = view_local('', 35, 0, 0, '', '', '0', $phpAds_context, '');
+		}
+		echo $phpAds_raw['html'];
+
+		// 033
+		if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+			if (!isset($phpAds_context)) {
+				$phpAds_context = array();
+			}
+			// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+			$phpAds_raw = view_local('', 36, 0, 0, '', '', '0', $phpAds_context, '');
+		}
+		echo $phpAds_raw['html'];
+		?>
+	</div>
+
+	<h2 class="sec-title">ビザ取得までのステップチャート</h2>
+	<h3 class="h3-01">参加可能年齢　18～30歳（申請時30歳であれば31歳での入国が可能）</h3>
+	<p class="text01">ニュージーランドの場合、HP上からオンライン申請ができます。ビザ申請時に必要なものは有効なパスポート（残存期間：入国日より１年３ヶ月以上）、クレジットカード、E-mailアドレス（携帯アドレスは不可）、運転免許証や健康保険証などの証明書です。</p>
+
+	<div class="text-center">
+		<img src="../images/visa-newzealand-flow.gif" alt="" />
+	</div>
+	<p class="bg-yellow">ニュージーランド大使館<br/>
+		〒150-0047 東京都渋谷区神山町20-40<br/>
+		TEL03（3467）2270 （ 9：30am～12：00pm／月～金 ） FAX：03(3467)2278 </p>
+
+	<h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+	<ul class="list-visabasic">
+		<a href="https://www.mofa.go.jp/mofaj/area/nz/data.html" target="_blank" rel="noreferrer">基本情報</a>
+		<a href="https://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=74" target="_blank" rel="noreferrer">安全情報</a>
+		<a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/oceania/newzea.html" target="_blank" rel="noreferrer">在外公館</a>
+	</ul>
+	<br/>
+	<?php
+	//settings for the calendar module display
+	$country_to_display = 'ニュージーランド';
+	$number_to_display = '2';
+	$start_display_from = ''; //empty is begining
+
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+	?>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+
+	<div class="text-center">
+		<p style="color: orangered">健康診断が必要なこと、知っていましたか？</p>
+		<a href="/mem/#meritt"><img src="images/memline5_off.gif" alt=""></a>
+	</div>
+
+	<h2 class="sec-title">ビザについて</h2>
+	<h3 class="h3-01">対象</h3>
+	<p class="text01">日本国籍を持つ18才から30才の独身者または、子供を同伴しない既婚者。休暇を過ごす目的で、ニュージーランドに1年までの長期滞在を希望される方。健康な方で、かつ犯罪歴の無い方。</p>
+	<h3 class="h3-01">滞在可能期間</h3>
+	<p class="text01">ニュージーランドに最初に入国した日より、１２ヶ月の滞在許可が入国時に許可されます。途中でニュージーランドを離れた場合、離れていた期間を再入国後に 延長することはできません。（ニュージーランド国内でワーキングホリデーを取得した場合、すでにニュージーランドにいるため、発行された日から１年までの 滞在となります。） </p>
+	<p class="text01">●ワーキング・ホリデー3ヶ月延長●<br/>
+		ワーキング・ホリデー期間をさらに3ヶ月延長できるようになりましたが、条件があります。</p>
+	<h3 class="h3-01">就学</h3>
+	<p class="text01">ワーキング・ホリデービザで、学校(語学学校等)に通えるのは6ヶ月（コースは複数可）までです。</p>
+	<h3 class="h3-01">仕事</h3>
+	<p class="text01">ワーキングホリデービザでは、同一雇用主のもとで働ける期間は国によって異なりますが、ニュージーランドは制限がありません。<br/></p>
+	<h3 class="h3-01">医療保険</h3>
+	<p class="text01">保険加入がない場合は入国自体が認められない場合があります。保険の保障期間が滞在予定期間より短い場合、<br/>
+		保険の保障期間の終了と同時に有効期限が切れる形で就労許可証が発給される可能性があります。<br/>
+		このような場合に、後日就労許可証の延長を申請することはできません。<br/>
+		また、2016年度ニュージーランド教育省の法律変更により、語学学校のお申込み時に海外保険加入証明の提出が義務化されました。<br/>
+	</p>
+	<h3 class="h3-01">航空券 </h3>
+	<p class="text01">片道航空券でも渡航可能です。</p>
+	<br/>
+	<?php
+	//settings for the calendar module display
+	$country_to_display = 'ニュージーランド';
+	$number_to_display = '2';
+	$start_display_from = '2'; //empty is begining
+
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+	?>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+	<div class="text-center">
+		<p style="color: orangered;">ビザの申請、ひとりでできますか？</p>
+		<a href="/mem/#meritt"><img src="images/memline3_off.gif" alt="メンーバ登録はこちらから"></a>
+	</div>
+	<br/>
+
+	<div class="visa-wh">
+		<a href="/wh/newzealand/">
+			<img src="/images/whnz_SP.jpg" style="border-radius: 0;" alt="ニュージーランドワーホリをチェック！">
+		</a>
+	</div>
+	<br/>
+	<h2 class="sec-title">申請方法</h2>
+	<h3 class="h3-01">申請料金</h3>
+	<p class="text01">日本国籍は無料（ただし日本国内の申請に限る）</p>
+	<p class="text01">別途、健康診断費用と国際観光税（IVL）がかかります。</p>
+	<h3 class="h3-01">申請方法</h3>
+	<p class="text01">ニュージーランドのワーキング・ホリデービザは、NZ移民局のホームページよりオンラインで申請して下さい。<br/>
+
+		全ての連絡は担当する現地のニュージーランド移民局から直接に申請者のメールアドレスに届きます。登録される際、ご自分のメールアドレスを間違いのないように記入してください。間違っている場合、移民局は連絡がとれませんので、申請は進みません。</p>
+	<p class="bg-blue">[オンラインで発給されるビザについて] </p>
+	<p class="text01">オンラインで発給されるビザは、パスポートに発給されるビザラベルと同様のしくみですが、パスポートにビザラベルを貼る代わりに、印刷された書類を申請者がパスポートに添付し持参します。<br/>
+		ビザの申請が許可されますとビザのコピーを印刷するよう指示されます。詳細事項はニュージーランド移民局のデーターベースに保存されます。このインフォーメーションはあなたのニュージーランドへの出入国の権利の有無、また、ニュージーランド入国時にパーミット（滞在許可）を決定するためにも必要です。　従ってあなたがオンラインで申請する際に、あなたの詳細について間違いなく正しく入力されることが大変重要です。</p>
+
+	<p class="bg-blue">[オンラインで発給されるビザにはどの様なインフォーメーションが表示されますか]</p>
+	<p class="text01">ニュージーランド移民局が発給するビザラベルと同様にあなたの個人情報、就労の条件、ビザの条件及び有効期間が表示されます。 </p>
+	<p class="bg-blue">[ニュージーランドの雇用主にはなにを提示すればよいですか ]</p>
+	<p class="text01">印刷されたビザの書類を提示してください。そこにニュージーランドでの就労条件が表示されています。また、ニュージーランド移民局のサイトにログインし て、あなたに許可された就労条件を雇用主に見せることが出来ます。また、雇用主が、ニュージーランド・ナショナル・コンタクト・センター（New Zealand National Contact Centre)に問い合わせて確認する事も出来ます。</p>
+	<p class="bg-blue">[レントゲン検査の提出について]</p>
+	<p class="text01">オンライン申請完了後、15日以内に指定医による胸部レントゲンの検査（Chest X-ray certificate）が必ず必要になります。</p>
+	<br/>
+	指定医は<a href="https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/tools-and-information/tools/panel-physicians" target="blank">こちら</a>から<br/>
+	<br/>
+	指定医で受診後は、病院からニュージーランド移民局に直接結果を送ってくれるので受診のみで大丈夫です。<br/>
+	病院に行く際には、ご自身で予約後パスポートを必ずご持参ください。<br/>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+	</div>
+	<p class="bg-blue">[申請を入力し始めたら、その内容をいちどセーブし、あとで終了することはできますか]</p>
+	<p class="text01">申請の内容を途中でセーブすることが出来ますので、後日そこから続きを入力し終了することが出来ます。</p>
+	<p class="text01">申請のページごとに“COMPLETE LATER" タブ が表示されます。それをクリックすれば入力した情報がセーブされるので、後日、User ID とパスワードで再度ログインし、“EDIT" タブをクリックすれば申請中の申請の入力が続けられます。</p>
+	<p class="bg-blue">[申請が受理されたかはどのようにして確認できますか]</p>
+	<p class="text01">申請が受理されれば確認のメッセージが送信されます。あなたのホームページにも申請状況が表示されます。記入されたメールアドレスが間違っていれば、確認のメッセージは届かないので、お間違えのないように記入してください。</p>
+	<p class="bg-blue">[申請状況のチェック方法]</p>
+	<p class="text01"><a href="https://www.immigration.govt.nz/new-zealand-visas/options/work" target="blank">ニュージーランドの移民局サイト</a>よりログイン後、ページに「view eVisa」という項目が増えていたら無事に発給されています。「view eVisa」をクリックしワーキングホリデービザのダウンロードを行いましょう。
+	</p>
+	<p class="bg-blue">[申請の注意事項]</p>
+	<p class="text01">１）申請のために申請者にクレジットカードを用意していただくシステムです。クレジットカードを持っているかどうかという質問に対して、"NO"と答えると、進まなくてなってしまいます。しかし、ニュージーランド国内で申請しない限り、クレジットカードの情報を記入することはなく、もちろんお金を請求されることもありません。したがって、クレジットカードお持ちの方でも、お持ちでない方でも、"YES"と答えてください。</p>
+	<p class="text01">２）パスポートの他にもDRIVER'S　LICENCE（自動車免許）、NATIONAL　ID（国民の証明書）のどれかの発効日と切れる日付（切れる日付がない場合、記入は不要）を記入するよう、求められます。自動車免許をお持ちでない方は、NATIONAL　IDを選んで、健康保険証、又はキャッシュカードの発効日・交付年月日を記入してください。</p>
+	<p class="text01">３）2019年10月からニュージーランドへ渡航する際は国際観光税（IVL）35ドルの支払いが必要となりました。ワーキングホリデービザ申請時に支払いが必要ですのでクレジットカード(VISA/Mastercard)のご用意をよろしくお願いします。</p>
+	<p class="bg-blue">[審査日数]</p>
+	<p class="text01">オンライン申請後（レントゲンも受診済）は最大23日以内に受理されます。<br/>
+		それまでにニュージーランド移民局より、ビザ申請時に登録したアドレスにメールが数通届きますのでその都度ログインし、状態を確認するようにしましょう。<br/>
+		<a href="https://www.immigration.govt.nz/about-us/policy-and-law/how-the-immigration-system-operates/visa-application-process/how-long-it-takes-to-process-your-visa-application" target="blank">レントゲンの発給について</a>
+	</p>
+	<p class="bg-blue">[申請後のお問い合わせ]</p>
+	<p class="text01">New Zealand Immigration :<a href="https://www.immigration.govt.nz/contact" target="blank">https://www.immigration.govt.nz/contact</a><br/>
+		電話：+64 9 914 4100<br/>
+		月曜日から土曜日の深夜6時（ニュージーランド現地時間）<br/>
+	</p>
+
+	<br/>
+	<br/>
+	<p class="text01">
+		【注意】<br/>
+		ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+		また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+		正確なものであることを保証するものではありません。<br/>
+		ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+	</p>
+	<br/>
+	<?php
+	//settings for the calendar module display
+	$country_to_display = 'ニュージーランド';
+	$number_to_display = '2';
+	$start_display_from = '4'; //empty is begining
+
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+	?>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		<p style="font-size: x-small;">※掲載されているビザ情報は、2017/11/28に確認した情報です。</p>
+	</div>
+	<div class="text-center">
+		<p style="color: orangered;">ビザの申請、ひとりでできますか？</p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif" alt="メンーバ登録はこちらから"></a>
+	</div>
+	<br/>
+
+	<?php $header_obj->display_visa_links(); ?>
+	<?php $links_obj->display_links(); ?>
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

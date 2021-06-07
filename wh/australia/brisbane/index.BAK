@@ -1,0 +1,449 @@
+﻿<?php
+
+require_once '../../../include/header.php';
+
+require_once '../../../include/links.php';
+
+
+
+$links_obj = new Links();
+
+$header_obj = new Header();
+
+
+
+
+
+$header_obj->title_page='ブリスベンでワーキングホリデー';
+
+$header_obj->description_page='オーストラリアの都市・ブリスベンへワーホリ（ワーキングホリデー）に行く方に向けて、ビザの取得と準備、ワーホリでの注意点、現地の特徴、語学学校・仕事の選び方、帰国後の就職など、必要な情報を掲載しています。';
+
+$header_obj->keywords_page ='ブリスベン,ワーホリ,オーストラリア,情報,英語';
+
+$header_obj->fncFacebookMeta_function = true;
+
+$header_obj->add_css_files='<link href="/wh/css/wh.css" rel="stylesheet" type="text/css" />';
+
+
+
+$header_obj->fncMenuHead_imghtml='<img id="top-mainimg" src="../../../../images/mainimg/AU-countrypage.gif" alt="" width="970" height="170" />';
+
+$header_obj->fncMenuHead_h1text='ブリスベンでワーキングホリデー | ワーホリについて';
+
+
+
+$header_obj->display_header();
+
+
+
+include('../../../calendar_module/mod_event_horizontal.php');
+
+
+
+?>
+
+	<div id="maincontent">
+
+	  <?php echo $header_obj->breadcrumbs(); ?>
+
+
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+
+	<div class="step_title">
+
+		ブリスベンでワーキングホリデー
+
+	</div>
+
+	  <table class="tableofcontents">
+
+	    <tr>
+
+		  <th>目次</th>
+
+		  <td>
+
+		    <ul>
+
+			  <li><a href="#st1-1">ワーホリでブリスベンが人気を集める理由</a></li>
+
+			  <li><a href="#st1-2">ブリスベンの魅力を紹介！</a></li>
+
+			  <li><a href="#st1-3">ブリスベンにワーホリに行く前の準備</a></li>
+
+			  <li><a href="#st1-4">ブリスベンでのワーホリ生活の楽しみ方</a></li>
+
+		    </ul>
+
+		  </td>
+
+		</tr>
+
+	  </table>
+
+
+
+
+
+
+
+	<h2 id="st1-1" class="sec-title">ワーホリでブリスベンが人気を集める理由</h2>
+	<h3 class="h3-01">ブリスベンはどんな都市？</h3>
+	<p class="text01">
+		日本全体のワーホリ利用者の実に半分以上が、オーストラリアを目的地に選んでいます。<br/>
+		そのオーストラリアで人気がある都市がブリスベンです。<br/>
+		世界一住みやすい街にも選ばれたことがある都市です。<br/>
+		ブリスベンの気候は１年中暖かい気候なので、快適に暮らせます。<br/>
+		<br/>
+		ブリスベンは世界の都市とくらべても治安は良いほうで、日本人でも安全に生活することができます。<br/>
+		オーストラリアで3番目に人気なブリスベンは、ワーホリ向けの仕事も募集されています。<br/>
+		ただ、ワーホリでは、同じ雇用主の元で働けるのは６ヶ月まで、と定められているので注意が必要です。<br/>
+	</p>
+
+	<h3 class="h3-01">世界一住みやすい都市　ブリスベン</h3>
+	<p class="text01">
+		ブリスベンは「世界住みやすい都市ランキング」で何度も１位に選ばれたことがある、世界的に見ても非常に人気の高い都市です。<br/>
+		最大の魅力は住みやすい気候！亜熱帯都市であるブリスベンでは、冬も暖かく、夏もそこまで暑くありません。<br/>
+		<br/>
+		都市部には病院や大学など、生活に必要なものがすべて揃っていて、街から少し出るだけで多くのアクティビティが体験できる自然も広がっています。<br/>
+		公共交通機関もしっかりと整備されているため、車を持つ必要がないこともワーホリメーカーにとってはうれしいですね。<br/>
+	</p>
+
+	<h3 class="h3-01">語学留学体験</h3>
+	<p class="text01">
+		英語を勉強する為に、オーストラリアへワーホリに行く方も多いと思います。<br/>
+		ブリスベンで英語を学ぶ魅力は、教育機関の多さです。大学や専門学校などが多くあるので、多くの学生がブリスベンにいます。放課後に学校の友達とカフェで話したり、カフェで出会った人他の学生たちと話したりと多くの人たちと英語を使う頻度があります。<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベンを観光してみよう</h3>
+	<p class="text01">
+		ブリスベンは自然と調和している都市と言われている都市です。<br/>
+		ブリスベン川を囲むような形で街が発展しており、高層ビルの中に、緑や公園が多くあります。また人工のビーチなどもあるので、仕事の合間に泳いでいる現地人もいるそうです。<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベン周辺を回る</h3>
+	<p class="text01">
+		ブリスベン市内から北に1時間ほど移動すればサンシャインコースト、南に移動すればゴールドコーストと気軽にビーチへ行くことができます。また、市内にも人口のビーチがあるので、近くで休憩したい時にはちょうどいい場所です。<br/>
+		<br/>
+		治安がよく気候が安定していること、仕事がみつかりやすいこと、ブリスベンでのアクティビティーが多いこと、周辺にも観光地が多いこと等々…。のワーホリの渡航先として、シドニーはとても魅力的な都市です。<br/>
+		自分の勉強や仕事にも打ち込められ、プライベートも充実させられる。<br/>
+		これだけの条件が揃っているブリスベンにワーホリで訪れてください！<br/>
+	</p>
+
+	<center><img src="../../img/ausmap_bne.gif" alt="ブリスベンの地図"></center>
+
+	<p style="color:red;text-align:center;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ブリスベン';
+
+	$number_to_display = '2';
+
+	$start_display_from = ''; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+	<h2 id="st1-2" class="sec-title">ブリスベンの魅力を紹介！</h2>
+
+	<h3 class="h3-01">ブリスベンの基本情報</h3>
+	<p class="text01">
+		南半球にあるオーストラリアは、日本とほぼ変わらない経度にありますが、季節が逆になっています。<br/>
+		ビクトリア州に属するブリスベンの時間帯は、日本時間＋１時間です（サマータイム中は２時間）。<br/>
+		<br/>
+		ブリスベンの気候は、亜熱帯気候のため、一年中温かく感じられると言われる都市です。1月は降水量が増えるので、気をつけましょう。<br/>
+		ブリスベンの治安は安定していますが、やはり日本とは違う国です。<br/>
+		落ち着いている雰囲気に気を許してしまいがちになりますが、油断はしないようにしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベンは見どころ満載！</h3>
+	<p class="text01">
+		ブリスベン観光で有名な場所はローンパイン・コアラ・サンクチュアリです。<br/>
+		130頭を超えるコアラが生活している世界最大で最古のコアラ園です。<br/>
+		園の中にはコアラを抱っこして写真を撮れるブースもあるので、是非一緒に写真を撮影してください。<br/>
+		<br/>
+		サウスバンク・パークランドも有名な観光スポットです。<br/>
+		ブリスベンシティーからブリスベン川をはさんだ先にある場所です。<br/>
+		現地の若者たちが集まる人気の場所で、多くのカフェやレストランがあります。<br/>
+		週末にはマーケットが開催されたりしているので、１にちいても飽きない場所です。<br/>
+		<br/>
+		またアンザック広場もとても有名な広場です。<br/>
+		第一次世界大戦の戦没者を弔って作られた記念碑があります。<br/>
+		毎年4月25日はアンザックデーという戦没者を祝う祝日があり、当日は盛大なセレモニーが行われます。<br/>
+		是非参加してみましょう！<br/>
+	</p>
+
+
+
+	<p style="color:red;text-align:center;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ブリスベン';
+
+	$number_to_display = '2';
+
+	$start_display_from = '2'; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+
+
+	<h2 id="st1-3" class="sec-title">ブリスベンにワーホリに行く前の準備</h2>
+
+	<p class="text01">
+		ここでは、日本でやっておくべき下準備について考えていくことにしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">まずはビザの申請・取得</h3>
+	<p class="text01">
+		オーストラリアは世界中からワーホリを受け入れている「ワーホリ大国」です。<br/>
+		パスポートを用意し、オーストラリア大使館のHPを参照にして、ワーホリビザを申請しましょう。<br/>
+		<br/>
+		オーストラリアには特定の条件を満たすことで取得することができるセカンドワーキングホリデーの制度があり、このセカンドワーキングホリデーを活用することでワーホリの期限を最大1年間延長することが可能です。<br/>
+		このセカンドワーキングホリデーを取得するための条件とは、政府指定の場所で約3カ月程度働くことです。<br/>
+		<br/>
+		ビザの申請はオンラインで行います。ビザ申請には複雑なステップもある為、ビザを申請する前に必ず協会にご連絡ください。
+		<a href="../../../visa/v-aus.html">⇒オーストラリアビザ情報ページへのリンク</a><br/>
+	</p>
+
+	<h3 class="h3-01">航空券の取得</h3>
+	<p class="text01">
+		航空券は往復、片道どちらを取得しても大丈夫です。<br/>
+		年末や休暇シーズンを避け、１～２カ月くらい余裕をもって予約をすることで、比較的安くチケットを入手することもできるでしょう。<br/>
+		また、出発の時間だけでなく、ブリスベンに何時に到着するのかも事前に確認しておきましょう。日本との時差もあり、夜に到着してしまうと移動などが面倒です。<br/>
+		万が一のトラブルに備えて、日中に到着する便がオススメです。<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベンでオージーイングリッシュを学ぼう！</h3>
+	<p class="text01">
+		オーストラリアの「オージーイングリッシュ」は、世界中で話されている英語とは少し違う、オーストラリア地方独自の英語です。<br/>
+		ブリスベンの語学学校での授業を終えたあとは、ぜひブリスベンの街で言葉に触れてみてください。<br/>
+		その土地の風土や歴史あってこそ、独自の言葉は生まれます。<br/>
+		ブリスベンで行われる多数のアクティビティーを体験し、オーストラリアでしか聞けない英語を学んでみてください。<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベンの学校について</h3>
+	<p class="text01">
+		ワーホリで通うことになるブリスベン語学学校では、どの学校でも実力に応じたクラスに振り分けられます。<br/>
+		語学学校での学習には、現地の生活で使われている英語をその場で勉強し使用できるという大きな魅力があります。<br/>
+		ワーホリでの渡航の場合、オーストラリアの学校に通えるのは、４ヶ月までと決まっています。<br/>
+		この機会を無駄にせず、学校で実力をつけ、現地での就労に備えましょう。<br/>
+		また、ブリスベンではブリスベン川のカヤックツアー、ロッククライミング、ウィンドサーフィン、サイクリングなど数多くのアクティビティに参加することができ、観光客から現地で暮らす人まで娯楽を楽しむことができます。<br/>
+	</p>
+
+	<h3 class="h3-01">ワーホリ最大の魅力・現地での就労</h3>
+	<p class="text01">
+		ワーホリでの滞在中にブリスベンで仕事を探すなら、日本人に向けた情報サイトや同じ地域に住んでいる日本人に聞いてみるのがおススメです。<br/>
+		ワーホリ渡航者が非常に多く滞在するブリスベンでは、ワーホリ用の仕事を見つけるのは決して難しくはありません。<br/>
+		ただ、２度目のワーホリであるセカンドワーホリの申請を出すためには、農業、漁業、林業など、政府指定の第一次産業に88日以上従事する必要があります。<br/>
+		広大な大地を誇るオーストラリアでの大規模な農作業は、ワーホリならではの体験といえるでしょう。<br/>
+	</p>
+
+	<h2 id="st1-4" class="sec-title">ブリスベンでのワーホリ生活の楽しみ方</h2>
+
+	<p class="text01">
+		ブリスベンでのワーホリ生活を充実させるためには、何を心がければいいのでしょうか。<br/>
+	</p>
+
+	<h3 class="h3-01">地元開催のイベントに参加しよう</h3>
+	<p class="text01">
+		ブリスベンは非常に人気の高い都市なので、有名なイベントがいくつも開催されます。<br/>
+		特に毎年８月にブリスベンで開催される「エッカ（Ekka）」は、クィーンズランドシュウでも最大級のフェスティバルです。エッカが開催される時期は、オーストラリア全土からも観光客が集まります。<br/>
+		フェスティバル開催中は、モーターショーやコンサート、ダンスショーなどの様々な模様下野が開催されるほか、移動式遊園地やグルメ商品の販売も行われるので、ブリスベン滞在中にぜひ参加してみてください。<br/>
+		<br/>
+		９月にはアートの祭典「ブリスベン・フェスティバル」も開催されます。映画・演劇・音楽・オペラなど、子供から大人まで楽しめるイベントとなっています。<br/>
+		最終日にはブリスベン川沿いで大規模な花火も上がります！混雑が予想されるので、参加される方は気を付けてくださいね！<br/>
+	</p>
+
+	<h3 class="h3-01">ブリスベンでの就労</h3>
+	<p class="text01">
+		観光地としても有名なブリスベンでは、カフェやレストラン、リゾートバイトなどの仕事を多く見つけることができます。<br/>
+		その他にもホテル勤務やヘアスタイリストなど職務経歴を活かすことができる仕事や、日本食レストランもあります。<br/>
+		英語が話せないとなかなか仕事に就けないかもしれませんが、あきらめずに履歴書をもって通ってみましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">季節労働から２度目のオージーワーホリへ</h3>
+	<p class="text01">
+		政府が指定した一次産業の現場で８８日以上働くことで、オーストラリアの２回目のワーホリ申請を出すことが出来るようになります。<br/>
+		このような肉体労働は比較的賃金が高いため、集中的に働いて旅行の資金する人もいます。<br/>
+		季節労働を申請する場合は、就労場所や気候条件、ご自身の体力を事前に考慮する必要があります。<br/>
+		労働時のトラブルや勘違いを避けるためにも、公式HPを参照にしましょう。<br/>
+	</p>
+
+	<h3 class="h3-01">多国籍文化との交流をすすめよう！</h3>
+	<p class="text01">
+		ワーホリ大国オーストラリアには、さまざまな国の人がやってきます。<br/>
+		大都市のブリスベンにはチャイナタウンがあり、日本を含めた他国の祭典が行われます。<br/>
+		それらのイベントを手始めに、他国の方と積極的に交流してみましょう。<br/>
+		ワーホリという同じ立場でブリスベンにいて、話す言葉も同じ英語です。<br/>
+		それらのイベントを通して、オーストラリア以外の国の人と触れ合うことはワーホリの醍醐味といえるでしょう。<br/>
+	</p>
+
+	<h3 class="h3-01">しっかりとした準備があってこその充実したワーホリ生活</h3>
+	<p class="text01">
+		海外生活にトラブルはつきものです。<br/>
+		語学の問題でも日常生活でも、思ってもないことが起きてしまうことがあります。<br/>
+		それを自分で解決するのが勉強ですが、事前の準備をしっかり行うことが解決への近道になります。<br/>
+		ワーキングホリデー協会では、様々な無料セミナーを用意しています。<br/>
+		初心者セミナーから始まり、語学学校の選び方、懇談形式のカウンセリングもあり、ワーホリ体験談を聞くことも出来ます。<br/>
+		また、ワーキングホリデー協会では、メンバー登録も行っています。<br/>
+		登録すれば、協会と密に連絡がとれ、個別カウンセリングや特別セミナーへの参加など、様々なサポートを受けることが出来ます。<br/>
+		ワーキングホリデー協会の充実したサポートを受け、目標の実現に動き出してください！<br/>
+	</p>
+
+
+	<p style="color:red;text-align:center;margin-top:8px;">
+
+	▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼
+
+	</p>
+
+<?php 
+
+	//settings for the calendar module display
+
+	$country_to_display = 'ブリスベン';
+
+	$number_to_display = '2';
+
+	$start_display_from = '6'; //empty is begining
+
+	display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+
+?>
+
+	<p style="text-align:right; color:green; margin-right:20px;">
+
+	<a href="/seminar/seminar"><img src="../../../images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+
+	<a href="/seminar/seminar">＞＞＞  無料セミナー情報をもっと見る</a>
+
+	</p>
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+
+
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/system.html"><span>ワーホリって何？</span></a></div>
+			<div class="btnarea"><a href="../../tame.php"><span>ワーホリのタメになる話</span></a></div>
+			<div class="btnarea"><a href="http://www.jawhm.or.jp/visa/v-aus.html"><span>ワーホリビザの申請手順</span></a></div>
+			<div class="btnarea"><a href="../../canada/"><span>カナダのワーホリ</span></a></div>
+			<div class="btnarea"><a href="../parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+		</div>
+	</div>
+
+
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+
+
+	  <div class="advbox03">
+
+<?php
+
+	// 111
+
+  define('MAX_PATH', '/var/www/html/ad');
+
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+
+    if (!isset($phpAds_context)) {
+
+      $phpAds_context = array();
+
+    }
+
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+
+    $phpAds_raw = view_local('', 86, 0, 0, '', '', '0', $phpAds_context, '');
+
+  }
+
+  echo $phpAds_raw['html'];
+
+?>
+
+	  </div>
+
+
+
+<?php $links_obj->display_links(); ?>
+
+
+
+	</div>
+
+  </div>
+
+  </div>
+
+
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+
+
+</body>
+
+</html>

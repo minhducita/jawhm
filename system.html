@@ -1,0 +1,479 @@
+<?php
+
+require_once 'include/header.php';
+require_once 'include/links.php';
+$links_obj = new Links();
+
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function = true;
+
+$header_obj->title_page = 'ワーキング・ホリデー制度について';
+$header_obj->description_page = 'ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港、ノルウェー、ポルトガル、ポーランド、スロバキア、オーストリア、ハンガリー、スペイン、チェコ、アルゼンチン、チリでワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/system-mainimg.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー制度について';
+
+$header_obj->display_header_2();
+include('calendar_module/mod_event_horizontal.php');
+?>
+<?php
+// detect mobile
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+$isMobile = false;
+if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i', $useragent) || preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i', substr($useragent, 0, 4))) {
+	$isMobile = true;
+}
+?>
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs(); ?>
+	<h2 class="sec-title">ワーキングホリデー（ワーホリ）制度について</h2>
+	<div class="comment-group">
+		<div class="text-center">
+			<div class="title-comment-group">
+				<img src="images/system/3.png" alt="">
+				<span>ワーキングホリデーに行ける人、行ける国</span>
+			</div>
+		</div>
+		<div class="body-comment-group">
+			<div class="bubble bubble-blue">
+				<img src="images/system/chat1.png" alt="">
+				<p>ワーキングホリデーって、誰でも行けるの？</p>
+			</div>
+			<div class="bubble bubble-gray">
+				<p>ワーキングホリデーに行けるのは、<trong style="color: #F63737">日本国籍を有する18歳から30歳までの人です。</strong></p>
+				<img src="images/system/chat2.png" class="bubble-gray-img" alt="">
+			</div>
+			<div class="bubble bubble-blue">
+				<img src="images/system/chat1.png" alt="">
+				<p>世界中どの国でも行けるの？</p>
+			</div>
+			<div class="bubble bubble-gray">
+				<p>ワーキングホリデーで行けるのは、<strong style="color: #F63737; font-weight: normal">オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港、ノルウェー、ポーランド、ポルトガル、スロバキア、オーストリア、ハンガリー、スペイン、アルゼンチン、チェコ、チリ、アイスランド、リトアニア、スウェーデン、エストニア、オランダ</strong>の26か国です。</p>
+				<img src="images/system/chat2.png" class="bubble-gray-img" alt="">
+			</div>
+			<div class="bubble bubble-blue">
+				<img src="images/system/chat1.png" alt="">
+				<p>まずは、どんなことから始めればいいの？</p>
+			</div>
+			<div class="bubble bubble-gray">
+				<p>まず日本ワーキングホリデー協会の<strong style="color: #F63737; font-weight: normal">無料セミナー</strong>に参加してみましょう!<br /><a href="/seminar/seminar_01.php"><img src="images/system/btn.png" alt="button"></a></p>
+				<img src="images/system/chat2.png" class="bubble-gray-img" alt="">
+			</div>
+			<div class="bubble bubble-gray">
+				<p>ワーキングホリデーについてもっと詳しく知りたい方は、以下のコンテンツも読んでみてください。</p>
+				<img src="images/system/chat2.png" class="bubble-gray-img" alt="">
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="off-day">
+		<a href="/start.html" class="off-day-child1">
+			<div class="img-off-day">
+				<img src="images/system/1.png" alt="">
+			</div>
+			<div class="info-off-day">
+				<span>はじめての</span>
+				<p>ワーキングホリデー</p>
+				<img src="images/system/arrow.png" alt="">
+			</div>
+
+		</a>
+		<a href="/country/" class="off-day-child2">
+			<div class="img-off-day">
+				<img src="images/system/2.png" alt="">
+			</div>
+			<div class="info-off-day">
+				<span>ワーキングホリデー</span>
+				<p>協定国</p>
+				<img src="images/system/arrow.png" alt="">
+			</div>
+		</a>
+		<div class="clearfix"></div>
+	</div>
+	<br />
+	<p class="text01">
+		【ワーキングホリデー（ワーホリ）制度とは】
+	</p>
+	<p class="text01">ワーキング・ホリデー制度とは，二つの国・地域間の取り決め等に基づき，各々の国・地域が，相手国・地域の青少年に対して自国・地域の文化や一般的な生活様式を理解する機会を提供するため，自国・地域において一定期間の休暇を過ごす活動とその間の滞在費を補うための就労を相互に認める制度です。
+
+		　我が国のワーキング・ホリデー制度は，1980年にオーストラリアとの間で開始されたことに始まり，1985年にニュージーランド，1986年にカナダとの間で開始されました。
+
+		　その後，1999年4月から韓国，同年12月からフランス，2000年12月からドイツ，2001年4月から英国，2007年1月からアイルランド，同年10月からデンマーク，2009年6月から台湾，2010年1月から香港との間で開始されました。更に、最近では2020年4月からオランダとの開始を発表し、現在は26ヶ国の協定国があります。（外務省ホームページより）
+	</p>
+
+	<p class="text01">
+		ワーキングホリデー（ワーホリ）ビザは観光、就学、就労ができる特別なビザです。どこに滞在しても、どこを旅行しても、仕事をしても、語学学校に通っても良いという素晴らしい自由度の高いビザです。　制度の趣旨として仕事を主たる目的とすることはできませんが現地で海外でバイトができるビザは他にはあまりないです。　英語の勉強をしたいけど留学は高すぎるからと諦めていた方には大変有効なビザです。留学の半額以下の料金で海外で滞在しながら勉強してバイトも出来る素晴らしいビザがワーキングホリデー（ワーホリ）ビザです。　一生に一度のチャンスなので絶対に活用してください。<br /><br />
+		<a href="/seminar/seminar_01.php"><img src="images/system/btn-2.png" style="text-align: center;" alt=""></a>
+	</p>
+
+
+
+	<p class="text01">
+		【申請手続き】
+	</p>
+	<p class="text01" style="margin-left:20px; margin-top:-6px;">
+		日本人の方がワーキング・ホリデー査証の発給を受けるためには、日本にある先方政府の大使館又は領事館等に対して申請を行う必要があります。
+		詳細は、<a href="visa/visa_top.html">ワーキング・ホリデー協定国のページ</a>をご確認下さい。<br />
+		しかし、大使館では1人1人のワーキングホリデービザ取得のサポートまではできません。そこで日本ワーキングホリデー協会でワーキングホリデービザ取得サポートを行っております。<br />
+		また、日本へ渡航を希望する相手国・地域の方は、当該相手国・地域にある日本政府の大使館又は領事館に対して申請を行うことが必要です（台湾については財団法人交流協会にお問い合わせ下さい。）
+	</p>
+
+	<p class="text01">
+		【まずは無料セミナーにご参加ください】
+	</p>
+	<p class="text01" style="margin-left:20px; margin-top:-6px;">
+		日本ワーキングホリデー協会では、東京・大阪・名古屋・福岡・沖縄の各オフィスで<br />
+		<a href="/seminar/seminar/">留学・ワーキングホリデーセミナー（参加無料）</a>を開催しています。
+		ワーキングホリデーの仕組み、ワーキングホリデービザの適切な使い方・取得方法、留学・ワーホリ先のご案内など、色々なセミナーを開催しています。<br />
+		まずは、「初心者向けセミナー」にご予約の上、ご参加ください。<br />
+		気になるセミナーをクリックしてくださいね。
+		<?php
+		//settings for the calendar module display
+		$country_to_display = '';
+		$number_to_display = '4';
+		$start_display_from = '';
+		$title_name = '初心者';
+		//		display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from,$title_name);            
+		?>
+	</p>
+	<!-- FIX -->
+	<div class="table-system-kari">
+		<table>
+			<tr>
+				<td>ワーキングホリデービザ対象者</td>
+			</tr>
+			<tr>
+				<td><span class="text-content">日本国籍の日本に在住している 18 歳から 30 歳までの人<span></td>
+			</tr>
+			<tr>
+				<td>日本におけるワーキング・ホリデー制度の歴史</td>
+			</tr>
+
+		</table>
+		<div class="" style="border: 1px solid #999; margin-top: -1px; margin-bottom: 20px; overflow: hidden">
+			<ul class="timeline">
+				<li>
+					<div class="direction-l">
+						<div class="flag-wrapper-l">
+							<span class="time-l time-l1">1980 年</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line1"></div>
+						<div class="info">
+							<img src="images/system/australia.jpg" alt="">
+							<span class="time">オーストラリア（1980 年 12 月 1 日開始）</span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<span class="flag-front"></span>
+						<div class="line2"></div>
+						<div class="info" style="margin-top: 15px;">
+							<img src="images/system/newzealand.jpg" alt="">
+							<span class="time">ニュージーランド（1985 年 7 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<span class="flag-time1"></span>
+						<div class="line3"></div>
+						<div class="info" style="clear: both">
+							<img src="images/system/canada.jpg" alt="">
+							<span class="time">カナダ（1986 年 3 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-l">
+						<div class="flag-wrapper-l">
+							<span class="time-l time-l2" style="position: absolute;top: -16px;right: -25px;">1990 年</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line5"></div>
+						<span class="flag1"></span>
+						<div class="info pad-info" style="margin-left: 41px; margin-top: 66px">
+							<div class="flag-two1">
+								<img src="images/system/southkorean.jpg" alt="southkorean">
+								<img src="images/system/france.jpg" alt="france">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">韓国（1999 年 4 月 1 日開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">フランス（1999 年 12 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line4"></div>
+						<span class="flag-time2"></span>
+						<div class="info" style="margin-top: -3px;">
+							<img src="images/system/germany.jpg" alt="germany">
+							<span class="time">ドイツ（2000 年 12 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line6"></div>
+						<span class="flag2"></span>
+						<div class="info">
+							<img src="images/system/united.jpg" alt="united">
+							<span class="time">イギリス（2001 年 4 月 16 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-l" style="position: absolute;top: 250px;">
+						<div class="flag-wrapper-l">
+							<span class="time-l time-l3">2000 年</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line7"></div>
+						<span class="flag-time3"></span>
+						<div class="info" style="margin-left: 51px">
+							<div class="flag-two2">
+								<img src="images/system/ireland.jpg" alt="ireland">
+								<img src="images/system/denmark.jpg" alt="denmark">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">アイルランド（2007 年 7 月 1 日開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">デンマーク（2007 年 10 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="direction-r">
+						<div class="line8"></div>
+						<span class="flag3"></span>
+						<div class="info" style="margin-top: -4px;">
+							<img src="images/system/taiwan.jpg" alt="taiwan">
+							<span class="time">台湾（2009 年 6 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line9"></div>
+						<span class="flag-time4"></span>
+						<div class="info">
+							<img src="images/system/hongkong.jpg" alt="hongkong">
+							<span class="time">香港（2010 年 1 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-l" style="position: absolute;top: 372px;">
+						<div class="flag-wrapper-l">
+							<span class="time-l time-l4">2010 年</span>
+						</div>
+						<div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line10"></div>
+						<span class="flag4"></span>
+						<div class="info">
+							<img src="images/system/norway.jpg" alt="norway">
+							<span class="time">ノルウェー（2013 年 2 月開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line11"></div>
+						<div class="info" style="margin-left: 48px">
+							<div class="flag-two3">
+								<img src="images/system/poland.jpg" alt="poland">
+								<img src="images/system/portugal.jpg" alt="portugal">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">ポーランド（2015 年 2 月 27 日開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">ポルトガル（2015 年 3 月 27 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line12"></div>
+						<div class="info" style="margin-left: 48px">
+							<div class="flag-two3">
+								<img src="images/system/slovakia.jpg" alt="slovakia">
+								<img src="images/system/austria.jpg" alt="austria">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">スロバキア（2016 年 6 月開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">オーストリア（2016 年 7 月開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line13"></div>
+						<div class="info" style="margin-left: 48px">
+							<div class="flag-two3">
+								<img src="images/system/hungary.jpg" alt="hungary">
+								<img src="images/system/spain.jpg" alt="spain">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">ハンガリー（2017 年 2 月開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">スペイン（2017 年 4 月開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line14"></div>
+						<div class="info" style="margin-left: 48px">
+							<div class="flag-two3">
+								<img src="images/system/argentina.jpg" alt="argentina">
+								<img src="images/system/czech.jpg" alt="czech">
+							</div>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">アルゼンチン（2017 年 5 月 19 日開始）</span>
+							<span class="time2" style="padding-left: 115px; margin-top: -3px;">チェコ（2017 年 6 月 27 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line15"></div>
+						<div class="info">
+							<img src="images/system/chile.jpg" alt="chile">
+							<span class="time">チリ（2017 年 10 月 18 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line16"></div>
+
+						<div class="info">
+							<img src="images/system/iceland.gif" alt="iceland">
+							<span class="time">アイスランド（2018 年 9 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line17"></div>
+						<span class="flag-end"></span>
+						<div class="info">
+							<img src="images/system/lithuania.jpg" alt="lithuania">
+							<span class="time">リトアニア（2019 年 4 月 1 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line18"></div>
+
+						<div class="info">
+							<img src="images/system/sweden.gif" alt="sweden">
+							<span class="time">スウェーデン（2019 年 8 月 26 日開始）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line25"></div>
+
+						<div class="info">
+							<img src="images/system/estonia.jpg" alt="estonia">
+							<span class="time">エストニア（2020 年 3 月 11 日開始予定）</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="direction-r">
+						<div class="line26"></div>
+
+						<div class="info">
+							<img src="images/system/netherlands.jpg" alt="netherlands">
+							<span class="time">オランダ（2020 年 4 月 11 日開始予定）</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<span class="text05" style="font-size: 20px; font-weight: 500"> ワーキングホリデービザ発給数推移 </span>
+	<div class="text-center">
+		<img src="images/system/system-kari2.jpg" alt="" style="width: 667px">
+	</div>
+	<br>
+	<?php $links_obj->display_links(); ?>
+
+
+	<h3 class="osusume_seminar_title_list">おススメの無料セミナー情報</h3>
+	<?php
+	//settings for the calendar module display
+	$country_to_display = '';
+	$number_to_display = '4';
+	//		$start_display_from = '4';
+	$start_display_from = '';
+	$title_name = '初心者';
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from, $title_name);
+	?>
+	<span class="bottom_osusume_seminar">★★★　留学・ワーホリの無料セミナー連日開催中！！　気になるセミナーをクリック！！　★★★</span>
+
+	<h2 id="meritt" class="sec-title" style="margin-top:20px;">メンバー登録はワーホリ成功の第一歩</h2>
+	<p class="text01">
+		当協会のメンバーになれば、個別相談をはじめビザ取得のお手伝い、出発前の準備、到着後のサポートまで、フルにサポートさせていただきます。<br />
+	<?php if ($isMobile) : ?>
+	<div class="text-center">
+		<a href="/mem/#1"><img src="/mem/images/member_merit1.gif" alt="" title="" width="40%" /></a>
+		<a href="/mem/#2"><img src="/mem/images/member_merit2.gif" alt="" title="" width="40%" /></a><br />
+		<a href="/mem/#3"><img src="/mem/images/member_merit3.gif" alt="" title="" width="40%" /></a>
+		<a href="/mem/#4"><img src="/mem/images/member_merit4.gif" alt="" title="" width="40%" /></a><br />
+		<a href="/mem/#5"><img src="/mem/images/member_merit5.gif" alt="" title="" /></a><br />
+	</div>
+	<?php else : ?>
+	<div class="text-center">
+		<a href="/mem/#1"><img src="/mem/images/member_merit1.gif" alt="" title="" width="20%" /></a>
+		<a href="/mem/#2"><img src="/mem/images/member_merit2.gif" alt="" title="" width="20%" /></a>
+		<a href="/mem/#3"><img src="/mem/images/member_merit3.gif" alt="" title="" width="20%" /></a>
+		<a href="/mem/#4"><img src="/mem/images/member_merit4.gif" alt="" title="" width="20%" /></a><br />
+		<a href="/mem/#5"><img src="/mem/images/member_merit5.gif" alt="" title="" /></a><br />
+	</div>
+	<?php endif; ?>
+	<div class="text-center">
+		<p><small>［ご注意］渡航国(アジア、ヨーロッパなど)によってはサポート対象外となる場合があります。詳細については事前にお問い合わせ下さい。</small></p>
+	</div>
+</p>
+
+<div class="advbox03">
+	<?php
+	// 301
+	define('MAX_PATH', '/var/www/html/ad');
+	if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+		if (!isset($phpAds_context)) {
+			$phpAds_context = array();
+		}
+		// function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+		$phpAds_raw = view_local('', 215, 0, 0, '', '', '0', $phpAds_context, '');
+	}
+	echo $phpAds_raw['html'];
+	?>
+</div>
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

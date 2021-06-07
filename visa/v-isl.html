@@ -1,0 +1,349 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'アイスランドのワーキングホリデービザ情報';
+$header_obj->description_page = 'アイスランドのワーキングホリデービザ取得のステップや注意事項を掲載しています。アイスランドへ滞在される方は参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（アイスランド） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('country'); ?>
+	<?php $header_obj->display_visa_links(); ?>
+	<img src="../images/flag-isl.gif" alt="" />
+
+	<h2 class="sec-title">Working holiday based residence permits</h2>
+
+	<p class="text01">アイスランドと他の国との間の二国間協定に基づいて、ワーキングホリデーを理由に居住許可が与えられます。日本はアイスランドがワーキングホリデー協定に合意をした唯一の国です。</p>
+
+	<p class="text01">ワーキングホリデーによる居住許可は、法律に基づいて付与されます。外国人に関する法律2016年第80号第66項目です。</p>
+
+	<h2 class="sec-title">次の条件のすべてが満たされている場合、あなたはワーキングホリデーの許可を受ける権利があります</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>日本に住む日本国民であること</li>
+		<li>アイスランドでの文化と一般的な生活様式の体験を目的としていること</li>
+		<li>アイスランドに永住するつもりはないこと</li>
+		<li>申請書が提出する年齢制限は18歳から26歳以下であること</li>
+		<li>滞在中に自給できることを証明すること</li>
+		<li>アイスランドの保険会社（保険会社の場合）またはアイスランド（外国保険会社の場合）の営業を許可されている外 国保険会社に有効な保険を有していること</li>
+		<li>過去5年間に海外で犯罪をおかし、刑を執行されたことがないこと、またはアイスランド法に基づき3ヵ月以上の懲役刑を科せられた犯罪について法廷で刑を宣告されていないこと。</li>
+		<li>居住許可の推定有効期間を少なくとも90日以上有効なパスポートを持っていること。</li>
+	</ul>
+
+	<h2 class="sec-title">あなたがワーキングホリデーの許可を受けられない条件</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>もしあなたがアイスランドへのビザが必要であり、居住許可を申請後また申請期間中にアイスランドに滞在すること。 このような申請は拒否されます。<br />
+			（ビザを必要としない申請者は、申請書の申請時並びに申請期間中にシェンゲンエリアの滞在日数が現在から180日間のうち90日を超えない場合）</li>
+		<li>すでにワーキングホリデーを使用している</li>
+		<li>扶養家族がいること。</li>
+		<li>国を離れることを除いて、他の理由で居留許可を申請している</li>
+		<li>居住許可期間である12ヶ月の間に3ヶ月以上別の国に滞在すること。 さもなければ、居住許可は取り消されるかもしれません。</li>
+	</ul>
+
+	<p class="text01">居住申請書と補助書類は、移民局またはレイキャビック圏外の地区コミッショナーの事務所提出しなければなりません。</p>
+
+	<p class="text01">
+		ビザを必要としない申請者は、申請書の提出時および申請中にアイスランドに滞在することができます。ただし、シェンゲンエリアの滞在日数は180日以内に90日を超えないものとします。ビザを必要とする申請者は、許可申請時および処理中にアイスランドに滞在することはできません。この場合申請は拒否されます。
+	</p>
+
+	<p class="text01">
+		申請者がこれらの要件および下記の要件を満たさない場合、居留許可申請は拒否され、申請者はアイスランドを出る必要があります。退去しない申請者は、退学または再入国禁止の対象となることがあります。アイスランドへの再入国禁止は、特定の期間または最低2年間、シェンゲンエリアへの再入国禁止です。
+	</p>
+
+	<p style="font-weight: bold;">ワーキングホリデーベースの居住許可に関する詳細</p>
+
+	<h2 class="sec-title">許可証に付与されている権利</h2>
+
+	<p class="text01">居住許可に付与されている権利は次のとおりです。</p>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>居留許可は最大1年間付与することができます。 居住許可の更新は許可されていません。</li>
+		<li>申請者は滞在期間中の就労許可に制限はありません。労働局に申請することなく仕事をし、仕事を変えられます。</li>
+		<li>在留許可には家族は含まれていません。</li>
+		<li>居留許可は永住できる理由ではありません。</li>
+	</ul>
+
+	<h2 class="sec-title">居住申請許可書</h2>
+
+	<p class="text01">ビザを必要としない申請者は、申請書の提出時および処理中にアイスランドに滞在することができます。ただし、Schengen Areaの滞在日数は180日以内に90日を超えないものとします。
+		滞在期間がこの期間を超えた場合は、申請者がアイスランドを去り、それを証明する航空券を提出するまで、申請の処理が停止されます。 ビザを必要とする申請者は、許可申請時および処理中にアイスランドに滞在することはできません。
+		上記滞在許可のない申請者による申請は拒否されます。</p>
+
+	<p class="text01">申請者は、必要な補助書類を申請書とともに提出する責任があります。</p>
+
+	<h2 class="sec-title">提出する書類</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li><a href="https://www.utl.is/files/Leyfi/ums_dvalarleyfi.pdf">居住許可申請。</a>
+			（記入する前にパソコンにダウンロードして保存してください）。元の形式で、慎重に記入し、申請者が署名します。申請者がアイスランドに居住地を記載することは重要です。出願時に住所が記載されていない場合は、申請者がアイスランドに到着した日から2週間以内に（例えば、写真を撮るときなど）、居住地に通知しなければなりません。
+		</li>
+		<li>パスポート写真（35mm x 45mm）。</li>
+		<li>パスポートのコピー。有効期限は、居住許可の有効期間を超えて少なくとも90日間でなければなりません。これには、パスポートの個人情報ページと署名ページの写しが含まれていなければなりません。</li>
+		<li>無犯罪証明書の原本を確認。犯罪記録の認証は、6ヶ月を超えてはならない。申請者が過去5年間住んでいたすべての国から犯罪記録を提出する必要があります。各国、すなわちそのような証明書を発行する権限を与えられた当局の最も適切な権限は、アポスティーユ「外国公文書の認証を不要とする条約（略称：認証不要条約）」（1961年10月5日のハーグ条約）に基づく付箋による外務省の証明の確認や二重認証の要件があることに注意してください。
+		</li>
+		<li>犯罪記録証明書の正式な翻訳者によって確認されたコピーまたは原本。犯罪記録証明書が英語または北欧言語以外の言語である場合にのみ適用されます。翻訳者がアイスランド公認の翻訳者、すなわちアポスティーユまたは二重認証でない場合、翻訳の確認が必要であることに注意してください。
+		</li>
+		<li><a href="https://www.utl.is/index.php/en/basic-requirements1#HEALTH-INSURANCE">健康保険の加入。</a>申請者は、アイスランド保険会社（保険会社参照）またはアイスランドでの営業を許可された外国保険会社（外国保険会社参照）から保険証書を提出しなければならない。申請者はアイスランド登録簿に登録されており、適用範囲は最低200万IKRとする。健康保険は通常、申請者がその日からアイスランドに滞在したことを条件に、入国管理局または居住許可カードの地区長官のオフィスで申請者の写真を撮った日から有効です。
+		</li>
+		<li><a href="https://www.utl.is/index.php/en/basic-requirements1#support">居住期間中の安全なサポートを確認するためのサポートに関する文書。</a>
+		</li>
+		<li>アイスランドからの帰国旅券の写しまたはチケット購入ができる十分な資金の証明。</li>
+	</ul>
+
+	<h2 class="sec-title">追加で求められる可能性がある書類</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>弁護士2名による<a href="https://www.utl.is/files/Leyfi/umbod_enska_utfyllanlegt.pdf">委任状。</a>委任状は、移民局による申請の処理に関する情報について追加希望をしない限り、申請者が提出する必要はありません。
+		</li>
+	</ul>
+
+	<p class="text01">
+		申請者は、必要な付随文書を申請書とともに提出する責任があります。書類不備と移民局が判断した場合は、申請の処理が遅れたり、申請が拒否されたりする可能性があります。移民局は、特別な状況が推奨する場合には、追加の情報を要求する場合があります。
+	</p>
+
+	<p class="text01">
+		申請者が居住許可のすべての要件を満たしている場合は、居住許可が与えられ、申請者に許可の通知が送信されます。 しかしながら、移民局またはレイキャビック圏外の地区コミッショナーの事務所にて写真撮影されるまで、また健康診
+		断（アイルランド語のみ）を受け当局に報告をするまで居住許可証は発行されません。</br>
+		申請者は、アイスランドへの到着から 1 週間以内に写真を撮るようになり、居住地を報告しなければなりません。（例え ば、撮影時）</br>
+		申請者は、身分証明書を取得するために有効なパスポートを提示しなければならないことに注意してください。また、 アイスランド入国から 2 週間以内に身体検査を受けなければなりません。申請者が上記の要件を満たしていない場合、
+		入国管理局は居住許可を発行しません。これは不法滞在と追放につながる可能性があります。
+	</p>
+
+	<h2 class="sec-title">ワーキングホリデービザ申請場所に関して</h2>
+
+	<p class="text01">ワーキングホリデービザ申請者は、日本から直接アイスランド移民局へ申請書と関連書類を郵送することができます。</br>
+		アイスランド移民局が申請書を受け取って承認が下りた後、アイスランドを旅行することができます。</br>
+		また、90日間の観光ビザを利用して、アイスランド入国後にビザ申請をすることも可能です。</br>
+		ただし、ビザ申請の処理にかかる時間が90日以上を超える可能性もあるため、日本から申請することを勧めています。
+	</p>
+
+	<h2 class="sec-title">ワーキングホリデービザ開始日に関して</h2>
+
+	<p class="text01">ワーキングホリデービザ申請者は、ワーキングホリデーの開始日を定める必要があります。</br>
+		アイスランドワーキングホリデービザの許可が下りるまで平均2〜3ヶ月かかります。</br>
+		また、クリスマス前後は普段よりも対応が遅くなるため、仮に2019年11月に申請をした場合、2020年の2月にビザ申請の許可が下りる可能性があります。
+	</p>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		<p>
+			<font size="1">※アイスランド移民局が公開している英語文章を翻訳した内容となっています。現本は下記をご参照くださいませ。</font>
+		</p>
+	</div>
+
+	<p class="bg-yellow"> アイスランドワーキングホリデーに関する情報の詳細は<a href="https://www.government.is/?PageId=699f15e6-a0d1-4cbb-ae03-eee2b367b7f8" target="_blank" rel="noreferrer">アイスランド大使館</a> からご確認ください。<br></p>
+	<h3 class="h3-01">外務省HPで基本情報を確認しよう</h3>
+	<ul class="list-visabasic">
+		<li><a href="https://www.mofa.go.jp/mofaj/area/iceland/index.html" target="_blank" rel="noreferrer">基本情報</a></li>
+		<li><a href="https://www.anzen.mofa.go.jp" target="_blank" rel="noreferrer">安全情報</a></li>
+		<li><a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/iceland.html" target="_blank" rel="noreferrer">在外公館</a></li>
+	</ul>
+
+	<!-- English start -->
+
+	<h2 class="sec-title">Working holiday based residence permits</h2>
+
+	<p class="text01">Residence permits on the grounds of a working holiday are granted based on bilateral agreements
+		between Iceland and other countries. Japan is the only country that Iceland has made such an agreement with so
+		far.</p>
+
+	<p class="text01">Working holiday based residence permits are granted based on Art. 66 of the Act on Foreigners No.
+		80/2016.</p>
+
+	<h2 class="sec-title" style="background-image: url(../images/sec-title-n.gif); height: 55px;">You might have a right
+		to a working holiday permit if all of the following requirements are met, as well as others</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>You are a citizen of and reside in Japan,</li>
+		<li>you wish to experience the culture and general way of life in Iceland,</li>
+		<li>you do not intend to take up residence in Iceland,</li>
+		<li>you are aged 18 &ndash; 26 when your application is submitted,</li>
+		<li>you can prove that you are able to provide for yourself during your stay,</li>
+		<li>you have a valid insurance with an Icelandic insurance company (in the field Insurance　Companies) or a
+			foreign insurance company authorized to operate in Iceland (in the field Foreign Insurance Companies),</li>
+		<li>you have not served a criminal sentence abroad during the last five (5) years or been sentenced by a court
+			of law for an offence which would be punishable by more than three (3) months imprisonment according to
+			Icelandic law, and</li>
+		<li>you have a passport valid at least 90 days beyond the estimated validity of residence permit.</li>
+	</ul>
+
+	<h2 class="sec-title">You may not</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>be in Iceland if you need a visa to Iceland, when the residence permit is applied for and while it is being
+			processed. Such an application will be refused. (An applicant who does not need a visa may be in Iceland
+			when the application is submitted and while it is being processed provided the stay in the Schengen Area
+			does not exceed 90 days in the current 180 day period),</li>
+		<li>have previously been granted a working holiday residence permit,</li>
+		<li>have your family with or to join you,</li>
+		<li>apply for a residence permit on other grounds, except leaving the country,</li>
+		<li>stay in another country longer than three (3) months in the 12-month period of the residence　permit period;
+			otherwise the residence permit may be cancelled or revoked.</li>
+	</ul>
+
+	<p class="text01">An application for a residence and supporting documents shall be submitted to the Directorate of
+		Immigration or at the offices of the district commissioners outside of the Reykjav&iacute;k Metropolitan Area.
+	</p>
+
+	<p class="text01">An applicant who does not need a visa may stay in Iceland when submitting an application and while
+		it is being processed, provided the stay in the Schengen Area does not exceed 90 days in the 180 day period. An
+		applicant who needs a visa may not stay in Iceland when applying for the permit and while it is being processed.
+		Such an application will be refused.</p>
+
+	<p class="text01">If an applicant does not fulfill these requirements and the requirements discussed below, the
+		application for a residence permit will be refused and the applicant must leave Iceland. An applicant who does
+		not leave the country may be subject to expulsion or a re-entry ban. A re-entry ban for Iceland is also a
+		re-entry ban into the Schengen Area for a specific period or for a minimum of two (2) years.</p>
+
+	<p class="text01">The residence permit may not be renewed.</p>
+
+	<p style="font-weight: bold;">Further information on Working Holiday based residence permits</p>
+
+	<p style="font-weight: bold;">Rights attached to the permit</p>
+
+	<p style="font-weight: bold;">Application for a residence permit</p>
+
+	<h2 class="sec-title">rights attached to the permit</h2>
+
+	<p class="text01">The rights attached to the residence permit are as follows</p>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>A residence permit may be granted for up to one (1) year. Renewing the residence permit is not permissible.
+		</li>
+		<li>The applicant receives an unlimited work permit. He/she may work and change work without applying at the
+			Directorate of Labor.</li>
+		<li>The residence permit does not contain a right to family reunification.</li>
+		<li>The residence permit is not grounds for a permanent residence permit.</li>
+	</ul>
+
+	<h2 class="sec-title">Application for a residence permit</h2>
+
+	<p class="text01">An applicant who does not need a visa may stay in Iceland when submitting an application and while
+		it is being processed, provided the stay in the Schengen Area does not exceed 90 days in the 180 day period. If
+		the stay exceeds this period, processing of the application will be stopped until the applicant has left Iceland
+		and has presented a departure boarding card to prove it. An applicant who needs a visa may not stay in Iceland
+		when applying for the permit and while it is being processed. An application by an applicant who does not have
+		the aforementioned permission to stay will be refused.</p>
+
+	<p class="text01">The applicant is responsible for submitting the necessary supporting documents with his/her
+		application.</p>
+
+	<h2 class="sec-title">Documents to be submitted</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>Application for a residence permit. (Please download and save on computer before filling out). In original
+			format, carefully filled out and signed by the applicant. It is important that the applicant state his/her
+			place of residence in Iceland. If the address is not stated when the application is made, the applicant must
+			notify his/her place of residence within two (2) weeks from the applicant&rsquo;s date of arrival in Iceland
+			(for example when being photographed).</li>
+		<li>Passport photo (35 mm x 45 mm).</li>
+		<li>Photocopy of passport. The period of validity must be at least 90 days beyond the period of validity of the
+			residence permit. This must include photocopies of the passport&rsquo;s personal information page and
+			signature page.</li>
+		<li>Confirmed original of a foreign criminal record certificate. The criminal record certification must not be
+			older than six (6) months. A criminal record certificate must be submitted from all the countries where the
+			applicant has lived for the last five (5) years. The highest appropriate authority in each country, i.e. the
+			authority authorized to issue such a certificate shall issue the. Note there is a requirement for apostille
+			confirmation or double authentication.</li>
+		<li>Confirmed copy or original translation by an authorized translator of the criminal record certificate.
+			Applies only if the foreign certificates are in other languages than English or the Nordic languages. Note
+			there is a requirement of confirmation of translation if the translator is not an authorized translator in
+			Iceland, i.e. apostille or double authentication.</li>
+		<li>Health Insurance. The applicant shall submit a certificate of insurance from an Icelandic insurance company
+			(see insurance companies) or a foreign insurance company authorized to operate in Iceland (see foreign
+			insurance companies) The insurance shall be valid for six (6) months from the date of the applicant being
+			registered in Registers Iceland and the coverage shall be at least IKR 2,000,000. Registration in Registers
+			Iceland is usually valid from the day the applicant&lsquo;s photo is taken at either the Directorate of
+			Immigration or at a District Commissioner&lsquo;s office for a residence permit card, given that the
+			applicant has stayed in Iceland from that date.</li>
+		<li>Documents on support, confirming secure support during the period of residence.</li>
+		<li>Copy of a return ticket from Iceland or proof of sufficient funds for such a ticket.</li>
+	</ul>
+
+	<h2 class="sec-title">Documents that may be submitted</h2>
+
+	<ul class="list-disc" style="padding-left: 5.5em;">
+		<li>Power of Attorney signed by two (2) witnesses. The Power of Attorney does not have to be submitted unless
+			the applicant wants someone other than him/her to receive information about the processing of the
+			application by the Directorate of Immigration.</li>
+	</ul>
+
+	<p class="text01">The applicant is responsible for submitting the necessary accompanying documents with his/her
+		application. If satisfactory documents are not received by the Directorate of Immigration,, this may result in
+		delays in processing the application or in the application being denied. The Directorate of Immigration may
+		request additional information when special circumstances recommend it</p>
+
+	<p class="text01">If the applicant meets all requirements of a residence permit, the residence permit will be
+		granted and the applicant will be sent a notification of the granting of the permit. The residence permit will
+		not be issued, however, until the applicant has come to be photographed at the offices of the Directorate of
+		Immigration or at offices of district commissioners outside of the Reykjav&iacute;k Metropolitan Area, reported
+		his place of residence to the Directorate and undergone medical examination (only in Icelandic). The applicant
+		should come to be photographed within one (1) week from his/her arrival in Iceland and must report his/her place
+		of residence (for example, when photographed). Please note that the applicant must present a valid passport when
+		photographed for identification.. Furthermore, the applicant must undergo medical examination within two (2)
+		weeks from arrival in Iceland. The Directorate of Immigration will not issue a residence permit if the applicant
+		does not meet the requirements stated above. This could lead to illegal stay and expulsion.</p>
+
+	<h2 class="sec-title">Do I have to apply Working Holiday Visa in Japan or after entering Iceland?</h2>
+
+	<p class="text01">You can send the application and the supporting documents from Japan to Iceland by mail.</br>
+		When the Directorate of Immigration has received and approved your application then you can travel to
+		Iceland.</br>
+		But you also have the option to come to Iceland and submit the application here in the office and stay in
+		Iceland for up to 90 days as a tourist, while the application is being processed.</br>
+		It is however possible that the processing time can exceed the 90 days, so it might be advisable to apply from
+		Japan.
+	</p>
+
+	<h2 class="sec-title">Do I have to decide to "the date of my stay(from/to)" in advance(in Japan)?</h2>
+
+	<p class="text01">
+		you have to decide the starting date.</br>
+		The average waiting time for this permit is between 2-3 months. If we factor in the holidays around christmas we
+		are most likely looking at your permit be processed in February 2020, assuming that you submit the application
+		in November 2019. </br>
+		We cannot hold applications.
+	</p>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+		<p>
+			<font size="1">※掲載されているビザ情報は、2021/1/21に確認した情報です。</font>
+		</p>
+	</div>
+	<!-- English end -->
+
+	<div class="text-center">
+		<p>
+			<font color="orangered">ビザの申請、ひとりでできますか？</font>
+		</p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif" alt="member register" /></a>
+	</div>
+	<br>
+	</br>
+
+	<?php $header_obj->display_visa_links(); ?>
+	<?php $links_obj->display_links(); ?>
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

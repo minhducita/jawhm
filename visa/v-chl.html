@@ -1,0 +1,94 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'チリのワーキングホリデービザ情報';
+$header_obj->description_page = 'チリのワーキングホリデービザ取得のステップや注意事項を掲載しています。チリへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（チリ） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('country'); ?>
+
+	<div style="clear:both; height:10px;">&nbsp;</div>
+	<?php $header_obj->display_visa_links(); ?>
+	<img src="/images/bflag21.gif" alt="" style="border: 1px solid #cbcbcb;" />
+	</br></br>
+
+
+	<div class="content-visa-new">
+		<h2 class="sec-title">ワーキングホリデービザ概要</h2>
+
+		<p>－&nbsp;2018年2月23日に発効</p>
+
+		<p>－ このプログラムでは日本の若者は1年間チリでのワーキングホリデーのための滞在ができ、また、さらに1年の延長も可能です。ただし、チリ滞在中は在留資格の変更はできません。</p>
+
+		<p>－ このプログラム利用者は滞在期間中における旅行・滞在資金を補うための付随的な就労が認められ、また、チリの文化・生活習慣を学ぶために語学レッスン等を取ることもできます。</p>
+
+		<p>－ 査証は在東京チリ領事館にて申請手続きを行ってください。</p>
+
+		<ul>
+			<li>1. 日本の国民、住民であること。</li>
+			<li>2. 査証申請時の年齢が18歳以上30歳以下であること。</li>
+			<li>3. 被扶養者を同伴しないこと（ワーキングホリデー査証あるいは別の種類の査証を有する場合は別）</li>
+			<li>4. 有効な旅券を所持すること。</li>
+			<li>5. 帰りの切符または切符を購入するための資金を所持すること。</li>
+			<li>6. 滞在の当初の期間に生計を維持するために必要な資金を所持すること。(月約USD700が望ましい）</li>
+			<li>7. 入院、死亡時の本国送還を含む医療・傷害保険に加入していること。</li>
+			<li>8. 以前にチリのワーキングホリデー査証を発給されたことがないこと。</li>
+			<li>9. 健康であること、犯罪歴がないこと。</li>
+			<li>10. 詳細については在東京チリ領事館までお問い合わせください。</li>
+			<li>Tel:　03-3452-1425</li>
+			<li>email: tokio@consulado.gob.cl</li>
+		</ul>
+	</div>
+
+	<h3 class="h3-01">外務省HPで基本情報を確認しよう</h3>
+	<ul class="list-visabasic">
+		<li><a href="https://www.mofa.go.jp/mofaj/area/chile/index.html" target="_blank" rel="noreferrer">外務省基本情報</a></li>
+		<li><a href="https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_251.html#ad-image-0"
+				target="_blank" rel="noreferrer">安全情報</a></li>
+		<li><a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/cs_ame/chile.html" target="_blank" rel="noreferrer">在外公館</a></li>
+	</ul>
+
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+		<p style="font-size: 11px">掲載されている情報は、2020/1/21に確認した情報です。</p>
+	</div>
+
+	<h3 class="h3-01">その他のワーキングホリデー協定国のビザ情報</h3>
+
+	<div class="clear">&nbsp;</div>
+
+	<?php $header_obj->display_visa_links(); ?>
+	<?php $links_obj->display_links(); ?>
+	<style>
+		.linkbox {
+			margin: 15px 15px 15px 15px;
+			padding: 10px 20px 10px 20px;
+			background-color: #FFE4B5;
+			font-size: 10pt;
+		}
+	</style>
+	<br />
+
+</div>
+</div>
+</div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+
+</body>
+
+</html>

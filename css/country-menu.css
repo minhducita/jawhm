@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+ul#menu-country{
+	list-style:none;
+}
+ul#menu-country li.menu-visa a:link,
+ul#menu-country li.menu-visa a:visited{
+	display: block;
+    height: 36px;
+    width: 200px;
+    /* width: 220px; */
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    /* border: 1.3px solid #e0dada; */
+    margin-left: 3px;
+    background-size: 200px;
+}
+
+a#aus-visa {
+	background-image: url('/images/coBtn_aus.gif');
+    height: 37px!important;
+}
+
+a#nz-visa {
+	background-image: url('/images/coBtn_nz.gif');
+	height: 37px!important;
+}
+
+a#can-visa {
+	background-image: url('/images/coBtn_can.gif');	
+	height: 37px!important;
+}
+
+a#kor-visa {
+	background-image: url('/images/coBtn_kor.gif');	
+}
+
+a#fra-visa {
+	background-image: url('/images/coBtn_fra.gif');
+}
+
+a#deu-visa {
+	background-image: url('/images/coBtn_deu.gif');
+}
+
+a#uk-visa {
+	background-image: url('/images/coBtn_uk.gif');
+	height: 37px!important;
+}
+
+a#ire-visa {
+	background-image: url('/images/coBtn_ire.gif');
+}
+
+a#dnk-visa {
+	background-image: url('/images/coBtn_dnk.gif');
+}
+
+a#ywn-visa {
+	background-image: url('/images/coBtn_twn.gif');
+}
+a#hkg-visa {
+	background-image: url('/images/coBtn_hkg.gif');
+}
+a#nor-visa {
+	background-image: url('/images/coBtn_nor.gif');
+}
+
+a#por-visa {
+	background-image: url('/images/coBtn_prt.gif');
+}
+
+a#pol-visa {
+	background-image: url('/images/coBtn_pol.gif');
+}
+
+a#svk-visa {
+	background-image: url('/images/coBtn_svk.gif');
+}
+
+a#aut-visa {	
+	background-image: url('/images/coBtn_aut.gif');
+}
+a#eps-visa {	
+	background-image: url('/images/coBtn_esp.gif');
+}
+a#hun-visa {	
+	background-image: url('/images/coBtn_hun.gif');
+}
+a#cze-visa {	
+	background-image: url('/images/coBtn_cze.gif');
+}
+a#arg-visa {	
+	background-image: url('/images/coBtn_arg.gif');
+}
+a#chl-visa {	
+	background-image: url('/images/coBtn_chl.gif');
+}
+a#isl-visa {	
+	background-image: url('/images/coBtn_isl.gif');
+}
+a#ltu-visa {	
+	background-image: url('/images/coBtn_ltu.gif');
+}
+a#swe-visa {	
+	background-image: url('/images/coBtn_swe.gif');
+}

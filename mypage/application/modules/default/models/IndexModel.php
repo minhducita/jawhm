@@ -1,0 +1,688 @@
+<?php
+require_once ('tools/tools.php');
+require_once ('tools/BaseModel.php');
+require_once (dirname (dirname (dirname (dirname (dirname(__FILE__))))) . '/tools/MypageConst.php');
+
+class IndexModel {
+    private $table;
+    private $bm;
+
+    public function __construct() {
+        $const = new MypageConst();
+        $this->pass = $const::$SQL_SERVER['PASSWORD'];
+        $this->url = $const::$SQL_SERVER['URL'];
+
+        $this->bm = new BaseModel();
+    }
+
+    public function index($table) {
+        $select = array('id', 'namae', 'userid');
+        $sort = 'id ASC';
+        $result = $this->bm->getList($table, $select, $sort);
+
+        return $result;
+    }
+
+    public function clientGet($table, $user_info, $login_id) {
+        $select = array('member_id', 'client_name');
+        $where = array('login_id', $login_id);
+        $stmt = $this->bm->getInfo($table, $select, $where, null);
+        if ($stmt) {
+            $result = $stmt;
+        } else {
+            $result = null;
+        }
+
+        return $result;
+    }
+
+    public function clientInsert($table, $user_info, $login_type){
+        $data = array (
+                'login_type' => $login_type,
+                'created_date' => null
+        );
+
+        $data += $this->setData($user_info, $login_type, $data);
+        $result = $this->bm->insert($table, $data);
+    }
+
+    public function clientUpdate($table, $user_info, $login_type){
+        $init_data = array();
+        $data = $this->setData($user_info, $login_type, $init_data);
+        $result = $this->bm->update($table, $data);
+    }
+
+    public function getid($table) {
+        $primal = 'client_id';
+        $result = $this->bm->getMaxID($table, $primal);
+
+        return $result;
+    }
+
+    public function emailCheck($table, $email) {
+        $select = array('id', 'email', 'namae');
+        $where = array('email', $email);
+        $stmt = $this->bm->getInfo($table, $select, $where, null);
+        if ($stmt) {
+            $result = 1;
+        } else {
+            $result = 0;
+        }
+
+        return $stmt;
+    }
+
+    private function setData($user_info, $login_type, $data) {
+        switch ($login_type) {
+            case 'facebook':
+                if($user_info['verified']) {
+                    $verified = 1;
+                } else {
+                    $verified = 0;
+                }
+
+                $data += array(
+                        'login_id' => $user_info['id'],
+                        'verified_email' => $verified,
+                        'first_name' => $user_info['first_name'],
+                        'last_name' => $user_info['last_name'],
+                        'full_name' => $user_info['name'],
+                        'gender' => $user_info['gender'],
+                        'url' => $user_info['link'],
+                        'locale' => $user_info['locale'],
+                        'timezone' => $user_info['timezone'],
+                        'updated_time' => $user_info['updated_time']
+                );
+                break;
+
+            case 'google':
+                if($user_info['verified_email']) {
+                    $verified = 1;
+                } else {
+                    $verified = 0;
+                }
+
+                $data += array(
+                        'login_id' => $user_info['id'],
+                        'email' => $user_info['email'],
+                        'verified_email' => $verified,
+                        'first_name' => $user_info['given_name'],
+                        'last_name' => $user_info['family_name'],
+                        'full_name' => $user_info['name'],
+                        'url' => $user_info['picture'],
+                        'locale' => $user_info['locale']
+                );
+
+                break;
+            case twitter:
+                $data += array(
+                'login_id' => $user_info['user_id'],
+                'full_name' => $user_info['screen_name']
+                );
+                break;
+            default:
+                $data = null;
+        }
+
+        return $data;
+    }
+
+    public function memberidRegistration($table, $id, $member_id, $client_name) {
+        $adapter = dbadapter ();
+        $param = dbconnect ();
+        $clienttable = 'clientlist';
+        $memtable = 'memlist';
+        $mailtable = 'emaillist';
+        $email = 'email';
+
+        $db = Zend_Db::factory ( $adapter, $param );
+        $db->beginTransaction();
+
+        try {
+            $client = array(
+                    'client_id' => $id,
+                    'member_id' => $member_id,
+                    'client_name' => $client_name,
+                    'updated_date' => null
+            );
+
+            $result1 = $this->bm->update($clienttable, $client);
+
+            $select = array('email');
+            $where = array('id', $member_id);
+            $mail_address = $this->bm->getInfo($memtable, $select, $where, null);
+            $is_registed = DuplicateCheck($mailtable, $email, $mail_address['email']);
+
+            if($is_registed) {
+                $email = array(
+                        'member_id' => $member_id,
+                        'email' => $mail_address['email'],
+                        'key_flag' => 1,
+                        'use_flag' => 1,
+                        'created_date' => null
+                );
+                $result2 = $this->bm->insert($mailtable, $email);
+            }
+
+            $db->commit();
+
+            return $result1;
+        } catch (Exception $e) {
+            $db->rollBack();
+            echo $e->getMessage();
+        }
+
+    }
+
+    public function statusRegistration($table, $member_id, $client_id) {
+        $select = 'client_status_id';
+        $where = 'member_id';
+        $client = $this->bm->getInfo($table, $select, array($where, $member_id), null);
+        if($client) {
+            return true;
+        }
+
+        $insert = array(
+                'member_id' => $member_id,
+                'crm_id' => $client_id,
+                'created_on' => null
+                );
+
+        $result = $this->bm->insert($table, $insert);
+
+        $select2 = array('next_step_id');
+        $where2 = "member_id = '".$member_id."'";
+        $ret = $this->bm->searchList('next_step', $where2, $select2, null);
+        if (empty($ret)) {
+            $data = array(
+                    'member_id' => $member_id,
+                    'step_name' => '初心者向けセミナーに参加しよう',
+                    'step_exposition_short' => 'セミナーにご参加いただく',
+                    'created_on' => date('c'),
+                    'updated_on' => null
+            );
+            $result2 = $this->bm->insert('next_step', $data);
+        }
+
+        return $result;
+
+    }
+
+    public function getclientid($table, $member_id) {
+        $select = array('crmid');
+        $where = array('id', $member_id);
+        $client = $this->bm->getInfo($table, $select, $where, null);
+
+        return $client;
+
+    }
+
+    public function activity($table, $limit, $member_id) {
+        $select = array('action_content', 'action_datetime');
+        $where = "member_id = '$member_id'";
+        $sort = 'client_activity_log_id DESC';
+
+        $return = $this->bm->searchLimitList($table, $where, $limit, $select, $sort);
+        return $return;
+    }
+
+    public function setActivity($table, $params) {
+        $content = '第一希望日: ' . $params['first_choice'] . ' ';
+        $content .= '第二希望日: ' . $params['second_choice'] . ' ';
+        $content .= '第三希望日: ' . $params['third_choice'] . ' ';
+        $content .= '相談内容: ' . $params['consultation'] . ' ';
+        $content .= 'ビザ情報: '. $params['visa_information'];
+
+        $insert = array(
+                'member_id' => $_SESSION['mem_id'],
+                'action_content' => $content,
+                'action_datetime' => date('c'),
+                'created_on' => date('c'),
+                'updated_on' => date('c'),
+                'action_from' => 'setappointment',
+                'connection_ip' => $_SERVER["REMOTE_ADDR"]
+        );
+
+        $return = $this->bm->insert($table, $insert);
+
+        return $return;
+    }
+
+    public function loginEmailCheck($table, $email) {
+        $select = array('id', 'namae');
+        $where = 'email';
+        $client = $this->bm->getInfo($table, $select, array($where, $email['email_reset']), null);
+
+        if (count($client) > 0 && $client['id'] === $email['id']) {
+            $result = $client;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
+
+    public function resetPassword($table, $email) {
+        $pwd = getRandomString(12);
+
+        $update = array(
+                'email' => $email,
+                'password' => md5($pwd),
+                'upddate' => date('Y-m-d H:i:s')
+        );
+        $result = $this->bm->update($table, $update);
+
+        return $pwd;
+
+    }
+
+    public function loginAuthentication($table, $email, $password) {
+        // connect DB
+        $adapter = dbadapter ();
+        $params = dbconnect ();
+
+        $db = Zend_Db::factory ( $adapter, $params );
+        $authAdapter = new Zend_Auth_Adapter_DbTable ( $db );
+
+        $authAdapter->setTableName ('memlist')->setIdentityColumn ('email')->setCredentialColumn ('password')->setCredentialTreatment ('MD5(?)');
+
+        $authAdapter->setIdentity ($email);
+        $authAdapter->setCredential ($password);
+
+        // return result login authenticate
+        $result = $authAdapter->authenticate ($authAdapter);
+        if ($result->isValid ()) {
+            $response = true;
+        } else {
+            $response = false;
+        }
+
+        return $response;
+
+    }
+
+    public function memberInfo($table, $params) {
+        $select = array('id', 'namae');
+        $where = 'email';
+        $client = $this->bm->getInfo($table, $select, array($where, $params['email']), null);
+
+        return $client;
+    }
+
+    public function getPlan($table, $id) {
+        $select = array('scheduled_departure_date', 'scheduled_arrival_date', 'scheduled_enroll_date', 'progress_level');
+        $where =array('member_id', $id);
+        $result = $this->bm->getInfo($table, $select, $where, null);
+
+        return $result;
+
+    }
+
+    public function getNextStep($table, $id) {
+        $select = array('step_name', 'step_exposition_short', 'preparation');
+        $where = array('member_id', $id);
+        $order = 'next_step_id DESC';
+        $result = $this->bm->getFirst($table, $select, $where, $order);
+
+        return $result;
+    }
+
+    public function firstLogin($table, $column, $id) {
+        $select = array($column);
+        $where = array('member_id', $id);
+
+        $result = $this->bm->getInfo($table, $select, $where, null);
+
+        if($result['first_time'] == 1) {
+            $update = array(
+                    'member_id' => $id,
+                    'first_time' => 0,
+                    'updated_on' => null
+            );
+            $after = $this->bm->update($table, $update);
+        }
+
+        return $result;
+    }
+
+    public function isMem($table, $id) {
+        $select = array('state');
+        $where = array('ID', $id);
+
+        $result = $this->bm->getInfo($table, $select, $where, null);
+
+        if($result['state'] == 5) {
+            $ret = true;
+        } else {
+            $ret = false;
+        }
+
+        return $ret;
+    }
+
+    public function getProgress($table, $id) {
+        $db_select = array('progress_level', 'join_seminar','seminar_beginner', 'seminar_planning',
+                        'seminar_info', 'seminar_discussion', 'seminar_school');
+        $where = array('member_id', $id);
+        $ret = $this->bm->getInfo($table, $db_select, $where, null);
+
+        return $ret;
+    }
+
+    public function getTempSurvey($table, $id) {
+        $select = array('client_name', 'pen_name', 'client_job', 'travel_period', 'school_name',
+                        'oppotunity', 'life', 'negative', 'only', 'effect', 'challenge',
+                        'advice', 'image_id1', 'image_id2', 'image_id3', 'agreement', 'temp');
+        $where = array('member_id', $id);
+        $ret = $this->bm->getInfo($table, $select, $where, null);
+
+        return $ret;
+    }
+
+    public function createSurvey($survey_table, $id, $params) {
+        $table['base'] = array('table' => 'M_顧客基本情報', 'column' => null);
+        $table['entry'] = array('table' => 'T_ENTRY_DETAILS', 'column' => 'client_no',
+                'ontable' => 'M_顧客基本情報', 'oncolumn' => 'お客様番号');
+        $table['school'] = array('table' => 'M_学校', 'column' => '学校番号',
+                'ontable' => 'T_ENTRY_DETAILS', 'oncolumn' => 'school_no');
+        $select = 'DISTINCT M_顧客基本情報.お客様番号,M_顧客基本情報.氏名, M_顧客基本情報.職業, M_学校.日本語名';
+        $where['abroad_no'] = array('column' => 'T_ENTRY_DETAILS.study_abroad_no',
+                'value' => $_SESSION['abroad'],
+                'comp' => '=',
+                'andor' => 'null');
+
+        $items = joinselect_sqlserver($table, $select, $where, $this->url, $this->pass);
+
+        if (isset($params['agreement'])) {
+            $agreement = $params['agreement'];
+        } else {
+            $agreement = null;
+        }
+        $data = array(
+                'member_id' => $_SESSION['mem_id'],
+                'crmid' => $items[0]['お客様番号'],
+                'client_name' => $items[0]['氏名'],
+                'study_abroad_no' => $_SESSION['abroad'],
+                'pen_name' => $params['pen_name'],
+                'client_job' => $params['client_job'],
+                'travel_period' => $params['travel_period'],
+                'school_name' => $items[0]['日本語名'],
+                'oppotunity' => $params['oppotunity'],
+                'life' => $params['life'],
+                'negative' => $params['negative'],
+                'only' => $params['only'],
+                'effect' => $params['effect'],
+                'challenge' => $params['challenge'],
+                'advice' => $params['advice'],
+                'agreement' => $agreement,
+                'temp' => 1,
+                'created_on' => null,
+                'updated_on' => null
+                );
+        $result = $this->bm->insert($survey_table, $data);
+
+        return true;
+    }
+
+    public function updateSurvey($table, $id, $params) {
+        if (isset($params['agreement'])) {
+            $agreement = $params['agreement'];
+        } else {
+            $agreement = null;
+        }
+
+        $data = array(
+                'member_id' => $_SESSION['mem_id'],
+                'pen_name' => $params['pen_name'],
+                'client_job' => $params['client_job'],
+                'travel_period' => $params['travel_period'],
+                'oppotunity' => $params['oppotunity'],
+                'life' => $params['life'],
+                'negative' => $params['negative'],
+                'only' => $params['only'],
+                'effect' => $params['effect'],
+                'challenge' => $params['challenge'],
+                'advice' => $params['advice'],
+                'agreement' => $agreement,
+                'updated_on' => null
+        );
+        $result = $this->bm->update($table, $data);
+
+        return true;
+    }
+
+    public function sendSurvey($table, $id) {
+        $data = array(
+                'member_id' => $_SESSION['mem_id'],
+                'temp' => 0,
+                'updated_on' => null
+        );
+        $result = $this->bm->update($table, $data);
+
+        return true;
+    }
+
+    public function setImages($table, $id, $image) {
+        $select = array('image_id1', 'image_id2', 'image_id3');
+        $where = array('member_id', $id);
+        $ret = $this->bm->getInfo($table, $select, $where, null);
+
+        $data = array('member_id' => $id);
+
+        if (empty($ret['image_id1'])) {
+            $data += array('image_id1' => $image);
+        } else if (empty($ret['image_id2'])) {
+            $data += array('image_id2' => $image);
+        } else {
+            $data += array('image_id3' => $image);
+        }
+
+        $data += array('updated_on' => null);
+        $result = $this->bm->update($table, $data);
+
+        return true;
+    }
+
+    public function getImgNum($table, $id) {
+        $select = array('image_id3');
+        $where = array('member_id', $id);
+        $ret = $this->bm->getInfo($table, $select, $where, null);
+
+        return $ret;
+    }
+
+    public function delImg($table, $id, $params) {
+        if ($params['ID'] == 1 || $params['ID'] == 2) {
+            $select = array('image_id1', 'image_id2','image_id3');
+            $where = array('member_id', $id);
+            $ret = $this->bm->getInfo($table, $select, $where, null);
+        } else {
+            return $result;
+        }
+
+        if ($params['ID'] == 1) {
+            $data = array(
+                    'member_id' => $_SESSION['mem_id'],
+                    'image_id1' => $ret['image_id2'],
+                    'image_id2' => $ret['image_id3'],
+                    'image_id3' => null,
+                    'updated_on' => null
+            );
+        } else if ($params['ID'] == 2) {
+            $data = array(
+                    'member_id' => $_SESSION['mem_id'],
+                    'image_id2' => $ret['image_id3'],
+                    'image_id3' => null,
+                    'updated_on' => null
+            );
+        } else {
+            $data = array(
+                    'member_id' => $_SESSION['mem_id'],
+                    'image_id3' => null,
+                    'updated_on' => null
+            );
+        }
+        $result = $this->bm->update($table, $data);
+
+        return $result;
+    }
+
+    public function getSurvey($table, $mem_id) {
+        $select = array('study_abroad_no', 'temp');
+        $where = "member_id = '$mem_id'";
+        $result = $this->bm->searchList($table, $where, $select, null);
+
+        return $result;
+    }
+
+    public function getSurveyID($table, $mem_id) {
+        $select = array('mypage_survey_id');
+        $where = "member_id = '$mem_id'";
+        $sort = 'mypage_survey_id DESC';
+        $limit = 1;
+        $result = $this->bm->searchLimitList($table, $where, $limit, $select, $sort);
+
+        return $result;
+    }
+
+    public function getAtendSeminar($table, $emails, $keywords) {
+        $select = array('entrylist.id', 'entrylist.seminarid');
+        $registered_date = $emails[0][0];
+        $firstRead = true;
+        $where  = "event_list.hiduke >= '$registered_date' ";
+        $is_exist = false;
+        foreach($emails as $email) {
+            if ($firstRead) {
+                $where .= "and (";
+                $firstRead = false;
+                $is_exist = true;
+            } else {
+                $where .= ' or ';
+            }
+            $where .= "entrylist.email = '$email[1]'";
+        }
+
+        if($is_exist) {
+            $where .= ')';
+        }
+        $where .= ' and (';
+        $firstRead2 = true;
+        foreach($keywords as $keyword) {
+            if ($firstRead2) {
+                $firstRead2 = false;
+            } else {
+                $where .= ' or ';
+            }
+            $where .= " event_list.k_desc2 = '$keyword'";
+        }
+
+        $where .= ') and entrylist.stat = 2';
+
+        $base_table = array(array($table[0], 'seminarid'), array($table[0], 'customid'));
+        $join_table = array(array($table[1], 'id', array('hiduke')));
+        $sort = 'event_list.id ASC';
+        $result = $this->bm->getSearchSortJoin($base_table, $join_table, $select, $where, $sort, null);
+
+        return $result;
+    }
+
+    public function attendSeminar ($table, $column) {
+        $data = array(
+                'member_id' => $_SESSION['mem_id'],
+                $column => 1,
+                'updated_on' => null
+        );
+        $result = $this->bm->update($table, $data);
+
+        return true;
+    }
+
+    public function setNextStep ($table, $seminar, $joinSemName, $nextSemName) {
+        $select = array('next_step_id');
+        $where = "member_id = '".$_SESSION['mem_id']."' and step_name = '".$joinSemName."'";
+        $ret = $this->bm->searchList($table, $where, $select, null);
+
+        $data = array(
+                'next_step_id' => $ret[0]['next_step_id'],
+                'start_date' => $seminar[0]['hiduke'],
+                'completion_date' => $seminar[0]['hiduke'],
+                'created_on' => date('c'),
+                'updated_on' => null
+        );
+        $result = $this->bm->update($table, $data);
+
+        if ($nextSemName != 'カウンセリングを受けよう') {
+            $step_exposition_short = 'セミナーにご参加いただく';
+            $preparation = $nextSemName;
+        } else {
+            $step_exposition_short = '初回カウンセリングをお受けいただく';
+            $preparation = '出発までのステップ、手続きより、ステップチャートのカウンセリングを受けようをご覧いただき準備をお願いします。';
+        }
+        $data2 = array(
+                'member_id' => $_SESSION['mem_id'],
+                'step_name' => $nextSemName,
+                'step_exposition_short' => $step_exposition_short,
+                'preparation' => $preparation,
+                'created_on' => date('c'),
+                'updated_on' => null
+        );
+        $result2 = $this->bm->insert($table, $data2);
+
+        return true;
+    }
+
+    public function getNextSeminar($table, $crm_id) {
+        $today = date('Y-m-d');
+        $select = array('event_list.starttime');
+        $where = "entrylist.customid = '".$crm_id."'" . " and event_list.hiduke >= '$today'";
+        $base_table = array(array($table[0], 'seminarid'), array($table[0], 'customid'));
+        $join_table = array(array($table[1], 'id', array('hiduke')));
+        $sort = 'event_list.starttime ASC';
+        $result = $this->bm->getSearchSortJoin($base_table, $join_table, $select, $where, $sort, null);
+
+        return $result;
+    }
+
+    public function getStatus($table, $mem_id) {
+        $select = array('study_abroad_no',
+                'article_expiration_date', 'article_flag','article_confirm',
+                'agreement_expiration_date', 'agreement_flag','agreement_confirm',
+                'deposit_finish_confirm', 'deposit_finish_flag', 'deposit_finish_date',
+                'deposit_expiration_date', 'deposit_flag', 'deposit_confirm',
+                'bill_expiration_date', 'bill_flag', 'bill_confirm',
+                'receipt_expiration_date', 'receipt_flag', 'receipt_confirm',
+                'passport_expiration_date', 'passport_flag', 'passport_confirm',
+                'application_expiration_date', 'application_flag', 'application_confirm',
+                'homestay_expiration_date', 'homestay_flag', 'homestay_confirm',
+                'flight_expiration_date', 'flight_flag', 'flight_confirm',
+                'insurance_expiration_date', 'insurance_flag', 'insurance_confirm',
+                'visa_expiration_date', 'visa_flag', 'visa_confirm',
+                'visa2_expiration_date', 'visa2_flag', 'visa2_confirm',
+                'mobile_expiration_date', 'mobile_flag', 'mobile_confirm',
+                'cash_passport_expiration_date', 'cash_passport_flag', 'cash_passport_confirm',
+                'loa_expiration_date', 'loa_flag', 'loa_confirm',
+                'pickup_expiration_date', 'pickup_flag', 'pickup_confirm',
+                'visa_print_expiration_date', 'visa_print_flag', 'visa_print_confirm',
+                'bank_expiration_date', 'bank_flag', 'bank_confirm',
+                'flightimage_expiration_date', 'flightimage_flag', 'flightimage_confirm',
+                'join_seminar', 'counseling',
+                'register_visa', 'reserve_flight',
+                'join_step1', 'join_step2',
+                'go_abroad', 'seminar_beginner',
+                'seminar_planning', 'seminar_info',
+                'seminar_discussion', 'seminar_school',
+                'decide_country', 'decide_period',
+                'decide_school', 'decide_accomodation',
+                'register_school');
+        $where = "member_id = '$mem_id'";
+        $sort = 'client_status_id desc';
+        $result = $this->bm->searchList($table, $where, $select, $sort);
+        return $result[0];
+    }
+
+    public function checkModel($table, $member_id) {
+        $select = array('client_status_id');
+        $where = "member_id = '$member_id'";
+        $result = $this->bm->searchList($table, $where , $select, null);
+        return $result;
+    }
+}

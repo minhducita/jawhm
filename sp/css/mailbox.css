@@ -1,0 +1,78 @@
+/* 2607 email regis START */
+#email_regis_2607 {
+	border: 5px solid #aaa;
+    border-radius: 3px;
+	margin: 5px 5px 20px 5px;
+    padding: 10px 5px 20px 5px;
+}
+#email_regis_2607 .er-top {
+	
+}
+#email_regis_2607 .er-img {
+	float: left;
+	width: 22%;
+	    text-align: center;
+}
+#email_regis_2607 .er-content {
+	float: left;
+	clear: right;
+	    margin-top: 23px;
+}
+#email_regis_2607 .er-img span {
+	font-size: 10px;
+}
+#email_regis_2607 .er-p1 {
+	text-align: center;
+	padding-bottom: 21px;
+    font-size: 12px;
+}
+#email_regis_2607 .er-p2 {
+	    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 15px;
+}
+#email_regis_2607 .er-p3 {
+	text-align: center;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+    line-height: 2em;
+}
+#email_regis_2607 .er-b1 {
+	text-align: center;
+	padding-bottom: 5px;
+}
+#email_regis_2607 .er-b1 input {
+	text-align: center;
+    padding: 15px 0 15px 0;
+    width: 300px;
+    max-width: 300px;
+	border: 1px solid #cccccc;
+}
+#email_regis_2607 .er-b2 {
+	text-align: center;
+}
+#email_regis_2607 .er-b2 button {
+	padding: 15px;
+    background-color: #000;
+	font-weight: bold;
+    color: #fff;
+        width: 300px;
+    border: none;
+}
+
+.mailbox-ser {
+	background: #fff;
+}
+.mailbox-ser .er-b1 input {
+	width: 100%!important;
+	max-width: 100%!important;
+}
+.mailbox-ser .er-b2 button {
+	width: 100%!important;
+}
+.mailbox-ser .ui-btn-corner-all {
+	height: 43px;
+    line-height: 41px;
+}
+/* 2607 email regis END */

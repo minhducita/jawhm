@@ -1,0 +1,107 @@
+
+    .qa-nbox1 a.img_q {
+        color: #006699;
+        text-decoration: none;
+        background: url(/../images/qa-Qicon.png)no-repeat left center;
+        background-size: contain;
+        padding:5px 0px 5px 30px;
+        line-height: 2em;
+    }
+    .qa-nbox1 .qa-drop1{
+        position: absolute;
+        top: 18px;
+        display: block;
+        right: 2%;
+    }
+    .qa-nbox1 .qa-drop1:active{
+        -webkit-transform: rotateX(45deg);
+        -ms-transform: rotateY(45deg);
+        -mo-transform: rotateY(45deg);
+        transform: rotateY(45deg);
+    }
+    .qa-nbox1 .qa-drop1:hover{
+        cursor: pointer;
+    }
+
+    .qa-nbox1 a:hover {
+        text-decoration: underline;
+    }
+    .qa-nbox1 .qa-h4-qt {
+        color: #006699;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .qa-nbox1 li {
+        font-size: 12px;
+    /*
+    list-style-position: inside;
+    list-style-type: disc;
+    */
+    margin-bottom: 8px;
+    color: #006699;
+    position: relative;
+    background: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin: auto 10px 10px 20px;
+    margin-left: 3px;
+}
+.frame-qa{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+     font-size: 14px;
+}
+.frame-qa form input[type=text]
+{
+    width: 73%;
+    margin-right: 1%;
+    float:left; 
+    height: 30px;
+    border-radius: 3px;
+
+
+}
+.frame-qa form input[type=submit]
+{
+    width: 23%;
+    height: 32px;
+    background: #f48024;
+    color: #FFF;
+     border-radius: 3px;
+       font-weight: bold;
+
+}
+.frame-qa form
+{
+    margin-bottom: 9px;
+    display: inline-block;
+    width: 100%;
+
+}
+
+div.frame-qa li a span {
+	width: 90%;
+}
+
+@media screen and (max-width:680px) {
+	div.frame-qa li a span {
+		width: 80%;
+	}
+	.frame-qa{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.qa-new .frame-qa input:first-child {
+		width: 100%;
+	}
+	.qa-new .frame-qa input:last-child {
+		width: 100%;
+		border: none;
+		margin-left: 3px;
+		margin-top: 10px;
+	}
+}
+
+

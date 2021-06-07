@@ -1,0 +1,226 @@
+<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリ協定国・チリ共和国の基本情報';
+$header_obj->description_page='日本とワーキングホリデー協定を結ぶアイルランドの食文化や緑が広がる風景など、現地の情報を掲載しています。渡航をされる前の準備にお役立てください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="banner_chile.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'アイルランド | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/bflag21.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/CHL_PC.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/CHL_SP.png"/>
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>チリ共和国人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />Santiago de Chile </li>
+				<li><img src="../images/crown-2.gif" />Valparaíso</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" />Concepción</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>チリ共和国基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Santiago de Chile</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">Spanish</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>756,950km2<span>（北海道よりやや小さい）</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>17,248,450人<span>（日本の1/7）</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>Peso chileno（CLP）</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Santiago de Chile</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-chl.png" /><br />
+								12月31日<br />
+								21:00pm
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Santiago de Chile</td>
+					</tr>
+					<tr>
+							<th>面積</th><td>756,950km2<span>（北海道よりやや小さい）</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>17,248,450人<span>（日本の1/7）</td>
+						</tr>
+				</table>
+				<table class="table-info" style="margin-right:0">
+					<tr>
+						<th>言語</th><td id="td-language">Spanish</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>Peso chileno（CLP）</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Santiago de Chile</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-chl.png" /><br />
+								12月31日<br />
+								21:00pm
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>チリ共和国ってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			チリ共和国は、南米大陸のアンデス山脈と太平洋にはさまれた、世界一細長い国。赤道近くから南極まで南北に細長く続く国土を持つため、都市によって自然環境の変化が著しいことで有名だ。
+			</p>
+			<p class="text01">赤道に近い北部は、世界で一番多くの星を見ることができる「アタカマ砂漠」を含む砂漠地帯となっている。首都サンティアゴのある中央部は、美しい自然と発展した都市が並ぶ心地よい気候の田園地帯。そして、南部は「風の大地」とも呼ばれる険しくも雄大な大地、「パタゴニア」へとつながっている。このように非常に多くの気候・地形を持つチリ共和国では、バラエティ豊かな観光地や数多くの世界遺産を楽しむことができるだろう。</p>
+			<p class="text01">このように南北に延びる国土を持つため、地域によって気候が大きく異なることに注意が必要だ。北部には砂漠が広がっているが、南部には年間通して氷におおわれている地域もある。しかし、ちょうど中部に位置する首都サンティアゴは夏の最高気温が23度前後、冬の最低気温は8度前後と、とても過ごしやすい。雨も少なく、日本と同じような四季もあるため、生活するには最高の気候だろう。</p>
+			<p class="text01">チリ共和国で最も有名な観光地と言えば、モアイ像が並ぶパラ・ヌイ島、通称「イースター島」だろう。チリ共和国からさらに3,700kmほど離れた場所にあるこの島は世界の果てとも呼ばれ、いまだ解明されない世界７不思議の一つに数えられている。島には宿泊施設もあるので、じっくり観光を楽しむことも可能だ。</p>
+			<p class="text01">チリ共和国とほかの南米の都市の大きな違いは、治安の良さにある。少し控えめで真面目な国民性は、日本人に近いとも言われていて、愛国心が強く、家族とのつながりをとても大切にしているので、すぐに仲良くなれるだろう。</p>
+			<p class="text01">長い海岸線をもつチリ共和国は、新鮮な魚介類を使った料理でも有名だ。味付けは塩とレモンを中心に、新鮮な魚介類をふんだんに使った料理を、チリワインと一緒にいただくのがチリ共和国の食文化。特に、チリ共和国特有の雨が少なく日照時間の長い気候を利用して栽培されるブドウは熟度がとても高く、このブドウを使って作られるチリワインは、現在日本でも人気が急上昇している。ワイナリーも多いため、働き先としても期待が持てる。</p>
+						
+		</div>
+
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-chl.html" title="チリ共和国のワーキングホリデー（ワーホリ）ビザ情報へ">チリ共和国のワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+	  	<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+		<a href="../../visa/v-chl.html" class="btn-visa area-round-corner">
+			チリ共和国<br />ビザ情報はこちらから
+		</a>
+	  	<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+
+
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'チリ共和国';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display);
+            ?>
+    <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    
+      <p>&nbsp;</p>
+
+		
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+
+<?php $links_obj->display_links(); ?>
+
+	</div><!-- /#maincontent -->
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

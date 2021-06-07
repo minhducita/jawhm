@@ -1,0 +1,98 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='カナダの留学やワーホリでよくある質問';
+$header_obj->description_page='カナダへのワーホリの際によくある質問にお答えしています。ビザの申請についてなど様々な疑問にお答えしています。カナダへ渡航される方は参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'カナダワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('qa'); ?>
+	  <h2 class="sec-title">カナダ　留学・ワーキングホリデー</h2>
+
+	  <table class="qatable-aus">
+	    <tr>
+		  <th><img src="images/mflag03.gif" alt="" /><br />カナダ</th>
+		  <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+		</tr>
+	  </table>
+      <p>&nbsp;</p>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'カナダ';
+            $number_to_display = '6';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <h2 class="sec-title">よくある質問と回答</h2>
+      <p>&nbsp;</p>
+
+	  <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ１.カナダワーキングホリデービザの申請はいつ始めればいいですか？</h3>
+		<p class="text01">　カナダワーキングホリデービザは、申請からビザ許可通知書発行まで約2ヶ月かかります。健康診断が必要な場合もありますので多めに時間は見ておきましょう。許可通知書は、発行から1年間有効です。発効日から1年以内にカナダに入国しましょう。入国した時から１年間がワーキングホリデーとなります。<br />
+		３カ月過ぎても連絡がない場合は、カナダ大使館広報部ワーキングホリデープログラム係にフルネーム（ローマ字）、生年月日、パスポート番号、出発日を明記の上、指定の問い合わせ先にご連絡してください。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ３.申請人数の6500人にはいつ達しそうですか？</h3>
+		<p class="text01m30">カナダ政府はカナダワーキングホリデービザ許可証発給の通知書発行数の定員枠は6500人に決定しました。昨年の実績を見て6500人という数字が計算されています。おそらくと到達しないだろうという数字ですがもし到達しても、来年になると取得が可能になります。残り人数とご自身の出発予定日を確認し適切な時期に申請を行いましょう。特に出発が4月から7月は気候が良くて理想的ですが9月以降は寒くなるので来年に見合わせる人もいるでしょう。
+		</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ４.カナダワーキングホリデービザ申請に気を付ける事は？</h3>
+		<p class="text01m30">申請中にもカナダに旅行に行けますが、自己責任で本当に旅行目的ということを入国審査で審査官に直接英語で説明する必要があります。英語に自信のない方は挑戦しない方がよいでしょう。対応は担当者により様々です。その場で認められなかったらそのまま帰国ということも十分にありえます。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ５.カナダワーキングホリデーの後にアメリカや他の国に行くことはできますか？</h3>
+		<p class="text01m30">はい、ビザを取得すれば可能です。アメリカ入国の際にもアメリカビザには十分気を付けてください。渡航される各国の大使館ホームページをご覧ください。
+		</p>
+	  </div>
+	    <div class="qa-abox-country">
+
+		<div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'カナダ';
+            $number_to_display = '6';
+            $start_display_from = '6'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	 
+	  <div class="advbox03">
+<?php
+	// 124
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 102, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+/*
+Theme Name: GlossyBlue
+MOBILE DIFFERENT SETTINGS
+*/
+p {
+	font-size:11px;	
+}
+h2 {
+	margin: 0px 0px 1px 0px;
+	font-size:14px;
+}
+#content { 
+	padding:0px;
+	padding-bottom:10px;
+	float:none;
+	width: 100%;   
+}
+.post-date {
+	padding-right:5px;
+}
+.post-title {
+	width: 75%;
+	margin-left:0px;
+}
+.entry {
+	position:relative;
+}
+.entry a:link, .entry:visited {
+	text-decoration:underline;
+}
+.entry a:hover {
+	text-decoration:none;
+}
+.entry table {
+	max-width:100%;	
+}
+.navigation {
+	position:relative;
+	width:100%;
+	padding: 10px 0px;
+}
+.navigation a, .navigation a:visited {
+	font-size:11px;
+}
+.previous-entries {
+	display:block;
+	float:none;
+	margin-bottom:5px;
+}
+.next-entries {
+	display:block;
+	float:none;
+	text-align:right;
+}
+#sidebar {
+	position:relative;
+	clear:both;
+	float: none;
+	width: 100%;
+}
+#searchform {
+	width: 255px;
+	margin:0;
+	margin-bottom:5px;
+}
+#searchform #s {
+	width: 155px;
+}
+#sidebar h3 {
+	font-size:15px;
+}
+.ul-cat li, .ul-archives li{
+	font-size:12px;
+}
+.ul-cat li a, .ul-cat li a:visited,
+.ul-archives li a, .ul-archives li a:visited{
+	font-size:12px;
+}
+
+#wp-footer .left-col{
+	position:relative;
+	width: 100%;
+	float: none;
+	margin-left: 0;
+	font-size:12px;
+}

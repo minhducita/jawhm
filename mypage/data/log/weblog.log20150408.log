@@ -1,0 +1,857 @@
+2015-04-08T13:50:11+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T15:16:16+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T15:16:40+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T15:16:40+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T16:25:32+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (status)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T16:28:45+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'flag = 0) or
+                  (deposit_finish_expiration_date = '2015-04-22' an' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'flag = 0) or
+                  (deposit_finish_expiration_date = '2015-04-22' an' at line 2' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T16:30:01+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insurance_expiration_date = 0) or
+                  (visa_expiration_date = '201' at line 11' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insurance_expiration_date = 0) or
+                  (visa_expiration_date = '201' at line 11' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T16:31:28+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insurance_flag = 0) or
+                  (visa_expiration_date = '2015-04-22' an' at line 11' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insurance_flag = 0) or
+                  (visa_expiration_date = '2015-04-22' an' at line 11' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T16:31:44+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'loa_flag = 0) or
+                  (pickup_expiration_date = '2015-04-22' pickup' at line 16' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'loa_flag = 0) or
+                  (pickup_expiration_date = '2015-04-22' pickup' at line 16' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T16:31:57+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pickup_flag = 0) or
+                  (visa_print_expiration_date = '2015-04-22'' at line 17' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#8 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pickup_flag = 0) or
+                  (visa_print_expiration_date = '2015-04-22'' at line 17' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/batch/models/ReminderModel.php(44): BaseModel->searchList('clientstatus', '(article_expira...', Array, NULL)
+#7 /var/www/html/mypage/application/modules/batch/controllers/ReminderController.php(38): IndexModel->getStatusExpiration('clientstatus', '2015-04-22')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): Batch_ReminderController->statusAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('statusAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T17:50:22+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T17:50:22+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T17:50:22+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T17:50:22+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:24:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:27:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:30:45+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:30:45+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:31:24+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:31:24+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:39:24+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:40:19+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.recepit_flag' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#7 /var/www/html/mypage/application/modules/default/models/IndexModel.php(650): BaseModel->searchList('clientstatus', 'member_id = 'JW...', Array, 'client_status_i...')
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(170): IndexModel->getStatus('clientstatus', 'JW125846')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->indexAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clientstatus.recepit_flag' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('SELECT `clients...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'SELECT `clients...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('SELECT `clients...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(737): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(109): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#6 /var/www/html/mypage/application/modules/default/models/IndexModel.php(650): BaseModel->searchList('clientstatus', 'member_id = 'JW...', Array, 'client_status_i...')
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(170): IndexModel->getStatus('clientstatus', 'JW125846')
+#8 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->indexAction()
+#9 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#12 {main}
+2015-04-08T18:40:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:41:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:44:17+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:47:06+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:47:36+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:54:42+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:54:43+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:56:05+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:56:05+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:57:01+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:57:01+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:59:50+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T18:59:50+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:19+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:19+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:45+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:45+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:59+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:02:59+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:03:35+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:03:35+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:04:28+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:24:08+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:24:08+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:25:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:25:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:26:13+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:36:20+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:36:21+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:39:14+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:39:14+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:43:09+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:43:47+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:43:47+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:44:42+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:45:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:45:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:45:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:45:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:45:14+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:54:15+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:54:28+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:54:54+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:54:54+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:55:12+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:55:12+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:55:36+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:56:17+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:56:17+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:56:25+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:56:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:59:46+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T19:59:55+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:03:58+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:04:15+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:04:15+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:05:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:05:11+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:05:51+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:06:41+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:08:21+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:08:30+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:10:03+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:10:04+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:13:30+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:14:02+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:19:19+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:19:43+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:21:11+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:23:12+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:24:28+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:25:39+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:25:49+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:32:42+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:47:54+09:00 ALERT (1): exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;/var/www/html/mypage/application/modules/staff/views/client/clientindex.tpl&quot;  on line 15 &quot;{/if}&amp;lt;div class=&amp;quot;div-center col-xs-12 expiration-box expiration-wrapper&amp;quot;&amp;gt;{$next_status}&amp;lt;br /&amp;gt;{$expiration_date|date_format:&amp;quot;%m&aelig;œˆ%d&aelig;—&yen;&amp;quot;}&amp;lt;/div&amp;gt;{/if}&quot; unknown tag &quot;ifclose&quot;' in /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php:719
+Stack trace:
+#0 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(484): Smarty_Internal_TemplateCompilerBase->trigger_template_error('unknown tag "if...', 15)
+#1 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11102): Smarty_Internal_TemplateCompilerBase->compileTag('ifclose', Array)
+#2 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11749): Smarty_Internal_Templateparser->yy_r58()
+#3 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templateparser.php(11838): Smarty_Internal_Templateparser->yy_reduce(58)
+#4 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(108): Smarty_Internal_Templateparser->doParse(10, '<div class="div...')
+#5 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(210): Smarty_Internal_SmartyTemplateCompiler->doCompile('{include file=$...')
+#6 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_template.php(220): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#7 /var/www/html/mypage/library/Smarty/sysplugins/smarty_internal_templatebase.php(170): Smarty_Internal_Template->compileTemplateSource()
+#8 /var/www/html/mypage/library/Smarty/Zend_View_Smarty.php(181): Smarty_Internal_TemplateBase->fetch('/var/www/html/m...')
+#9 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(900): Zend_View_Smarty->render('/var/www/html/m...')
+#10 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('/var/www/html/m...', NULL)
+#11 /var/www/html/mypage/library/Zend/Controller/Action/Helper/ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#12 /var/www/html/mypage/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#13 /var/www/html/mypage/library/Zend/Controller/Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#14 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('clientindexActi...')
+#15 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#17 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:55+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:56+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:57+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:57+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:57+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:57+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:47:57+09:00 ALERT (1): exception 'Zend_Controller_Action_Exception' with message 'Action "themes" does not exist and was not trapped in __call()' in /var/www/html/mypage/library/Zend/Controller/Action.php:485
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Action.php(518): Zend_Controller_Action->__call('themesAction', Array)
+#1 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('themesAction')
+#2 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#4 {main}
+2015-04-08T20:52:15+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2015-04-08T20:52:31+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (themes)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}

@@ -1,0 +1,36 @@
+<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->title_page='ワーホリに行こうよ';
+$header_obj->keywords_page='オーストラリア,ニュージーランド,カナダ,カナダ,韓国,フランス,ドイツ,イギリス,アイルランド,デンマーク,台湾,香港,ビザ,取得,方法,申請,手続き,渡航,外務省,厚生労働省,最新,ニュース,大使館';
+$header_obj->description_page='オーストラリア・ニュージーランド・カナダを初めとしたワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。';
+
+$header_obj->fncMenubar_function=false;
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="http://www.jawhm.or.jp/images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_link = 'pc';
+$header_obj->footer_type = 'pc';
+$header_obj->display_header();
+?>
+	<div id="error">
+    <div id="maincontent">
+		<div class="content404">
+			<img src="/images/404/icon.png" alt="icon">
+			<div class="text06">
+				<P>We seem to have lost this page, try one of these instead</P>
+			    <span>お探しのURLが見つかりません</span>
+			</div>
+			<div class="btn-backhome"><a href="/">トップページへ戻る</a></div>
+		</div>
+	</div><!--maincontentEND-->
+    </div>
+
+  </div><!--contentsEND-->
+  </div><!--contentsboxEND-->
+ <?php fncMenuFooter($header_obj->footer_type); ?>
+  <script>
+	jQuery("#contentswide").addClass("contentswide_404");
+ </script>
+</body>
+</html>

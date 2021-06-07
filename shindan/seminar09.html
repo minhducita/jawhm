@@ -1,0 +1,141 @@
+<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+$header_obj->title_page = 'ワーキングホリデー・セミナー診断';
+$header_obj->fncMenubar_function = false;
+$header_obj->description_page = 'あなたにオススメのセミナーが分かる！ワーホリ協会監修 ワーホリ・留学を考えている人のためのセミナー診断';
+$header_obj->keywords_page = 'ワーキングホリデー,ワーホリ,留学,セミナー診断';
+$header_obj->fncFacebookMeta_function = true;
+
+//$header_obj->add_css_files = '<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー・セミナー診断';
+
+if ($header_obj->computer_use() == false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="/shindan/css/style_sp.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+
+?>
+
+<div id="area-body">
+	<section class="pcview">
+    <div id="area-panel-header">
+    <div id="area-panel">
+  
+      <div id="panel-main">
+        <p id="panel-a-text">
+          <span class="color-orange">会場が遠くて参加できない、家で情報収集したい</span><br />
+          あなたにオススメなのはコレ！
+        </p>
+        <p id="panel-seminar-name" class="color-orange">
+          電話カウンセリング
+        </p>
+  
+        <div id="area-image-text" class="clearfix">
+          <img id="panel-a-image" src="/shindan/images/seminar_09.jpg" />
+          <div id="area-panel-a-text">
+            <p>ワーホリ協会のメンバーになることで、</p>
+            <p>電話やスカイプを通して</p>
+            <p>個別カウンセリングを受けられるようになります！</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+  
+        <div id="area-seminar-info">
+          <p id="seminar-info-comment">メンバー登録をすると、ビザ取得のサポートや特別セミナーへのご参加など、様々な特典が受けられます！</p>
+          <a class="memBtn" href="/mem/"><img class="btn-hover" src="/shindan/images/btn_member.png" alt="メンバー登録する！"></a>
+        </div>
+      </div>
+  
+    </div>
+    <div id="area-panel-footer">&nbsp;</div>
+    </div>
+    <!-- オレンジ斜線背景エリア -->
+  
+  
+    <p class="seminar-etc-title"><span>その他のおススメセミナー</span></p>
+  
+    <div id="area-seminar-etc-info">
+      <p>
+        ワーキング・ホリデー協会では、他にもたくさんのセミナーを開催しています。<br />
+        あなたの知りたい情報に合わせて、様々なセミナーに参加して頂くことが出来ます！
+      </p>
+  
+      <ul id="seminar-btn">
+        <li><a href="/shindan/seminar01.html"><img class="btn-hover" src="/shindan/images/seminar-btn-1.jpg" alt="初心者セミナー" /></a></li>      
+        <li><a href="/shindan/seminar02.html"><img class="btn-hover" src="/shindan/images/seminar-btn-2.jpg" alt="海外渡航プランニング法セミナー" /></a></li>
+        <li><a href="/shindan/seminar03.html"><img class="btn-hover" src="/shindan/images/seminar-btn-3.jpg" alt="学校比較選びかたセミナー" /></a></li>
+        <li><a href="/shindan/seminar04.html"><img class="btn-hover" src="/shindan/images/seminar-btn-4.jpg" alt="年内渡航相談会" /></a></li>
+        <li><a href="/shindan/seminar06.html"><img class="btn-hover" src="/shindan/images/seminar-btn-9.jpg" alt="体験談セミナー" /></a></li>
+        <li><a href="/shindan/seminar05.html"><img class="btn-hover" src="/shindan/images/seminar-btn-5.jpg" alt="女性限定セミナー" /></a></li>
+        <li><a href="/shindan/seminar07.html"><img class="btn-hover" src="/shindan/images/seminar-btn-6.jpg" alt="語学学校セミナー" /></a></li>
+        <li><a href="/shindan/seminar08.html"><img class="btn-hover" src="/shindan/images/seminar-btn-7.jpg" alt="休職ワーホリセミナー" /></a></li>
+      </ul>
+      <p id="btn-back-top"><a href="/shindan/"><img class="btn-hover" src="/shindan/images/btn-back-top.jpg" alt="診断TOPへ" /></a></p>
+    </div>
+  
+  </section><!-- /.pcview -->
+  
+  <section class="spview result">
+  	<h3><a href="/shindan/">あなたにオススメのセミナーが分かる！ワーホリ・留学を考えている人のためのセミナー診断</a></h3>
+    <div class="mainBox">
+    	<div class="atext">
+      	<p>
+          <span>会場が遠い、家で情報収集したい</span><br>
+          あなたにオススメのセミナーはコレ！<br>
+          <span class="semName">中継セミナー</span>
+        </p>
+      </div><!-- /.atext -->
+      
+      <div class="detail"> 
+      	<img class="left" src="/shindan/images/seminar_09.jpg" alt="セミナー画像">
+        <p class="right">
+        ワーホリ協会のメンバーになることで、各種セミナーをご自宅にいながらオンラインで視聴できるようになります！
+        </p>
+      </div><!-- /.detail -->     
+      
+      <div class="memInfo">
+      	<p class="pad20">メンバー登録をすると、ビザ取得のサポートや特別セミナーへのご参加など、様々な特典が受けられます！</p>
+      	<a class="memBtn" href="/mem/"><img class="btn-hover" src="/shindan/images/btn_member.png" alt="メンバー登録する！"></a>
+      </div>
+    </div><!-- /.mainBox --> 
+    
+    <div class="reBtn">
+    	<a href="/shindan/">もう一度診断する！</a>
+    </div><!-- /.reBtn -->
+    
+    <div class="othSeminar">
+    	<h4 class="sec-title">その他のオススメセミナー</h4>
+      <p>
+      	ワーキング・ホリデー協会では、他にもたくさんのセミナーを開催しています。<br>
+        あなたの知りたい情報に合わせて、様々なセミナーに参加して頂くことが出来ます！
+      </p>
+      
+      <ul class="semList">
+      	<li	class="sem01"><a href="/shindan/seminar01.html"><span>初心者セミナー<br>まだセミナーに参加したことがない方へ</span></a></li>
+        <li class="sem02"><a href="/shindan/seminar02.html"><span>海外渡航プランニング法セミナー<br>海外渡航の前に色々な情報を集めたい方へ</span></a></li>
+        <li class="sem09"><a href="/shindan/seminar04.html"><span>年内渡航相談会セミナー<br>プランを立てたり具体的な質問をしたい方へ</span></a></li>
+        <li class="sem03"><a href="/shindan/seminar03.html"><span>学校比較選びかたセミナー<br>海外での目標を見つけたい方へ</span></a></li>
+        <li class="sem04"><a href="/shindan/seminar06.html"><span>体験談セミナー<br>カウンセラーの体験・経験談を知りたい方へ</span></a></li>
+        <li class="sem05"><a href="/shindan/seminar05.html"><span>女性限定セミナー<br>女性ならではのデリケートな悩みがある方へ</span></a></li>
+        <li class="sem06"><a href="/shindan/seminar07.html"><span>語学学校セミナー<br>目指す目標がある！特別な情報を知りたい！方へ</span></a></li>
+        <li class="sem07"><a href="/shindan/seminar08.html"><span>休職ワーホリセミナー<br>自分を変えたい、ワーホリをもっと楽しみたい方へ</span></a></li>
+      </ul><!-- /.semList -->
+    </div><!-- /.othSeminar -->
+  </section><!-- /.spview -->
+
+</div>
+
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

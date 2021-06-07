@@ -1,0 +1,153 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='アルゼンチンのワーキングホリデービザ情報';
+$header_obj->description_page='アルゼンチンのワーキングホリデービザ取得のステップや注意事項を掲載しています。アルゼンチンへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（アルゼンチン） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+    	  <?php echo $header_obj->breadcrumbs('country'); ?>
+
+			<div style="clear:both; height:10px;">&nbsp;</div>
+      <?php $header_obj->display_visa_links(); ?>
+	  <img src="/images/bflag20.gif" alt="" style="border: 1px solid #cbcbcb;" />
+	<br>
+	<br>
+	<p class="text01"><span class="centered-btn"><a class="visa-btn country-info" href="/country/argentina" title="Argentina"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">アルゼンチン</font></font></a></span> <strong>アルゼンチン</strong><b>のワーキングホリデービザの取得方法についてご案内します。</b></p>
+	<div class="content-visa-new">
+		<h2 class="sec-title">ワーキングホリデービザ概要</h2>
+		<p>アルゼンチンと日本の、ワーキングホリデーに基づいた労働協約に枠組みの中でアルゼンチン共和国に入国を希望する日本人は、それに関連するビザを取得する必要があります。ワーキングホリデービザは申請時に下記の条件を満たす日本国民に発行されます。<br>
+		&nbsp;</p>
+
+		<ul>
+			<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. </font></font>日本に住み、日本国が発行した有効なパスポートを所持する日本国民 <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> </font></font></li>
+			<li>2. 18歳以上、30歳以下の方</li>
+			<li>3. 適切なビザを所有している場合を除き、渡航時に被扶養者が同行しない方</li>
+			<li>4. ワーキングホリデービザを利用したことがない方</li>
+			<li>5. 犯罪履歴がない方</li>
+			<li>6. 滞在の初期費用を賄えると関係当局が判断できるだけの十分な資金を保有している方</li>
+			<li>7. 帰国用の航空券を保有しているか、それを購入するのに十分な費用を所持している方</li>
+			<li>8. 認可された滞在の12ヶ月間に、病気または死亡した場合の入院医療費および送還費用をカバーする医療保険を保有する方</li>
+			<li>9. すべてのビザ申請費用の支払いを完了した方</li>
+		</ul>
+
+		<p>ワーキングホリデービザ取得者は、最大で12カ月間アルゼンチンに滞在することが可能です。ビザの更新はできません。ワーキングホリデービザ取得者はアルゼンチンへの出入りが可能で、働くこともできますが、正社員としての就労は禁止されています。</p>
+
+		<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		</div>
+
+		<h2 class="sec-title">ワーキングホリデービザ申請方法</h2>
+
+		<p>ビザ申請は個人で行い、必ず以下の書類（原本とコピー）を在日アルゼンチン大使館へ提出してください。</p>
+
+		<ul>
+			<li>1. 白紙ページが1ページ以上ある有効なパスポート</li>
+			<li>2. 入力の完了したビザ申請書</li>
+			<li>3. 白い背景の証明写真（4×4 cm）</li>
+			<li>4. 日本警察によって発行された、過去3年以内の犯罪歴がないことを証明する無犯罪証明書（申請者が他の国で犯罪記録を有していないことを示す宣誓供述書を含む）</li>
+			<li>5. 帰国用の航空券、もしくはその航空券を購入するのに十分な資金を有する証明書類</li>
+			<li>6. 滞在の初期費用を賄えるだけの資金証明（最低USD $2,500）（過去3か月間の銀行報告書、またはクレジットカード明細書を提出することも可能です）</li>
+			<li>7. 被保険者の遺体処理/遺体輸送費用を含む、最低USD $300、000の医療保険および傷害保険の証書、または予算証明書</li>
+			<!--<li>8. ビザ申請料金の支払い証明書（USD $150）</li>-->
+			<li>8. 渡航の主目的はアルゼンチンでの休暇であり、就労は副次的なものであるという動機づけの手紙</li>
+		</ul>
+
+		<p>&nbsp;&nbsp; これらの要件を満たし多としても、アルゼンチン政府はビザの付与を保証するものではありません。<br>
+		&nbsp;</p>
+
+		<h3 class="h3-01">外務省HPで基本情報を確認しよう</h3>
+
+		<ul class="list-visabasic">
+			<li><a href="http://www.mofa.go.jp/mofaj/area/argentine/data.html" target="_blank">外務省基本情報</a> <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=165" target="_blank">安全情報</a> <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/cs_ame/argentin.html" target="_blank">在外公館</a></li>
+		</ul>
+
+		<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+
+		<p style="font-size: 11px">※アルゼンチン大使館が公開している英語文章を翻訳した内容となっています。原本は下記をご参照くださいませ。</p>
+		</div>
+
+		<h2 class="sec-title">WORK AND HOLIDAY PROGRAMME</h2>
+
+		<p>Japanese citizens who wish to enter the Argentine Republic within the framework of the Memorandum of Cooperation between Argentina and Japan on a Work and Holiday Program must obtain the relevant visa. The work and holiday visa shall be issued to Japanese citizens who meet the following requirements at the time of submitting the application:</p>
+
+		<ul>
+			<li>1. They are Japanese citizens, holders of a valid Japanese passport, residents in territory of Japan</li>
+			<li>2. They are aged between eighteen (18) and thirty (30), both inclusive</li>
+			<li>3. They are not travelling accompanied by dependent family members, unless they have their own visa</li>
+			<li>4. They have not previously taken part in the Programme</li>
+			<li>5. They have no criminal record</li>
+			<li>6. They have sufficient funds for their maintenance during the initial period of their stay, at the discretion of the relevant authorities</li>
+			<li>7. They have a return ticket to their home country or sufficient funds to purchase such a ticket</li>
+			<li>8. They hold medical insurance including hospitalization and repatriation in case of sickness or death for the 12 months of authorized stay</li>
+			<li>9. They pay all fees required for the issuance of the visa.</li>
+		</ul>
+
+		<p>Applicants are reminded that, upon obtaining a Work and Holiday Visa, they will be authorized to stay in Argentina for a period of up to twelve (12) months, non-renewable. They may enter into and leave</p>
+
+		<p>Argentina and work, provided it is not a permanent job.</p>
+
+		<h2 class="sec-title">How to apply for the Work and Holiday Visa</h2>
+
+		<p>The visa application is personal and must be submitted along with the following documentation (original and copies) to the Argentine Embassy in Japan:</p>
+
+		<ul>
+			<li>1. Valid japanese passport with at least one blank page</li>
+			<li>2. Completed visa application form</li>
+			<li>3. One front face photograph (4x4 cm) on white background</li>
+			<li>4. A criminal record search certificate issued by <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">japanese</font></font> authorities stating that the applicant has no criminal record for the last three years</li>
+			<li>5. An affidavit stating that the applicant has no criminal record in other countries</li>
+			<li>6. A return ticket to Japan or proof of sufficient funds to purchase such a ticket</li>
+			<li>7. Proof of sufficient funds for the applicant's maintenance during the initial period of stay (a minimum of US u$s 2.500). This requirement may be fulfilled by submitting (either own or third-party) bank statements for the last three months or credit card statements</li>
+			<li>8. A reservation or a budget for medical and accident insurance for a minimum of US u$s 30,000, including repatriation of human remains and sanitary repatriation</li>
+			<!--<li>9. A payment receipt for the relevant visa fee (US u$s 150)</li>-->
+			<li>9. Motivation letter stating that the main purpose of the trip is to vacation in Argentina, being work an incidental aspect of the visit.</li>
+		</ul>
+
+		<p>The fulfillment of these requirements does not guarantee the grant of a visa as this is an exclusive prerogative of the Argentine Government.</p>
+		&nbsp;
+
+		<div class="top-move">
+		<p><a href="#header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">▲ To the TOP of the page</font></font></a></p>
+
+		<p style="font-size: 11px;text-decoration:underline">※掲載されているビザ情報は、2019/06/07に確認した情報です。</p>
+		</div>
+		</div>
+    
+	</br></br>
+
+	<h3 class="h3-01">その他のワーキングホリデー協定国のビザ情報</h3>
+
+	<div class="clear">&nbsp;</div>
+    
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+	<style>
+	.linkbox	{
+		margin : 15px 15px 15px 15px;
+		padding	: 10px 20px 10px 20px;
+		background-color : #FFE4B5;
+		font-size:10pt;
+	}
+	</style>
+    
+<br/>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?php
+require_once 'include/header.php';
+
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='お問い合わせ完了｜日本ワーキング・ホリデー協会';
+$header_obj->description_page='日本ワーキングホリデー協会WEBサイトからお問い合わせいただき、ありがとうございます。バナー広告掲載を希望する企業様・賛助会員企業様は info@jawhm.or.jp までご連絡ください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/adv-mainimg.gif" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '日本ワーキングホリデー協会 お問い合わせありがとうございます。';
+
+$header_obj->display_header();
+
+?>
+<style type="text/css">
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #maincontent p {
+        font-size: 14px;
+    }
+
+    #maincontent .to-home {
+        text-align: right;
+    }
+</style>
+    <div id="maincontent">
+        <?php echo $header_obj->breadcrumbs(); ?>
+        <h2>お問い合わせ完了画面</h2>
+        <div class="contents">
+            <div>
+                <p>この度はお問い合わせいただき、誠にありがとうございました。</p>
+                <br>
+                <p>お問い合わせ内容は、正常に送信されました。</p>
+                <p>後日、担当者から連絡させていただきますので、今しばらくお待ちくださいませ。</p>
+            </div>
+        </div>
+        <br>
+        <div class="to-home">
+            <p><a href="https://www.jawhm.or.jp">▲TOPに戻る</a></p>
+        </div>
+        <br>
+    </div>
+</div>
+</div>
+    <?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

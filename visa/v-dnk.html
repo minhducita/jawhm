@@ -1,0 +1,229 @@
+﻿<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='デンマークのワーキングホリデービザ情報';
+$header_obj->description_page='デンマークのワーキングホリデービザの申請時に必要な書類や注意事項など、ワーホリで重要な情報を掲載しているので、デンマークのワーホリに参加される方は、ご確認ください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.webp" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（デンマーク） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	  <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag09.gif" alt="" />
+
+
+	<p class="text01">
+	<span class="centered-btn"><a class="visa-btn country-info" href="../country/denmark" title="デンマーク国情報へ">デンマーク国情報へ</a></span>
+	<b>デンマークのワーキングホリデービザの取得方法についてご案内します。</b>	<br /></p>
+
+<!--
+	  <div class="advbox04">
+-->
+<?php
+
+/***************************
+
+	// 073
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 69, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 074
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 70, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 075
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 71, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 076
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 72, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+	// 077
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 73, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+
+***************************/
+?>
+<!--
+	  </div>
+-->
+
+	  <h2 class="sec-title">ビザについて</h2>
+	  <p class="text01"> 2007年10月1日から日本・デンマークの両政府が両国における協力 関係をより緊密化するためにワーキングホリデーの制度を導入します。 また日本・デンマークの文化や生活様式を相互に理解していただく為の 幅広い機会を提供します。 </p>
+      <p class="text01"> このワーキング・ホリデー制度の開始によって、日本とデンマークの青年が各々の国を一定期間に渡って訪問し、その間の滞在費を補うために就労することができるようになりました。</p>
+      <p class="text01"> これに伴って、在デンマーク日本国大使館では、次の各要件を満たすデンマーク国民からの査証（ビザ）申請に対し、発給日から１年間有効なワーキング・ホリデー査証を無償で発給します。 </p>
+<!--	  <h3 class="h3-01"> 必要条件 </h3>
+	  <p class="text01"> 1年間有効なワーキングホリデーは下記の条件を満たしていれば日本国籍の方に対して無料で交付されます。</p>
+	  <ul class="list-disc">
+	  <li> ワーキングホリデーの主な目的は休暇を過ごすことである。 </li>
+	  <li> ワーキングホリデーの申請時に日本に居住していて日本国籍を持っている。 </li>
+	  <li> ワーキングホリデーの申請時に18才以上30才以下である。 </li>
+	  <li> 主に1年間以内の期間で休暇を過ごす目的で、許可された期間を延長することはできない。 </li>
+	  <li> デンマークのワーキングホリデービザをいままで取得していない。 </li>
+	  <li> 同行者が独自のビザを持っていなければ扶養義務のある家族を同行することはできない。 </li>
+	  <li> 有効な日本のパスポートを持っている。 </li>
+	  <li> 往復航空券かそれが購入できる程の十分な資金を持っている。 </li>
+	  <li> 主にデンマークでの滞在期間の生活を維持することが出来る十分な資金の証明(DKK15,000相当)。 </li>
+	  <li> 健康でかつ犯罪歴がない。 </li>
+	  <li> このスキームの下で入国する場合、デンマークの法律・規定に従わなければならない。 </li>
+	  </ul>
+-->
+	  <!-- <h3 class="h3-01"> ワーキングホリデーのための滞在許可 </h3>
+	  <ul class="list-disc">
+	  <li> 申請時点で日本に居住していなければなりません。住民票を提出する必要があります。住民票の提出に関してのみ、ご自身の英訳でも問題ありません。 </li>
+	  <li> 申請時に18歳から30歳でなければなりません。申請後に31歳になっても構いません。 </li>
+	  <li> この滞在許可の主旨は長期の観光用であるため、3ヶ月以上勉強することや、同一の勤務先で6ヶ月以上働くことはできません。 </li>
+	  <li> 日本国のパスポートを所持していなければなりません。 </li>
+	  <li> ノルウェー渡航後３か月分の十分な生活資金をもっていなければなりません。十分な資金とは、１か月当たり10092ノルウェークローナとされています。 </li>
+	  <li> ワーキングホリデー終了後にノルウェーを離れる意思がなければなりません。ただしノルウェー入国前に日本への帰国のためのチケットを購入しておく必要はありません。 </li>
+	  <li> 概して健康であり、医療費をカバーできる保険に入っていなければなりません。以下の書式を使用してこれを証明してください。 </li>
+	  <li> 健康証明書 </li>
+	  <li> 意思表示書 </li>
+	  <li> 書類を提出する前に<a href="https://www.norway.or.jp/studywork/research/visa/ApplicationPortalNorway/#.VaclcPk2X1A" target="blank">Application Portal</a>で申請登録をする必要があります。 Application Portalでは"Work"を選び、チェックリストは"working holiday for young adults from Japan"を使用してください。 </li>
+	  </ul> -->
+
+<br />
+
+	  <p class="bg-yellow"> デンマークワーキングホリデーに関する情報の詳細は<a href="https://japan.um.dk/ja.aspx" target="_blank" rel="noreferrer"> デンマーク大使館 </a> からご確認ください。<br></p>
+	  <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		    <ul class="list-visabasic">
+			  <a href="https://www.mofa.go.jp/mofaj/area/denmark/data.html">基本情報</a>
+			  <a href="https://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=164">安全情報</a>
+			 <a href="https://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/denmark.html">在外公館</a>
+			</ul>
+
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'デンマーク';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline5_off.gif" alt=""></a></center>
+
+	  <h2 class="sec-title">申請に必要な書類</h2>
+      <ul class="list-disc">
+	  <li> 有効なパスポート </li>
+	  <li> パスポートのコピー(表紙及びすべてのページのコピーを1部、白紙のページも含む) </li>
+	  <li> パスポートサイズの写真 1枚 </li>
+	  <li> 自分名義の銀行残高証明書(英文で原本１部）<p>（少なくとも 15000 デンマーククローネ「約 30 万円相当」以上の資金証明が必要）</p></li>
+	  <li> 往復航空券予約証明、または英訳された購入資金所持証明　</li>
+	  <li> 保険証書　</li>
+	  </ul>
+      <h2 class="sec-title">申請の流れ（オンライン申請の場合）</h2>
+      <ul class="list-number">
+	  <li> 必要書類を準備する</li>
+	  <li> アプリケーションフォームを進めてビザを申請する。
+	  <br>
+		<p>　　https://www.nyidanmark.dk/en-GB/You-want-to-apply/Working-Holiday/Working-Holiday-Japan?anchor=howtoapply</p>
+	  </li>
+	  <li> VFSデンマークビザ申請センターへの訪問予約をメールにて行う。</li>
+	<li> VFSデンマークビザ申請センターにて生体認証を行う。<p>　　※オンライン申請を進めてから14日以内に登録が必要です。</p></li>
+	<li> VFSデンマークビザ申請センターにてビザを受け取る。もしくは郵送で受け取る</li>
+      </ul>
+    <h2 class="sec-title">申請の流れ（手書きで申請の場合）</h2>
+    <ul class="list-number">
+	  <li> 必要書類を準備する</li>
+	  <li> アプリケーションフォームをダウンロードし記入する。</li><li> VFSデンマークビザ申請センターへの訪問予約をメールにて行う。</li>
+	  <li> VFSデンマークビザ申請センターにてビザ申請、並びに生体認証を行う。</li>
+	  <li> VFSデンマークビザ申請センターにてビザを受け取る。もしくは郵送で受け取る</li>
+      </ul>
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'デンマーク';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+	<p class="text01">
+	【注意】<br/>
+	ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+	また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+	正確なものであることを保証するものではありません。<br/>
+	ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+	</p>
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'デンマーク';
+            $number_to_display = '2';
+            $start_display_from = '4'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2019/06/13に確認した情報です。</font></p>
+	  </div>
+	  		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline3_off.gif" alt=""></a></center>
+</br>
+	  <?php $header_obj->display_visa_links(); ?>
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

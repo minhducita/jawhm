@@ -1,0 +1,251 @@
+/*
+Theme Name: Editor style
+*/
+
+.pink-title{
+	font-weight:bold;
+	color:deeppink;
+	font-size:15px;
+}
+
+hr.dotted {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.sec-title-skyblue {
+	font-size: 14px;
+	color: #000033;
+	background-image: url(http://www.jawhm.or.jp/ja/wp-content/uploads/2013/03/sec-title2.gif);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	height: 25px;
+	width: 660px;
+	padding-left: 20px;
+	padding-top: 8px;
+}
+
+#heading3{
+	font-size: 50%;
+	color: navy;
+    border:solid 1px #ddd;
+    padding-top: 10px;
+    border-radius: 5px;
+    background: #eee;
+    -moz-border-radius: 5px; /* FF */
+    background: -moz-linear-gradient(top,  #fff,  #eee); /* FF */
+    -webkit-border-radius: 5px;/* Webkit */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));/* Webkit */
+    -pie-background:linear-gradient(top,  #fff,  #eee); /* ie */
+    behavior: url(images/PIE.htc);  /* ie */
+    }
+    #heading3 span{border-left:5px navy solid;padding-left:10px;}
+
+
+
+/*　会場選択ボタン　*/
+
+
+
+.btn_tokyo,.btn_osaka,.btn_nagoya,.btn_fukuoka{
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+	display: block;
+	float: left;
+	position: relative;
+	left: 5%;
+}
+
+a.btn_fukuoka:visited {color: #ffffff; text-decoration: none;}
+a.btn_tokyo:visited {color: #ffffff; text-decoration: none;}
+a.btn_osaka:visited {color: #ffffff; text-decoration: none;}
+a.btn_nagoya:visited {color: #ffffff; text-decoration: none;}
+
+
+
+.btn_tokyo {
+	background: #3cf;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	color: #fff;
+	padding: 10px 0px;
+	width: 22%;
+
+
+}
+
+.btn_osaka {
+	background: #f66f92;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	color: #fff;
+	padding: 10px 0px;
+	width: 22%;
+}
+
+.btn_nagoya {
+	background: #00b38c;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	color: #fff;
+	padding: 10px 0px;
+	width: 22%;
+}
+
+.btn_fukuoka {
+	background: #ffbb37;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	color: #fff;
+	padding: 10px 0px;
+	width: 22%;
+
+
+}
+
+
+.btn_list{
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+	display: block;
+	float: left;
+	position: relative;
+	left: 5%;
+}
+
+.btn_list {
+	background: navy;
+	border: 1px solid #DDD;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	color: #fff;
+	padding: 5px 40px;
+}
+
+a.btn_list:visited {color: #ffffff; text-decoration: none;}
+
+
+/*　角丸　*/
+#maru{
+	border:0px solid #FF0000; 
+	margin:0px; padding:20px 30px 40px 30px; 
+	background-color:#FFFFFF;
+	webkit-border-radius: 10px;
+	moz-border-radius: 10px;
+	border-radius: 10px;
+	width="80%"
+    }
+
+
+/*　見出し　*/
+
+#heading_tokyo{
+	size: 25px;
+	color: navy;
+   	border-bottom: 2px #3cf solid;
+   	padding-bottom: 5px;
+	margin-top: 20px;
+    }
+    #heading_tokyo span{
+	size: 20px;
+        margin-left:20px;
+        color: #ccc;
+        position: relative;
+        top: 0px;
+        }
+
+#heading_osaka{
+	size: 25px;
+	color: deeppink;
+   	border-bottom: 2px #f66f92 solid;
+   	padding-bottom: 5pt;
+    }
+    #heading_osaka span{
+	size: 20px;
+        margin-left:20px;
+        color: #ccc;
+        position: relative;
+        top: 0px;
+        }
+
+#heading_nagoya{
+	size: 25px;
+	color: SeaGreen;
+   	border-bottom: 2px #00b38c solid;
+   	padding-bottom: 5px;
+    }
+    #heading_nagoya span{
+	size: 20px;
+        margin-left:20px;
+        color: #ccc;
+        position: relative;
+        top: 0px;
+        }
+
+#heading_fukuoka{
+	size: 25px;
+	color: DarkOrange;
+   	border-bottom: 2px #ffbb37 solid;
+   	padding-bottom: 5px;
+    }
+    #heading_fukuoka span{
+	size: 20px;
+        margin-left:20px;
+        color: #ccc;
+        position: relative;
+        top: 0px;
+        }
+
+
+
+.button {
+	font-color: #fff;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	outline: none;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+
+.button {
+	text-decoration: none;
+	margin-bottom: 15px;
+	font-color: #fff;
+	background-color: #ccc;
+}
+.button:hover {
+	font-color: #fff;
+	background-color: #3a77ec;
+}

@@ -1,0 +1,372 @@
+@charset "utf-8";
+/*
+------------------------------------------------------------
+国選択ページ
+------------------------------------------------------------
+*/
+
+#area-map-title {
+	font-size:18px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	text-align: center;
+}
+#area-map-message-sp {
+	font-size: 13px;
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 0 20px;
+}
+#area-map {
+	display: none;
+}
+#area-map-sp {
+	width: 100%;
+	margin: 0 auto 20px;
+}
+#area-map-sp ul {
+	width: 100%;
+}
+#area-map-sp ul li {
+	width: 48%;
+	float: left;
+	margin-right:4%;
+}
+#area-map-sp ul li:nth-child(2n) {
+	margin-right:0;
+}
+#area-map-sp ul li img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+#area-map-message {
+	display: none;
+}
+.sec-title {
+	display: none;
+}
+.dd-pc {
+	display: none;
+}
+.list-country li .dl-country-title dd {
+	background: url('../../country/images/title.png');
+	color: #fff;
+	font-weight: bold;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 56px;
+	padding: 0 5px;
+	font-size: 18px;
+}
+.list-country li .dl-country-title .name-jp{
+	float: right;
+}
+.list-country li .dl-country-title dd span {
+	font-size: 13px;
+	padding-left: 8px;
+}
+.country-message {
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+
+}
+/*.area-block {
+	width: 310px;
+	margin: 10px auto 15px;
+}*/
+.area-block div {
+	margin-bottom: 10px;
+}
+.area-block-1{
+	width: 100%;
+}
+.area-block-2{
+	width: 49%;
+	float: left;
+	margin-right: 5px;
+}
+
+.area-block-3{
+	width: 49%;
+	float: left;
+	margin-left: 5px;
+}
+.area-block .area-block-4 {
+
+}
+.area-block .area-block-4 .link-btn img {
+	width: 150px;
+}
+.area-block .dl-article {
+	font-size: 10px;
+}
+.area-block .dl-article dd {
+	padding: 4px 6px;
+	line-height: 15px;
+}
+.area-block .dl-article .dd-btn a {
+	padding: 6px;
+}
+.area-block .area-block-4 .link-detail {
+	margin-bottom: 5px;
+}
+.area-display-pc {
+	display: none;
+}
+.country-morebtn {
+	margin-top: 10px;
+	font-size: 14px;
+	padding: 12px 0;
+	-webkit-background-size:8px 11px;
+	-moz-background-size:8px 11px;
+	-o-background-size:8px 11px;
+	background-size:8px 11px;
+}
+/*
+------------------------------------------------------------
+各国ページ
+------------------------------------------------------------
+*/
+.h2-title {
+	font-size: 14px;
+	width: 98% !important;
+}
+.area-main-content {
+	width: 98%;
+	margin: 10px auto 15px;
+}
+.btn-back-list {
+	display: block;
+	width: 98%;
+	margin: 10px auto;
+	background-color: #F39800;
+	padding: 8px 0;
+	text-align: center;
+	text-decoration: none;
+	color: #fff !important;
+	font-size: 18px;
+}
+.btn-visa {
+	display: block;
+	width: 90%;
+	margin: 10px auto;
+	padding: 8px 0;
+	padding-left: 25px;
+	text-align: left;
+	text-decoration: none;
+	color: #fff !important;
+	font-size: 15px;
+	font-weight: bold;
+	background: url("../images/arrow-2.gif") no-repeat 90% center #29A7E1;
+}
+#area-map-img {
+	width: 293px;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+.list-best3 li {
+	font-size: 15px;
+	padding-bottom: 3px;
+	margin-right: 5px;
+}
+.list-best3 li img {
+	width: 28px;
+	height: auto;
+	vertical-align: bottom;
+}
+.table-info {
+	width: 48%;
+	float: left;
+	margin-right: 4%;
+}
+.table-info th {
+	font-size: 12px;
+}
+.table-info td {
+	font-size: 13px;
+}
+.table-info td span {
+	display: block;
+}
+.table-info #td-capital,
+.table-info #td-language {
+	font-size: 15px;
+}
+.table-clock {
+	width: 100%;
+	margin: 20px 0 15px;
+}
+.table-clock th,
+.table-clock td {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+/* --------------------------------------------------
+    追加 _ 2015.02.23
+-------------------------------------------------- */
+.centered-btn_set3 {
+	font-size: 13px;
+	text-align: right;
+	margin-bottom: 20px;
+}
+/* --------------------------------------------------
+    FIx  _ 2015.05.10
+-------------------------------------------------- */
+.mb_none{
+	display: none;
+}
+.area-display-sp a img{
+	display: block;
+	width: 98%;
+	margin: 20px auto; 
+}
+.area-display-sp a:nth-child(2) img{
+	width: 94%;
+	margin-top: -15px;
+}
+.list-country-content{
+	border: 1px solid #ddd;
+    background: #fff;
+   	padding: 15px 0 20px 15px;
+   	padding: 15px 5px 20px 5px;
+}
+.list-country-content .area-block .area-block-2 img, .list-country-content .area-block .area-block-3 img {
+
+	max-height: 100px;
+}
+.area-block-2 dt img, .area-block-3 dt img {
+    width: 100%;
+   /* height: 100px;*/
+}
+.area-block-1 .dl-article dt img{
+	width: 100%;
+   /* height: 155px;*/
+}
+.area-block .dl-article dd img{
+	float: right;
+	margin-top: 9px;
+	width: 12px;
+}
+.all-btn{
+	display: none;
+}
+.sp-all-btn .btn{
+	margin-bottom: 6px;
+	border-radius: 4px;
+	height: 30px;
+	border: 1px solid #ccc;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ededed+0,fcfcfc+28,ffffff+52,fcfcfc+75,ededed+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ededed 0%, #fcfcfc 28%, #ffffff 52%, #fcfcfc 75%, #ededed 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 0%,#fcfcfc 28%,#ffffff 52%,#fcfcfc 75%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#ededed 0%,#fcfcfc 28%,#ffffff 52%,#fcfcfc 75%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+.sp-all-btn .btn a{
+	text-decoration: none;
+}
+.sp-all-btn .btn p{
+	font-size: 11px;
+    font-weight: 600;
+    color: #222;
+}
+.sp-all-btn .btn img, .sp-all-btn .btn i.fa{
+	float: left;
+    margin-top: 6px;
+    width: 23px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.sp-all-btn .btn i.fa {
+	font-size: 20px;
+	color: #0e6eb8;
+}
+.list-country li .dl-country-title .dd-sp{
+	font-size: 15px;
+}
+@media only screen and (max-width : 768px){
+	
+
+}
+@media only screen and (min-width:480px) and (max-width:768px){
+	.area-block-1 .dl-article dt img {
+	    width: 100%;
+	   /* height: 240px;*/
+	}
+	.area-block-2 {
+	    width: 49%;
+	     margin-right: 5px;
+	}
+	.area-block-3 {
+	 width: 49%;
+	  margin-left: 5px;
+	}
+	.area-block .dl-article dd {
+	    padding: 4px 20px;
+	}
+}
+@media only screen and (max-width : 480px){
+	.area-block-2 {
+	    width: 48%;
+	    margin-right: 5px;
+	}
+	.area-block-3 {
+	    width: 48%;
+	    margin-left: 5px;
+	}
+}
+@media only screen and (max-width : 320px){
+	.area-block .dl-article {
+	    font-size: 9px !important;
+	}
+}
+.btn-seminar.display-SP{
+		display: block !important;
+	}
+	.btn-seminar.display-PC{
+		display: none !important;
+}
+.step_box1 {
+	width: 100%;
+}
+.flex-content{
+	display: flex;
+	/*align-items: center;*/
+	  margin: 0 5px 15px 5px;
+}
+.liusa .flex-content:nth-child(2){
+	float: right;
+}
+.liusa{
+	text-align:center;
+	margin-top: 20px;
+}
+.liusa a img{
+	width:100%;
+}
+.liusa:nth-child(2){
+	margin-top: 10px;
+}
+.box-chat {
+	max-width: 280px;
+}
+.from-me {
+	font-size: 13px;
+	line-height: 25px;
+	font-weight: bold;
+}
+.from-them {
+	font-size: 13px;
+	line-height: 30px;
+	font-weight: bold;
+}
+.liusa .fa-user {
+	font-size: 30px;
+}
+.box-chat {
+	padding: 5px 15px;
+}

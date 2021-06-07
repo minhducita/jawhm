@@ -1,0 +1,453 @@
+/*
+Theme Name: GoldenBook
+Theme URI: 
+Description: A theme for guest reviews.
+Version: 1
+Author: AntoineMichael, JAWHM
+Author URI: http://www.jawhm.or.jp
+*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	background:url('img/new-bg.jpg') #e5d8c7 no-repeat center top;
+}
+
+#content {
+	position:relative;
+	width:977px;
+	height:805px;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+	background:url('img/notebook.png') no-repeat center top;
+}
+
+a:link,
+a:visited {
+	color:#cca367;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+/*------------------*/
+/* START Right part */
+/*------------------*/
+
+#right-box {
+	position:relative;
+	margin-left:480px;
+	width:470px;
+	height:657px;
+	/*border:1px solid red;*/
+	overflow:hidden;
+}
+.content-box{
+	position:relative;
+	/*border:1px solid lightblue;*/
+	padding-left:20px;
+	padding-right:10px;
+	height:695px;
+	width:458px;
+	overflow:scroll;
+}
+.content-box h3 {
+	display:block;
+	height:73px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:110px;
+	width:320px;
+	font-size:1.3em;
+	text-align:center;
+	color:#555555;
+	word-wrap: break-word;
+	word-break:keep-all;
+}
+
+h3.map-ca {
+	background:url('img/ca-map.png') no-repeat right center;
+}
+h3.map-au {
+	background:url('img/au-map.png') no-repeat right center;
+}
+h3.map-nz {
+	background:url('img/nz-map.png') no-repeat right center;
+}
+h3.map-uk {
+	background:url('img/uk-map.png') no-repeat right center;
+}
+h3.map-fr {
+	background:url('img/fr-map.png') no-repeat right center;
+}
+h3.map-de {
+	background:url('img/de-map.png') no-repeat right center;
+}
+h3.map-dk {
+	background:url('img/dk-map.png') no-repeat right center;
+}
+h3.map-photo {
+	background:url('img/big-photo.png') no-repeat right center;
+}
+
+/*------------------*/
+/*     Gallery      */
+
+div.gallery {
+	padding-left:15px;
+}
+div.gallery img {
+	text-align:center;
+	padding:5px;
+	background-color:#ffffff;
+	margin:0px 2px 0px 2px;
+	border:1px solid #E7E7E7;
+}
+
+/*------------------*/
+/*  END Right part  */
+/*------------------*/
+
+/*------------------*/
+/* START Left part  */
+/*------------------*/
+
+#left-box {
+	position:relative;
+	float:left;
+	width:450px;
+	height:730px;
+	margin-top:0px;
+	padding-left:30px;
+	/*border:1px solid blue;*/
+}
+
+h2#notebook-title {
+	margin-top:0px;
+	margin-bottom:11px;
+	padding-top:20px;
+	display:inline-block;
+	width:100%;
+	height:50px;
+	font-family:Impact;
+	text-align:center;
+	font-size:24px;
+	font-weight:normal;
+	background:url('img/line.png') no-repeat center bottom;
+}
+
+#links {
+	position:relative;
+	height:590px;
+	padding-left:20px;
+	/*border:1px solid green;*/	
+}
+
+/* List of title */
+/*---------------*/
+
+a.list-post-au:link,
+a.list-post-au:visited,
+a.list-post-ca:link,
+a.list-post-ca:visited,
+a.list-post-de:link,
+a.list-post-de:visited,
+a.list-post-dk:link,
+a.list-post-dk:visited,
+a.list-post-fr:link,
+a.list-post-fr:visited,
+a.list-post-nz:link,
+a.list-post-nz:visited,
+a.list-post-uk:link,
+a.list-post-uk:visited,
+a.list-post-photo:link,
+a.list-post-photo:visited{
+	margin-top:0px;
+	margin-bottom:8px;
+	padding-top:0px;
+	padding-left:30px;
+	
+	display:block;
+	height:22px;
+	width:auto;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:1.2em;
+}
+a.list-post-au{
+	background:url('img/au.png') no-repeat left center;
+}
+a.list-post-ca{
+	background:url('img/ca.png') no-repeat left center;
+}
+a.list-post-de{
+	background:url('img/de.png') no-repeat left center;
+}
+a.list-post-dk{
+	background:url('img/dk.png') no-repeat left center;
+}
+a.list-post-fr{
+	background:url('img/fr.png') no-repeat left center;
+}
+a.list-post-nz{
+	background:url('img/nz.png') no-repeat left center;
+}
+a.list-post-uk{
+	background:url('img/uk.png') no-repeat left center;
+}
+a.list-post-photo{
+	background:url('img/camera.png') no-repeat left center;
+}
+
+span.selected {
+	color:#F90;
+}
+
+a:hover span.titlename{
+	text-decoration:underline;
+	cursor:pointer;	
+}
+
+span.titlename {
+	float:left;
+	display:inline-block;
+	padding-top:5px;
+	height:22px;
+}
+
+span.both-gender,
+span.male-gender,
+span.female-gender{
+	float:left;
+	display:inline-block;
+	margin-left:10px;
+	height:22px;
+	background-image:url('img/gender.png');
+	background-repeat:no-repeat;
+}
+
+span.both-gender{
+	width:29px;
+	background-position:left center;
+	margin-top:3px;
+}
+span.male-gender{
+	width:15px;
+	background-position:left 3px;
+}
+span.female-gender{
+	width:14px;
+	background-position:right -1px;
+	margin-top:3px;
+}
+
+/* Div Navigation */
+/*----------------*/
+
+.navigation {
+	position:relative;
+	height:50px;
+	/*border:1px solid orange;*/
+	text-align:center;
+}
+
+#girouette {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:47px;
+	height:48px;
+	background:url('img/chicken-red.png');
+	background-position: center bottom;
+	/*border:1px solid pink;*/
+}
+.navigation a {
+	display:block;
+	height:48px;
+	line-height:70px;
+}
+
+.navigation a.previous-posts-link {
+	float:right;
+	padding-right:120px;
+}
+.navigation a.previous-posts-link:hover~span#girouette{
+	background-position:right bottom;
+}
+
+.navigation a.next-posts-link {
+	float:left;
+	padding-left:102px;
+}
+
+.navigation a.next-posts-link:hover~span#girouette{
+	background-position:left bottom;
+}
+
+/*----------------*/
+
+#logo {
+	position:relative;
+	margin-top:30px;
+	margin-bottom:5px;
+	margin-right:auto;
+	margin-left:auto;
+	width:440px;
+	height:21px;
+	background:url('img/logo-black.png') no-repeat center center;
+}
+/*----------------*/
+/* END Left part  */
+/*----------------*/
+
+/*-----------------*/
+/* START FLAG menu */
+/*-----------------*/
+div#filter {
+	position:relative;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+}
+div#filter ul{
+	display:inline-block;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+div#filter ul li {
+	display:inline-block;
+	list-style-type:none;
+	margin:0px;
+	margin-right:5px;
+	padding:0px;
+	height:16px;
+	text-align:center;
+	font-size:12px;
+}
+
+div#filter ul li a {
+	margin:0px;
+	padding-right:20px;
+	height:16px;
+	color:#555555;
+}
+
+a.ALL{
+	background:url('img/United-Nations-16.png') no-repeat right center;
+}
+a.AUS{
+	background:url('img/Australia-16.png') no-repeat right center;
+}
+a.CAN{
+	background:url('img/Canada-16.png') no-repeat right center;
+}
+a.NZL{
+	background:url('img/New-Zealand-16.png') no-repeat right center;
+}
+a.GBR{
+	background:url('img/United-Kingdom-16.png') no-repeat right center;
+}
+a.DEU{
+	background:url('img/Germany-16.png') no-repeat right center;
+}
+a.FRA{
+	background:url('img/France-16.png') no-repeat right center;
+}
+a.DNK{
+	background:url('img/Denmark-16.png') no-repeat right center;
+}
+
+/*----------------*/
+/* END FLAG menu  */
+/*----------------*/
+
+/*----------------*/
+/* START TOP menu */
+/*----------------*/
+
+div.menu {
+	padding:0px;
+	text-align:right;
+}
+
+div.menu ul{
+	display:inline-block;
+	margin:0px;
+	margin-right:210px;
+	padding:0px;
+	width:276px;
+	height:55px;
+	vertical-align:top;
+	text-align:left;
+	font-size:0;
+	background:url('img/bookmark.png') no-repeat center top;
+}
+
+div.menu ul li {
+	float:left;
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+	height:55px;
+	text-align:center;
+	font-size:10px;
+}
+div.menu ul li a {
+	margin:0px;
+	padding:0px;
+	display:inline-block;
+	padding-top:35px;
+	width:100%;
+	height:20px;
+	font-family:serif;
+	color:#936
+}
+
+div.menu ul li a:hover {
+	background-image:url('img/bookmark-hover.png');
+	background-repeat:no-repeat;
+	text-decoration:none;
+}
+
+
+li#menu-item-440{
+	width:45px;
+}
+
+li#menu-item-441 {
+	width:45px;
+}
+li#menu-item-441 a:hover {
+	background-position:-45px 0px;
+}
+
+li#menu-item-442 {
+	width:61px;
+}
+li#menu-item-442 a:hover {
+	background-position:-87px 0px;
+}
+
+li#menu-item-443 {
+	width:66px;
+}
+li#menu-item-443 a:hover {
+	background-position:-148px 0px;
+}
+
+li#menu-item-444 {
+	width:57px;
+}
+li#menu-item-444 a:hover {
+	background-position:-214px 0px;
+}
+/*--------------*/
+/* END TOP menu */
+/*--------------*/

@@ -1,0 +1,159 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page = 'カナダのワーキングホリデービザ情報';
+$header_obj->description_page = 'カナダのビザ。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="ワーキングホリデー協定国(ビザ情報）" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（カナダ） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+<div id="maincontent">
+	<?php echo $header_obj->breadcrumbs('country'); ?>
+
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../../wh/canada/toronto/"><span>トロントワーホリがあなたを変える</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<?php $header_obj->display_visa_links(); ?>
+	<img src="../images/bflag03.gif" alt="カナダフラッグ" />
+	<?php
+	if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+
+		echo ('
+	<p class="text01">
+	<span class="centered-btn" style="padding-top:0;margin-bottom:0"><a class="visa-btn country-info" href="../country/canada" title="カナダ国情報へ">カナダ国情報へ</a></span>
+	<b style="display:block;margin-top:1em">カナダのワーキングホリデービザの取得方法についてご案内します。</b><br>
+	<a style="display:block" href="/wh/canada/">カナダのワーキングホリデー情報はこちら</a><br></p>
+	');
+	} else {
+
+		echo ('
+	<p class="text01">
+	<span class="centered-btn"><a class="visa-btn country-info" href="../country/canada" title="カナダ国情報へ">カナダ国情報へ</a></span>
+	カナダ情報については<a href="/wh/canada/">こちら</a>でご案内しています。<br />
+	</p>
+	');
+	}
+	?>
+	<p class="pt-30">２０２１年IECワーキングホリデープログラムは３月１日にオープンしました。<br>
+		<br>
+		新型コロナウィルスの影響で、申請要件や入国要件に変更がありますので、以下にご案内する関連サイトを定期的にご確認ください。<br>
+		<br>
+		また、リンク先の情報は定期的に更新されます。　最新情報をご確認の上、申請のご準備と渡航の計画をお願いします。<br>
+	</p>
+
+	<h2 class="sec-title">IECの2021年プログラム変更について</h2>
+	<p>現行の入国制限下では、必要不可欠の渡航のみに制限されているため、IECワーキングホリデー参加希望者は、参加資格申請の際にジョブオファーがあることをIECに提出しなければなりません。<br>
+		<br>
+		この新しい要件に関する説明は、IRCC公式ウェブサイトに掲載される予定です。また、プログラム参加費が153ドルから156ドルに値上げされます。<br>
+		 <br>
+		入国制限下ではIECの渡航を可能にするために、2021年プログラムの参加資格に仕事の内定が加えられました。<br>
+		参加資格申請にプロフィールを提出し、ジョブオファーがある方に就労許可証申請の招待状が発行されます。<br>
+	</p>
+
+	<br>
+	<p class="text-bold">・Tell us about your job offer (for Working Holiday candidates)</p>
+	<p>
+		<a style="color: #0000EE;" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/become-candidate.html#joboffer"
+			target="_blank" rel="noreferrer">
+			https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/become-candidate.html#joboffer
+		</a>
+	</p>
+	<br>
+	<br>
+	<br>
+	<p>以下に該当箇所を抜粋しましたのでご参照ください。</p>
+	<br>
+	<p>IECトップページ</p>
+	<p>
+		<a style="color: #0000EE;" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html"
+			target="_blank" rel="noreferrer">
+			https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html
+		</a>
+	</p>
+	<br>
+	<br>
+	<p>IECジャパンページ</p>
+	<p>
+		<a style="color: #0000EE;" href="https://www.cic.gc.ca/english/work/iec/selections.asp?country=jp&cat=wh" target="_blank"
+			rel="noreferrer">
+			https://www.cic.gc.ca/english/work/iec/selections.asp?country=jp&cat=wh
+		</a>
+	</p>
+	<br>
+	<br>
+	<p>新型コロナウィルスのIECへの影響について</p>
+	<p>
+		<a style="color: #0000EE;" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/coronavirus-covid19/iec.html"
+			target="_blank" rel="noreferrer">
+			https://www.canada.ca/en/immigration-refugees-citizenship/services/coronavirus-covid19/iec.html
+		</a>
+	</p>
+	<br>
+	<br>
+	<div class="top-move">
+		<p><a href="#header">▲ページのＴＯＰへ</a></p>
+		<p>
+			
+			<font size="1">※掲載されているビザ情報は、2021/03/05に確認した情報です。</font>
+		</p>
+	</div>
+
+	<h3 class="h3-02"><a style="color: red" href="/seminar/seminar">もうすぐ開催！カナダの無料セミナー</a></h3>
+	<?php
+	//settings for the calendar module display
+	$country_to_display = 'カナダ';
+	$number_to_display = '2';
+	$start_display_from = '2'; //empty is begining
+
+	display_horizontal_calendar($country_to_display, $number_to_display, $start_display_from);
+	?>
+
+	<div style="clear:both; height:20px;">&nbsp;</div>
+	<div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="../../wh/canada/toronto/"><span>トロントワーホリがあなたを変える</span></a></div>
+		</div>
+	</div>
+	<div style="clear:both; height:30px;">&nbsp;</div>
+
+	<h3 class="h3-02">その他のワーキングホリデー協定国のビザ情報</h3>
+	<?php $header_obj->display_visa_links(); ?>
+	<?php $links_obj->display_links(); ?>
+
+</div>
+</div>
+</div>
+
+<?php
+$header_obj->add_js_files .= '
+	<script>(function () {
+			var w = window, d = document;
+			var s = "https://app.chatplus.jp/cp.js";
+			d["__cp_d"] = "https://app.chatplus.jp";
+			d["__cp_c"] = "eaf57958_1";
+			var a = d.createElement("script"), m = d.getElementsByTagName("script")[0];
+			a.async = true, a.src = s, m.parentNode.insertBefore(a, m);
+		})();
+	</script>
+  ';
+?>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+</body>
+
+</html>

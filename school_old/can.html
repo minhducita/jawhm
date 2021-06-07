@@ -1,0 +1,372 @@
+﻿<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='カナダの学校';
+$header_obj->description_page='カナダの学校。ワーキングホリデー（ワーホリ）や留学で行ける各種語学学校のご案内です。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/school-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '留学・ワーキングホリデー　カナダの学校';
+
+$header_obj->display_header();
+
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('school'); ?>
+
+	  <h2 class="sec-title">カナダの学校</h2>
+
+
+<?php
+
+$scdata = '';
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_ilac/"><img src="can_ilac/p01.jpg" width="100"></a>
+		</th>
+		<td>
+			<a href="can_ilac/">インターナショナル・ランゲージ・アカデミー・オブ・カナダ（INTERNATIONAL LANGUAGE ACADEMY OF CANADA / ILAC）</a><br/>
+  			<font color="#333333">
+			ランゲージトラベルマガジンやトップランゲージスクールなど、数々のアワードを受賞しているILACには世界70ヶ国から学生が集まり、語学学習にアクティビティと、積極的に毎日を楽しんでいます！17段階と細かなレベル分けで、初心者から上級者まで、短期から長期まで、ニーズに合わせてレッスンが受けられます。多国籍で様々な文化が混ざり合った素晴らしい国カナダで、世界中から来た友達と楽しく語学学習しませんか？
+			</font>
+ 		</td>
+
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_kgic/"><img src="can_kgic/p01.jpg" width="110"></a>
+		</th>
+		<td>
+			<a href="can_kgic/">キング・ジョージ・インターナショナル・カレッジ（King George International College / KGIC）</a><br/>
+  			<font color="#333333">
+			KGIC/KGIBC-CTCは1996年にBC州サレーにて創立され、現在はバンクーバーに、サレー、トロント、ビクトリア、ハリファックスキャンパスを持つ語学・専門学校です。 英語学習から進学、ビジネス、有給インターンシップと多彩なプログラムを開講し、英語でスキルアップキャリアアップを行い方、留学にて就職を有利にしたい方、英語環境にて仕事をしたい方に最適な学校です。 
+			</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+/*
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_cwa/"><img src="can_cwa/p01.gif" width="150"></a>
+		</th>
+		<td>
+			<a href="can_cwa/">ケンブリッジ・ウエスタン・アカデミー　（Cambridge Western Academy / CWA）</a><br/>
+		<font color="#333333">
+		ケンブリッジ ウェスタン アカデミー（CWA）は、オーストラリアで15年の歴史を持つCambridge International Collegeが開校した学校です。オーストラリアでは一番大きな語学学校として知られ、メルボルン・アデレード・パースの３都市に11キャンパス、イギリスではバーミングハムにキャンパスを持ち、専門コースと英語コースを合わせ、現在約５,000名の学生が通っています。この実績と経験を活かして、2010年6月にはバンクーバーに新しいキャンパスをオープンしました。 CWAはバンクーバーのダウンタウン、リチャードストリートとウェストヘイスティングストリートの角に位置しています。ウォーターフロント駅から徒歩1分、ショッピング街やレストランまで徒歩圏内にあり、どのエリアからも通学しやすい便利な場所にあります。また、きめ細やかなカウンセリング生徒全員に目を行き届かせ、仕事探し、大学への進学相談、留学生活でのサポートなどを行っている日本人カウンセラーが常駐しています。
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_lets/"><img src="can_lets/p01.jpg" width="100"></a>
+		</th>
+		<td>
+			<a href="can_lets/">レッツ　（ＬＥＴＳ）</a><br/>
+			<font color="#333333">
+			LETS カナダ校は2006 年に北米で初めて「小学校英語指導者認定協議会」（J-Shine）に認定された児童英語講師養成専門学校です。場所はカナダで一番のロケーション。ダウンタウンのど真ん中にあり、何かお買い物をする際も大変便利です。また最寄りの駅より徒歩３分と大変便利です。また日本人スタッフが常駐しておりますので、日本語でお気軽にご相談できます。
+			</font>
+			</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+*/
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_ih/"><img src="can_ih/p01.jpg" width="135"></a>
+		</th>
+		<td>
+			<a href="can_ih/">インターナショナル・ハウス / バンクーバー校（ih Vancouver）</a><br/>
+			<font color="#333333">
+			当校はダウンタウンに位置し、またはスカイトレイン、スタディアム駅から徒歩2分、バスの路線も多く走るエリアに位置しています。 学校はショッピングモール(INTERNATIONAL　VILLAGE内２階)の中にあり、フードコート、映画館などもある為、何をするにも非常に便利な立地です。 NHL所属のアイスホッケーチームのバンクーバー・カナックスの本拠地のロジャースアリーナも徒歩で行ける範囲となっております。また観光地としても有名なギャスタウンまでも徒歩３分です。</td>
+			</font>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_pgic/"><img src="can_pgic/p01.jpg" width="120"></a>
+		</th>
+		<td>
+			<a href="can_pgic/">ピージーアイシー（PGIC Vancouver/ Toronto/ Victoria）</a><br/>
+			<font color="#333333">
+				Loyalist Group Limitedはカナダの教育業界で唯一の上場企業であり、4つの学校、6つのキャンパスを展開し、2013年TSX(トロント証券)TOP50に選ばれた現在、最も注目されている企業である。
+				PGICはその中でも独自の教育方針やカリキュラムの質の高さで定評があり、1994年の開校以来、「英語を本気でモノにしたい！！」という学生が世界中から集まります。その理由のひとつは4週間1セッションの固定クラスでしっかり学習できること。学生の入れ替わりも少ないので多国籍のクラスメートとお友達になりやすいのもポイントです。また、授業では就職活動やグローバル社会では欠かせない自己アピール力、論理的思考力、プレゼンテーション力などのユニークなプログラムが多数あり、英語プラスαのスキルを身につけることができます。 また徹底されたEnglish Only Policyは自然に英語を話す勇気を与えてくれ、地元カナダ人との会話クラブや街でネイティブスピーカーに話しかけるトーキングコンテストなど、生きた英語を話す自信をつけ、楽しみながら英語力を高めることができるオンリー1の学校です。			</font>
+
+		 		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_umc/"><img src="can_umc/p01.jpg" width="100"></a>
+		</th>
+		<td>
+			<a href="can_umc/">アッパー・マディソン・カレッジ（Upper Madison College / UMC）</a><br/>
+			<font color="#333333">
+			“CONNECTING THE WORLD WITH COMMITMENT & COMPASSION”をモットーに２００４年に設立されたＵＭＣ。少人数制クラスで生徒、教師、スタッフ間の距離が近く、お互いを名前で呼び合うアットホームな環境のもと、実際に使える英語力取得を目指して構成された当校オリジナルカリキュラムを用いて、各々の英語力を飛躍的に伸ばしていきます。 英語で考え、英語で発言するというプロセスを鍛えることに重きを置き、インプットとアウトプットのバランスに長けた当校プログラムは、世界で一番とも言われる異文化社会のここトロントにおいて、皆さんをグローバル人材へと導びく大きな役割を果たすことでしょう。国際感覚を身につけるにはこの上ない最高の環境で、私たちと一緒に楽しく、運用できる英語力を身につけませんか？ 
+			</font>
+		 		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_ccel/"><img src="can_ccel/p01.jpg" width="140"></a>
+		</th>
+		<td>
+		<font color="#333333">
+			<a href="can_ccel/">カナディアン・カレッジ・オブ・イングリッシュ・ランゲージ（Canadian College of English Language / CCEL）</a><br/>
+	
+		・１９９１年創立以来２１年間、国際的な評価を得る伝統校<br />
+		・Languages Canada認定校、 Quality English認定校、東日本大震災被災者救済ホーププロジェクト対象校<br />
+		・PCTIA（BC州専門学協会）認定校<br />
+		・EQA（BC州教育クオリティ認定協会）認定校<br />
+		・学生数： ５００－６００名（語学、専門含む）<br />
+		・アメリカに姉妹校(SCEL)あり。転校や「２カ国留学」も可能 <br />		 		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_quest/"><img src="can_quest/p01.jpg" width="130"></a>
+		</th>
+		<td>
+			<a href="can_quest/">クエスト・ラングエッジ・スタディーズ（Quest Language Studies）</a><br/>
+		<font color="#333333">
+		ニーズに合うフレキシブルなプログラムを少人数制でしっかり学べる学校がQuestです。定期的なライティング、マンツーマンスピーキングチェックテストを通じて生徒さん個々人の学習進度状況もしっかり把握していく安心できる学習サポートシステムを完備しています。
+		どのレベルでも会話の中から身につける英語学習方法（コミュニカティブアプローチ）を徹底化することで日本では実現しにくかった楽しく、効果的な英語習得方をご提供します！是非その“差”を体験しにいらして下さい！
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_cornerstone/"><img src="can_cornerstone/p01.jpg" width="150"></a>
+		</th>
+		<td>
+			<a href="can_cornerstone/">コーナーストーン・アカデミック・カレッジ　（Cornerstone Academic College）</a><br/>
+		<font color="#333333">
+			Cornerstone Academic Collegeはバンクーバー、トロントにキャンパスを持つ語学学校です。
+			リスニング・スピーキング・文法などすべてのスキルを関連付けて学ぶ「Integrated method」を採用し、日常会話から仕事で使う英語までをカリキュラムでカバーしております。
+			また、スピーキング集中コースや、ビジネス英語などの専門コースにも力を入れており、目的に特化した英語学習をしたい方にもオススメの学校です。
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_eurocentres/"><img src="can_eurocentres/p01.jpg" width="150"></a>
+		</th>
+		<td>
+			<a href="can_eurocentres/">ユーロセンター・カナダ　（Eurocentres Canada）</a><br/>
+		<font color="#333333">
+				ユーロセンターズ・カナダは、設立当初より学生第一をポリシーにしています。
+				英語を母国語とする教師陣は、ランゲージズ・カナダから認定済みであり、高いスタンダードを誇ります。
+				学校の内外で素晴らしい留学体験ができるよう、教師やスタッフ全員が、学生のケアーと安全を念頭に日々努めています。
+				2011年の東日本大震災の被災者をカナダの学校がうけいれた、Hope For Youthプロジェクトにも参加しました。
+				ユーロセンター・カナダのバンクーバー校とトロント校では、各学生の留学目標に答えるための個人指導が徹底されています。
+				学業カウンセリング、自習アドバイス、定期試験、模擬試験、毎週の個人面談など、常に学生の習熟度は評価されているので、流暢さと正確さ双方において、より効率よく英語力を高めることができます。コースも多種あり、短期留学から、大学進学やIELTS検定コースなど選ぶことができます。
+				毎週催されるアクティビティーに参加すれば、世界各国に友達の輪を広げることができるでしょう。
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_tamwood/"><img src="can_tamwood/p01.jpg" width="150"></a>
+		</th>
+		<td>
+			<a href="can_tamwood/">タムウッド・インターナショナル　（Tamwood International）</a><br/>
+		<font color="#333333">
+				タムウッドは中規模ながら世界各国から生徒がバランス良く集まる学校です。
+				Productionつまり英語を作る、訳すのではなく実際に英語を使う練習をします。
+				またStudy HallやPersonal Coachingと個別指導を提供しており、
+				グループレッスンではカバーできない個人の弱点をバックアップするシステムがある世界でも数少ない学校です。
+				インターンやボランティアプログラムを提供するGo International、COOPビザで
+				学習・研修するTamwood Careers専門学校をグループ内に持つ、ユニークな学校となります。
+				学ぶ、体験する、夢を実現するを3つの組織でインハウスで提供できるのがTamwoodです。
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_sec/"><img src="can_sec/p01.jpg" width="105"></a>
+		</th>
+		<td>
+			<a href="can_sec/">スタディ・イングリッシュ・イン・カナダ（Study English in Canada）</a><br/>
+		<font color="#333333">
+				SECトロント校は、アットホームな環境の中で総合英語と専門科目を学べる学校です。
+				また姉妹校のキャリアカレッジUCCBTへの編入も可能ですので、生徒の皆さんのニーズに合わせたコース選びをすることができ、
+				世界各国の留学生への質の高いサポートを提供しています。
+				当校にはフレンドリーなスタッフと質の高いレッスン内容を提供するためのプロフェッショナルの講師がいます。
+				さらにトロント校とバンクーバー校間での転校が簡単にできます。
+				生徒一人一人の夢やチャレンジを応援するスタッフが皆さんのお越しを待っています！
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+$scdata[] = '
+	<table class="shool-event">
+	<tr>
+		<th>
+			<a href="can_selc/"><img src="can_selc/p01.jpg" width="105"></a>
+		</th>
+		<td>
+			<a href="can_selc/">セルク・イングリッシュ・ラングエッジ・センター・バンクーバー（SELC Vancouver）</a><br/>
+		<font color="#333333">
+			SELC バンクーバー校は1985年、オーストラリアのシドニーに設立された最も歴史の長い語学学校の一つで、
+			2012年にカナダに初めてオープンしました。
+			基礎的な英語学習プログラムに加え、カフェやホテルでの仕事に挑戦するワーホリスペシャルや、
+			SELC社内でのインターン体験など、あなただけの留学ストーリーを作る環境が整っています。
+			アットホームでフレンドリーな教師スタッフが学生一人ひとりサポートする環境が整っています。7
+			英語力と共に人として成長できる学校にぜひお越しください！
+		</font>
+		</td>
+		<td  class="kuni">
+			<a href="can.html"><img src="../images/flag03.gif"><br/>Canada</a>
+		</td>
+	</tr>
+	</table>
+';
+
+
+	shuffle ($scdata);
+
+	foreach ($scdata as $showdata)	{
+		print $showdata;
+	}
+
+?>
+
+
+	  <h2 class="sec-title">各国の学校</h2>
+
+	  <div class="mcontent-country-box">
+	    <ul class="country-box-01">
+		  <li class="c-01"><a href="aus.html">オーストラリア</a></li>
+		  <li class="c-02"><a href="kor.html">韓国</a></li>
+		  <li class="c-03"><a href="uk.html">イギリス</a></li>
+		  <li class="c-04"><a href="ywn.html">台湾</a></li>
+		</ul>
+		<ul class="country-box-01">
+		  <li class="c-05"><a href="nz.html">ニュージーランド</a></li>
+		  <li class="c-06"><a href="fra.html">フランス</a></li>
+		  <li class="c-07"><a href="ire.html">アイルランド</a></li>
+		  <li class="c-08"><a href="hkg.html">香港</a></li>
+		</ul>
+		<ul class="country-box-02">
+		  <li class="c-09"><a href="can.html">カナダ</a></li>
+		  <li class="c-10"><a href="deu.html">ドイツ</a></li>
+		  <li class="c-11"><a href="dnk.html">デンマーク</a></li>
+		  <li class="c-12"><a href="worldwide.html">ワールドワイド</a></li>
+
+		</ul>
+	  </div>
+
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+      </div>
+
+<?php $links_obj->display_links(); ?>
+
+      <div class="advbox03">
+	    <p>108</p>
+	  </div>	  
+      <div class="advbox03">
+	    <p>109</p>
+	  </div>
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

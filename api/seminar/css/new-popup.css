@@ -1,0 +1,367 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+}
+p{
+	display:block;}
+.clear{
+	clear: both;
+}
+.newpopup{
+	font-size: 15px;
+	background:#f1f1f1;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.5;
+	border-radius: 5px;
+	position: relative;
+	padding: 30px 30px;
+	}
+.newpopup .close{
+	top:15px;
+	right:20px;
+	position:absolute;
+	background:#e1e1e1;
+	text-align: center;
+	font-size:20px;
+	border-radius:100%;
+	width:30px;
+	padding-top: 5px;
+	height:30px;
+	cursor: pointer;
+}
+.newpopup .lefpopup{
+	width:100px;
+	height:100px;
+	background-color:#fff;
+	border-radius: 10px;
+	font-size:15pt;
+	box-shadow: 10px 10px 1px #d2d2d2;
+	position:relative;
+	float: left;
+	margin-right: 50px;
+	}
+.newpopup .lefpopup .title{
+	background:#e74c3c;
+	height:27px;
+	padding-top: 3px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	}
+.newpopup .lefpopup .title .buttonleft {
+	background-color:#000;
+	border-radius:100%;
+	width:5px;
+	height:5px;
+	position:absolute;
+	top: 13px;
+	left:10px;
+	}
+.newpopup .lefpopup .title .buttonright{
+	background-color:#000;
+	border-radius:100%;
+	width:5px;
+	height:5px;
+	position:absolute;
+	top: 13px;
+	right:10px}
+.newpopup .lefpopup .title p {
+	text-align:center;	
+	color:#fff;
+	font-weight:700;
+	}
+.newpopup .lefpopup .content{
+	text-align:center;
+	width: 100px;
+	margin-top:15px;
+	}
+.newpopup .rightcontent .righttitle{
+	padding-top: 10px;
+}
+.newpopup .rightcontent .righttitle img{
+	display: inline-block;
+	margin-bottom: -4px;
+}
+.newpopup .rightcontent .righttitle span{
+	margin-left:15px;
+	margin-right: 10px;
+}
+.newpopup .maincontent{
+	margin-top: 30px;
+}
+.newpopup .maincontent h3{
+	padding: 14px 30px 6px 30px;
+	background: #ebebeb;
+	border-radius: 10px;
+}
+.newpopup .maincontent .flex{
+	margin-top: 7px;
+}
+.newpopup .maincontent .flex img{
+	float: left;
+}
+.newpopup .maincontent .flex p{
+	margin: 8px 0px 0px 15px;
+	float: left;
+}
+.newpopup .maincontent .textcontent{
+	margin-left: 45px;
+	font-size: 13px;
+}
+.newpopup .maincontent .textcontent ul{
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.newpopup .maincontent .textcontent ul li{
+	list-style: inside;
+	margin-bottom: 5px;
+}
+ .newpopup .maincontent input{
+	float: none!important;
+	height: 30px !important;
+	width: 120px!important;
+ }
+ .newpopup .maincontent .buttonright{
+ 	display: flex;
+	flex-direction: row-reverse;
+	-webkit-direction: row-reverse;
+	-ms-direction: row-reverse;
+	-mo-direction: row-reverse;
+	text-align:right;
+ }
+/***********POPcontinue**************/
+.newpopup .popcontinue{
+	margin: 30px 50px;
+	line-height: 2em;
+	font-size: 13px;
+}
+.newpopup .popcontinue .flex_bg {
+/*
+ -Xóa .newpopup .popcontinue .flex thay bằng .newpopup .popcontinue .flex_bg
+ -thêm min-height: 55px;
+*/
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 50px;
+    min-height: 55px;
+}
+.newpopup .popcontinue .flex h3{
+/*
+ -Thêm with:100%;
+ -Fix height thành min-height
+*/
+	float:left;
+	width: 100%;
+	min-height: 34px;
+	margin-left: 10px;
+	margin-top: 12px;
+	padding-top: 11px;
+	padding-left: 30px;
+	font-size: 18px;
+	background: #e1e1e1;
+	border-radius: 5px;
+}
+/* hack css ff */
+@-moz-document url-prefix() {
+	.newpopup .popcontinue .flex h3 {
+		padding-top: 6px;
+	}
+	.newpopup .popcontinue .flex img{
+		width: 55px;
+		height: 55px;
+	}
+	.newpopup .maincontent h3{
+		padding: 10px 30px;
+		background: #ebebeb;
+		border-radius: 10px;
+	}
+	.newpopup .maincontent .flex p{
+		margin: 5px 0px 0px 15px;
+	}
+	.newpopup .lefpopup .title{
+		height:30px;
+	}
+	.newpopup .lefpopup .title p {
+		margin-top: -4px;
+	}
+}
+/* hack css chorme */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+/*
+ -Xóa .newpopup .popcontinue .flex img
+ - .newpopup .popcontinue .flex h3  xóa height
+*/
+	.newpopup .popcontinue .flex h3 {
+		padding-top: 8px;
+	}
+	.newpopup .maincontent h3{
+		padding: 11px 30px 9px 30px;
+		background: #ebebeb;
+		border-radius: 10px;
+	}
+	.newpopup .maincontent .flex p{
+		margin: 6px 0px 0px 15px;
+	}
+	.newpopup .lefpopup .title{
+		height:30px;
+	}
+	.newpopup .lefpopup .title p {
+		margin-top: -4px;
+	}
+}
+.newpopup .popcontinue .title{
+	font-size: 15px;
+	margin-top: 20px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.newpopup .popcontinue ul li{
+	margin-bottom: 12px;
+	list-style-image:url(../img/iconlist.png);
+	margin-left: 25px;
+}
+.newpopup .popcontinue .center{
+	width: 210px; 
+	margin: 20px auto -20px auto;
+}
+.newpopup .popcontinue button,{
+	background: #31a3dc;
+	color: #fff;
+	border:none;
+
+}
+.newpopup input[type="button"] , .newpopup input[type="submit"], .newpopup button{
+/***********************************************************************************************/
+/******************************* padding:3px 20px; thành padding:0px 20px;**********************/
+/***********************************************************************************************/
+	float:right;
+	background:#31a3dc;
+	border: none;
+	font-size:13px;
+	border-radius:30px;
+	text-align:center;
+	padding:0px 20px;
+	margin: 10px 0px 5px 10px;
+	cursor:pointer;
+	min-height: 26px;
+	color:#fff ;
+	}
+.newpopup .close:hover , .newpopup button:hover , .newpopup input:hover{
+	opacity: 0.6;
+	filter:Alpha(opacity=60);
+}
+/************************************************************************************/
+/******************************* THÊM .newpopup .button_submit **********************/
+/******************************* THÊM .newpopup .button_cancel **********************/
+/******************************* THÊM .newpopup input[type="button"] ****************/
+/************************************************************************************/
+.newpopup .button_submit  ,.newpopup input[type="button"]{						  /**/							  /**/
+    -webkit-transition-duration: 0.4s; /* Safari */                               /**/
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border: solid 1px #31a3dc;
+}
+.newpopup .button_cancel{
+	background: #e74c3c;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border: solid 1px #e74c3c;
+}
+.newpopup .button_submit:hover , .newpopup input[type="button"]:hover{
+	background: #fff;
+	color: #31a3dc;
+	box-shadow: inset 0 0 0 2px #31a3dc;
+	opacity: 1
+}
+.newpopup .button_cancel:hover{
+	color:  #e74c3c;
+	background: #fff !important;;
+	box-shadow: inset 0 0 0 2px #e74c3c;
+	opacity: 1	;																  /**/
+}																				  /**/
+/************************************************************************************/
+.newpopup .maincontent input{
+	background:#31a3dc;
+	border:none;
+	color:#fff;
+	height: 26px;
+	/*
+	padding-bottom: 4px;
+	padding-top: 4px;
+	*/
+	}
+.newpopup .popcontinue button .fa{
+	margin-right: 10px;
+}
+.newpopup .nheader-m .lefpopup{
+	margin:auto;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+.newpopup .nheader-m .righttitle{
+	margin-left:0px;
+}
+@media only screen and (max-device-width : 480px) {
+	.newpopup{
+		padding:20px 10px !important;
+	}
+	.newpopup .popcontinue{
+		margin:10px;
+	}
+	.newpopup .popcontinue .flex h3{
+		padding-left: 10px;
+	}
+	.newpopup .maincontent .textcontent{
+		margin-left:0px;
+	}
+	.newpopup .lefpopup {
+	    width: 80px;
+	    height: 80px;
+	    border-radius: 7px;
+	    font-size: 12pt;
+	    box-shadow: 7px 7px 1px #d2d2d2;
+	    margin-right: 20px;
+	}
+	.newpopup .lefpopup .content {
+	    text-align: center;
+	    width: 80px;
+	    margin-top: 10px;
+		font-size: 12px;
+	}
+	.newpopup .rightcontent .righttitle {
+		padding-top: 5px;
+	}	
+}
+	/*******************/
+	 /* hack css safari */
+	/*******************/
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+
+	::i-block-chrome,.flex{
+		display: block;
+	}
+	:i-block-chrome,.newpopup .lefpopup{
+		float: left;
+	}
+	:i-block-chrome,.newpopup .rightcontent .righttitle{
+		float: left;
+	}
+}
+
+    max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+    max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+    max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+    max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+    max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+    max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+    min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+*/

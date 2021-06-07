@@ -1,0 +1,270 @@
+﻿<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='STEP5 まもなく出発ですね';
+$header_obj->description_page='初めてワーキングホリデー（ワーホリ）や留学に行く方向けに準備・手続きの手順をご案内しています。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="/css/step_sp.css" rel="stylesheet" type="text/css" />';
+	$header_obj->add_js_files = '<script src="/js/step/jquery.jtruncsubstr-1.0rc.js" type="text/javascript"></script><script src="/js/step/script.js" type="text/javascript"></script>';
+} else {
+	$header_obj->add_css_files = '<link href="/css/step.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/step1-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'はじめてのワーキングホリデー Step5 まもなく出発ですね';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent" class="stepPage step05">
+	  <?php echo $header_obj->breadcrumbs('start'); ?>
+	<!--div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="step1.php"><span>STEP1 ワーホリとは</span></a></div>
+			<div class="btnarea"><a href="step2.php"><span>STEP2 目標を決める</span></a></div>
+			<div class="btnarea"><a href="step3.php"><span>STEP3 行き先は？</span></a></div>
+			<div class="btnarea"><a href="step4.php"><span>STEP4 準備をしよう</span></a></div>
+			<div class="btnarea"><a href="step5.php"><span>STEP5 出発前１ヶ月</span></a></div>
+			<div class="btnarea"><a href="step6.php"><span>STEP6 渡航中の事</span></a></div>
+			<div class="btnarea"><a href="step7.php"><span>STEP7 帰国したら</span></a></div>
+		</div>
+	</div-->
+ <?php if(!empty($_SESSION['pc']) and $_SESSION['pc'] == 'on'){?>
+  <table class="pageLinkBox">
+  	<tr>
+    	<td class="leftSide"><a href="/step4.html"><span>STEP4</span>準備をしよう</a></td>
+      <td class="toTopLink"><a href="/start.html">はじめての<br>ワーホリTOP</a></td>
+      <td class="rightSide"><a href="/step6.html"><span>STEP6</span>渡航中の事</a></td>
+    </tr>
+  </table>
+  <?php } ?>
+  
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="step_title">
+		STEP5<br>まもなく出発ですね。
+	</div>
+	<p class="text01">出発前準備確認とは出発日１か月前には用意しておくことです。早く準備は終わらせましょうね</p>
+	<table class="tableofcontents">
+		<tr>
+			<th>目次</th>
+		</tr>
+	    <tr>
+		  <td>
+		    <ul>
+				<li><a href="#st5-1">5-1　持ち物チェックリスト！！</a></li>
+				<li><a href="#st5-2">5-2　ＦＡＣＥＢＯＯＫを開設しよう！</a></li>
+				<li><a href="#st5-3">5-3　大事なお金の持っていきかた</a></li>
+				<li><a href="#st5-4">5-4　海外旅行保険確認！</a></li>
+		    </ul>
+		  </td>
+		</tr>
+	</table>
+
+	<h2 id="st5-1" class="sec-title">持ち物チェックリスト！！</h2>
+	<p class="text01">
+	１か月前にはスーツケース、コンタクトレンズ、デジカメ、ＰＣ、海外対応ドライヤー、化粧水、持って行く衣類をスーツケースに入れ始める、電子辞書、メイク落とし、ハンドクリーム、ポケットティッシュ、目薬、旅行ガイドブック、家族写真（友達やホームステイ先に紹介するため）、変換プラグ、折り畳み傘、通学用かばん、歯ブラシ、歯磨き粉、水着（海外のものはサイズが合わない）　この他、友達と一緒に楽しめるものは友達づくりの良いツールになりますので、サッカーボール、バスケットボール、ゴルフバッグセットやラケット、ギターなどを現地で調達し、初日に学校に持って行ってアピールしよう！
+	</p>
+	<p class="text01">
+	使いなれている医薬品は持って行くことをお勧めする。しかし医薬品は一度に多く持っていけない国が多いのでよく調べて渡航後に国際便で送ってもらうなどの対策を考えよう。
+	</p>
+	<div class="display-calendar">
+		<div class="display-calendar-title">
+			<span>ワーキングホリデーのオススメセミナー</span>
+		</div>
+		<?php 
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+		?>
+		<div class="img-calendar-display">
+			<img src="images/calendar-display.png">
+		</div>
+	</div>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+<?php include('./step/memline.php'); ?>
+
+	<h2 id="st5-2" class="sec-title">FACEBOOKを開設しよう！</h2>
+	<p class="text01">
+	海外へ行く前にFACEBOOKアカウントを開設しましょう！海外では連絡先の交換として、年齢を問わず幅広く利用されています。一度連絡先を登録しておけば、ワーキングホリデーが終わって日本に帰ってきた後でもその友達と繋がることが出来るので、別の機会に海外へ行く時にその人と会って遊ぶこともできるでしょう。
+	</p>
+	<div class="display-calendar">
+		<div class="display-calendar-title">
+			<span>ワーキングホリデーのオススメセミナー</span>
+		</div>
+        <?php 
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+		?>
+		<div class="img-calendar-display">
+			<img src="images/calendar-display.png">
+		</div>
+	</div>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+<?php include('./step/memline.php'); ?>
+
+	<h2 id="st5-3" class="sec-title">大事なお金の持っていきかた</h2>
+	<p class="text01">
+	一番心配になると思いますが結構難しいのがお金の持って行き方ですね。　みなさんが気にするのが為替レートと手数料。でもこの手数料何種類もあるのでここでは簡単にお話しします。
+	</p>
+	<p class="text01">
+	現金で持っていって現地で両替する方法は、レート次第でお得に両替をすることできます。また、銀行以外は手数料が無料。つまりレートもよくて手数料が無料なのでとてもお得です。しかし、この方法を実践する為に大金を持ち歩くことはオススメしません。比較的治安がいいと言われるエリアでも、日本より軽犯罪率が高いです。　オススメはキャッシュパスポートを使ってお金を持って行くことです。
+	</p>
+	<div class="display-calendar">
+		<div class="display-calendar-title">
+			<span>ワーキングホリデーのオススメセミナー</span>
+		</div>
+        <?php 
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '2';
+            $start_display_from = '4'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+		?>
+		<div class="img-calendar-display">
+			<img src="images/calendar-display.png">
+		</div>
+	</div>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+<?php include('./step/memline.php'); ?>
+
+<?php
+/*
+
+	<h2 id="st5-4" class="sec-title">海外旅行保険確認！</h2>
+	<p class="text01">
+	海外旅行保険は入りましたか？<br>加入してなければ<a target="_blank" href="http://www.aiu.co.jp/travel/trial/index.html?p=oA41F201">AIU海外旅行保険のインターネット契約保険料試算から加入してください。</a><br>
+	
+	海外旅行保険は出発日のご自宅を出た時からカバーされます。　スーツケースが階段で車輪が壊れたなども修理費用が保障されるので出発の3カ月前には加入して手元に保険証を持って安心して家を出発して下さい。
+	<br>
+	そして保険の内容はご両親にもきちんと説明をしておきましょう。　傷害死亡、治療・救援費用や生活用動産（長期用）などご両親も理解しておくと、いざとなった時にご両親も対応していただけますし、保険の請求に日本からも協力が必要な場合もあります。
+	<br>
+	また滞在を延長される場合には1か月前に延長手続きが可能となっています。保険を延長する場合もご家族の方が日本で手続きをすることになりますので、必ずご親族の方に保険の内容と保険期間を伝え、理解していただきましょう。 
+	<br>
+	</p>
+	<p class="text01">
+	海外旅行保険、ワーキングホリデー保険は加入したら3日で保険証券と保険の本が届きます。また10け月の予定でも帰国時にアジア旅行をして帰ってくる場合はそのアジア旅行の期間分も延長して同時に加入しておきましょう。長期で加入した方がお得ですし、盗難と病気は旅行には付き物だからです。
+	</p>
+	<div style="text-align:center;">
+
+<?php
+	// AIU1
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 91, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	</div>
+
+*/
+?>
+
+	<div class="display-calendar">
+		<div class="display-calendar-title">
+			<span>ワーキングホリデーのオススメセミナー</span>
+		</div>
+        <?php 
+            //settings for the calendar module display
+            $country_to_display = '';
+            $number_to_display = '2';
+            $start_display_from = '6'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+		?>
+		<div class="img-calendar-display">
+			<img src="images/calendar-display.png">
+		</div>
+	</div>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div class="pageLinkBox2">
+  	<a class="nextStep" href="/step6.html">次のステップに進む</a>
+  	<p>はじめてのワーキング・ホリデー</p>
+    <ul class="linkList">
+    	<li><a href="/step1.html">Step1　ワーキングホリデーについて</a></li>
+      <li><a href="/step2.html">Step2　目標を立てよう</a></li>
+      <li><a href="/step3.html">Step3　行き先は決まりましたか？</a></li>
+      <li><a href="/step4.html">Step4　渡航先が決まったら準備に入りましょう</a></li>
+      <li class="active">Step5　まもなく出発ですね</li>
+      <li><a href="/step6.html">Step6　渡航中の留意点</a></li>
+      <li><a href="/step7.html">Step7　帰国してからすること</a></li>
+      <li><a href="/step/baggage.html">Step8　おまけ</a></li>
+    </ul><!-- /.linkList -->
+  </div><!-- /.pageLinkBox2 -->
+
+	<!--div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="step1.php"><span>STEP1 ワーホリとは</span></a></div>
+			<div class="btnarea"><a href="step2.php"><span>STEP2 目標を決める</span></a></div>
+			<div class="btnarea"><a href="step3.php"><span>STEP3 行き先は？</span></a></div>
+			<div class="btnarea"><a href="step4.php"><span>STEP4 準備をしよう</span></a></div>
+			<div class="btnarea"><a href="step5.php"><span>STEP5 出発前１ヶ月</span></a></div>
+			<div class="btnarea"><a href="step6.php"><span>STEP6 渡航中の事</span></a></div>
+			<div class="btnarea"><a href="step7.php"><span>STEP7 帰国したら</span></a></div>
+		</div>
+	</div-->
+  
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	  <div class="advbox03">
+<?php
+	// 115
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 90, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+
+<script type="text/javascript">
+	function hide_banner(){
+        var banner = $("#mem-banner");
+        banner.hide();
+        if (typeof(Storage) !== "undefined")
+        {
+            localStorage.memBanner = "hide";
+            localStorage.memBannerTime = new Date().getTime() / 1000;
+        }
+        else
+            console.log ( '#Browser does not support localStore' );
+    }
+</script>
+
+</body>
+</html>

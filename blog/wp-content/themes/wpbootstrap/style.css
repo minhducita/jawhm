@@ -1,0 +1,3102 @@
+/*
+
+Theme Name: WP Bootstrap
+
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+
+Description: A demo theme built to accompany the Treehouse blog post <a href="http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial">How to Build a WordPress Theme with Bootstrap</a>.
+
+Author: Zac Gordon
+
+Author URI: http://teamtreehouse.com/
+
+Version: 1.0
+
+Tags: responsive, white, bootstrap
+
+
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+
+*/
+
+
+
+/* @import url('bootstrap/css/bootstrap.css'); 
+
+@import url('bootstrap/css/bootstrap-responsive.css'); */
+
+@import url('bootstrap.css'); 
+
+@import url('bootstrap-responsive.css');
+
+
+
+a, a:hover, a:focus {
+
+	text-decoration: none !important;
+
+}
+
+
+
+body {
+
+	line-height: 0px !important;
+	overflow: hidden;
+
+}
+
+
+
+.container {
+
+	line-height: 20px !important;
+
+}
+
+
+
+@media (max-width: 979px) and (min-width: 768px) {
+
+	.container {
+
+		margin-right: 0;
+
+		margin-left: 0;
+
+		width: 100%;
+
+	}
+
+}
+
+
+
+@media all and (orientation:portrait) {
+
+/* School Logo */
+
+	.rowww ul li{
+
+   	/* width: 33.3333%;
+
+   	min-width: 100px;
+
+   	max-width: 308px;  */
+
+		width: 30%;
+
+   	display: inline-block;
+
+		margin: 3px 2px;
+
+	}
+
+/* End of School Logo */
+
+
+
+/* Header Logo */
+
+	.s_logo {
+
+		/* height: 40px; */
+
+	}
+
+/* End of Header Logo */
+
+
+
+/* New Entries */
+
+	div.main_newentry ul li {
+
+		height: 130px;
+
+		width: 44%;
+
+	}
+
+	div.main_newentry div.imgContainer {
+
+		height: 80px;
+
+	}
+
+/* End of New Entries */
+
+
+
+/* Index Slider */
+
+	div.img_container,
+
+	div.slider_main_div {
+
+		height: 100px;
+
+	}
+
+/* End of Index Slider */
+
+
+
+/* Image w/ Triangle */
+
+	div.blog_posts div.post_img {
+
+		height: 80px;
+
+	}
+
+/* End of Image w/ Triangle */
+
+
+
+/* Youtube In Iframe */
+
+	div.post_content iframe{
+
+//		height: 250px;
+
+	}
+
+/* End of Youtube In Iframe */
+
+
+
+/* Search Form */
+
+	.jp-search form input#searchsubmit {
+
+		/* width: 39px; */
+
+		width: 9%;
+
+		height: 20px;
+
+	}
+
+	.jp-search form input#s {
+
+		/* width: 260px; */
+
+		width: 88%;
+
+		font-size: 15px;
+
+		height: 30px;
+
+	}
+
+/* End of Search Form */
+
+
+
+/* Numbered Pagination */
+
+	div.pagination div.navigation ul>li>a, div.pagination div.navigation ul>li>span {
+
+		float: left !important;
+
+		padding: 4px 6px !important;
+
+		line-height: 20px !important;
+
+		font-size: 12px !important;
+
+		text-decoration: none !important;
+
+		background-color: #ffffff !important;
+
+		border: 1px solid #7C94AC !important;
+
+		/*border-left-width: 0 !important;*/
+
+	}
+
+/* End of Numbered Pagination */
+
+
+
+/* Search not Found Message */
+
+	div.search_not_found {
+
+		padding: 10px 0;
+
+		text-align: center;
+
+		margin: 0;
+
+		font-size: 12px;
+
+	}
+
+/* End of Search not Found Message */
+
+
+
+/* Blue Button */
+
+	p.img_button img {
+
+		height: 22px;
+
+		margin-top: 0;
+
+	}
+
+/* End of Blue Button */
+
+
+
+/* Comment Fields */
+
+	input#author, input#email, input#captcha_code {
+
+		height: 30px;
+
+	}
+
+/* End of Comment Fields */
+
+
+
+}
+
+
+
+@media all and (orientation:landscape) {
+
+/* School Logo */
+
+	.rowww ul li{
+
+   		/* width: 33.3333%;
+
+   		min-width: 100px;
+
+   		max-width: 308px;  */
+
+		width: 100px;
+
+   		display: inline-block;
+
+		margin: 3px 2px;
+
+	}
+
+/* End of School Logo */
+
+
+
+/* Header Logo */
+
+	.s_logo {
+
+		/* height: 70px; */
+
+	}
+
+/* End of Header Logo */
+
+
+
+/* New Entries */
+
+	div.main_newentry ul li {
+
+		height: 180px;
+
+		width: 46%;
+
+	}
+
+	div.main_newentry div.imgContainer {
+
+		height: 130px;
+
+	}
+
+/* End of New Entries */
+
+
+
+/* Index Slider */
+
+	div.img_container,
+
+	div.slider_main_div {
+
+		height: 130px;
+
+	}
+
+/* End of Index Slider */
+
+
+
+/* Image w/ Triangle */
+
+	div.blog_posts div.post_img {
+
+		height: 110px;
+
+	}
+
+/* End of Image w/ Triangle */
+
+
+
+/* Youtube In Iframe */
+
+	div.post_content iframe{
+
+		height: 400px;
+
+	}
+
+/* End of Youtube In Iframe */
+
+
+
+/* Numbered Pagination */
+
+	div.pagination div.navigation ul>li>a, div.pagination div.navigation ul>li>span {
+
+		float: left !important;
+
+		padding: 4px 10px !important;
+
+		line-height: 24px !important;
+
+		font-size: 14px !important;
+
+		text-decoration: none !important;
+
+		background-color: #ffffff !important;
+
+		border: 1px solid #7C94AC !important;
+
+		/*border-left-width: 0 !important;*/
+
+	}
+
+/* End of Numbered Pagination */
+
+
+
+/* Search not Found Message */
+
+	div.search_not_found {
+
+		padding: 12px 0;
+
+		text-align: center;
+
+		margin: 0;
+
+		font-size: 14px;
+
+	}
+
+/* End of Search not Found Message */
+
+
+
+/* Search Form */
+
+	.jp-search form input#searchsubmit {
+
+		width: 9%;
+
+		/* width: 45px; */
+
+		height: 35px;
+
+	}
+
+	.jp-search form input#s {
+
+		width: 88%;
+
+		/* width: 450px; */
+
+		font-size: 20px;
+
+		height: 35px;
+
+	}
+
+/* End of Search Form */
+
+
+
+/* Blue Button */
+
+	p.img_button img {
+
+		height: 30px;
+
+		margin-top: 20px;
+
+	}
+
+/* End of Blue Button */
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+
+  overflow-x: hidden;
+
+	padding: 0 !important;
+
+}
+
+
+
+
+
+  body {
+
+	/*display:none;*/
+
+	/*background-color:#dedede;*/
+
+	background-color:#fff;
+
+	}
+
+  
+
+  img{
+
+		/* width: auto !important; */
+
+  }
+
+  
+
+  p.header{
+
+	font-size:.50em;
+
+	text-align:center;
+
+
+
+  }
+
+  h2{
+
+	font-size:1em;
+
+	text-align:center;
+
+	color:#e4ffff;
+
+	
+
+}
+
+
+
+	
+
+.header-left {
+
+	width:100% !important;
+
+	border: none;
+
+	margin:0 auto;
+
+	padding-bottom: 10px;
+
+}
+
+.header-left h2 {
+
+	line-height: 1.5;
+
+	font-size: 14px;
+
+}
+
+	
+
+  .header-right{
+
+	display:none;
+
+  }
+
+  
+
+  .text-logo{
+
+	padding:2px;
+
+  }
+
+  
+
+  #header, #masthead, .site-header{
+
+	width:100%;
+
+	background-color:#266ba0;
+
+	padding-top: 5px;
+
+  }
+
+	
+
+	div.mobile-nav-border span,
+
+	div.mobile-nav span {
+
+		/* display: table-cell;
+
+		vertical-align: top; */
+
+		margin-top: 2px;
+
+		color: #fff;
+
+		font-size: 13px;
+
+	}
+
+	
+
+	
+
+  
+
+  #logo{
+
+	margin:0 auto;
+
+	width: 90% !important;
+
+  }
+
+  
+
+  #h-bg {
+
+    width: 100%;
+
+	max-width:960px;
+
+	border:0px solid red;
+
+	}
+
+ 
+
+	#site-navigation{
+
+		display:none;
+
+	}
+
+	#mobile-menu{
+
+		display:inline !important;
+
+		background-color:#0f518a;;
+
+	}
+
+	
+
+	#mobile-menu a{
+
+		color: #e4ffff !important;
+
+		font-size:.85em;
+
+		font-weight:bold;
+
+		text-decoration:none;
+
+		text-shadow:1px 1px rgba(0, 0, 0, .5);
+
+		margin-left:0px;
+
+		text-align:center;
+
+		
+
+		}
+
+		
+
+	.mobile-nav-border,
+
+	.mobile-nav{
+
+		display: inline;
+
+		background-color:#0f518a;
+
+		padding:0;
+
+		margin:0;
+
+		float:left;
+
+		width:49.8%;
+
+		height:30px;
+
+		text-align:center;
+
+		padding-top:10px;
+
+		font-size: 10px;
+
+	}
+
+	
+
+	.mobile-nav-border {
+
+		border-right: 1px solid #3d719c;
+
+	}
+
+	
+
+	.mobile-top-links {
+
+		background-color:#0f518a; 
+
+		border:0px solid red;
+
+		line-height: 20px;
+
+	}
+
+	
+
+	.mobile-nav-img{
+
+		/* position: relative;
+
+		float: left;
+
+		vertical-align: middle;
+
+		display: table-cell;
+
+		margin-left: 5px; */
+
+		left: 5%;
+
+		margin: 0 5px 5px 5px;
+
+		top: -2px;
+
+		width: 20px !important;
+
+	}
+
+	
+
+	/*search-btn-accordion*/
+
+	#search-accordion{
+
+Usc Main's Head Turners		display:inline !important;
+
+		border:0px solid blue;
+
+		
+
+	}
+
+	#search-accordion ul{}
+
+	#search-accordion ul li{ display:block; border:1px solid red; height:30px; background-color:#fbfcfb;}
+
+	#search-accordion ul li a{ text-decoration:none; text-align:center; line-height:2; margin-left:15px; color:#737373;}
+
+	
+
+	.footer-nav{
+
+		background-color:#000033; 
+
+		color:#e4ffff;
+
+		height:50px;
+
+		border:1px solid red;
+
+		padding-top:5%;
+
+		font-size:1em;
+
+		
+
+	}
+
+
+
+	.footer-links{
+
+	
+
+	}
+
+
+
+	<!-- LIST Css -->
+
+
+
+	.list {
+
+	
+
+  		width: 200px;
+
+	}
+
+ 
+
+	.list h2 {
+
+ 		 font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+
+  		margin: 0;
+
+  		padding: 0;
+
+	}
+
+ 
+
+	.list ul {
+
+		/* margin-bottom: 35;
+
+		padding-bottom: 15;
+
+		margin-left: 10; */
+
+ 		list-style-type: none;
+
+  		margin: 0;
+
+  		padding: 0;
+
+		border-top: 1px solid #ccc;
+
+		margin-bottom: 52px;
+
+	}
+
+ 
+
+	.list li {
+
+ 		 /*border-bottom: 1px solid #ccc;
+
+ 		 font: 200 14px/1.5;
+
+		 padding-top: 10px;*/
+
+		 list-style:none;
+
+		 width:100%;
+
+		 padding-top: 10; /* test list padding-top */
+
+		/* height: 40px !important;*/
+
+	}
+
+ 
+
+	.list li:last-child {
+
+ 		 border: none;
+
+	}
+
+ 
+
+.list li a {
+
+	/* text-indent:10px;
+
+	margin:5px; */
+
+	text-decoration: none;
+
+	font-weight:bold;
+
+	color: #8d8d8e;
+
+	display: block;
+
+	width: 100%;
+
+
+
+	-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	-o-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	transition: font-size 0.3s ease, background-color 0.3s ease;
+
+}
+
+
+
+	#footer_links li a {
+
+  		text-decoration: none;
+
+		font-weight:bold;
+
+  		color: #fff;
+
+  		display: block;
+
+		font-size: 14px;
+
+  		width: 100%;
+
+		margin: 0 !important;
+
+		/*text-shadow:1px 1px rgba(0, 0, 0, .30);*/	
+
+		text-indent:10px;
+
+ 
+
+ 		 -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	}
+
+ 
+
+	.list li a:hover {
+
+ 		/* font-size: 25px; */
+
+ 		/*background: #f6f6f6; */
+
+		
+
+		} 
+
+
+
+<!--list-two-->
+
+
+
+
+
+	.list-two {
+
+	
+
+  		width: 200px;
+
+	}
+
+ 
+
+	.list-two h2 {
+
+ 		 font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+
+  		margin: 0;
+
+  		padding: 0;
+
+	}
+
+ 
+
+	.list-two ul {
+
+ 		 list-style-type: none;
+
+  		margin: 0;
+
+  		padding: 0;
+
+	}
+
+ 
+
+	.list-two li {
+
+ 		 font: 200 14px/1.5;
+
+ 		 border-bottom: 1px solid #ccc;
+
+		 list-style:none;
+
+		 width:100%;
+
+		
+
+		 
+
+			
+
+	}
+
+ 
+
+	.list-two li:last-child {
+
+ 		 border: none;
+
+	}
+
+ 
+
+	.list-two li a {
+
+  		text-decoration: none;
+
+		font-weight:bold;
+
+  		color: #41568a;
+
+  		display: block;
+
+  		width: 100%;
+
+		margin:5px;
+
+		/*text-indent:10px;*/
+
+		
+
+ 
+
+ 		 -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	}
+
+
+
+	#footer_links li a {
+
+  		text-decoration: none;
+
+		font-weight:bold;
+
+  		color: #fff;
+
+  		display: block;
+
+		font-size: 14px;
+
+  		width: 100%;
+
+		/*text-shadow:1px 1px rgba(0, 0, 0, .30);*/	
+
+		text-indent:10px;
+
+ 
+
+ 		 -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+ 		 transition: font-size 0.3s ease, background-color 0.3s ease;
+
+	}
+
+ 
+
+	.list-two li a:hover {
+
+ 		/* font-size: 25px; */
+
+ 		/*background: #f6f6f6; */
+
+		
+
+		} 
+
+
+
+	.list-header{
+
+		line-height: 20px;
+
+		height: 65px;
+
+		background-color:ee9f17;
+
+		border-bottom:2px solid #b2720a;
+
+		text-align:center;
+
+		color:#fff;
+
+		font-weight:bold;
+
+		}
+
+	.bloglist-header{
+
+		margin-top: 12px; 
+
+		height:35px;
+
+		background-color:#286497;
+
+		border-bottom:0px solid #b2720a;
+
+		text-align:center;
+
+		color:#fff;
+
+		font-weight:bold;
+
+		width: 100%;
+
+		}
+
+	.bloginformation-header{
+
+		height: 65px;
+
+		background-color:#ffffff;
+
+		border-bottom:2px solid #286497;
+
+		text-align:center;
+
+		color:#286497;
+
+		font-weight:bold;
+
+		width: 100%;
+
+		/* padding-top:30px; */
+
+		line-height: 0; 
+
+		font-size: 16px;
+
+	}
+
+	.bloginformation-header p {
+
+		margin: 0;
+
+		text-align: center;
+
+		line-height: 65px;
+
+	}
+
+	.grayblog-header{
+
+		margin-top:2px;
+
+		height:35px;
+
+		background-color:#898989;
+
+		border-bottom:2px solid #898989;
+
+		text-align:center;
+
+		color:#ffffff;
+
+		font-weight:bold;
+
+		width: 100%;
+
+		}
+
+	
+
+
+
+	.rowww ul {
+
+		padding: 0 0 0 3px;
+
+		margin: 0 auto; 
+
+
+
+		}
+
+	.rowww ul li img{
+
+  		  display: block;
+
+  		  height: auto;
+
+   		 /*width: 100%; */
+
+		}
+
+.posts{
+
+	margin-left: 5px;
+
+	border: 0px solid red;
+
+}
+
+
+
+div.tag_head {
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	padding: 10px 5px 5px 5px;
+
+}
+
+
+
+/* Header Images 
+
+.WorkingHoliday_head {
+
+	background: url(../../../wp-content/uploads/2014/11/hamster.png);
+
+}
+
+.Australia_head {
+
+	background: url(../../../wp-content/uploads/2015/01/new-au-banner2.png);
+
+}
+
+.World_head {
+
+	background: url(../../../wp-content/uploads/2015/01/new-worldwide-banner.png);
+
+}
+
+.Canada_head {
+
+	background: url(../../../wp-content/uploads/2015/01/new-ca-banner2.png);
+
+}
+
+.NewZealand_head {
+
+	background: url(../../../wp-content/uploads/2015/01/new-nz-banner2.png);	
+
+}
+
+.Europe_head {
+
+	background: url(../../../wp-content/uploads/2015/01/europe_choice_sp.png);
+
+}
+
+.Osaka_head {
+
+	background: url(../../../wp-content/uploads/2014/12/osaka-blog-banner.png);
+
+}
+
+.Tokyo_head {
+
+	background: url(../../../wp-content/uploads/2014/12/tokyo-blog-banner3.png);
+
+}
+
+.Nagoya_head {
+
+	background: url(../../../wp-content/uploads/2014/12/nagoya-blog-banner.png);
+
+}
+
+.Fukuoka_head {
+
+	background: url(../../../wp-content/uploads/2014/12/fukuoka-blog-banner.png);
+
+}
+
+.Okinawa_head {
+
+	background: url(../../../wp-content/uploads/2014/12/okinawa-blog-banner.png);
+
+}
+
+ End of Header Images */
+
+
+
+/* School Header Logo */
+
+
+
+.s_logo {
+
+	/* width: 100%;
+
+	height: 98px !important;
+
+	margin-left: 5px !important;
+
+	margin-right: 5px !important;	 */
+
+	background-size: 100%;
+
+	background-position: center center;
+
+	background-repeat: no-repeat;
+
+	margin-bottom: 10px;		
+
+	border: none !important;
+
+	width: auto !important;
+
+}
+
+
+
+/* end of School Header Logo */
+
+/* ------------------------- */
+
+
+
+/* Index Page - New Posts Section */
+
+
+
+div.main_newentry {
+
+	display: inline-block;
+
+	width: 100%;
+
+	margin-top: 5px;
+
+	border-top: 2px solid #EFEFEF;
+
+	padding-bottom: 15;
+
+}
+
+div.main_newentry ul {
+
+	list-style-type: none;
+
+	margin: 2px auto;
+
+}
+
+div.main_newentry ul li.li_left {
+
+	float: left;
+
+}
+
+div.main_newentry ul li.li_right {
+
+	float: right;
+
+}
+
+div.main_newentry ul li {
+
+	border: 2px solid #eee;
+
+	padding: 5px;
+
+	margin: 2px 2px 4px 2px;
+
+	overflow: hidden;
+
+  line-height: 150px;
+
+	position: relative;
+
+}
+
+div.main_newentry div.new_Container {
+
+	max-width: 100%;
+
+	height: 100%:
+
+}
+
+div.main_newentry div.new_Container span {
+
+	font-size: 10px;
+
+	line-height: 1.3;
+
+}
+
+div.main_newentry div.imgContainer {  /*edit */
+
+	background-size: 100% auto;
+
+	/* background-size: 100% 285%; */
+
+	overflow: hidden;
+
+	width: 100%;
+
+	position: absolute;
+
+	bottom: 10;
+
+	left: 0;
+
+	background-repeat: no-repeat;
+
+	background-position: center center;
+
+	background-color: black;
+
+	z-index: -2;
+
+}
+
+div.main_newentry div.imgContainer img {
+
+	position: relative;
+
+	z-index: -1;
+
+}
+
+div.new_entry_date {
+
+	text-align: right; 
+
+	position: absolute; 
+
+	bottom: 0; 
+
+	font-size: 10px; 
+
+	line-height: 1.3; 
+
+	width: 100%;
+
+}
+
+span.new_entry_date {
+
+	color: black; 
+
+	padding-right: 7px;
+
+}
+
+/*div.bjqs-wrapper div.bgtag {
+
+	position: absolute;
+
+	left: -44px;
+
+	top: 0px;
+
+	padding: 30px 40px 0 40px;
+
+}*/
+
+
+
+
+
+/* end of Index Page - New Posts Section */
+
+/* ------------------------------------- */
+
+
+
+
+
+/* Index Page - Slider */
+
+
+
+
+
+ol{
+
+	
+
+}
+
+/* .bjqs li{
+
+	height: 115px !important;
+
+}
+
+li.bjqs-slide {
+
+	text-align: left;
+
+	font-size: 10px;
+
+}
+
+.bjqs li a{
+
+	width: 700px;
+
+	padding: 10px;
+
+	height: 100%;
+
+	display: inline-block;
+
+	position: absolute;
+
+	text-decoration: none;
+
+	z-index: 100;
+
+} */
+
+#banner-fade{
+
+	border: 2px solid #CCCCCC;
+
+	width:100%;
+
+	border:0px solid red;
+
+}
+
+.slide_content_left{
+
+	float: left;
+
+	padding: 10px;
+
+}
+
+.slide_content{
+
+	float: left; 
+
+	padding-top: 10px;
+
+	width: 60%;
+
+}
+
+/* ol.bjqs-markers.h-centered{
+
+	text-align: center;
+
+	position: absolute;
+
+	top: 135px;
+
+}
+
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+
+ol.bjqs-markers li{display:inline;}
+
+ol.bjqs-markers li a{display:inline-block;}
+
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+
+
+
+ul.bjqs-controls.v-centered li a{
+
+	display:block;
+
+	//padding:10px;
+
+	background:#fff;
+
+	color:#000;
+
+	text-decoration: none;
+
+}
+
+
+
+ul.bjqs-controls.v-centered li a:hover{
+
+	//background:#000;
+
+	//color:#fff;
+
+}
+
+
+
+ol.bjqs-markers li a{
+
+	padding: 5px 11px;
+
+	//background:#000;
+
+	color:#fff;
+
+	margin-top:20px;
+
+	text-decoration: none;
+
+	height: 3px;
+
+	text-indent: -9999px;
+
+	white-space: nowrap; 
+
+}
+
+
+
+p.bjqs-caption{
+
+	background: rgba(255,255,255,0.5);
+
+} */
+
+
+
+.bjqs li img{
+
+	/* width: 260px!important;
+
+	height: 95px!important;
+
+	float: left;
+
+	margin-right: 10px;
+
+	position: absolute; */
+
+    /* clip: rect(0px,193px,95px,0px); */
+
+}
+
+
+
+div.slider_content {
+
+	color: black;
+
+	display: block;
+
+	display: -webkit-box;
+
+	height: 60px;
+
+	margin: 0 auto;
+
+	font-size: 10px;
+
+	line-height: 1.5;
+
+	-webkit-line-clamp: 4;
+
+	-webkit-box-orient: vertical;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+}
+
+
+
+div.img_container {
+
+	background-size: 100% auto;
+
+	/* background-size: 100% 285%; */
+
+	position: relative;
+
+	float: left; 
+
+	width: 50%; 
+
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+
+	background-position: center center;
+
+}
+
+
+
+div.school_tag p,
+
+div.main_newentry div.bgtag p,
+
+div.post_img div.bgtag p {
+
+	margin: 0px;
+
+	font-weight: bold;
+
+	padding-bottom: 5px;
+
+	word-wrap: break-word;
+
+	text-align: center;
+
+	line-height: 1;
+
+}
+
+
+
+div.school_tag,
+
+div.main_newentry div.bgtag {
+
+	width: 60px;
+
+	position: absolute;
+
+	text-align: center;
+
+	padding-top: 50px;
+
+	padding-right: 60px;
+
+	padding-left: 60px;
+
+	-ms-transform: rotate(-45deg);
+
+	-webkit-transform: rotate(-45deg);
+
+	transform: rotate(-45deg);
+
+	z-index: 5 !important;
+
+	top: -25px;
+
+	left: -80px;
+
+}
+
+div.post_img div.bgtag {
+
+	width: 60px;
+
+	position: relative;
+
+	text-align: center;
+
+	padding-top: 50px;
+
+	padding-right: 60px;
+
+	padding-left: 60px;
+
+	-ms-transform: rotate(-45deg);
+
+	-webkit-transform: rotate(-45deg);
+
+	transform: rotate(-45deg);
+
+	z-index: 5 !important;
+
+	left: -80px;
+
+	top: -25px;
+
+}
+
+
+
+div.slider_detail {
+
+	float: right;
+
+	width: 48%;
+
+	font-size: 10px;
+
+	line-height: 1.5;
+
+	text-align: left;
+
+	padding: 2px;
+
+}
+
+
+
+div.slider_post_title,
+
+div.new_entry_title,
+
+div.japan_newentry_title { /*edit*/
+
+	display: block;
+
+	display: -webkit-box;
+
+	height: 36px;
+
+	margin: 0 auto;
+
+	font-size: 15px;
+
+	font-weight: bold;
+
+	line-height: 1.2;
+
+	-webkit-line-clamp: 2;
+
+	-webkit-box-orient: vertical;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+	word-wrap: break-word;
+
+}
+
+
+
+/*blog info*/
+
+
+
+div.bloginfo_img {
+
+	float: left; 
+
+	width: 35%; 
+
+	padding-top: 15; 
+
+	padding-left: 3;
+
+}
+
+
+
+div.bloginfo_text {
+
+	float: right; 
+
+	padding: 15px 2px 0 2px; 
+
+	width: 60%; 
+
+}
+
+
+
+
+
+/* end of Index Page - Slider */
+
+/* -------------------------- */
+
+
+
+
+
+div.ads {
+
+	margin-top: 15px;
+
+	text-align: center;
+
+}
+
+
+
+
+
+/* Japan Site - Search */
+
+.jp-search {
+
+	margin-bottom: 0;
+
+}
+
+.jp-search form {
+
+	margin: 0;
+
+}
+
+.jp-search form input#searchsubmit {
+
+	/* float: left; 
+
+	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1); */
+
+	padding: 0 !important;
+
+	margin: 0 !important;
+
+	display: table-cell;
+
+	vertical-align: middle;
+
+	border-left: none;
+
+	border-radius: 0;
+
+	line-height: 1.5em;
+
+	font-size: 0;
+
+	background-position: 10px;
+
+	border: 0px solid #d2d2d2;
+
+}
+
+
+
+.jp-search form input#s {
+
+	/* padding: 0.428571429rem;
+
+	float: left; */
+
+	display: table-cell;
+
+	vertical-align: middle;
+
+	border-radius: 0;
+
+	border-right: none;
+
+	border: 1px solid #ccc;
+
+	line-height:100%;
+
+	margin: 15px auto;
+
+}
+
+
+
+ul.categories li {
+
+	padding-left: 12px;
+
+}
+
+
+
+/* end of Japan Site - Search */
+
+/* -------------------------- */
+
+
+
+
+
+/* Japanese Blog - Top Page - Pagination */
+
+
+
+div.pagination div.navigation {
+
+	margin: 20px 0 !important;
+
+	text-align: center;
+
+}
+
+div.pagination div.navigation ul {
+
+	display: inline-block !important;
+
+	margin-left: 0 !important;
+
+	margin-bottom: 0 !important;
+
+	border-radius: 5px !important;
+
+}
+
+div.pagination div.navigation ul>li {
+
+	display: inline !important;
+
+	list-style: none !important;
+
+	float: left;
+
+	font-size: 12px;
+
+}
+
+div.pagination div.navigation ul>li:first-child>a, div.pagination div.navigation ul>li:first-child>span {
+
+	border-left-width: 1px !important;
+
+	border-radius: 5px 0 0 5px !important;
+
+	font-size: 10px;
+
+}
+
+div.pagination div.navigation ul>li:last-child>a, div.pagination div.navigation ul>li:last-child>span {
+
+	border-rigth-width: 1px !important;
+
+	border-radius: 0 5px 5px 0 !important;
+
+}
+
+
+
+/* Japanese Blog - Top Page - Pagination */
+
+/* ------------------------------------- */
+
+
+
+
+
+
+
+/* Japanese Blog - Top Page - Posts */
+
+
+
+div.blog_posts {
+
+	border-top: solid 2px #33359A !important;
+
+	padding-top: 5px;
+
+}
+
+div.blog_posts div.post_time, div.blog_posts div.tags {
+
+	width: 100%;
+
+	text-align: left;
+
+}
+
+div.blog_posts div.tags {
+
+	clear: both;
+
+	font-size: 10px;
+
+}
+
+div.blog_posts div.tags p{
+
+	line-height: 1.2;
+
+}
+
+div.blog_posts div.post_time p {
+
+	font-size: 12px;
+
+	margin: 0;
+
+	line-height: 1.2;
+
+	color: #9C9C9C;
+
+}
+
+div.blog_posts div.post_img {
+
+	background-size: 100% auto;
+
+	/* background-size: 100% 285%; */
+
+	position: relative;
+
+	overflow: hidden;
+
+	width: 100%;
+
+	background-repeat: no-repeat;
+
+	background-position: center center;
+
+	background-color: black;
+
+	z-index: -2;
+
+}
+
+div.blog_posts div.title_n_content {
+
+	line-height: 1.3;
+
+	padding-left: 4px;
+
+	text-align: left;
+
+}
+
+div.blog_posts div.title_n_content p.content {
+
+	display: block;
+
+	display: -webkit-box;
+
+	height: 19px;
+
+	margin: 0 auto;
+
+	font-size: 10px;
+
+	line-height: 1.2;
+
+	-webkit-line-clamp: 2;
+
+	-webkit-box-orient: vertical;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+	color: black;
+
+}
+
+
+
+div.japan_newentry {
+
+	padding: 10px 5px 5px 5px;
+
+	border-bottom: solid 1px #33359A !important;
+
+}
+
+
+
+div.japan_newentry div.japan_newentry_left {
+
+	float: left;
+
+	width: 48%;
+
+}
+
+
+
+div.japan_newentry div.japan_newentry_right {
+
+	float: right;
+
+	width: 51%;
+
+}
+
+
+
+div.japan_newentry_tags {
+
+	clear: both;
+
+	font-size: 10px;
+
+	line-height: 1.2;
+
+	padding-top: 5px;
+
+}
+
+div.japan_newentry_tags p {
+
+	text-align: left;
+
+}
+
+
+
+div.japan_newentry_button {
+
+	float: right;
+
+	height: 10px;
+
+	width: 30px;
+
+	background-color: blue;
+
+}
+
+
+
+span#post_author {
+
+	padding: 2px 10px;
+
+}
+
+
+
+div.bloginfo_text{
+
+	padding-left: 5px;
+
+}
+
+
+
+p#school_name_n_link {
+
+	font-size: 12px;
+
+	line-height: 1.2;
+
+}
+
+
+
+div.bloginfo_info {
+
+	clear: both;
+
+	padding: 5px 3px 3px 3px;
+
+	font-size: 11px;
+
+	line-height: 1.4;
+
+}
+
+
+
+div.tags-bg {
+
+	background-color:#fff;
+
+	line-height: 20px;
+
+}
+
+
+
+/* Japanese Blog - Top Page - Posts */
+
+/* -------------------------------- */
+
+
+
+
+
+/* Single Page */
+
+
+
+div.navi-top, div.navi-bottom {
+
+	display: table !important;
+
+	width:100%;
+
+}
+
+
+
+div.navi-bottom {
+
+	/* margin-bottom: 10px; */
+
+}
+
+
+
+div.navi-top div.nav-previous div, div.navi-top div.nav-next div,
+
+div.navi-bottom div.nav-previous div, div.navi-bottom div.nav-next div {
+
+	text-align: center;
+
+	/*display: table-cell;*/
+
+	font-size: 12px;
+
+	
+
+	background-size: auto 100%;
+
+	
+
+	display: block;
+
+	display: -webkit-box;
+
+	height: 28.8px;
+
+	margin: 0 auto;
+
+	line-height: 1.2;
+
+	-webkit-line-clamp: 2;
+
+	-webkit-box-orient: vertical;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+	word-wrap: break-word;
+
+	text-align: left;
+
+}
+
+div.navi-top div.nav-previous, div.navi-bottom div.nav-previous {
+
+	text-align: left;
+
+	padding-left: 15px;
+
+}
+
+div.navi-top div.nav-next, div.navi-bottom div.nav-next {
+
+	text-align: right;
+
+	padding-right: 15px;
+
+}
+
+h1.entry-title {
+
+	font-size: 15px;
+
+	line-height: 1.3;
+
+	clear: both;
+
+}
+
+.content {
+
+	text-align: left;
+
+	font-size: 12px;
+
+	padding: 5px;
+
+/*	border-top: solid 1px #EEEFF1;
+
+	border-bottom: solid 1px #EEEFF1; */
+
+	margin-bottom: 10px; 
+
+}
+
+.content p {
+
+	word-wrap: break-word;
+
+}
+
+div.title_n_date p.title {
+
+	margin: 0 0 30px 0;
+
+	font-size: 20px;
+
+	line-height: 1.2;
+
+}
+
+div.title_n_date p.date {
+
+	font-size: 10px;
+
+	text-align: left;
+
+	margin-bottom: 2px;
+
+}
+
+div.content div.tags {
+
+	border-top: solid 1px #EEEFF1;
+
+	margin: 10px 0;
+
+	padding-top: 5px;
+
+}
+
+div.content div.tags p {
+
+	margin: 0;
+
+}
+
+
+
+/* end of Single Page */
+
+/* ------------------ */
+
+
+
+/* sub_main.php */
+
+
+
+div.sub_entry_note {
+
+	overflow: hidden;
+
+	width: 100%;
+
+	margin-top: 5px;
+
+	border: 1px solid #CCCCCC;
+
+	max-height: 200px;
+
+}
+
+div.sub_entry_note p {
+
+	line-height: 1.4em;
+
+	padding: 3px;
+
+	font-size: 10px;
+
+	margin: 0;
+
+}
+
+div.Australia_view {
+
+	background: url('../../../wp-content/uploads/sites/2/2014/11/australia.jpg') no-repeat;
+
+	background-size: 100%;
+
+	width: 120px;
+
+	height: 100px;
+
+	float: left;
+
+	border: none;
+
+	margin: 1px 5px 0 2px;
+
+}
+
+div.Canada_view {
+
+	background: url('../../../wp-content/uploads/sites/3/2014/11/canada.jpg') no-repeat;
+
+	background-size: 100%;
+
+	width: 120px;
+
+	height: 100px;
+
+	float: left;
+
+	border: none;
+
+	margin: 1px 5px 0 2px;
+
+}
+
+div.NewZealand_view {
+
+	background: url('../../../../newzealand/wp-content/uploads/sites/4/2014/11/newzealand.jpg') no-repeat;
+
+	background-size: 100%;
+
+	width: 120px;
+
+	height: 100px;
+
+	float: left;
+
+	border: none;
+
+	margin: 1px 5px 0 2px;
+
+}
+
+div.Europe_view {
+
+	background: url('../../../../europe/wp-content/uploads/sites/5/2014/11/europe_choice_image_sp.jpg') no-repeat;
+
+	background-size: 100%;
+
+	width: 120px;
+
+	height: 100px;
+
+	float: left;
+
+	border: none;
+
+	margin: 1px 5px 0 2px;
+
+}
+
+div.World_view {
+
+	background: url('../../../../world/wp-content/uploads/sites/6/2014/11/worldwide.png') no-repeat;
+
+	background-size: 100%;
+
+	width: 120px;
+
+	height: 100px;
+
+	float: left;
+
+	border: none;
+
+	margin: 1px 5px 0 2px;
+
+}
+
+
+
+/* end of sub_main */
+
+/* --------------- */
+
+
+
+.pc-switcher {
+
+	display: none;
+
+}
+
+
+
+
+
+/* index.php - Japanese Top Blog Page */
+
+div.header_name {
+
+	text-align: center;
+
+	padding: 7px 0;
+
+	line-height: 1.2;
+
+	font-size: 12px;
+
+}
+
+div.header_name a#head_content_link {
+
+	text-decoration: none;
+
+}
+
+/* index.php - Japanese Top Blog Page */
+
+/* ---------------------------------- */
+
+
+
+
+
+/* From inline css to Class */
+
+
+
+.eng_banner{
+
+	/* background-color: #fcfbe4;  */
+
+	border-bottom:2px solid #fbedb4;
+
+}
+
+
+
+.footer_copyright{
+
+	border: 0px solid red;
+
+	background-color:#000033;
+
+	height:50px; color:#fcfcfc; 
+
+	padding-top:10px;
+
+	line-height: 20px !important;
+
+
+
+}
+
+
+
+div.post_content iframe{
+
+	width: 100%;
+
+}
+
+
+
+div.draggable {
+
+	margin: 0 10px;
+
+}
+
+
+
+div.navi-top div.nav-home,
+
+div.navi-bottom div.nav-home {
+
+	width: 20%; 
+
+	display: table-cell;
+
+	text-align: center;
+
+	vertical-align: middle;
+
+}
+
+
+
+div.navi-top div.nav-home img,
+
+div.navi-bottom div.nav-home img {
+
+	width: 85% !important;
+
+}
+
+
+
+div.navi-top div.nav-next-base,
+
+div.navi-bottom div.nav-next-base {
+
+	width: 35%;
+
+	display: table-cell;
+
+	vertical-align: middle;
+
+}
+
+
+
+div.navi-top div.nav-prev-base,
+
+div.navi-bottom div.nav-prev-base {
+
+	width: 35%;
+
+	display: table-cell;
+
+	vertical-align: middle;
+
+}
+
+
+
+p.img_button {
+
+	text-align: right;
+
+	padding-top: 5px;
+
+	margin: 0;
+
+}
+
+
+
+div.row-archive {
+
+	border-top: 2px solid #286497;
+
+}
+
+
+
+div.search_div {
+
+	vertical-align: middle;
+
+	display: table;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+	width: 100%;
+
+	padding: 0 5px;
+
+	margin-top: 8;
+
+	/* border-top: 2px solid #286497; */
+
+}
+
+
+
+/*nav bg */
+
+div.nav-bg {
+
+	line-height: 0px;
+
+}
+
+
+
+.site_logo {
+
+	text-align: center;
+
+}
+
+
+
+div.s_logo img {
+
+	width: 100% !important;
+
+}
+
+
+
+#comment_posted, #wc {
+
+	line-height: 1.2;
+
+	margin: 5px;
+
+	padding: 7px;
+
+	border: solid 1px gray;
+
+}
+
+
+
+p#p_big {
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	margin-bottom: 5px;
+
+}
+
+
+
+div.drop-menu {
+
+	border-bottom: 2px solid #286497;
+
+}
+
+
+
+div.inner_comment {
+
+	/*border-bottom: 1px solid #ccc;*/
+
+	padding-bottom: 40px;
+
+	margin-bottom: 10px;
+
+	/*border: 3px solid #ededed;*/ /*for checking borders inner comment*/
+
+	margin-left: 100px;
+
+	/*margin-top: 5px;*/
+
+	margin-top: -130px;
+
+	
+
+
+
+}
+
+
+
+div.inner_comment time{
+
+	font-size: 12;
+
+	/*margin-left: 65;*/
+
+	/*margin-left: 130;*/
+
+	float: right;
+
+	margin: 5px;
+
+	/*margin-top: -60;*/
+
+	
+
+
+
+}
+
+
+
+div.inner_comment {
+
+	/*margin-left: 10;*/
+
+	/*float: left;*/
+
+	/*margin-left: 90;*/
+
+	/*margin-top: -21;*/
+
+
+
+}
+
+
+
+ol.commentlist {
+
+	text-align: left;
+
+}
+
+
+
+img.avatar {
+
+	padding-top: 20px;
+
+}
+
+
+
+#collapse3 li {
+
+	border-bottom: 1px solid #ccc;
+
+
+
+}
+
+
+
+span.required {
+
+	color: red;
+
+}
+
+
+
+#collapse1 li {
+
+	border-bottom: 1px solid #ccc;
+
+
+
+}
+
+
+
+div#collapse1{
+
+	margin-bottom: -50;
+
+}
+
+
+
+div.fo {
+
+	margin-top: 15px;
+
+}
+
+
+
+#captcha_code input {
+
+	display: block;
+
+}
+
+
+
+#captcha_code_label label {
+
+	display: inline;
+
+	clear: both;
+
+}
+
+
+
+div.rowww {
+
+	text-align: center;
+
+	padding: 15;
+
+}
+
+
+
+p.pick_up_ads {
+
+	text-align: left;
+
+	color: #286497;
+
+	font-weight: bold;
+
+	font-size: 16px;
+
+	margin-left: 10;
+
+}
+
+
+
+.simple_title {
+
+	margin-top: 13px !important;
+
+}
+
+
+
+#content_test {
+
+	border-top: 1px solid #ccc;
+
+	border-bottom: 1px solid #ccc;
+
+	margin-top: -5;
+
+}
+
+
+
+span#tag_head {
+
+	font-size: 14px;
+
+}
+
+
+
+.orange-icons {
+
+	height: 14px !important;
+
+}
+
+
+
+p.orange-p {
+
+	margin: 0;
+
+	text-align: center;
+
+	line-height: 65px;
+
+}
+
+
+
+p.footer-list-p {
+
+	margin: 0;
+
+	text-align: left;
+
+	line-height: 40px;
+
+}
+
+
+
+img.li-country-list,
+
+img.li-tag-list-2 {
+
+	opacity: 0.4;
+
+	filter: alpha(opacity=40);
+
+}
+
+
+
+img.li-tag-list,
+
+img.li-tag-list-2,
+
+img.li-country-list {
+
+	width:10px !important;
+
+	margin-top: -2px;
+
+}
+
+
+
+p.p-country-list,
+
+p.p-tag-list {
+
+	margin: 0 0 0 5px !important;
+
+	text-align: left;
+
+	line-height: 40px;
+
+}
+
+
+
+li.li-tag-list {
+
+	float: left;
+
+	width: 50%;
+
+}
+
+
+
+p.p-top-img {
+
+	margin: 0 !important;
+
+	text-align: center;
+
+	line-height: 29px;
+
+}
+
+
+
+.post_img img {
+
+	position: absolute;
+
+	z-index: -1;
+
+	top: 0px;
+
+}
+
+
+
+p#move_notice {
+
+	font-size: 10px;
+
+	color: red;
+
+	padding: 5px;
+
+	font-weight: bold;
+
+	line-height: 1.2;
+
+}

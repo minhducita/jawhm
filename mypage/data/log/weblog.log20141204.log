@@ -1,0 +1,88 @@
+2014-12-04T12:21:35+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_on' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('INSERT INTO `cl...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('INSERT INTO `cl...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'INSERT INTO `cl...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('INSERT INTO `cl...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `cl...', Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(576): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `cl...', Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(38): Zend_Db_Adapter_Abstract->insert('client_activity...', Array)
+#7 /var/www/html/mypage/tools/common.php(627): BaseModel->insert('client_activity...', Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(893): action_log('googleauth', 'Google?????????...', NULL)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(739): IndexController->loginCommon(Array, 'googleauth', 'Google')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->googleauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('googleauthActio...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_on' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('INSERT INTO `cl...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'INSERT INTO `cl...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('INSERT INTO `cl...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `cl...', Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(576): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `cl...', Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(38): Zend_Db_Adapter_Abstract->insert('client_activity...', Array)
+#6 /var/www/html/mypage/tools/common.php(627): BaseModel->insert('client_activity...', Array)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(893): action_log('googleauth', 'Google?????????...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(739): IndexController->loginCommon(Array, 'googleauth', 'Google')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->googleauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('googleauthActio...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2014-12-04T13:01:30+09:00 ALERT (1): exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_on' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:58
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php(58): PDO->prepare('INSERT INTO `cl...')
+#1 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('INSERT INTO `cl...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'INSERT INTO `cl...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('INSERT INTO `cl...')
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `cl...', Array)
+#5 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(576): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `cl...', Array)
+#6 /var/www/html/mypage/tools/BaseModel.php(38): Zend_Db_Adapter_Abstract->insert('client_activity...', Array)
+#7 /var/www/html/mypage/tools/common.php(627): BaseModel->insert('client_activity...', Array)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(893): action_log('googleauth', 'Google?????????...', NULL)
+#9 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(739): IndexController->loginCommon(Array, 'googleauth', 'Google')
+#10 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->googleauthAction()
+#11 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('googleauthActio...')
+#12 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#14 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_on' in 'field list'' in /var/www/html/mypage/library/Zend/Db/Statement/Pdo.php:61
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Db/Statement.php(115): Zend_Db_Statement_Pdo->_prepare('INSERT INTO `cl...')
+#1 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(184): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Pdo_Mysql), 'INSERT INTO `cl...')
+#2 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Adapter_Pdo_Abstract->prepare('INSERT INTO `cl...')
+#3 /var/www/html/mypage/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `cl...', Array)
+#4 /var/www/html/mypage/library/Zend/Db/Adapter/Abstract.php(576): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `cl...', Array)
+#5 /var/www/html/mypage/tools/BaseModel.php(38): Zend_Db_Adapter_Abstract->insert('client_activity...', Array)
+#6 /var/www/html/mypage/tools/common.php(627): BaseModel->insert('client_activity...', Array)
+#7 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(893): action_log('googleauth', 'Google?????????...', NULL)
+#8 /var/www/html/mypage/application/modules/default/controllers/IndexController.php(739): IndexController->loginCommon(Array, 'googleauth', 'Google')
+#9 /var/www/html/mypage/library/Zend/Controller/Action.php(516): IndexController->googleauthAction()
+#10 /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php(308): Zend_Controller_Action->dispatch('googleauthActio...')
+#11 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#13 {main}
+2014-12-04T16:21:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2014-12-04T16:21:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2014-12-04T16:21:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}
+2014-12-04T16:21:57+09:00 ALERT (1): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (mypage)' in /var/www/html/mypage/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /var/www/html/mypage/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /var/www/html/mypage/index.php(69): Zend_Controller_Front->dispatch()
+#2 {main}

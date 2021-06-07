@@ -1,0 +1,217 @@
+﻿<?php
+require_once '../../include/header.php';
+require_once '../../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='台湾情報';
+$header_obj->description_page='台湾のビザ。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../../images/mainimg/TW-countrypage.png" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = '台湾 | ワーホリで行ける国（ワーキングホリデー協定国）';
+
+//add javascript for country info
+$header_obj->add_js_files='
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--[if IE]><script type="text/javascript" src="/country/country_info/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/country/country_info/js/coolclock.js"></script>
+<script type="text/javascript" src="/country/country_info/js/moreskins.js"></script>
+';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-m.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="../css/style.css" rel="stylesheet" type="text/css" /><link href="../css/style-p.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+include('../../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+
+		<div class="area-display-pc" style="padding-top:35px">
+			<a href="/country/" class="btn-back-list area-round-corner">協定国一覧へ戻る</a>
+			<p class="country-name-img"><img src="../../images/bflag10.gif" alt="" /></p>
+
+			<div id="area-map-img">
+				<img src="../images/map-ywn.png" />
+			</div>
+		</div>
+		<div class="area-display-sp">
+			<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+
+			<div id="area-map-img">
+				<img src="../images/map-ywn-sp.png" />
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>台湾人気都市　BEST3</span></h2>
+		<div class="area-main-content">
+			<ul class="list-best3">
+				<li><img src="../images/crown-1.gif" />Tapei</li>
+				<li><img src="../images/crown-2.gif" />Kaohsiung</li>
+				<li style="margin-right:0"><img src="../images/crown-3.gif" />Taichung</li>
+			</ul>
+		</div>
+
+		<h2 class="h2-title"><span>台湾基本情報</span></h2>
+		<div class="area-main-content clearfix">
+
+			<div class="area-display-pc">
+				<div class="area-left">
+					<table class="table-info">
+						<tr>
+							<th>首都</th><td id="td-capital">Taipei</td>
+						</tr>
+						<tr>
+							<th>言語</th><td id="td-language">Chinese</td>
+						</tr>
+						<tr>
+							<th>面積</th><td>7,686,850 km&#178;<span>(世界138位)</span></td>
+						</tr>
+						<tr>
+							<th>人口</th><td>23,063,027人<span>(世界52位)</td>
+						</tr>
+						<tr>
+							<th>通貨</th><td>New Taiwan Dollar (TWD)</td>
+						</tr>
+					</table>
+					<p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p>
+				</div>
+
+				<div class="area-right">
+					<table class="table-clock">
+						<caption>日本との時差</caption>
+						<tr>
+							<th>日本時間</th><th>Taipei</th>
+						</tr>
+						<tr>
+							<td style="border-right:1px solid #000">
+								<img src="../images/clock-tokyo.png" /><br />
+								1月1日<br />
+								09:00am
+							</td>
+							<td>
+								<img src="../images/clock-ywn.png" /><br />
+								1月1日<br />
+								08:00am
+							</td>
+						</tr>
+					</table>
+					<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+				</div>
+			</div>
+
+			<div class="area-display-sp clearfix">
+				<table class="table-info">
+					<tr>
+						<th>首都</th><td id="td-capital">Taipei</td>
+					</tr>
+					<tr>
+						<th>面積</th><td>7,686,850 km&#178;<span>(世界138位)</span></td>
+					</tr>
+					<tr>
+						<th>人口</th><td>23,063,027人<span>(世界52位)</td>
+					</tr>
+				</table>
+				<table class="table-info" style="margin-right:0">
+					<tr>
+						<th>言語</th><td id="td-language">Chinese</td>
+					</tr>
+					<tr>
+						<th>通貨</th><td>New Taiwan Dollar (TWD)</td>
+					</tr>
+					<tr style="border-bottom:none">
+						<td colspan="2"><p class="text-attention" style="padding-right:10px">＊2014 年10 月時点の数値です</p></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="area-display-sp">
+			<h2 class="h2-title"><span>日本との時差</span></h2>
+			<div class="area-main-content">
+				<table class="table-clock">
+					<tr>
+						<th>日本時間</th><th>Taipei</th>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #000">
+							<img src="../images/clock-tokyo.png" /><br />
+							1月1日<br />
+							09:00am
+						</td>
+						<td>
+							<img src="../images/clock-ywn.png" /><br />
+							1月1日<br />
+							08:00am
+						</td>
+					</tr>
+				</table>
+				<p class="text-attention">＊サマータイムの期間は時差が変動します</p>
+			</div>
+		</div>
+
+
+		<h2 class="h2-title"><span>台湾ってどんな国？</span></h2>
+		<div class="area-main-content">
+		    <p class="text01">
+			沖縄から見えるほど近い台湾は熱帯、亜熱帯、温暖気候からなりその温暖な気候と大陸から離れている島なので台湾独特の動植物も多く、台湾でしか見られない動植物をみる事も台湾ワーキングホリデーの楽しみの一つだろう。　グルメの街として日本のテレビでよく紹介されるように中国全域の料理を堪能でき、日本から進出したお店も多い。　台北から高雄には新幹線が走っており台湾が親日家が多い象徴かもしれない。台北市内はMRT（電車）が整備されており移動には便利だ。　治安も良く、物価が安く、気候も暖かい上に親日家が多いので日本人旅行客は多い。　親日家が多いのには歴史的背景がある。　台湾人は日本のことをよく知っているが日本人は台湾のことをあまり知らないのが現状なのでこれから台湾ワーキングホリデーに行く人は台湾がどのように現在に至ったのか、なぜ日本人に好意を抱いてくれているのか歴史や政治からその成り立ちを知っておくべきだろう。　台湾での中国語の勉強をすると日本でするよりも台湾の歴史や人、文化が学べて重ねて勉強になるだろう。お勧めだ。　中国語のアクセントも比較的軽い発音の中国語なので日本人にとっては発音しやすい。　近年では国を挙げてのIT国家が成功していたり中国へのビジネスの足掛かりとして日系企業が台湾企業と提携する例も多く、日本にとっては重要なパートナーとなっている。
+			</p>
+		</div>
+
+
+	<div class="area-display-pc">
+		<div class="centered-btn_set3"><a class="visa-btn3" href="../../visa/v-ywn.html" title="台湾のワーキングホリデー（ワーホリ）ビザ情報へ">台湾のワーキングホリデー（ワーホリ）ビザ情報へ</a></div>
+	  	<div class="seminar-listing-title-red">▼▼▼まずは無料セミナーへ！ワーキングホリデー＆留学の無料セミナーはこちら！▼▼▼</div>
+	</div>
+	<div class="area-display-sp">
+	  	<a href="/guidebook"><img src="../images/ca_banner.jpg"></a>
+		<a href="../../visa/v-ywn.html" class="btn-visa area-round-corner">
+			台湾の<br />ビザ情報はこちらから
+		</a>
+	  	<div class="seminar-listing-title-red">まずは無料セミナーへ！<br />ワーキングホリデー＆留学の無料セミナーはこちら！</div>
+	</div>
+
+
+
+
+    <?php 
+			//settings for the calendar module display
+            $country_to_display = '台湾';
+            $number_to_display = '2';
+
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>	
+    <div style="position:relative;text-align:center;">
+      <a href="/seminar/seminar"><img src="/images/canausseminar.gif" title="ワーキングホリデー＆留学無料セミナー毎日開催中！"/></a>
+      <p style="text-align:right;padding-right:20px;"><a href="/seminar/seminar" title="無料セミナー">＞＞＞  無料セミナー情報をもっと見る</a></p>
+    </div> 
+    <div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+
+
+	<div class="area-display-pc">
+		<h2 class="h2-title"><span>ワーキングホリデー協定国一覧</span></h2>
+		<?php include('../flags_country_list.php'); ?>
+	</div>
+	<div class="area-display-sp">
+		<a href="/country/" class="btn-back-list area-round-corner">ワーホリ協定国一覧へ戻る</a>
+	</div>
+
+
+<?php $links_obj->display_links(); ?>
+
+	</div><!-- /#maincontent -->
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

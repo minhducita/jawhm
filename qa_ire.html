@@ -1,0 +1,145 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='アイルランドの留学・ワーホリでよくある質問';
+$header_obj->description_page='アイルランドのワーホリに関するよくある質問にお答えします。現地での手続きや銀行口座開設についてなど、役立つ情報をご紹介していますので、アイルランドへのワーホリをお考えの方は、是非ご活用ください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'アイルランドワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('qa'); ?>
+	  <h2 class="sec-title">アイルランド　ワーキングホリデー</h2>
+	  <table class="qatable-aus">
+	    <tr>
+		  <th><img src="images/mflag08.gif" alt="" /><br />アイルランド</th>
+		  <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+		</tr>
+	  </table>
+
+      <p>&nbsp;</p>
+
+	<center>
+		<?php
+		  //アイルランドギャラリーirelandgalley
+
+		  // The MAX_PATH below should point to the base of your OpenX installation
+		  define('MAX_PATH', '/var/www/html/ad');
+		  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+		    if (!isset($phpAds_context)) {
+		      $phpAds_context = array();
+		    }
+		    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+		    $phpAds_raw = view_local('', 135, 0, 0, '_blank', '', '0', $phpAds_context, '');
+		  }
+		  echo $phpAds_raw['html'];
+		?>
+
+	</center>
+
+
+      <p>&nbsp;</p>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'アイルランド';
+            $number_to_display = '6';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <h2 class="sec-title">よくある質問と回答</h2>
+      <p>&nbsp;</p>
+
+	  <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ１.アイルランドワーキングホリデービザはいつ申請すればいいでしょうか？</h3>
+		<p class="text01">アイルランドへの入国は、「アイルランド・ワーキング・ホリデー・オーソリゼーション（許可証）」の発給日から12ヶ月以内で、入国から12ヶ月滞在することが可能です。「アイルランド・ワーキング・ホリデー・オーソリゼーション（許可証）」は例年、第一期と第二期にわけて申請手続き期間が定められています。ご自身が出発したい時期にあわせ、タイミングを逃さないように申請をしましょう。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ２.現地へ行ってからしなければいけない手続きについて教えてください。</h3>
+
+
+		<p class="text01m30">■外国人登録<br />
+アイルランドの空港に到着したら入国審査で、あなたのパスポートに1ヶ月または3ヶ月の滞在許可のスタンプが押されます。入国1か月以内にアイルランドの警察で外国人登録を行ってください。日本人のアイルランドワーキングホリデービザ取得者もこの届出を行わないと、アイルランドで90日以上の滞在ができません。<br />
+ダブリンに行く場合ですと出入国管理局・GNIB（Garda National Immigration Bureau)、<br />
+ダブリン以外に滞在の場合は、その地域の警察署本部（Garda）で手続きが行えます。<br />
+＜必要書類＞<br />
+　・パスポート<br />
+　・住所証明（銀行預金の明細書など）<br />
+　・手数料<br />
+
+		<p class="text01m30">アイルランドでは各種手続きにおいて、住所証明の提示が必要です。<br />
+一般的には、本人宛で住所が記載されている電気・ガス・電話等の請求書が必要です。フラットシェアなどの場合はこれらの書類を揃えることができませんが、以下の方法があります。<br />
+・ 現住所宛の該当する請求書とその請求書に記載されている人のレター<br />
+・	自分の名前と住所の書かれた銀行預金明細書<br />
+・	賃貸借契約書と大家さんのレター<br />
+・	ユースホステルなどの宿泊施設に滞在の場合は領収書と宿泊施設からのレター<br />
+なお各種手続き担当者によっては、証明書の指定がある場合もございますので、事前に確認をとりましょう。</p>
+
+<p class="text01m30">■PPSナンバー<br />
+アイルランドで仕事をする場合、Personal Public Serviceナンバーと呼ばれる社会保障番号のPPSが必要になります。近くのDepartment of Social and Family Affairs（社会福祉事務局）で手続きを行ってください。<br />
+申請後郵送でPPSナンバーが送られてきます。<br/>
+</p>
+
+<p class="text01m30">■税務当局（Revenue Commissioners）へ登録<br />
+仕事が決まったら、Revenue Commissionersに登録してください。雇用主にPPSナンバーを提示し「Form12A」の用紙に必要事項を記入して税務署に郵送してください。<br />
+</p>
+
+
+	     <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ４.銀行口座の開設はどうすればいいですか？</h3>
+		<p class="text01m30">銀行口座開設に必要な書類は、パスポート、PPSナンバー、住所証明書が必要になります。銀行によって必要な書類が変わってきますので詳細は現地の銀行でご確認下さい。<br />
+		7営業日ほどで郵送で暗証番号が送られてきます。　銀行にてその暗証番号を入力して銀行カウンターでキャッシュカードが受け取れます。お仕事を始めるにあたり銀行口座は必要不可欠です。はやめに手続きを済ませておきましょう。</p>
+	  </div>
+	      <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ５.アイルランドで仕事はすぐ見つかりますか？</h3>
+		<p class="text01m30">近年の不況の影響もあり、アルバイトですらなかなか見つからないのが現状です。アイルランドの最低時給は€8.65。英語のできないうちは日本食レストランなどで仕事先を探してみましょう。他国と同じく履歴書を配り歩いたり根気よくお仕事探しをする必要があります。希望の職種等があればなおさらです。
+		</p>
+	  </div>
+	     
+
+		<div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+	  
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'アイルランド';
+            $number_to_display = '6';
+            $start_display_from = '6'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <div class="advbox03">
+<?php
+	// 129
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 107, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

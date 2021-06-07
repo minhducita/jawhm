@@ -1,0 +1,640 @@
+<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+
+//Iscroll  onscroll event
+$header_obj->iscrollEvent = 'onScrollMove: function() { '.$javascript_event_action.' }, onBeforeScrollEnd: function() { '.$javascript_event_action.' }';
+$header_obj->js_settings_beforeIscroll = $javascript_variable.'
+'.$javascript_function_load_data;
+
+$header_obj->title_page='ワーキングホリデー協定国（ビザ情報）';
+$header_obj->description_page='ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港、ノルウェーでワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（ビザ情報） | ワーホリビザ情報';
+
+$header_obj->display_header();
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs(); ?>
+	  <p class="text01">現在、日本がワーキング・ホリデー協定を結んでいるのは下記の24ヶ国です。</p>
+	  <div id="visapage-country-list">
+	  <div class="step1-country">
+		<a href="#au"><img src="../images/step1-coun01.gif" alt="" /></a>
+		<a class="visa-btn" href="v-aus.html">オーストラリアビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct2"><img src="../images/step1-coun02.gif" alt="" /></a>
+		<a class="visa-btn" href="v-nz.html">ニュージーランドビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct3"><img src="../images/step1-coun03.gif" alt="" /></a>
+		<a class="visa-btn" href="v-can.html">カナダビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct4"><img src="../images/step1-coun04.gif" alt="" /></a>
+		<a class="visa-btn" href="v-kor.html">韓国ビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct5"><img src="../images/step1-coun05.gif" alt="" /></a>
+		<a class="visa-btn" href="v-fra.html">フランスビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct6"><img src="../images/step1-coun06.gif" alt="" /></a>
+		<a class="visa-btn" href="v-deu.html">ドイツビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct7"><img src="../images/step1-coun07.gif" alt="" /></a>
+		<a class="visa-btn" href="v-uk.html">イギリスビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct8"><img src="../images/step1-coun08.gif" alt="" /></a>
+		<a class="visa-btn" href="v-ire.html">アイルランドビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct9"><img src="../images/step1-coun09.gif" alt="" /></a>
+		<a class="visa-btn" href="v-dnk.html">デンマークビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct10"><img src="../images/step1-coun10.gif" alt="" /></a>
+		<a class="visa-btn" href="v-ywn.html">台湾ビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct11"><img src="../images/step1-coun11.gif" alt="" /></a>
+		<a class="visa-btn" href="v-hkg.html">香港ビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct12"><img src="../images/step1-coun12.gif" alt="" /></a>
+		<a class="visa-btn" href="v-nor.html">ノルウェービザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct13"><img src="../images/step1-coun13.gif" alt="" /></a>
+		<a class="visa-btn" href="v-pol.html">ポーランドビザ情報へ</a>
+	  </div>
+	  <div class="step1-country">
+		<a href="#ct14"><img src="../images/step1-coun14.gif" alt="" /></a>
+		<a class="visa-btn" href="v-prt.html">ポルトガルビザ情報へ</a>
+	  </div>
+	  <!-- design by Minh Ánh VN -->
+		<div class="step1-country">
+			<a href="#ct15"><img src="../images/step1-coun15.gif" alt="" /></a>
+			<a class="visa-btn" href="v-svk.html">スロバキアビザ情報へ</a>
+		</div>
+
+		<div class="step1-country">
+			<a href="#ct16"><img src="../images/step1-coun16.gif" alt="" /></a>
+			<a class="visa-btn" href="v-aut.html">オーストリアビザ情報へ</a>
+		</div>
+		<div class="step1-country">
+        <a href="#ct17"><img src="../images/coun_hun_1.gif" alt="" /></a>
+        <a class="visa-btn" href="v-hun.html">ハンガリービザ情報へ</a>
+		</div>
+		<div class="step1-country">
+			<a href="#ct18"><img src="../images/coun_spain.gif" alt="" /></a>
+			<a class="visa-btn" href="v-esp.html">スペインビザ情報へ</a>
+		</div>
+		<div class="step1-country">
+            <a href="#ct19"><img src="../images/coun_arg.gif" alt="" /></a>
+            <a class="visa-btn" href="v-arg.html">アルゼンチンのビザ情報へ</a>
+        </div>
+        <div class="step1-country">
+            <a href="#ct20"><img src="../images/coun_chl.gif" alt="" /></a>
+            <a class="visa-btn" href="v-chl.html">チリのビザ情報へ</a>
+        </div>
+
+        <div class="step1-country">
+            <a href="#ct21"><img src="../images/coun_cze.gif" alt="" /></a>
+            <a class="visa-btn" href="v-cze.html">チェコのビザ情報へ</a>
+        </div>  
+        <div class="step1-country">
+            <a href="#ct22"><img src="../images/coun_isl.gif" alt="" /></a>
+            <a class="visa-btn" href="v-isl.html">アイスランドのビザ情報へ</a>
+        </div>
+        <div class="step1-country">
+            <a href="#ct23"><img src="../images/coun_ltu.gif" alt="" /></a>
+            <a class="visa-btn" href="v-ltu.html">リトアニアのビザ情報へ</a>
+        </div>
+
+        <div class="step1-country">
+            <a href="#ct24"><img src="../images/coun_swe.gif" alt="" /></a>
+            <a class="visa-btn" href="v-swe.html">スウェーデンのビザ情報へ</a>
+		</div>
+	</div>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+		<center><a href="/mem/#meritt"><img src="images/memline1_off.gif" alt="" /></a></center>
+
+
+	<h2 id="ct1" class="sec-title">オーストラリア</h2>
+    <p class="country-name-img"><img src="../images/step1-coun01.gif" alt="" /></p>
+    
+	<p class="text01">
+	ワーキングホリデーで最も人気の国です。地球上でもっとも小さな大陸でありながら世界で6番目に大きな国がオーストラリアです。550以上の国立公園と16の世界遺産との神秘的な自然が多いのが特徴です。　自然環境は厳しく保護されていてオーストラリア独特の動物、コアラやウォンバット、カンガルー、ワラビーだけでなく、世界に12000種あるワイルドフラワーのうち8000種は西オーストラリアに棲息しているほど独特の自然環境を持っています。　壮大な空が都市にもかぶさり最大の都市シドニーにも青い空と白い砂浜があなたを迎えてくれます。　歴史が浅い国で200年ちょっとしかたっていないので3代までさかのぼるとほぼ全員が移民になると言われるほど移民が多く非英語圏の居住者も多い。　オーストラリアの高校生の第二言語学習では日本語がフランス語とともにトップ、輸出先としても日本は重要なので親日家も多い。　ワーキングホリデー協定国でいちばん夏が長くその気候を楽しむサーフィン、ビーチBBQやハウスパーティなど日本では体験できないライフスタイルは是非体験しよう。
+	</p>
+	<p class="text01">
+	最低時給は日本の最低時給よりも高く15ドル以上だ。観光立国なので日本人が日本語を使って観光客相手に働く職場も多く、仕事が見つけやすい点は渡航しやすさにもつながっているだろう。　ただ日本食レストランで1年間終わってしまうと英語の上達スピードは落ちるので努力してほしい。　食料自給率が260％もあるオーストラリアでは農場で3カ月働くと2年目のセカンドワーホリがもらえる唯一の国でもある。　農場での時給も15ドル～20ドルと高く農場で働いただけで100万円貯金するワーホリも多い。
+	</p>
+	<p class="text01">
+	オーストラリアワーキングホリデー達の特徴として働いて貯金すると1周旅行(ラウンド）や他の街に引っ越しをする人も多いです。
+	</p>
+	<p class="text01">
+	日本との時差が1～2時間で成田空港と関西空港からも格安航空会社LCC（Low Cost Carrier）が出航しておりさらにセールの時は１人分の料金で２人分の航空券などとすごく安く手に入る。
+	</p>
+	<p class="text01">
+	暖かい気候に誘われて外出する事も多く、週末はビーチ、平日もカフェと友好関係が広がる機会は多く年齢や人種を超えた友人ができるだろう。さらに現地では「ワーホリ恋のチケット3枚」と言われるほど異性との出会いも多く年齢、人種、見た目を超えた日本では考えられない出会いも、恋愛も楽しんでほしい。
+	</p>
+	<p class="text01">
+	スポーツはクリケットやラグビーが盛んだがヨーロッパからの移民が多いためサッカーのAリーグも盛ん。サーフィンの世界大会が行われるほどビーチが多く波は厚く良質。ボディーボードやサーフィンの中古を１万円ほどで購入し始めるワーホリも多い。サーフィンは毎日行ってもお金がかからないので良い遊びになるだろう。日本にいるよりも上達する。シドニー、ゴールドコースト、パースではビーチが数えられないほどあり、あまり知られていないが冬の期間はスノボも楽しめる。　F1レースやインディーカーレース、バイクの世界大会や野球のマイナーリーグなどのスポーツも盛ん。
+	</p>
+	<a class="visa-btn" href="v-aus.html">オーストラリアビザ情報へ</a>
+
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'オーストラリア';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct2" class="sec-title">ニュージーランド</h2>
+	<p class="country-name-img"><img src="../images/step1-coun02.gif" alt="" /></p>
+	
+    <p class="text01">
+	映画ロードオブザリングやラストサムライの撮影場所に選ばれるなど太古の自然が残っておりゆったりと生活できる。　一番の都市オークランドでもどこでもゆったりとしている。ニュージーランドワーキングホリデーに行く人もゆったりとしているだろう。　多彩なアウトドアアクティビティはニュージーランドの醍醐味だ。ニュージーランドにワーキングホリデーに行くのなら必ず予定に入れておこう。　北島と南島で行き先が分かれ北島のオークランドは都市、南島の中央には「南半球のアルプス山脈」と呼ばれる山がそびえておりフィヨルドが見られるのもここ。アクティビティをしないとニュージーランドとはいえないだろう。
+	</p>
+	<p class="text01">
+	北島も南島も合わせても日本よりも小さく1周旅行でも１カ月もかからず出来るのでぐるっと回る人は多い。　ウィンタースポーツの街クィーンズタウンでは日本の夏に冬になるので夏休みに観光ビザでスノボに行く人も多い。　湖を見下ろしながらのスノボは最高だ。　同一雇用主で1年間働けるのも特徴だが仕事はオークランドに集中している。　農場の仕事を3カ月するとワーホリが3カ月延長できる。
+	</p>
+	<a class="visa-btn" href="v-nz.html">ニュージーランドビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ニュージーランド';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct3" class="sec-title">カナダ</h2>
+	<p class="country-name-img"><img src="../images/step1-coun03.gif" alt="" /></p>
+    
+	<p class="text01">
+	１０州と３つの準州からなるが日本人に有名なのはバンクーバーのあるブリティッシュコロンビア州、とカナダで一番大きな都市トロントがあるオンタリオ州だ。　トロントからはニューヨークが近くて、バンクーバーからはシアトルが近く、車でイチロー選手を応援に行くのもカナダワーキングホリデーの楽しみ。
+	</p>
+	<p class="text01">
+	ロッキー山脈は絶景で2010年にはウィンターオリンピックがバンクーバーとウィスラーで行われフィギュアスケート女子銀メダルの浅田真央や女子モーグルの上村愛子の入賞は記憶に新しい。　冬が長く最長で8カ月もウィンタースポーツが出来るのも魅力。
+	</p>
+	<p class="text01">
+	赤毛のアンが有名なプリンスエドワード島も有名。その近くのハリファックスという町に英語留学する人もいる。　バンクーバー夏は涼しく冬はロkk－山脈の雪が解けて雨になるため雨の冬が続く。
+	</p>
+	<p class="text01">
+	ケベック州はフランス語圏になるのでフランス語がわからないと厳しい。　ケベック州でワーキングホリデービザで就労する場合はケベック州の雇用主がＣＡＱを取得する必要がある。　就学条件と就労条件は変わらない。
+	</p>
+	<a class="visa-btn" href="v-can.html">カナダビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'カナダ';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct4" class="sec-title">韓国</h2>
+	<p class="country-name-img"><img src="../images/step1-coun04.gif" alt="" /></p>
+    
+	<p class="text01">
+	日本に一番近く飛行機代も安いので頻繁に帰国できる。　韓国語は日本語と同じ文法なので覚えやすく40個の文字記号の組み合わせですべての文字が書けるので規則を覚えれば習得しやすいが発音は日本語にない音も多く複雑。　最近の韓流ブームの影響で老若男女を問わず日本の観光客が押し寄せている。首都ソウルは全体面積の0.6 %でありながら、全人口の25%が集中する一極集中都市になっている。　時給は300円ほどなので日本から行くワーキングホリデーは働くことを目的としない韓国ワーキングホリデーも多い。その反対に韓国から日本への韓国人のワーキングホリデーは7000人以上が渡日しており、働くことを目的として日本に来る韓国人ワーキングホリデーは非常に多い。
+	</p>
+	<p class="text01">
+	日本ではあまり知られていないが歴史も文化も知るとおもしろい。最近では日本をしのぐほどのＩＴ国家で、家電や携帯は韓国の方がおもしろかったりする。
+	</p>
+	<p class="text01">
+	衣料や食事は安いので生活費はあまりかからない。酒は勧められるままに飲むと危ないかも。。
+	</p>
+	<a class="visa-btn" href="v-kor.html">韓国ビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = '韓国';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct5" class="sec-title">フランス</h2>
+	<p class="country-name-img"><img src="../images/step1-coun05.gif" alt="" /></p>
+    
+	<p class="text01">
+	歴史ある街並みが絵になるおしゃれな街パリ、人気ファッションブランドも多く、農業国、フランス料理、フランスワインも有名。　　ヨーロッパ歴史の要であるが歴史を知っている日本人は少ないので是非歴史を知ってからいってほしい。建物一つ一つの歴史や意味がわかるとフランスはもっと楽しくなるだろう。　自己主張が強いことも知られているが日本人的に行動していてはままならないだろう。　日本のアニメファンが一番浸透しており、日本の専門学校のようなアニメ学校がある国はヨーロッパでもフランスだけだろう。　日本食レストランもあるのでバイトする分には見つけられるだろうが日本語はラテン語派生ではないので他の国から来ているフランス語を習っている生徒よりも日本人は学習スピードが遅く苦労するだろう。　1年でしゃべれるようになるには相当の努力が必要だ。
+	</p>
+	<a class="visa-btn" href="v-fra.html">フランスビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'フランス';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct6" class="sec-title">ドイツ</h2>
+	<p class="country-name-img"><img src="../images/step1-coun06.gif" alt="" /></p>
+
+    <p class="text01">
+	2011年の日本人サッカー選手の活躍でドイツサッカーをテレビで見ない週はないほどサッカーが盛り上がっている。　古いお城や宮殿が点在しており、美しい街並みに浸りながらビールとソーセージを堪能できる。　　環境問題に対する意識が非常に高くリサイクル活動も徹底している。ヨーロッパで1番の工業国で、ドイツの経済状況がユーロの値打ちに直結しているともいえる。　良く日本人に似ていると言われるほど勤勉で大学の学費は留学生でも安い。　若者を育てるために宿泊させるユースホステルや農業体験を経験させるウ―フWWOOFの発祥の地。　ベルリンの壁の崩壊やアウシュビッツなど現在のドイツを形成する上で大きな影響をもたらした歴史は必ず知っておこう。中世の歴史も知っておくとお城や音楽家の生家など感動する場面も多くなるだろう。　　地域によっては日本人が住まない方がよい治安の場所もあるので注意。
+	</p>
+	<p class="text01">
+	音楽、建築系で留学する人も多いが留学前の語学学校に通うためにドイツワーキングホリデービザを使う人もいる。　有名なロマンティック街道や10月のビール祭りオクトーバーフェスト、12月のクリスマス祭りが有名。発音はし易いが単語は多くてこずる
+	</p>
+	<a class="visa-btn" href="v-deu.html">ドイツビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ドイツ';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct7" class="sec-title">イギリス</h2>
+	<p class="country-name-img"><img src="../images/step1-coun07.gif" alt="" /></p>
+    
+      <p class="text01">
+	長い歴史を持つイギリス。毎年ビザはすぐに発給限度数に達っし2011年は2時間で発給限度数に達した。　イングランド、北アイルランド、ウェールズ、スコットランドの連合王国からなりそれぞれに歴史と文化が違う。英語の発音で出身地がわかるほどだ。	</p>
+	<p class="text01">
+	アートやファッション、音楽、スポーツなどの文化的楽しみが多く、首都ロンドンは世界の金融の街としても有名。　そのため物価はワーキングホリデー開催国の中でも最も高く、留学生の入国規制も設け、エリート教育の方針に政府も向かっている。　文化の楽しみとして4月1日のエイプリルフールはテレビ会社や新聞会社が「ウソ」を報道したりする。サッカー、ラグビー、クリケットが国民スポーツ。　日本人の多くはロンドンに滞在する。地下鉄が発達しているのでちょっと郊外でも通勤通学出来るだろう。　イギリスに行きたい人は準備する費用は多く持って行かないとちょっと外食をすると芽目が飛び出るほど高く感じ、アルバイトが見つかるまでには持参したお金が底をついて帰国するイギリスワーキングホリデーもいる。　スコットランドなど北部では牧草地帯が絵のようで美しくフィンランドにもフェリーで行くことも出来る。
+	</p>
+	<a class="visa-btn" href="v-uk.html">イギリスビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'イギリス';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct8" class="sec-title">アイルランド</h2>
+	<p class="country-name-img"><img src="../images/step1-coun08.gif" alt="" /></p>
+   
+    <p class="text01">
+	国土のほとんどが牧草地で、エメラルドの島と呼ばれている。主食がポテトというほどポテトを買い、立ち飲みで入りやすいアイリッシュパブでもチップス（フレンチフライ）とギネスビール（黒ビール）で友達と集まる。アイリッシュパブ発祥の地で、パブの歴史的が非常に深く、ソーシャライズする場、意味は地元の友達を作ったり初めての人と知り合ったりする場として全土にそして世界的にも広がっている。バンドやアンプラグドのライブが行われるのもアイリッシュパブの特徴。ライブでは人気のある曲は店内がカラオケ状態になるほど全員が歌いだす。　どこでものんびりとした田舎暮らしは堪能することができ、その気候や文化から発展した独特のアクセントの強い英語の発音は非常に難しいだろう。そのためか日本人も少なく、アイルランドワーキングホリデーに行く日本人も少ない。
+	</p>
+	<a class="visa-btn" href="v-ire.html">アイルランドビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'アイルランド';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display);
+            ?>
+
+      <p>&nbsp;</p>
+
+	<center>
+		<?php
+		  //アイルランドギャラリー　irelandgalley
+
+		  // The MAX_PATH below should point to the base of your OpenX installation
+		  define('MAX_PATH', '/var/www/html/ad');
+		  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+		    if (!isset($phpAds_context)) {
+		      $phpAds_context = array();
+		    }
+		    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+		    $phpAds_raw = view_local('', 136, 0, 0, '_blank', '', '0', $phpAds_context, '');
+		    $phpAds_context[] = array('!=' => 'bannerid:'.$phpAds_raw['bannerid']);
+		    $phpAds_context[] = array('!=' => 'campaignid:'.$phpAds_raw['campaignid']);
+		  }
+		  echo $phpAds_raw['html'];
+		?>
+	</center>
+
+	<h2 id="ct9" class="sec-title">デンマーク</h2>
+	<p class="country-name-img"><img src="../images/step1-coun09.gif" alt="" /></p>
+    
+    <p class="text01">
+	スカンジナビア半島、北欧諸国で南に位置するデンマーク。近年ではデザインの国として北欧家具や北欧雑貨が人気を集めている。デザインは街並みにも反映されており美しい自然と可愛い建物が並ぶ風景はおとぎの国のイメージだ。　田舎の風景も田園に古城と風車が点在してまるでミニチュアを作ったようだ。　一番高い標高でも173mしかなく国全体全体がなだらかで歩きやすい。そのためエコ先進国として普及している自転車も乗りやすくは本当に多く見かけるだろう。　デンマークでの自転車の多くはペダルブレーキなのでハンドルにペダルが付いていない。日本人には慣れるまで注意が必要だ。　国王制なので日本の天皇家と交流があり親日国家とも言える。童話アンデルセンとレゴ発祥地というのも納得だ。
+	</p>
+	<a class="visa-btn" href="v-dnk.html">デンマークビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'デンマーク';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct10" class="sec-title">台湾</h2>
+	<p class="country-name-img"><img src="../images/step1-coun10.gif" alt="" /></p>
+    
+    <p class="text01">
+	沖縄から見えるほど近い台湾は熱帯、亜熱帯、温暖気候からなりその温暖な気候と大陸から離れている島なので台湾独特の動植物も多く、台湾でしか見られない動植物をみる事も台湾ワーキングホリデーの楽しみの一つだろう。　グルメの街として日本のテレビでよく紹介されるように中国全域の料理を堪能でき、日本から進出したお店も多い。　台北から高雄には新幹線が走っており台湾が親日家が多い象徴かもしれない。台北市内はMRT（電車）が整備されており移動には便利だ。　治安も良く、物価が安く、気候も暖かい上に親日家が多いので日本人旅行客は多い。　親日家が多いのには歴史的背景がある。　台湾人は日本のことをよく知っているが日本人は台湾のことをあまり知らないのが現状なのでこれから台湾ワーキングホリデーに行く人は台湾がどのように現在に至ったのか、なぜ日本人に好意を抱いてくれているのか歴史や政治からその成り立ちを知っておくべきだろう。　台湾での中国語の勉強をすると日本でするよりも台湾の歴史や人、文化が学べて重ねて勉強になるだろう。お勧めだ。　中国語のアクセントも比較的軽い発音の中国語なので日本人にとっては発音しやすい。　近年では国を挙げてのIT国家が成功していたり中国へのビジネスの足掛かりとして日系企業が台湾企業と提携する例も多く、日本にとっては重要なパートナーとなっている。
+	</p>
+	<a class="visa-btn" href="v-ywn.html">台湾ビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = '台湾';
+            $number_to_display = '2';
+
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct11" class="sec-title">香港</h2>
+	<p class="country-name-img"><img src="../images/step1-coun11.gif" alt="" /></p>
+    
+    <p class="text01">
+	香港人が自分たちで言うようにうるさいくらい良くしゃべる。飲茶文化を発展させたように外食文化が発展しており、家で料理をしないという家庭で驚いてはいけないキッチンがない家もある。　フリーポートとして日本企業も多く進出しておりそのビル群の夜景は100万ドルの夜景と呼ばれている。　都市部の若者文化は日本と類似しておりウェスタナイズされている。　マンゴーデザート店やドリアンが食べられるように熱帯地方の気候はトロピカルな食べ物が多く、ちょっと田舎方面に出向くとヤシの木やうっそうと茂った草木に都市部では感じられない香港が見える。　大陸中国には電車を利用し陸路で行ける。税関もあるが毎日買い物や仕事で行き来する人もいるほど行き易い。　発展し続ける香港と、今まさに建設ラッシュの中国を見比べるとそのギャップや貧困の差には感じることも多いだろう。　観光都市、アジアの流通ハブとして経済が発展している姿は日本の未来形かもしれない。　古くから中東やインドからの移民、イギリスの植民地時代と移民が多く、いろいろな人種がビジネスを通して英語を使っている。　ビジネスでは英語は出来て当たり前で香港を楽しむためには広東語も勉強しよう。
+	</p>
+	<a class="visa-btn" href="v-hkg.html">香港ビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+     
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = '香港';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	  
+	  	<h2 id="ct12" class="sec-title">ノルウェー</h2>
+	<p class="country-name-img"><img src="../images/step1-coun12.gif" alt="" /></p>
+    
+    <p class="text01">
+		ヨーロッパの北部にある、フィヨルドで有名な国、ノルウェー王国。その歴史は古く、バイキング時代から港とともに発展してきた非常に自然豊かな北欧の国です。ダイナミックで雄大な自然環境から様々な物語の舞台になり、ムンクの「叫び」を始め芸術活動の盛んな国でもあります。またノーベル平和賞授与式が開催されたり、世界で最も男女平等が浸透している国としても知られおり、平和な国として有名です。
+	</p>
+	<a class="visa-btn" href="v-nor.html">ノルウェービザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+     
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ノルウェー';
+            $number_to_display = '2';
+            
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>
+	<h2 id="ct13" class="sec-title">ポーランド</h2>
+	<p class="country-name-img"><img src="../images/step1-coun13.gif" alt="" /></p>
+    <p class="text01">ポーランドは通称「Heart of Europe (ヨーロッパの心臓)」とも呼ばれる、地理的/文化的に東西ヨーロッパの懸け橋になっている国です。国名の語源である「平原」が示す通り、国土には大草原が広がっています。そしてそれだけではなく、ポーランドには原生林を始め、美しいバルト海の海岸、氷河時代から存在する湖水地帯、さらには砂丘地帯も存在しており、様々な姿の自然を体験することができるでしょう。</p>
+	<p class="text01">ポーランドはショパンを始め、キュリー夫人やヨハネ・パウロ2世といった数多くの著名人/芸術家/音楽家を生み出しました。また、ヨーロッパの中心に位置する為、数々の歴史的な出来事の舞台にもなっており、その歴史をたどるツアーやショーが人気を博しています。</p>
+	<p class="text01">ポーランド人のルーツとされる古代サルマチア人にはとにかく客人をもてなす文化があり、現在のポーランド人にもその心得が息づいています。</p>
+	<p class="text01">日本と同じ様に、ポーランドにも四季があります。西部は比較的温暖で、東部は涼しげな内陸性気候です。日本とのポーランドの大きな違いは気温で、日本と比べると10度程度気温が低いです。夏場も日中は気温が上がりますが、日が落ちると長袖が必要になります。</p>
+	<a class="visa-btn" href="v-pol.html">ポーランドビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ポーランド';
+            $number_to_display = '2';
+
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?> 
+
+    <h2 id="ct14" class="sec-title">ポルトガル</h2>
+	<p class="country-name-img"><img src="../images/step1-coun14.gif" alt="" /></p>
+    <p class="text01">ポルトガルはヨーロッパの最西に位置する国です。国土が上下に長いので、日本と同じ様に北部と南部で気温が大きく変わるのが特徴です。内陸部は夏季が非常に暑く、長期にわたるのに対し、冬季は短く、降水量も多くないので、温暖な気候のリゾート地として高い人気を誇ります。</p>
+	<p class="text01">ポルトガルと言えば、南蛮貿易、鉄砲伝来、コンペイトウ、カステラ、ザビエルとキリスト教の布教など、古くから日本と強い繋がりがあり、多くの影響を与えていました。現在でも日本とポルトガルはいくつかの自治体間で姉妹都市協定を結んでおり、青年、経済・文化関係者、著名人などのレベルでの交流の促進において特別な関係を構築しています。</p>
+	<p class="text01">ポルトガルはヨーロッパ諸国の中でもっとも言語的統一性の整った国のひとつであり、アソーレス、マデイラ諸島を含むすべての領土においてポルトガル語が公用語として用いられています。英語もお隣のスペインに比べれば通じやすいですが、ポルトガル語の習得は必須です。</p>
+	<a class="visa-btn" href="v-prt.html">ポルトガルビザ情報へ</a>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ポルトガル';
+            $number_to_display = '2';
+
+			display_horizontal_calendar($country_to_display,$number_to_display); 
+      ?>  
+	  
+	  <!-- design by Minh Ánh VN -->
+
+		<h2 id="ct15" class="sec-title">スロバキア</h2>
+		<p class="country-name-img"><img src="../images/step1-coun15.gif" alt="" /></p>
+		<p class="text01">スロバキアはオーストリア、ポーランド、ハンガリーなどと隣接する小さな国で、国土は日本の約7分の1。国土のほとんどが山岳地帯からなっており、北部のタトラ山脈や南部の緩やかな低地地域などが観光地として人気がある。</p>
+		<p class="text01">スロバキアには日本と同じくはっきりとした四季があり、夏は暑く、冬は寒い。内陸部のため気温や天気の変化が激しいので、服装には気を配らなくてはならない。
+		</p>
+		<p class="text01">スロバキアの公用語はスロバキア語。チェコ語と類似している点が多く、チェコ語とスロバキア語で会話が成立してしまうこともある。近年は英語もしっかり通じるようになっているが、しっかり仕事をするためにはスロバキア語の習得が必須となるだろう。
+		</p>
+		<p class="text01">スロバキアの首都はブラチスラバ。非常に落ち着いた街で、「ヨーロッパ圏で最も退屈な街」とも呼ばれる事がある。これは、スロバキアが東欧の中心に位置し、ハンガリー、オーストリア、ポーランドといった東欧主要国に囲まれていることが要因だ。スロバキアには背の高い建物が少なく、街並みや建築物は淡い色合いで小さくかわいらしいものが多い。そのため、東欧を観光している人達には「地味」と受け取られてしまうようだ。また、スロバキアは人口の少ない国だ。首都のブラチスラバでも騒がしくない、ゆったりとした時間が流れているため、どうしても「田舎っぽい」というイメージがついている。
+		</p>
+		<p class="text01">しかし、ブラチスラバ最大の魅力は、その「田舎っぽさ」にある。建物や街並みはオモチャのようにかわいらしく、どこを切り取っても絵になる。街にはスロバキアの国土料理を振る舞うレストランも多く点在し、ゆったりとした雰囲気を堪能しつつ、徒歩で様々な場所へアクセスすることも出来るだろう。また、ブラチスラバとオーストリアの首都 ウィーンは「世界一距離が近い首都」として知られていて、鉄道やバスを使うと１時間ほどで移動することができる。スロバキアは東欧でも物価の安い国なので、普段はブラチスラバに住み、週末はウィーンへ日帰りで遊びに行くことも容易にできるのだ。
+		</p>
+
+		<a class="visa-btn" href="v-svk.html">スロバキアビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'スロバキア';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>  
+
+
+		<h2 id="ct16" class="sec-title">オーストリア</h2>
+		<p class="country-name-img"><img src="../images/step1-coun16.gif" alt="" /></p>
+		<p class="text01">ヨーロッパのほぼ中央に位置するオーストリアは、8つの国に囲まれる内陸国です。国土は日本の約4分の１程ですが、そのほとんどがアルプスの美しく壮大な自然に包まれています。高原にはいくつもの湖があり、その大自然の美しさはヨーロッパでも随一と言われます。
+		</p>
+		<p class="text01">オーストリアの公用語はドイツ語です。これは、元々オーストリアとドイツが同じ1つの国だった事が理由です。ただ、ドイツで使われているドイツ語とは若干の違いがあり、細かく分類すると「オーストリアドイツ語」として扱われます。
+		</p>
+		<p class="text01">オーストリアは上記のように公用語がドイツ語であるため、ドイツ語留学の渡航先として人気があります。特にオーストリアは音楽分野に長けているので、留学しながら音楽を学びたい、音楽に触れあいたいと考えている人にオススメされます。
+		</p>
+		<p class="text01">オーストリアは湿度の低い大陸性気候なので、夏は気温が高く、冬には激しく冷え込みます。渡航にオススメなのは4月から8月にかけて。天候的に暖かく過ごしやすい日が続き、春の音楽祭などのイベントも開催されます。だたし、日中と日没後では気温差が激しいので注意が必要です。
+		</p>
+		<p class="text01">オーストリアの首都　ウィーンは「音楽の街」「楽都」と呼ばれるほどに音楽が盛んな街です。クラシックコンサートや音楽祭はもちろん、有名なウィーン少年合唱団や、国立オペラ座でのオペラも見所です。また、モーツァルト、シューベルト、ハイドンなど、数多くの有名作曲家を生み出した国でもあり、街の至る場所で彼らも足跡を辿ることができます。
+		</p>
+		<p class="text01">オーストリアに点在する数多くの歴史ある劇場では、今でも世界最高峰のオペラやバレエ、コンサートが上映されています。1年を通して様々な演目が上映されるので、ワーキングホリデーや留学で滞在中にいくつの演目を見ることが試してみるのもいいかもしれません。
+		</p>
+
+		<a class="visa-btn" href="v-aut.html">オーストリアビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'オーストリア';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>  
+		<!--- HUN --->
+		<h2 id="ct17" class="sec-title">ハンガリー</h2>
+		<p class="country-name-img"><img src="../images/coun_hun_1.gif" alt="" /></p>
+		<p class="text01">ハンガリーは中央ヨーロッパの共和制国家です。西には、オーストリア、北にはスロバキアがあり、ワーキングホリデー協定国と隣接している内陸国です。周辺が山脈に囲まれているので、国土は平らな盆地であり、有名なドナウ川によって西と東がほぼ二分に別れています。「温泉大国」としても有名なので多くの観光客が訪れています。
+		</p>
+		<p class="text01">日本と同じように四季があり、緯度が高い為、冬は冷え込みますが、地中海の影響を受けているので、冬も湿度が高いです。年間の平均気温は10℃前後です。
+		</p>
+		<p class="text01">ハンガリーの首都はブダペストです。世界で最も美しい街の一つであり、ドナウ川を中心として多くの世界遺産がある事で有名です。</p>
+		<p class="text01">ハンガリーの公用語は、ハンガリー語です。国民の90%以上が使用しています。ビジネスマンや若者には英語が伝わりますが、英語よりもドイツ語が通じる所が多</p>
+		<a class="visa-btn" href="v-hun.html">ハンガリービザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'ハンガリー';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>  
+		
+		<!--- ESP --->
+		<h2 id="ct18" class="sec-title">スペイン</h2>
+		<p class="country-name-img"><img src="../images/coun_spain.gif" alt="" style="border-bottom: 1px solid #cccccc" /></p>
+		<p class="text01">太陽が降り注ぐ、陽気で明るい国スペイン。北はピレネー山脈を挟んでフランスと隣接し、南はジブラルタル海峡の先にモロッコがあります。スペインには長い歴史の中で様々な民族が侵入し、国の発展に大きな影響を与え続けてきました。その結果、民族と文化が交錯してきたこの国では、地方や町ごとに多彩な個性を有するようになりました。<br>
+		<br>
+		刺激に溢れ、芸術面で独特の彩りを放つスペインは、ピカソをはじめとした世界的知名度を誇る芸術家を数多く生み出しました。サグラダファミリアや古都トレドの町並みなど、スペインでしか見ることのできない独特な建築物も、国内に数多く点在しています。また、闘牛やフラメンコで知られるスペインの情熱的な文化はスペイン人の国民性に大きな影響を与えており、一つの物事に対して非常に情熱を傾けます。自由奔放ながら個人の考えを尊重し、家族や親しい友人との関係を何よりも大切にするのもスペイン人の特徴。海外でもスペインほど家族愛のある国は他にないと言っても過言ではありません。<br>
+		<br>
+		海と山の幸をふんだんに使ったスペイン料理も忘れてはいけません。スペイン原産のオリーブオイルをふんだんに使ったアヒージョや、取れたての海鮮物が盛りだくさんのパエリアなどが有名です。バル（Bar）と呼ばれる食堂とバーが一緒になったような飲食店も多く点題しているので、おいしい料理とスペイン産のワインを楽しんでみるのはいかがでしょうか。<br>
+		&nbsp;<br>
+		スペインのライフスタイルとして覚えておきたいのが、「シエスタ」の存在です。シエスタとは午睡（お昼休み）の事で、スペインでは少し遅めの昼食の後に1~2時間ほどしっかりとした休みをとります。シエスタはスペインで伝統的な生活習慣として認められており、シエスタの時間には多くの店が休業されます。そのため、タイミングを間違えると「どこに行ってもお店が閉まっている」なんて状態になってしまうかもしれません。<br>
+		&nbsp;<br>
+		スペインの母国語はスペイン語です。現在スペイン語を母国語としている国は21カ国あり、世界第3位の国際言語です！特にアメリカでは英語に次ぐ第2言語として幅広く使われています。首都圏であれば英語やフランス語も通じますが、ワーキングホリデーの期間中にスペインで仕事をされたい方は、しっかりとしたスペイン語を身に付ける必要があるでしょう。<br>
+		&nbsp;<br>
+		「太陽の国」の名が示す通り、スペインはその温暖で過ごしやすい気候で知られています。中央部は夏暑く冬寒い大陸性気候ですが、南部に行けば1年を通して生活しやすい地中海性気候になります。</p>
+		<a class="visa-btn" href="v-eps.html">スペインビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'スペイン';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>  
+
+		<!--- ARG --->
+		<h2 id="ct19" class="sec-title">アルゼンチン</h2>
+		<p class="country-name-img"><img src="../images/coun_arg.gif" alt="" /></p>
+		<p class="text01">アルゼンチンは、ブラジルに次ぐ南米第二の大国。国民の大半はヨーロッパ系移住者の子孫であるため、他の南米諸国とは異なり、文化や街並みなどの雰囲気がヨーロッパに近く、首都のブエノスアイレスは南米のパリとも呼ばれている。</p>
+		<p class="text01">アルゼンチンには、「悪魔の喉笛」の異名を持つイグアスの滝をはじめ、アンデス山脈、バンパス平原など、大自然の恩恵を感じることが出来る観光地が数多く点在している。</p>
+		<p class="text01">アルゼンチンではサッカーが非常に盛んであり、選手デビューを目指す若者のスポーツ留学先として選ばれることが多い。また、イタリアのスカラ座、フランスのオペラ座と並ぶ世界三大劇場のひとつである「コロン劇場」があるため、タンゴを学びにアルゼンチンを訪れる人も増えてきている。</p>
+		<p class="text01">1870年代以降の急速な経済発展に伴い、牛肉と小麦の重要な輸出国となったアルゼンチン。現在でも肉牛の生産量・消費量ともに世界一を誇る。全国各地にパリージャと呼ばれる肉料理専門店があり、郷土料理をはじめ様々な部位・種類の肉料理を楽しむことが出来る。また、アルゼンチンでは肉料理に合うワインも有名だ。国内にワイナリーが2000以上もあるワイン大国で、牛肉と並ぶ名産品となっている。日本と違い、ディナーが20時近くから始まるのも特徴。レストランなどでは分厚い肉料理を2時間ほどかけてゆっくり楽しむのがアルゼンチン流だ。</p>
+		<p class="text01">北から南に国土が長いアルゼンチンでは、地域によって気候・天候が大きく異なる。また、日本とは反対の季節感となっているので、渡航前にはしっかりとした情報収集や準備が必要だ。北部は亜熱帯性気候なので、１年を通じて降水量がある。雨が降ると湿度が上昇するので、薄手の服を持って行くのがいいだろう。中部は1年を通して過ごしやすく快適な気候に恵まれている。南部は亜北極圏の気温となるため、アルゼンチンとからは連想しにくい寒さを体験でき、冬のスポーツも楽しむことが出来るだろう。</p>
+		<p class="text01">アルゼンチンではスペイン語が公用語になっている。英語も地域によっては通じるが、現地で働くためにはスペイン語の習得が必須だ。また、アルゼンチンのスペイン語は、他地域のスペイン語とかなり違っていることで有名。アクセントやイントネーションの違いから、最初は聞き取るのに苦労してしまうかもしれない。</p>
+		<a class="visa-btn" href="v-arg.html">アルゼンチンビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'アルゼンチン';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+		<!--- CHL --->
+		<h2 id="ct20" class="sec-title">チリ</h2>
+		<p class="country-name-img"><img src="../images/coun_chl.gif" alt="" /></p>
+		    <p class="text01">
+			チリ共和国は、南米大陸のアンデス山脈と太平洋にはさまれた、世界一細長い国。赤道近くから南極まで南北に細長く続く国土を持つため、都市によって自然環境の変化が著しいことで有名だ。
+			</p>
+			<p class="text01">赤道に近い北部は、世界で一番多くの星を見ることができる「アタカマ砂漠」を含む砂漠地帯となっている。首都サンティアゴのある中央部は、美しい自然と発展した都市が並ぶ心地よい気候の田園地帯。そして、南部は「風の大地」とも呼ばれる険しくも雄大な大地、「パタゴニア」へとつながっている。このように非常に多くの気候・地形を持つチリ共和国では、バラエティ豊かな観光地や数多くの世界遺産を楽しむことができるだろう。</p>
+			<p class="text01">このように南北に延びる国土を持つため、地域によって気候が大きく異なることに注意が必要だ。北部には砂漠が広がっているが、南部には年間通して氷におおわれている地域もある。しかし、ちょうど中部に位置する首都サンティアゴは夏の最高気温が23度前後、冬の最低気温は8度前後と、とても過ごしやすい。雨も少なく、日本と同じような四季もあるため、生活するには最高の気候だろう。</p>
+			<p class="text01">チリ共和国で最も有名な観光地と言えば、モアイ像が並ぶパラ・ヌイ島、通称「イースター島」だろう。チリ共和国からさらに3,700kmほど離れた場所にあるこの島は世界の果てとも呼ばれ、いまだ解明されない世界７不思議の一つに数えられている。島には宿泊施設もあるので、じっくり観光を楽しむことも可能だ。</p>
+			<p class="text01">チリ共和国とほかの南米の都市の大きな違いは、治安の良さにある。少し控えめで真面目な国民性は、日本人に近いとも言われていて、愛国心が強く、家族とのつながりをとても大切にしているので、すぐに仲良くなれるだろう。</p>
+			<p class="text01">長い海岸線をもつチリ共和国は、新鮮な魚介類を使った料理でも有名だ。味付けは塩とレモンを中心に、新鮮な魚介類をふんだんに使った料理を、チリワインと一緒にいただくのがチリ共和国の食文化。特に、チリ共和国特有の雨が少なく日照時間の長い気候を利用して栽培されるブドウは熟度がとても高く、このブドウを使って作られるチリワインは、現在日本でも人気が急上昇している。ワイナリーも多いため、働き先としても期待が持てる。</p>
+		
+		<a class="visa-btn" href="v-chl.html">チリビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'チリ';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+		<!--- CZE --->
+		<h2 id="ct21" class="sec-title">チェコ</h2>
+		<p class="country-name-img"><img src="../images/coun_cze.gif" alt="" /></p>
+		<p class="text01">チェコはヨーロッパの中心に位置し、ドイツ・オーストリア・ポーランド・スロバキアの4カ国に囲まれた内陸国だ。チェコの地形は変化に富んでおり、西に隣接するドイツとの国境線から東のスロバキアまで広がるボヘミア高原は、ボヘミアの森と呼ばれる広大な森林におおわれている。</p>
+		<p class="text01">チェコの首都プラハは「百塔の街」「建築博物館の街」「ヨーロッパの魔法の都」「北のローマ」など数多くの異名を持ち、絵本のように美しい中世ヨーロッパの街並みがそのままの姿で残されていることで有名だ。世界を旅した人に、どの街が一番美しかったかを聞くと「プラハ」と答える方がとても多いと言われており、どこを切り取っても絵になる街を歩くだけでもタイムスリップしたような感覚を味わうことが出来るだろう。</p>
+		<p class="text01">「チェコの特産品は何か」と聞かれれば、「ビール」と「ボヘミアンガラス」の２つが挙げられる。特にチェコはビールの国民一人当たりの年間消費量が世界一位と言われており、コーラや水よりもビールが安く販売されている。ビール工場も数多く点在しているので、ビール好きな人はそれらを巡るツアーに参加してみてはどうだろうか。</p>
+		<p class="text01">チェコは元々ハンガリーの一部であり、「上部ハンガリー」と呼ばれていた。しかし18世紀に同じくハンガリーの一部だった東隣のスロバキア共和国と統合され「チェコスロバキア連邦共和国」となり、その後改めて分離したことで現在の「チェコ共和国」という形になった。元々ハンガリーの一部だったこともあり、今もなおハンガリーの文化が根強く残っている。</p>
+		<p class="text01">ドイツからも大きな影響を受けており、チェコではドイツ料理に近い肉料理がメインで食べられている。魚も食べられているが、内陸国なので魚料理は淡水魚が中心となっている。</p>
+		<p class="text01">チェコも日本と同じく1年を通して四季がある国。夏は梅雨こそないものの気温が30度を超えることがあり、一方で冬はマイナスまで落ち込み、雪が積もることも多い。春と秋の季節がしっかりしているため、お花見や紅葉狩りなどを楽しむこともできるだろう。</p>
+		<p class="text01">チェコの公用語はチェコ語。スロバキア語に似ており、チェコ語とスロバキア語で会話が成り立つこともあるとか。チェコにワーキングホリデーする際は、英語だけでなくチェコ語の習得が必須となるだろう。</p>
+		<a class="visa-btn" href="v-cze.html">チェコビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'チェコ';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+		<!--- ISL --->
+		<h2 id="ct22" class="sec-title">アイスランド</h2>
+		<p class="country-name-img"><img src="../images/step-isl.gif" alt="" style="border-bottom: 1px solid #cccccc" /></p>
+		<p class="text01">ヨーロッパのはずれ、イギリスやアイルランドのさらに北部に位置する小さな島国、アイスランド。アイスランドは北海道と四国を足したくらいの大きさで、ヨーロッパ国内でもイギリスに次ぐ広い国土を誇ります。通称「火と氷の島」とも呼ばれており、200を超す活火山と国土の12%を占める氷河が両立する、非常に美しい国です。 </p>
+		<p class="text01">「アイスランド」という名前と国の緯度の高さから「年中氷に包まれた非常に寒い国」というイメージを持たれがちですが、実は極寒の地というわけではありません。夏でも平均気温が10℃前後と低いですが、冬になっても平均気温も０℃ほどであり、日本ほど寒暖の差がなく年間通して過ごしやすいです。これは暖流であるメキシコ湾流が流れる西海岸性気候の特徴。風が強いため体感温度はもう少し下がるものの、暑さが苦手な人には最高の国といえるのではないでしょうか。 </p>
+		<p class="text01">アイスランドの大きな特徴は、圧倒的な活火山の多さです。もちろん主要都市は火山から離れているため危険はありません。この活火山の影響もあり、アイスランド国内には数多くの温泉が点在しています。 </p>
+		<p class="text01">首都 レイキャヴィークをはじめ、アイスランドの国土全域がオーロラベルトの下にあるため、冬になると各所でオーロラが観測できるようになります。また、夏には一日中太陽が沈まない「白夜」を体験することもできます。どちらもなかなか体験できない現象なので、アイスランドに行ったら是非体験してみてください。</p>
+		<p class="text01">日本からアイスランドへは直行便が出ていないため、基本的にはヨーロッパ諸国を経由して入国することになります。飛行機を使えばイギリスまで約２~３時間なので、週末の小旅行も可能ですね。アイスランドの街は小さくまとまっているので生活やしやすいですが、鉄道がないため国内の移動は基本的にバスか車になります。 </p>
+		<p class="text01">広大で美しい国土を持つアイスランドですが、一方で人口は約32万人とほぼ沖縄県那覇市とおなじくらいとなっています。しかし、国民一人当たりの収入が世界トップクラスであり、首都 レイキャヴィークも生活水準の高さや治安の良さは非常に高い評価を獲得しているなど、非常に住みやすく人気の高いとしてしても認知されています。 </p>
+		<p class="text01">アイスランドの公用語はアイスランド語。難解な言語として知られていますが、アイスランド人はアイスランド語以外にも英語とデンマーク語を学んでいるので、英語だけでも十分意思疎通は可能です。ただし、ワーキングホリデーの期間中に仕事を探すのであれば、最低限のアイスランド語学力が必要になるでしょう。</p>
+		<p class="text01">物価はやや高め。長期滞在をするなら多めに予算を準備しておく必要があります。</p>
+		<p class="text01">アイスランドでの就労でポイントとなるのは、正社員や非正規雇用者といった雇用形態の括りがなく、「フルタイム」か「パートタイム」で区別する職場がほとんどということです。また、職場の福利厚生が手厚く、女性が活躍できる土壌も整っているため、挑戦してみるにはもってこいの管区用かもしれません。</p>
+		<a class="visa-btn" href="v-isl.html">アイスランドビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'アイスランド';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+		<!--- LTU --->
+		<h2 id="ct23" class="sec-title">リトアニア</h2>
+		<p class="country-name-img"><img src="../images/coun_ltu.gif" alt="" /></p>
+		<p class="text01">近年ヨーロッパの穴場観光地として「バルト三国」が注目されています。リトアニアはそのバルト三国の中で一番南に位置する小国で、様々な美しい教会が街を彩るヴィリニュスや、リトアニアの巡礼地シャウレイの十字架の丘など、味わい深い観光地がたくさんある美しい森と湖の国です。</p>
+		<p class="text01">リトアニアの国民は敬虔なクリスチャンが多く、８割近い方がカトリックです。そのため国中に協会が点在しており、特に中世の街並みがそのまま残る首都ヴィリニュスでは旧市街を歩くだけでいくつもの協会を見つけることができるでしょう。ただ、すべての協会が今も機能しているわけではなく、一部は音楽ホールなどの用途で利用されています。</p>
+		<p class="text01">今も中世の面影をそのまま残す首都ヴァリニュスの旧市街は、都市がまるごと世界遺産として登録されています。淡いピンクやイエローで彩られた街並みを歩くだけでも、のんびりとした牧歌的な雰囲気を満喫することができます。</p>
+		<p class="text01">公用語はリトアニア語ですが、地域によってはロシア語も話されています。英語も通じるのでリトアニア語が話せなくても生活はできるかもしれませんが、ワーキングホリデー（ワーホリ）を使って仕事をするならリトアニア語を習得する必要があります。</p>
+		<p class="text01">リトアニアの天候は日本と比べて少し寒いくらいです。夏でも朝や天気の悪い日は少し肌寒く感じることがあり、冬は同じ緯度の他の国と比べると暖流の影響でそれほど寒くはありませんが、日によっては-20℃ぐらいまで下がることもありますので、防寒対策はしっかりしていきましょう。</p>
+		<p class="text01">日本とリトアニアでの繋がりとして有名なのが、日本人外交官としてナチス・ドイツから6000人以上のユダヤ人を救った杉浦千畝氏でしょう。彼が「命のビザ」を発給した日本領事館は現在「杉原記念館」として公開されています。日本とリトアニアの架け橋を担っているので、チャンスがあればぜひ足を運んでみてください。</p>
+		
+		<a class="visa-btn" href="v-ltu.html">リトアニアビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'リトアニア';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+		<!--- LTU --->
+		<h2 id="ct24" class="sec-title">スウェーデン</h2>
+		<p class="country-name-img"><img src="../images/coun_swe.gif" alt="" /></p>
+		<p class="text01">スウェーデンは北ヨーロッパのスカンディナビア半島の東側に位置する国で、国土の6割が森や湖などで締められる豊かな自然あふれる美しい国です。スウェーデンの街並みの特徴として、絵のように美しいカラフルな建物があげられます。なかでも首都のストックホルムには今もなお古い町並みがそのままの状態で残されており、14の島を橋で結んだ水の都は「北欧のベネチア」とも称され多くの観光客に愛されています。また、城壁で囲まれた中世都市カルマル、大聖堂や海洋博物館などがあり運河沿いの港町として発展したスウェーデン第2の都市ヨーテボリ、ホテル全体が氷で作られた幻想的な「ICE HOTEL」が有名なユッカスヤルヴィなど、ストックホルム以外にも個性的な街々が点在しています。 </p>
+		<p class="text01">スウェーデンには「フィーカ」と呼ばれる独特な文化があります。フィーカとはスウェーデンにおけるコーヒーブレイクの時間のこと。スウェーデン人は1日に何度もコーヒーブレイクをする習慣があり、その際は一人ではなく恋人や家族、仕事仲間と一緒にコーヒーの時間を楽しみます。スウェーデンでは年間のコーヒー消費量が日本の2倍以上であることからも、フィーカの時間が大切にされていることが分かります。</p>
+		<p class="text01">フィーカのように知人との和を大切にする一方で、スウェーデンには個人主義の考えも強く根付いています。スウェーデンの人々は自立心が強く、真面目で、「個」の在り方を尊重します。女性の就職率が80%を超えていることも、その一端といえるのではないでしょうか。</p>
+		<p class="text01">スウェーデンは「とにかく寒い」というイメージが先行しがちですが、メキシコ湾からの暖流もあり、想像よりも穏やかで四季をしっかり感じることができます。特に北極圏の天候が特徴的で、夏は1日中太陽が沈まない「白夜」があり、冬になると今度は逆に1日中太陽がでない「極夜」になります。冬は夜の時間が長くなるため、オーロラを見ることができるチャンスが高まります。</p>
+		<a class="visa-btn" href="v-swe.html">スウェーデンビザ情報へ</a>
+		<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+		<?php 
+		//settings for the calendar module display
+		$country_to_display = 'スウェーデン';
+		$number_to_display = '2';
+
+		display_horizontal_calendar($country_to_display,$number_to_display); 
+		?>
+
+	  <div class="advbox03">
+<?php
+	// 103
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 94, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

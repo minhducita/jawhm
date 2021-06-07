@@ -1,0 +1,71 @@
+<?php
+require_once '../include/header.php';
+
+$header_obj = new Header();
+$header_obj->title_page = 'ワーキングホリデー・セミナー診断';
+$header_obj->fncMenubar_function = false;
+$header_obj->description_page = 'あなたにオススメのセミナーが分かる！ワーホリ協会監修 ワーホリ・留学を考えている人のためのセミナー診断';
+$header_obj->keywords_page = 'ワーキングホリデー,ワーホリ,留学,セミナー診断';
+$header_obj->fncFacebookMeta_function = true;
+
+//$header_obj->add_css_files = '<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="/images/mainimg/top-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー・セミナー診断';
+
+if ($header_obj->computer_use() == false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files='<link href="/shindan/css/style_sp.css" rel="stylesheet" type="text/css" />';
+} else {
+	$header_obj->add_css_files='<link href="/shindan/css/style.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->display_header();
+
+?>
+
+<div id="area-body">
+
+	<div id="area-panel-header" class="pcview">
+	<div id="area-panel">
+
+		<div id="panel-main">
+			<p id="panel-q-text" style="padding-top:15px">
+				将来どうしてもやりたいことがある！
+			</p>
+
+			<img id="panel-q-image" src="/shindan/images/q-image-17.png" style="top:180px" />
+
+			<ul id="panel-q-btn">
+				<li><a href="/shindan/seminar07.html"><img class="btn-hover" src="/shindan/images/q-btn-yes.png" alt="はい" /></a></li>
+				<li><a href="/shindan/seminar03.html"><img class="btn-hover" src="/shindan/images/q-btn-no.png" alt="いいえ" /></a></li>
+			</ul>
+		</div>
+
+	</div>
+	<div id="area-panel-footer">&nbsp;</div>
+	</div>
+  
+  <div class="spview">  
+  	<h3><a href="/shindan/">あなたにオススメのセミナーが分かる！ワーホリ・留学を考えている人のためのセミナー診断</a></h3>
+    <div class="mainBox">
+    	<p class="qtext"><span>将来どうしてもやりたいことがある！</span></p>      
+      <img class="mainImg" src="/shindan/images/q-image-17.png" alt="診断画像">
+      <ul class="choice">
+      	<li><a href="/shindan/seminar07.html"><img src="/shindan/images/sp/yesBtn.png" alt="はい"></a></li>
+        <li><a href="/shindan/seminar03.html"><img src="/shindan/images/sp/noBtn.png" alt="いいえ"></a></li>
+      </ul><!-- /.choice -->      
+    </div><!-- /.mainBox -->      
+  </div><!-- /.spview -->
+
+</div>
+
+
+</div>
+
+
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:2263:"<script type="text/javascript" src="https://www.jawhm.or.jp/jawhmcart/js/lib/owlcarousel/owl.carousel.min.js?ver=4.3.3" ></script><script type="text/javascript">
+(function(_, $) {
+    $.ceEvent('on', 'ce.commoninit', function(context) {
+        var elm = context.find('#scroll_list_22');
+
+        $('.ty-float-left:contains(.ty-scroller-list),.ty-float-right:contains(.ty-scroller-list)').css('width', '100%');
+
+        var item = 4,
+            // default setting of carousel
+            itemsDesktop = 4,
+            itemsDesktopSmall = 3;
+            itemsTablet = 2;
+
+        if (item > 3) {
+            itemsDesktop = item;
+            itemsDesktopSmall = item - 1;
+            itemsTablet = item - 2;
+        } else if (item == 1) {
+            itemsDesktop = itemsDesktopSmall = itemsTablet = 1;
+        } else {
+            itemsDesktop = item;
+            itemsDesktopSmall = itemsTablet = item - 1;
+        }
+
+        var desktop = [1199, itemsDesktop],
+            desktopSmall = [979, itemsDesktopSmall],
+            tablet = [768, itemsTablet],
+            mobile = [479, 1];
+
+                function outsideNav () {
+            if(this.options.items >= this.itemsAmount){
+                $("#owl_outside_nav_22").hide();
+            } else {
+                $("#owl_outside_nav_22").show();
+            }
+        }
+        
+        if (elm.length) {
+            elm.owlCarousel({
+                items: item,
+                itemsDesktop: desktop,
+                itemsDesktopSmall: desktopSmall,
+                itemsTablet: tablet,
+                itemsMobile: mobile,
+                                scrollPerPage: true,
+                                                autoPlay: false,
+                                lazyLoad: true,
+                slideSpeed: 400,
+                stopOnHover: true,
+                                pagination: false,
+                            afterInit: outsideNav,
+                afterUpdate : outsideNav
+            });
+
+              $('#owl_prev_22000').click(function(){
+                elm.trigger('owl.prev');
+              });
+              $('#owl_next_22000').click(function(){
+                elm.trigger('owl.next');
+              });
+
+            
+        }
+    });
+}(Tygh, Tygh.$));
+</script>";s:7:"content";s:6298:"    <div class="ty-mainbox-simple-container clearfix homepage-hotdeals">
+                    <h2 class="ty-mainbox-simple-title">
+                
+                                    Hot deals
+                                
+
+            </h2>
+                <div class="ty-mainbox-simple-body">
+
+                        
+
+    <div class="owl-theme ty-owl-controls">
+        <div class="owl-controls clickable owl-controls-outside"  id="owl_outside_nav_22">
+            <div class="owl-buttons">
+                <div id="owl_prev_22000" class="owl-prev"><i class="ty-icon-left-open-thin"></i></div>
+                <div id="owl_next_22000" class="owl-next"><i class="ty-icon-right-open-thin"></i></div>
+            </div>
+        </div>
+    </div>
+
+<div id="scroll_list_22" class="owl-carousel ty-scroller-list">
+            
+        <div class="ty-scroller-list__item">
+                        <div class="ty-scroller-list__img-block">
+                
+                <a href="https://www.jawhm.or.jp/jawhmcart/addjust/product-248/"><span class="ty-no-image" style="min-width: 160px; min-height: 160px;"><i class="ty-no-image__icon ty-icon-image" title="No image"></i></span></a>
+                            </div>
+            <div class="ty-scroller-list__description">
+                                
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ty-simple-list clearfix">
+                <form action="https://www.jawhm.or.jp/jawhmcart/" method="post" name="product_form_22000scr_22000248" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
+<input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[scr_22000248][product_id]" value="248" />
+
+            
+                            
+
+            
+            <a href="https://www.jawhm.or.jp/jawhmcart/addjust/product-248/" class="product-title" title="ADJ 100,000YEN" >ADJ 100,000YEN</a>    
+
+
+                
+                
+    
+
+
+
+            
+
+                                    
+
+
+
+
+            
+                            
+            
+            
+                            
+                        
+                            
+
+                            
+
+                                                    <input type="hidden" name="security_hash" class="cm-no-hide-input" value="89795f3ed8a375e95e1d2647efb5249c" /></form>
+
+    </div>
+
+            </div>
+        </div>
+        
+
+            
+        <div class="ty-scroller-list__item">
+                        <div class="ty-scroller-list__img-block">
+                
+                <a href="https://www.jawhm.or.jp/jawhmcart/addjust/product-249/"><span class="ty-no-image" style="min-width: 160px; min-height: 160px;"><i class="ty-no-image__icon ty-icon-image" title="No image"></i></span></a>
+                            </div>
+            <div class="ty-scroller-list__description">
+                                
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ty-simple-list clearfix">
+                <form action="https://www.jawhm.or.jp/jawhmcart/" method="post" name="product_form_22000scr_22000249" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
+<input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[scr_22000249][product_id]" value="249" />
+
+            
+                            
+
+            
+            <a href="https://www.jawhm.or.jp/jawhmcart/addjust/product-249/" class="product-title" title="ADJ 50,000YEN" >ADJ 50,000YEN</a>    
+
+
+                
+                
+    
+
+
+
+            
+
+                                    
+
+
+
+
+            
+                            
+            
+            
+                            
+                        
+                            
+
+                            
+
+                                                    <input type="hidden" name="security_hash" class="cm-no-hide-input" value="89795f3ed8a375e95e1d2647efb5249c" /></form>
+
+    </div>
+
+            </div>
+        </div>
+        
+
+            
+        <div class="ty-scroller-list__item">
+                        <div class="ty-scroller-list__img-block">
+                
+                <a href="https://www.jawhm.or.jp/jawhmcart/sanjokaiin/forschool/product-247/"><img class="ty-pict   lazyOwl "    data-src="https://www.jawhm.or.jp/jawhmcart/images/thumbnails/160/160/detailed/1/image-01.png?t=1457947694" alt="" title=""  /></a>
+                            </div>
+            <div class="ty-scroller-list__description">
+                                
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ty-simple-list clearfix">
+                <form action="https://www.jawhm.or.jp/jawhmcart/" method="post" name="product_form_22000scr_22000247" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
+<input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[scr_22000247][product_id]" value="247" />
+
+            
+                            
+
+            
+            <a href="https://www.jawhm.or.jp/jawhmcart/sanjokaiin/forschool/product-247/" class="product-title" title="1 Year Package for ESL" >1 Year Package for ESL</a>    
+
+
+                
+                
+    
+
+
+
+            
+
+                                    
+
+
+
+
+            
+                            
+            
+            
+                            
+                        
+                            
+
+                            
+
+                                                    <input type="hidden" name="security_hash" class="cm-no-hide-input" value="89795f3ed8a375e95e1d2647efb5249c" /></form>
+
+    </div>
+
+            </div>
+        </div>
+        
+
+    </div>
+
+
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+
+
+</div>
+    </div>
+";}s:6:"expiry";i:0;}

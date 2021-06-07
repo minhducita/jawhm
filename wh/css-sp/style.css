@@ -1,0 +1,170 @@
+@charset "utf-8";
+/*
+********************************************************************************
+■ 共通
+********************************************************************************
+*/
+.area-main-image {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+.tableofcontents {
+	display: none;
+}
+.area-banner-seminar {
+	display: block;
+	width: 98%;
+	margin: 0 auto;
+}
+.area-banner-seminar-title {
+	font-size: 14px;
+	margin-bottom: 1em;
+	color: #ff0000;
+	border-left: 5px solid #ff0000;
+	padding-left: 10px;
+}
+.link-free-seminar {
+	text-align: right;
+	padding-right: 8px;
+	margin-bottom: 1em;
+}
+.link-free-seminar a {
+	color: #0b43f0 !important;
+}
+.area-wh-footer {
+	display: none;
+}
+.area-accordion {
+	width: 98%;
+	margin: 10px auto;
+	font-size: 12px;
+	color: #333;
+}
+.area-image {
+	display: block;
+	width: 100%;
+}
+.area-image img {
+	margin: 0 !important;
+}
+#maincontent .sec-title {
+	background-image: none;
+	background-repeat: none;
+	margin: 0 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	border-bottom: 1px solid #ccc;
+	border-left: 5px solid #1b6cab;
+}
+.area-accordion .clearboth {
+	margin: 10px 0 25px;
+}
+.area-accordion .clearboth,
+.area-accordion .clearboth a {
+	color: #fff;
+	text-align: right;
+}
+.truncate_more_link {
+	color: #fff;
+	text-decoration: none;
+	background-color: #1b6cab;
+	padding: 5px 12px 3px 14px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+/*
+********************************************************************************
+■ オーストラリア：ワーキングホリデーの楽しみ方
+********************************************************************************
+*/
+td.nittei_span p {
+  display: inline-block;
+  font-size: 11px;
+  margin-right: 5px;
+}
+td.nittei_span span {
+  background: url(/sp/accordion/icon_acd_td.png) no-repeat left top;
+  background-size: 21px 42px;
+}
+td.nittei_span span.open {
+  background-position: left bottom;
+}
+/*
+********************************************************************************
+■ カナダ：カナダワーキングホリデーの費用
+********************************************************************************
+*/
+#area-accordion-canada-06 p.block01 {
+	display:block;
+	width:100%;
+	margin: 0 0 15px 0 !important;
+	padding: 10px 0;
+	border-bottom:none;
+	position:relative;
+	text-align: center;
+}
+#area-accordion-canada-06 p.block01 span.bl {
+	display: inline-block;
+	font-size: 11px;
+	margin-right: 5px;
+}
+#area-accordion-canada-06 p.block01 span.bl-icon {
+	background: url(/sp/accordion/icon_acd_td.png) no-repeat left top;
+	background-size: 21px 42px;
+	display:block;
+	position:absolute;
+	top:50%;
+	right:5px;
+	margin-top:-10px;
+	width:21px;
+	height:0;
+	padding-top:21px;
+	overflow:hidden;
+
+}
+#area-accordion-canada-06 p.block01 span.bl-open {
+	background-position: left bottom;
+}
+#area-accordion-canada-06 .area-sub-accordion {
+	border:1px solid #ADD8E6;
+	padding: 10px 10px 15px;
+	margin-bottom: 15px;
+	display:none;
+}
+/*
+********************************************************************************
+■ responsive images
+********************************************************************************
+*/
+.responsive-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+/*
+********************************************************************************
+■ clearfix
+********************************************************************************
+*/
+.clearfix:after {content: ".";display: block;clear: both;height: 0;visibility: hidden;}
+.clearfix {min-height: 1px;}
+* html .clearfix {height: 1px; /*\*//*/height: auto;overflow: hidden;/**/}
+/*
+********************************************************************************
+■ Fix 2016-05-10
+********************************************************************************
+*/
+.mb_none {
+	display: none;
+}
+.pc_none{
+	display: block;
+}
+a.pc_none>img{
+	display: block;
+	width: 94%;
+	margin: auto auto 20px;
+}

@@ -1,0 +1,1 @@
+tinyMCE.addI18n('en.div_dlg',{paddingTB:"Padding Top/Bottom",paddingLR:"Padding Left/Right",width:"Width",widthunits:"Units",background:"Background Image"});

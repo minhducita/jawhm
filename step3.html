@@ -1,0 +1,300 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='STEP3 行き先は決まりましたか？';
+$header_obj->description_page='初めてワーキングホリデー（ワーホリ）や留学に行く方向けに準備・手続きの手順をご案内しています。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、デンマーク、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+	$header_obj->add_css_files = '<link href="/css/step_sp.css" rel="stylesheet" type="text/css" />';
+	$header_obj->add_js_files = '<script src="/js/step/jquery.jtruncsubstr-1.0rc.js" type="text/javascript"></script><script src="/js/step/script.js" type="text/javascript"></script>';
+} else {
+	$header_obj->add_css_files = '<link href="/css/step.css" rel="stylesheet" type="text/css" />';
+}
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/step1-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'はじめてのワーキングホリデー Step3 行き先は決まりましたか？';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+
+<script>
+  jQuery( function($) {
+           $('tbody tr[data-href]').addClass('clickable').click( function() {
+               //window.location = $(this).attr('data-href');
+              var target = $($(this).attr('data-href'));
+              target = target.length && target;
+              if (target.length) {
+                  var sclpos = 30;
+                  var scldurat = 1000;
+                  var targetOffset = target.offset().top - sclpos;
+                  //$('html,body').animate({scrollTop: targetOffset}, {duration: scldurat, easing: "easeOutExpo"});
+                  $('html,body').animate({scrollTop: targetOffset}, {duration: scldurat});
+                  return false;
+              }
+           })
+           .find('a').hover( function() {
+               $(this).parents('tr').unbind('click');
+           	   }, function() {
+                 $(this).parents('tr').click( function() {
+                   //window.location = $(this).attr('data-href');
+                  var target = $($(this).attr('data-href'));
+                  target = target.length && target;
+                   if (target.length) {
+                      var sclpos = 30;
+                      var scldurat = 1000;
+                      var targetOffset = target.offset().top - sclpos;
+                      //$('html,body').animate({scrollTop: targetOffset}, {duration: scldurat, easing: "easeOutExpo"});
+                      $('html,body').animate({scrollTop: targetOffset}, {duration: scldurat});
+                      return false;
+                   }
+                 });
+              }
+          );
+       });
+</script>
+
+	<div id="maincontent" class="stepPage step03">
+	  <?php echo $header_obj->breadcrumbs('start'); ?>
+
+	<!--div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="step1.php"><span>STEP1 ワーホリとは</span></a></div>
+			<div class="btnarea"><a href="step2.php"><span>STEP2 目標を決める</span></a></div>
+			<div class="btnarea"><a href="step3.php"><span>STEP3 行き先は？</span></a></div>
+			<div class="btnarea"><a href="step4.php"><span>STEP4 準備をしよう</span></a></div>
+			<div class="btnarea"><a href="step5.php"><span>STEP5 出発前１ヶ月</span></a></div>
+			<div class="btnarea"><a href="step6.php"><span>STEP6 渡航中の事</span></a></div>
+			<div class="btnarea"><a href="step7.php"><span>STEP7 帰国したら</span></a></div>
+		</div>
+	</div-->
+	  <?php if(!empty($_SESSION['pc']) and $_SESSION['pc'] == 'on'){?>
+	  <table class="pageLinkBox">
+		<tr>
+		  <td class="leftSide"><a href="/step2.html"><span>STEP2</span>目標を決める</a></td>
+		  <td class="toTopLink"><a href="/start.html">はじめての<br>ワーホリTOP</a></td>
+		  <td class="rightSide"><a href="/step4.html"><span>STEP4</span>準備をしよう</a></td>
+		</tr>
+	  </table>
+	  <?php }?>
+	<div style="clear:both; height:10px;">&nbsp;</div>
+
+	<div class="step_title">
+		STEP3<br>行き先は決まりましたか？
+	</div>
+	  <p class="text01">	何を基準にワーキングホリデー滞在国を選びますか？　気候、人柄、経済、スポーツ？　現在日本は　11カ国とワーキング・ホリデー協定を結んでいます。　最近の傾向では日本での就職が難しいので海外で力を付けて帰ってきたい！もしくはそのまま海外で就職したいという方が多くなっているように思います。そうすると仕事も両立できる国が人気が出てきます。</p>
+	<table class="tableofcontents">
+		<tr>
+			<th>目次</th>
+		</tr>
+	    <tr>
+		  <td>
+		    <ul>
+			  <li><a href="#st3-13">3-1　どれだけお金を準備すればいいの？</a></li>
+			  <li><a href="#st3-12">3-2　滞在中のお金が心配な方に</a></li>
+			  <li><a href="#st3-1">3-3　オーストラリア</a></li>
+			  <li><a href="#st3-2">3-4　ニュージーランド</a></li>
+			  <li><a href="#st3-3">3-5　カナダ</a></li>
+			  <li><a href="#st3-4">3-6　韓国</a></li>
+			  <li><a href="#st3-5">3-7　フランス</a></li>
+			  <li><a href="#st3-6">3-8　ドイツ</a></li>
+			  <li><a href="#st3-7">3-9　イギリス</a></li>
+			  <li><a href="#st3-8">3-10　アイルランド</a></li>
+			  <li><a href="#st3-9">3-11　デンマーク</a></li>
+			  <li><a href="#st3-10">3-12　台湾</a></li>
+			  <li><a href="#st3-11">3-13　香港</a></li>
+			  <li><a href="#st3-14">3-14　ノルウェー</a></li>
+			  <li><a href="#st3-15">3-15　ポーランド</a></li>
+			  <li><a href="#st3-16">3-16　ポルトガル</a></li>
+			  <li><a href="#st3-17">3-17　スロバキア</a></li>
+			  <li><a href="#st3-18">3-18　オーストリア</a></li>
+		    </ul>
+		  </td>
+		</tr>
+	</table>
+	<h2 id="st3-13" class="sec-title">どれだけお金を準備すればいいの？</h2>
+	<p class="text01">
+	下の生活費の欄を12カ月でかけると、1年に大体どれくらいの費用が必要かを計ることができます。
+	</p>
+	<table id="step3" border="1">
+		<tr>
+			<th>国名</th>
+			<th>語学学校学費</th>
+			<th>生活費</th>
+			<th class="earnedmoney-title">各国の最低時給</th>
+		</tr>
+		<tr data-href="#st3-1">
+            <td><img src="images/flag01.gif" alt="" /><br/><a href="#st3-1">Australia</a></td>
+			<td>AUD $1,200/月</td>
+			<td>AUD $800/月</td>
+			<td>AUD $19.49</td>
+<!--			<td class="earnedmoney">日本食レストラン／A$11～16<br/>土産店・免税店／A$12～16<br/>農場／A$16～25<br/>ベビーシッター／A$8～</td>-->
+		</tr>
+		<tr data-href="#st3-2">
+            <td><img src="images/flag02.gif" alt="" /><br/><a href="#st3-2">NewZealand</a></td>
+			<td>NZD $1,320/月</td>
+			<td>NZD $700/月</td>
+			<td>NZD $16.50</td>
+<!--			<td class="earnedmoney">日本食レストラン／N$12～<br/>土産店・免税店／N$12～<br/>フルーツピッキング／N$12～<br/>ベビーシッター／N$12～</td>-->
+		</tr>
+		<tr data-href="#st3-3">
+            <td><img src="images/flag03.gif" alt="" /><br/><a href="#st3-3">Canada</a></td>
+			<td>CAD $1,200/月</td>
+			<td>CAD $800/月</td>
+			<td>CAD $12.65</td>
+<!--			<td class="earnedmoney">飲食業／C$7.5～11<br/>土産店／C＄8～10<br/>ホテルスタッフ／C＄8～<br/>ツアーガイド／C$11～12<br/>オフィススタッフ／C＄10～13</td>-->
+		</tr>
+<!--
+		<tr data-href="#st3-4">
+            <td><img src="images/flag04.gif" alt="" /><br/><a href="#st3-4">Korea</a></td>
+			<td>45万W/月</td>
+			<td>65万W/月</td>
+			<td class="earnedmoney">ファーストフード／4,000W～<br/>日本語教師／10,000～20,000W<br/>免税店／1,000,000W（※月給）</td>
+		</tr>
+-->
+		<tr data-href="#st3-5">
+            <td><img src="images/flag05.gif" alt="" /><br/><a href="#st3-5">France</a></td>
+			<td>€ 500/月</td>
+			<td>€ 900/月</td>
+			<td>€ 10.03</td>
+<!--			<td class="earnedmoney">日本食レストラン／7ユーロ<br/>免税店／7ユーロ～<br/>地方でのアルバイト探しは難しい。<br/>フランス語は必須。</td>-->
+		</tr>
+		<tr data-href="#st3-6">
+            <td><img src="images/flag06.gif" alt="" /><br/><a href="#st3-6">Germany</a></td>
+			<td>€ 1,200/月</td>
+			<td>€ 500/月</td>
+			<td>€ 9.19</td>
+<!--			<td class="earnedmoney">日本食レストラン／6～7ユーロ<br/>アルバイト探しは難しい。<br/>ドイツ語は必須。</td>-->
+		</tr>
+		<tr data-href="#st3-7">
+            <td><img src="images/flag07.gif" alt="" /><br/><a href="#st3-7">United Kingdom</a></td>
+			<td>￡ 1200/月</td>
+			<td>￡ 600/月</td>
+			<td>￡ 7.83</td>
+<!--			<td class="earnedmoney">日本食レストラン、ベビーシッター、<br/>カフェ、引越作業<br/>全国最低賃金￡5.73</td>-->
+		</tr>
+		<tr data-href="#st3-8">
+            <td><img src="images/flag08.gif" alt="" /><br/><a href="#st3-8">Ireland</a></td>
+			<td>€ 1200/月</td>
+			<td>€ 600/月</td>
+			<td>€ 9.8</td>
+<!--			<td class="earnedmoney">レストラン、ファーストフード、パブ<br/>全国最低賃金8.65ユーロ</td>-->
+		</tr>
+<!--
+		<tr data-href="#st3-9">
+            <td><img src="images/flag09.gif" alt="" /><br/><a href="#st3-9">Denmark</a></td>
+			<td>9,000DKK/月</td>
+			<td>3,500DKK/月</td>
+			<td class="earnedmoney">レストラン／100DKK～<br/>ベビーシッター／100DKK～</td>
+		</tr>
+-->
+	</table>
+	<br />
+	<p class="text01">
+	※2019年12月時点での情報です。各種情報は現在と違う場合もございますので、ご了承ください。
+	</p>
+	<div class="display-calendar">
+		<div class="display-calendar-title">
+		<span>ワーキングホリデーのオススメセミナー</span>
+		</div>
+          <?php 
+            //settings for the calendar module display
+            $country_to_display = 'other';
+            $number_to_display = '4';
+            $start_display_from = ''; //empty is begining
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <div class="img-calendar-display">
+			<img src="images/calendar-display.png">
+		</div>
+	</div>
+	<div class="top-move"><p><a href="#header">▲ページのＴＯＰへ</a></p></div>
+	<?php include('./step/memline.php'); ?>
+    <!--Country-->
+	<?php include('./step/view/australia.html');?> 
+	<?php include('./step/view/newzealand.html');?>
+	<?php include('./step/view/canada.html');?>
+	<?php include('./step/view/southkorea.html');?> <!-- 5-2 -->
+	<?php include('./step/view/france.html');?>
+	<?php include('./step/view/germany.html');?>
+	<?php include('./step/view/unitedkingdom.html');?>
+	<?php include('./step/view/ireland.html');?><!-- 8-2 -->
+	<?php include('./step/view/denmark.html');?>
+	<?php include('./step/view/taiwan.html');?> <!-- 11-2 -->
+	<?php include('./step/view/hongkong.html');?> <!-- 14-2 -->
+	<?php include('./step/view/norway.html');?>
+	<?php include('./step/view/poland.html');?> <!-- 17-2 -->
+	<?php include('./step/view/portugal.html');?><!-- 20-2 -->
+	<?php include('./step/view/slovakia.html');?><!-- 23-2 -->
+	<?php include('./step/view/austria.html');?>
+	<!--Country-->
+
+	<div class="pageLinkBox2">
+		<a class="nextStep" href="/step4.html">次のステップに進む</a>
+		<p>はじめてのワーキング・ホリデー</p>
+		<ul class="linkList">
+			<li><a href="/step1.html">Step1　ワーキングホリデーについて</a></li>
+		  <li><a href="/step2.html">Step2　目標を立てよう</a></li>
+		  <li class="active">Step3　行き先は決まりましたか？</li>
+		  <li><a href="/step4.html">Step4　渡航先が決まったら準備に入りましょう</a></li>
+		  <li><a href="/step5.html">Step5　まもなく出発ですね</a></li>
+		  <li><a href="/step6.html">Step6　渡航中の留意点</a></li>
+		  <li><a href="/step7.html">Step7　帰国してからすること</a></li>
+		  <li><a href="/step/baggage.html">Step8　おまけ</a></li>
+		</ul><!-- /.linkList -->
+	</div><!-- /.pageLinkBox2 -->
+
+	<!--div class="step_box">
+		<div class="step_box1 clearfix">
+			<div class="btnarea"><a href="step1.php"><span>STEP1 ワーホリとは</span></a></div>
+			<div class="btnarea"><a href="step2.php"><span>STEP2 目標を決める</span></a></div>
+			<div class="btnarea"><a href="step3.php"><span>STEP3 行き先は？</span></a></div>
+			<div class="btnarea"><a href="step4.php"><span>STEP4 準備をしよう</span></a></div>
+			<div class="btnarea"><a href="step5.php"><span>STEP5 出発前１ヶ月</span></a></div>
+			<div class="btnarea"><a href="step6.php"><span>STEP6 渡航中の事</span></a></div>
+			<div class="btnarea"><a href="step7.php"><span>STEP7 帰国したら</span></a></div>
+		</div>
+	</div-->
+	<div style="clear:both; height:10px;">&nbsp;</div>
+	  <div class="advbox03">
+		<?php
+			// 113
+		  define('MAX_PATH', '/var/www/html/ad');
+		  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+		    if (!isset($phpAds_context)) {
+		      $phpAds_context = array();
+		    }
+		    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+		    $phpAds_raw = view_local('', 88, 0, 0, '', '', '0', $phpAds_context, '');
+		  }
+		  echo $phpAds_raw['html'];
+		?>
+	  </div>
+	<?php $links_obj->display_links(); ?>
+	</div>
+  </div>
+  </div>
+  <?php fncMenuFooter($header_obj->footer_type); ?>
+  
+<script type="text/javascript">
+	function hide_banner(){
+        var banner = $("#mem-banner");
+        banner.hide();
+        if (typeof(Storage) !== "undefined")
+        {
+            localStorage.memBanner = "hide";
+            localStorage.memBannerTime = new Date().getTime() / 1000;
+        }
+        else
+            console.log ( '#Browser does not support localStore' );
+    }
+</script>
+  
+</body>
+</html>

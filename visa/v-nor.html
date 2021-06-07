@@ -1,0 +1,240 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='ノルウェーのワーキングホリデービザ情報';
+$header_obj->description_page='ノルウェーのビザ。ワーキングホリデー（ワーホリ）協定国の最新のビザ取得方法や渡航情報などを発信しています。また、ワーキングホリデー（ワーホリ）をされる方向けの各種無料セミナーを開催しています。オーストラリア、ニュージーランド、カナダ、韓国、フランス、ドイツ、イギリス、アイルランド、ノルウェー、台湾、香港でワーキングホリデー（ワーホリ）ビザの取得が可能です。ワーキングホリデー（ワーホリ）ビザ以外に学生ビザでの留学などもお手伝い可能です。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（ノルウェー） | ワーホリビザ情報';
+
+$header_obj->display_header();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+
+	<div id="maincontent">
+       <?php echo $header_obj->breadcrumbs('country'); ?>
+	  <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag12.gif" alt="" />
+
+
+	<p class="text01">
+	<b>ノルウェーのワーキングホリデービザの取得方法についてご案内します。</b>
+	<!--<span class="centered-btn"><a class="visa-btn country-info" href="../country/norway" title="ノルウェー国情報へ">ノルウェー国情報へ</a>--><br /></span>
+	</p>
+<!--
+	  <div class="advbox04">
+
+<?php
+  //096
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 146, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+
+<?php
+  //097
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 147, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+
+<?php
+  //098
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 150, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+
+<?php
+  //099
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 148, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+
+<?php
+  //100
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 149, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+
+
+	  </div>
+	  -->
+	  <h2 class="sec-title">ビザについて</h2>
+
+		<p class="text01">日本・ノルウェー間のワーキング・ホリデー協定により、<br/>日本国民はワーキング・ホリデーを目的としてノルウェーに滞在することができます。</p>
+		<p class="text01">ワーキング・ホリデー協定により、日本人の方は1年を上限として就労することのできる滞在許可を申請することが可能です。この滞在許可は、主に旅行目的でノルウェーに滞在することを許可するものです。よって、通常は申請者が同じ雇用主の元で6ヶ月以上働くことはできません。</p>
+
+	  <h3 class="h3-01"> 申請可能な方 </h3>
+	  <ul class="list-disc">
+	  <li> 申請時に日本に在住していること。 </li>
+	  <li> 申請の時点で年齢が18歳から30歳であること。</li>
+	  <li> 日本国のパスポート、日本帰国便の航空券、ノルウェー渡航後3ヶ月の生活費を所持していること。 </li>
+	  <li> ワーキング・ホリデー終了後にノルウェーを離れる意思があること。</li>
+	  <li> 健康であり、医療費をカバーできる保険に入っていること。</li>
+	  </ul>
+<br />
+
+	  <p class="bg-yellow"> <a href="http://www.norway.or.jp/" target="_blank"> ノルウェー大使館 </a> <br />
+〒106-0047　東京都港区南麻布5-12-2 　Tel. 03-6408-8100　Fax.03-6408-8191 </p>
+	  <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+		    <ul class="list-visabasic">
+			  <a target="_blank" href="http://www.mofa.go.jp/mofaj/area/norway/data.html">基本情報</a>
+			  <a target="_blank" href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=166">安全情報</a>
+			 <a target="_blank" href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/europe/norway.html">在外公館</a>
+			</ul>
+
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ノルウェー';
+            $number_to_display = '2';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline5_off.gif"></a></center>
+	
+      <h2 class="sec-title">申請の流れ</h2>
+      <ul class="list-number">
+		<li>必要書類を準備する</li>
+	  <li>ポータルサイト（VFSノルウェー申請センター）にて申請の登録<p>　 (受付時間は月〜金　09:00~15:00)</p></li>
+    <li>必要書類をVFSノルウェーセンターへ提出</li>
+	  <li>審査結果を確認</li>
+    <li>入国後にビザを受け取る</li>
+    ※書類の申請先は在北京ノルウェー大使館を選択してください。
+</ul>
+	  <h2 class="sec-title">申請について</h2>
+	  <h3 class="h3-01"> 申請に必要な書類 </h3>
+    <ul class="list-disc">
+		<li> パスポートの原本、および使用済みのページのコピー </li>
+	<li> ビザ申請書</li>
+		<li>アプリケーションポータルまたはアプリケーションフォームから取得したカバーレター<br>
+		（メールで届く添付のデータですので、印刷をしてください。）</li>
+		<li> 背景が白色のパスポートサイズのカラー写真2枚（3,5 cm x 4,5 cm)  </li>
+		<li> 最初の3ヶ月分の生活費を所有していることを示す書類<br>
+		（１ヶ月あたり10,634クローナ、３ケ月で31,902クローナが必要。銀行発行の英文残高証明書および・あるいはノルウェーの就職先の証明書などで資金を証明してください。）</li>
+		<li> ノルウェーにおける滞在先住所の証明書類<br>
+		（宿泊先はホテルの予約などでも可能です。）</li>
+		 <li> 健康診断書（英訳）<br>
+		（申請者が「健康である」ことを医師が証明し、発行したものを提出してください。）</li>
+	<li> 住民票（英訳）<br>
+		（申請者が「日本在住である」ことを証明するためのものであるため、必ず必要です。市役所などで発行してください。）</li>
+		<li> 医療保険（原本とコピー）<br>
+		（滞在予定全期間有効な保険の証書、あるいはワーキング・ホリデーのための滞在許可が下りた時点で医療保険に加入することを示した文書（署名入り）を提出してください。また原本はパスポートと共に返却されます。）</li>
+		<li> UDIの必要書類チェックリスト</li>
+	  <div></div></ul>
+
+	<p class="text01">※上記の必要書類一覧はUDIに掲載されている情報を参考にしています。原文は<a href="http://www.udi.no/en/checklists-container/work/checklist-for-young-adult-from-japan-on-working-holiday/?c=jpn" target="blank">こちらのページ</a>をご確認ください。</p>
+
+<br />
+
+	<p class="text01"><b>【重要事項】</b><br/></p>
+	<ul class="list-disc">
+	    <li>すべての必要添付書類を提出しなければ、申請は完了しません。 </li>
+	    <li> 申請後は、申請手数料の払い戻しはできません。 </li>
+	    <li>ワーキング・ホリデーのための滞在許可申請には、オンライン申請サイトを利用することはできません。 </li>
+	    <li>ノルウェー語あるいは英語で書かれていない書類には、必ずノルウェー語訳または英語訳を添付しなければなりません。 </li>
+	    <li>書類は全て原本の提出が必要です。原本の返却を希望する場合には、必ずコピーを作成の上、原本と一緒にお持ちください。 </li>
+	</ul>
+      <br/>
+
+		<p class="text01">滞在許可の申請に関する更に詳しい情報については、ノルウェー入国管理局のWebサイトをご覧下さい <a href="http://www.udi.no/Norwegian-Directorate-of-Immigration/Central-topics/Work-and-residence/">>>UDI</a></p>
+
+		<p class="text01">申請手続きについてはこちらをご参照ください <a href="http://www.norway.or.jp/studywork/research/visa/ApplicationPortalNorway/#.VC4bpRbvaFA">>>ビザ、滞在許可のオンライン申請</a></p>
+
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ノルウェー';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+
+
+	&nbsp;<br/>
+	&nbsp;<br/>
+	<p class="text01">
+	【注意】<br/>
+	ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+	また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+	正確なものであることを保証するものではありません。<br/>
+	ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+	</p>
+      <br/>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'ノルウェー,ヨーロッパ';
+            $number_to_display = '2';
+            $start_display_from = '4'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2019/06/14に確認した情報です。</font></p>
+	  </div>
+	  		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline3_off.gif"></a></center>
+</br>
+	  <?php $header_obj->display_visa_links(); ?>
+	<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

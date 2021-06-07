@@ -1,0 +1,78 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='ポルトガルへの留学・ワーホリでよくある質問';
+$header_obj->description_page='ポルトガルのワーホリでよく頂く質問にお答えしています。ビザの申請や現地での仕事探しに関することなど、具体的に掲載しているのでオーストラリアへ渡航される方は参考になさってください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ポルトガルワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+    <div id="maincontent">
+      <?php echo $header_obj->breadcrumbs('qa'); ?>
+      <h2 class="sec-title">ポルトガル　留学・ワーキングホリデー</h2>
+
+      <table class="qatable-aus">
+        <tr>
+          <th><img src="images/porflag.png" alt="" /><br />ポルトガル</th>
+          <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      
+      <h2 class="sec-title">ポルトガルの良くある質問</h2>
+      <p>&nbsp;</p>
+      <div class="qa-abox-country">
+        <h3 class="q-title">Ｑ１. ポルトガル語ができませんが、ポルトガル ワーキングホリデーは可能ですか？</h3>
+        <p class="text01m30">ポルトガルの公用語はポルトガル語です。ポルトガル語ができないからといってワーキングホリデービザが許可されないわけではありません。都心に行けばある程度英語が通じるエリアもありますが、ポルトガル語が全く分からない状態では仕事に就くこともできないので注意しましょう。</p>
+      </div>
+        <div class="qa-abox-country">
+        <h3 class="q-title">Ｑ２. ポルトガルへの渡航はいつ頃がオススメですか？</h3>
+        <p class="text01m30">6～9月の乾季が渡航するにはオススメの時期。日本の様な蒸し暑さはなく、気温が３０度を超えず、雨も少ない。日差しの対策をしっかりしておけば、楽しく街を散策することができるだろう。
+      </p>
+        </div>
+            <div class="qa-abox-country">
+            <h3 class="q-title">Ｑ３.ポルトガルで働く前にしなければならない手続きはありますか？</h3>
+            <p class="text01m30">申込書と必要書類を準備し、在留査証を大使館へ提出して下さい。所持しているビザや海外での活動に応じて必要書類が変わるので気をつけましょう。
+            </p>
+        </div>
+        <div class="qa-abox-country">
+            <h3 class="q-title">Ｑ４.ポルトガルワーキングホリデーで注意することはありますか？</h3>
+            <p class="text01m30">ワーキングホリデービザでの滞在はシェンゲン協定の定めるビザ免除規定の期間（６ヶ月内９０日間）を含みます。シェンゲン協定加盟国外で6ヶ月過ごさなければ、ポルトガルも含むシェンゲン条約加盟国の再入国はできません。　シェンゲン協定加盟国に6カ月入国できないのでポルトガルワーキングホリデー終了後にシェンゲン協定国へのヨーロッパ旅行はできません。
+            </p>
+        </div>
+        <div class="top-move">
+            <p><a href="#header">▲ページのＴＯＰへ</a></p>
+        </div>
+      <div class="advbox03">
+<?php
+    // 122
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 100, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+      </div>
+
+<?php $links_obj->display_links(); ?>
+
+  </div>
+  </div>
+</div>
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

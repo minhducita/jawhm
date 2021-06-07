@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+PRODID:-//AT Content Types//AT Event//EN
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:{$datetime}
+CREATED:{$created}
+LAST-MODIFIED:{$created}
+SUMMARY:{$summary}
+DTSTART:{$datestart}
+DTEND:{$dateend}
+LOCATION:{$address}
+URL:{$url}
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR

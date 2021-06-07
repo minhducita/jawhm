@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.header-new {
+	width: 100% !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.header-left-new {
+	width: 970px !important;
+	margin: 0 auto !important;
+	float: none !important;
+}
+
+#contentsbox {
+	margin-top: -4px;
+}
+
+
+/*
+--------------------------------------------------------------------------------
+globalmenu
+--------------------------------------------------------------------------------
+*/
+
+#area-blog-globalmenu {
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+	background: url("../images/globalmenu-bg.jpg") repeat-x left top;
+}
+
+#area-blog-globalmenu-inner {
+	width: 975px;
+	margin: 0 auto;
+}
+
+#blog-globalmenu-list {
+	/*display: block;
+	width: 975px;
+	margin: 0 auto;*/
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li {
+	float: left;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li a {
+	display: block;
+	height: 45px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li a:hover {
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-ms-filter: "alpha(opacity=70)";
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-01 a {
+	width: 228px;
+	background: url("../images/globalmenu.jpg") no-repeat 0 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-02 a {
+	width: 151px;
+	background: url("../images/globalmenu.jpg") no-repeat -228px 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-03 a {
+	width: 121px;
+	background: url("../images/globalmenu.jpg") no-repeat -379px 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-04 a {
+	width: 110px;
+	background: url("../images/globalmenu.jpg") no-repeat -500px 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-05 a {
+	width: 151px;
+	background: url("../images/globalmenu.jpg") no-repeat -610px 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-06 a {
+	width: 104px;
+	background: url("../images/globalmenu.jpg") no-repeat -761px 0;
+}
+
+#area-blog-globalmenu #blog-globalmenu-list li#blog-globalmenu-list-07 a {
+	width: 110px;
+	background: url("../images/globalmenu.jpg") no-repeat -865px 0;
+}
+
+
+

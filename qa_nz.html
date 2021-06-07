@@ -1,0 +1,105 @@
+<?php
+require_once 'include/header.php';
+require_once 'include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->fncFacebookMeta_function=true;
+
+$header_obj->title_page='ニュージーランドの留学・ワーホリでよくある質問';
+$header_obj->description_page='ニュージーランドのワーホリに関するよくある質問にお答えします。ビザの延長やIRDナンバーについてなど、具体的な情報を掲載していますので、ニュージーランドへ渡航される方は、是非ご活用ください。';
+
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="images/mainimg/qanda-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ニュージーランドワーキングホリデーのよくある質問';
+
+$header_obj->display_header();
+include('calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+	  <?php echo $header_obj->breadcrumbs('qa'); ?>
+	  <h2 class="sec-title">ニュージーランド　留学・ワーキングホリデー</h2>
+
+	  <table class="qatable-aus">
+	    <tr>
+		  <th><img src="images/mflag02.gif" alt="" /><br />ニュージーランド</th>
+		  <td>ワーキングホリデー協定国別に、よくあるご質問にお答えしています。</td>
+		</tr>
+	  </table>
+      <p>&nbsp;</p>
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'ニュージーランド';
+            $number_to_display = '6';
+            $start_display_from = ''; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+
+	  <h2 class="sec-title">よくある質問と回答</h2>
+      <p>&nbsp;</p>
+	  <div class="qa-abox-country">
+	    <h3 class="q-title">Ｑ１.ニュージーランドワーキングホリデービザ申請をしたいけど英語がわかりません。</h3>
+		<p class="text01">ニュージーランド移民局のホームページからのオンライン申請となります。自分でニュージーランドワーキングホリデービザを申請し、間違いがあった・どうしていいかわからないとお問い合わせを受ける事がありますが、申請してしまった後のビザ申請のお手伝いは当協会ではできかねます。
+		ビザは相手国の法律に基づいて審査されるものです。慎重に進める必要があります。特にニュージーランドはインターネットで申請できる手軽さからご自身でやってみようという方は多いようですがその分、連絡が来ない、失敗しましたという連絡が本当に多いです。偽りの申請や質問事項に間違った返答を記したままビザを取得すると現地で滞在中にビザのキャンセル、強制送還となっても仕方がありません。<a href="http://www.jawhm.or.jp/mem/">日本ワーキングホリデー協会ではビザの申請をお手伝いもしております。</a></p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ２.ビザは自分で簡単に申請できますか？</h3>
+		<p class="text01m30">英語だからわからないということであれば軽率にご自身でビザを申請することはやめましょう。911テロ以降世界中の国でビザに対しては厳しくなっています。お近くの留学会社や日本ワーキング・ホリデー協会のサポートを通してビザ申請を進める等、間違いがないように手続き下さい。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ３.オーストラリアのワーキング・ホリデービザも一緒に取得していいですか？<br />
+</h3>
+		<p class="text01m30">オーストラリアワーキングホリデービザを一緒に申請してオーストラリアにワーキングホリデーに行ったあとにニュージーランドに行く方もいらっしゃいます。オーストラリアもニュージーランドのビザも一度ビザを取得してしまうと再申請できません。発給日から１２ヶ月間の有効期限があるので、注意してその期間内に渡航して下さいね。<br />
+<br />
+		ワーキングホリデービザは発給された日から1年以内に入国してその入国から1年がワーキングホリデー滞在期間になります。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ４.片道航空券でも入国できますか？</h3>
+		<p class="text01m30">ニュージーランドワーキングホリデーでニュージーランドに入国する際は、片道航空券でも入国できます。</p>
+	  </div>
+		<div class="qa-abox-country">
+		<h3 class="q-title">Ｑ５.IRDナンバーって必要ですか？</h3>
+		<p class="text01m30">IRDナンバーとは、Inland Revenue Department（日本の国税局にあたる）機関で管理されている納税者番号です。ニュージーランドでバイトや仕事をする場合に必ず必要となりますので、ＩＲＤナンバーは、郵便局で手続きし取得してください。Inland RevenueのＷｅｂサイトからも申請用紙がダウンロードできます。パスポートと語学学校の学生証や入学許可証・雇用証明書で身元確認を行い、郵便局にある封筒で送付します。約３週間で申請時に記載した住所に届けられます。</p>
+	  </div>
+	    <div class="qa-abox-country">
+		<h3 class="q-title">Ｑ６.ニュージーランドでの学生ビザ、永住権、働くビザには延長できますか？</h3>
+		<p class="text01m30">ニュージーランド大使館のホームページで案内されていますのでご参照下さい。</p>
+	  </div>
+		<div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+	  
+      <?php 
+            //settings for the calendar module display
+            $country_to_display = 'ニュージーランド';
+            $number_to_display = '6';
+            $start_display_from = '6'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+      ?>
+	  <div class="advbox03">
+<?php
+	// 123
+  define('MAX_PATH', '/var/www/html/ad');
+  if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+    if (!isset($phpAds_context)) {
+      $phpAds_context = array();
+    }
+    // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+    $phpAds_raw = view_local('', 101, 0, 0, '', '', '0', $phpAds_context, '');
+  }
+  echo $phpAds_raw['html'];
+?>
+	  </div>
+
+<?php $links_obj->display_links(); ?>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type); ?>
+
+</body>
+</html>

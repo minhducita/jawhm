@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/*
+********************************************************************************
+■ 共通
+********************************************************************************
+*/
+#area-panel-header.pcview, section.pcview { display:none; }
+div.spview h3, section.spview h3 a {
+	display:block;
+	background:url(../images/sp/logo.jpg) no-repeat left top;
+	-webkit-background-size:288px 80px;
+	-moz-background-size:288px 80px;
+	background-size:288px 80px;
+	width:288px; height:0;
+	padding-top:80px; overflow:hidden;
+	margin:20px auto 15px auto;
+}
+div.spview div.mainBox {
+	background-image: url(../images/sp/mainbgTop.png), url(../images/sp/mainbgBtm.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: top center, bottom center;
+	background-size:100% auto;
+	padding:40px 0 65px 0;
+	line-height:1.6;
+}
+section.spview div.mainBox {
+	background-image: url(../images/sp/mainbgTop2.png), url(../images/sp/mainbgBtm.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: top center, bottom center;
+	background-size:100% auto;
+	padding:40px 0 65px 0;
+	line-height:1.6;
+}
+div.spview div.mainBox { margin-bottom:30px; }
+section.spview div.mainBox { margin-bottom:20px; }
+
+/*
+********************************************************************************
+■ TOP
+********************************************************************************
+*/
+div.spview div.mainBox p {
+	text-align:center;
+	color:#474747;
+}
+div.spview div.mainBox p > span.pink { color:#f46b6b; font-weight:bold; }
+div.spview div.mainBox p > span.bold { font-weight:bold; }
+div.spview div.mainBox a.startBtn {
+	background:url(../images/sp/startBtn.png) no-repeat left top;
+	-webkit-background-size:225px 45px;
+	-moz-background-size:225px 45px;
+	background-size:225px 45px;
+	width:225px; height:0;
+	padding-top:45px; overflow:hidden;
+	margin:25px auto;
+	display:block;
+}
+div.spview div.mainBox img.bamkun {
+	width:224px; height:65px;
+	display:block;
+	margin:0 auto;
+}
+
+/*
+********************************************************************************
+■ 診断質問
+********************************************************************************
+*/
+div.spview div.mainBox p.qtext,
+div.spview div.mainBox div.atext { text-align:center; }
+div.spview div.mainBox p.qtext span {
+	display:inline-block;
+	background:url(../images/sp/Qicon.png) no-repeat left center;
+	-webkit-background-size:35px 35px;
+	-moz-background-size:35px 35px;
+	background-size:35px 35px;
+	padding:10px 0 10px 45px;
+	min-height:35px;
+	font-size:14px;
+	margin-bottom:10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	text-align:left;
+}
+
+div.spview div.mainBox img.mainImg {
+	width:80%;
+	display:block;
+	margin:0 auto 30px auto;
+}
+div.spview div.mainBox ul.choice {
+	/*display:flex;
+	justify-content:center;*/
+	width: 270px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+div.spview div.mainBox ul.choice li:first-child { margin-right:20px; float:left; }
+div.spview div.mainBox ul.choice li:last-child { float:right; }
+div.spview div.mainBox ul li a { display:block; width:125px; height:40px; }
+div.spview div.mainBox ul li a img { width:100%; height:auto; }
+
+/*
+********************************************************************************
+■ 診断結果
+********************************************************************************
+*/
+section.spview div.mainBox { line-height:1.4; }
+section.spview div.mainBox div.atext p {
+	display:inline-block;
+	background:url(../images/sp/Aicon.png) no-repeat left 5px;
+	-webkit-background-size:48px 35px;
+	-moz-background-size:48px 35px;
+	background-size:48px 35px;
+	padding:5px 0 10px 58px;
+	min-height:35px;
+	font-size:14px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	text-align:left;
+}
+section.spview div.mainBox div.atext { text-align:center; }
+section.spview div.mainBox div.atext p span {	color:#f86a1e; }
+section.spview div.mainBox div.atext p span.semName { font-size:18px; font-weight:bold; }
+section.spview div.mainBox div.detail {
+	padding:0 10px;
+	overflow:hidden;
+	box-sizing:border-box;
+	margin-bottom:25px;
+}
+section.spview div.mainBox div.detail { display:table; }
+section.spview div.mainBox div.detail img.left {
+	float:left;
+	/*width:40%;*/
+	box-sizing:border-box;
+}
+section.spview div.mainBox div.detail p.right {
+	/*float:right;*/
+	width:60%;
+	box-sizing:border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+section.spview div.mainBox h4 {
+	border-left:7px solid #ff7e00;
+	color:#ff7e00;
+	font-size:16px; font-weight:bold;
+	padding-left:8px;
+	margin:0 0 10px 10px;
+}
+ul.areaBtn {
+	overflow:hidden;
+	padding:0 10px;
+	/*display:flex;
+	justify-content:flex-start;*/
+	box-sizing:border-box;
+	margin: 0 auto 10px auto;
+  width: 320px;
+}
+ul.areaBtn li { width:93px; margin-right:10px; float:left; }
+ul.areaBtn li:last-child { margin-right:0; }
+ul.areaBtn li a {
+	background:url(../images/sp/areaBtn.png) no-repeat left top;
+	-webkit-background-size:95px 175px;
+	-moz-background-size:95px 175px;
+	background-size:95px 175px;
+	display:block;
+	overflow:hidden;
+	width:95px; height:0;
+	padding-top:35px;
+}	
+ul.areaBtn li.btnTokyo a { background-position:0 0; }
+ul.areaBtn li.btnOsaka a { background-position:0 -35px; }
+ul.areaBtn li.btnNagoya a { background-position:0 -70px; }
+ul.areaBtn li.btnFukuoka a { background-position:0 -105px; }
+ul.areaBtn li.btnOnline a { background-position:0 -140px; }
+
+section.spview div.seminarBox { margin-bottom:25px; }
+div.seminarBox h4 {
+	color:#ff7e00;
+	font-size:16px; font-weight:bold;
+	margin:0 0 10px 10px;
+}
+section.spview div.seminarBox p.moreView {
+	margin-top:10px;
+	text-align:right;
+	padding:0 10px;
+}
+section.spview div.seminarBox p.moreView a {
+	color:#474747;
+	text-decoration:underline;
+}
+section.spview ul.semList {
+	width:95%;
+	margin:0 auto 40px auto;
+}
+section.spview ul.semList li {
+	border:1px solid #c4c4c4;
+	border-bottom:none;
+	background: linear-gradient(#f6f6f6, #e3e3e3);	
+	background: -moz-linear-gradient(#f6f6f6, #e3e3e3);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)); 
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+section.spview ul.semList li:last-child { border-bottom:1px solid #c4c4c4; }
+section.spview ul.semList li a {
+	background:url(../images/sp/arrowIcon.png) no-repeat 98% center;
+	-webkit-background-size:7px 12px;
+	-moz-background-size:7px 12px;
+	background-size:7px 12px;
+	display:block;
+	padding:0 5px;
+}
+section.spview ul.semList li a span{
+	display:block;
+	background:url(../images/sp/othSeminar.png) no-repeat left top;
+	-webkit-background-size:300px 477px;
+	-moz-background-size:300px 477px;
+	background-size:300px 477px;
+	overflow:hidden;
+	height:0;
+	padding-top:53px;
+}
+section.spview ul.semList li.sem01 a span {	background-position:0 0; }
+section.spview ul.semList li.sem02 a span {	background-position:0 -53px; }
+section.spview ul.semList li.sem03 a span {	background-position:0 -106px; }
+section.spview ul.semList li.sem04 a span {	background-position:0 -159px; }
+section.spview ul.semList li.sem05 a span {	background-position:0 -212px; }
+section.spview ul.semList li.sem06 a span {	background-position:0 -265px; }
+section.spview ul.semList li.sem07 a span {	background-position:0 -318px; }
+section.spview ul.semList li.sem08 a span {	background-position:0 -371px; }
+section.spview ul.semList li.sem09 a span {	background-position:0 -424px; }
+
+div.othSeminar p { padding:0 10px; margin:10px 0 15px 0; }
+section.spview p.pad10 { padding:0 10px; }
+section.spview p.pad20 { padding:0 20px; }
+section.spview p.mgb10 { margin-bottom:10px; }
+
+section.spview a.memBtn {
+	display: block;
+  width: 200px;
+  margin: 10px auto 0 auto;
+}
+section.spview div.reBtn {
+	text-align:center;
+	margin:0 auto 15px auto;
+}
+section.spview div.reBtn a {
+	display:block;
+	background:url(../images/sp/reBtn.png) no-repeat left top;
+	-webkit-background-size:140px 40px;
+	-moz-background-size:140px 40px;
+	background-size:140px 40px;
+	width:140px; height:0;
+	padding-top:40px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+
+#panel-sub-online-sp p.pad10 { text-align:center; }
+	
+
+/*
+********************************************************************************
+■ responsive images
+********************************************************************************
+*/
+.responsive-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*
+********************************************************************************
+■ clearfix
+********************************************************************************
+*/
+.clearfix:after {content: ".";display: block;clear: both;height: 0;visibility: hidden;}
+.clearfix {min-height: 1px;}
+* html .clearfix {height: 1px; /*\*//*/height: auto;overflow: hidden;/**/}

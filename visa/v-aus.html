@@ -1,0 +1,328 @@
+<?php
+require_once '../include/header.php';
+require_once '../include/links.php';
+
+$links_obj = new Links();
+$header_obj = new Header();
+
+$header_obj->title_page='オーストラリアのワーキングホリデービザ情報';
+$header_obj->description_page='オーストラリアのビザ取得は日本ワーキング・ホリデー協会のこちらのページをご確認ください。オーストラリアのワーキングホリデービザ取得の最新情報・ステップ・注意事項はこちら。ワーキングホリデーは年間25,000人以上の方にセミナー参加いただいています。オーストラリアへ滞在される方は参考になさってください。';
+$header_obj->fncMenuHead_imghtml = '<img id="top-mainimg" src="../images/mainimg/visa-mainimg.jpg" alt="" width="970" height="170" />';
+$header_obj->fncMenuHead_h1text = 'ワーキングホリデー協定国（オーストラリア） | ワーホリビザ情報';
+
+$header_obj->display_header_2();
+
+include('../calendar_module/mod_event_horizontal.php');
+?>
+	<div id="maincontent">
+    	  <?php echo $header_obj->breadcrumbs('country'); ?>
+
+			<div class="step_box">
+				<div class="step_box1 clearfix">
+					<div class="btnarea"><a href="../../wh/australia/sydney/"><span>シドニーでワーキングホリデー</span></a></div>
+					<div class="btnarea"><a href="../../wh/australia/parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+				</div>
+			</div>
+			<div style="clear:both; height:10px;">&nbsp;</div>
+      <?php $header_obj->display_visa_links(); ?>
+	  <img src="../images/bflag01.gif" alt="" />
+<?php
+if ($header_obj->computer_use() === false && $_SESSION['pc'] != 'on') {
+
+	echo('
+	<p class="text01">
+	<span class="centered-btn" style="padding-top:0;margin-bottom:0"><a class="visa-btn country-info" href="../country/australia" title="オーストラリア国情報へ">オーストラリア国情報へ</a></span>
+	<b style="display:block;margin-top:1em">オーストラリアのワーキングホリデービザの取得方法についてご案内します。</b><br>
+	<a style="display:block" href="http://www.jawhm.or.jp/wh/australia/">オーストラリアのワーキングホリデー情報はこちら</a><br>
+	');
+
+
+} else {
+
+	echo('
+	<p class="text01">
+	<span class="centered-btn"><a class="visa-btn country-info" href="../country/australia" title="オーストラリア国情報へ">オーストラリア国情報へ</a></span>
+	<b>オーストラリアのワーキングホリデービザの取得方法についてご案内します。</b>	<br />
+	<a href="http://www.jawhm.or.jp/wh/australia/">オーストラリアのワーキングホリデー情報はこちら</a>でご案内しています。<br/>
+	');
+
+}
+?>
+
+
+	&nbsp;<br/>
+	在日韓国人の方のワーキング・ホリデービザ申請は<a href="v-aus-k.html">こちら&gt;&gt;</a></p>
+
+    <!--<center><p style="color: red; font-weight: bold;">メンバー登録でビザ申請サポートも実施しております。</p></center>-->
+    <!--<a href="/mem/">
+            <p class="v-aus_mem"><img src="/images/aus-v_mem_SP.jpg"> </p>
+    </a>-->
+
+
+	<!--<h3 class="h3-01">オーストラリアのおすすめ語学学校</h3>-->
+	<div class="advbox04">
+    <?php
+      // 025
+      define('MAX_PATH', '/var/www/html/ad');
+      if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+        if (!isset($phpAds_context)) {
+          $phpAds_context = array();
+        }
+        // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+        $phpAds_raw = view_local('', 4, 0, 0, '', '', '0', $phpAds_context, '');
+      }
+      echo $phpAds_raw['html'];
+    ?>
+    
+    <?php
+      // 026
+      define('MAX_PATH', '/var/www/html/ad');
+      if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+        if (!isset($phpAds_context)) {
+          $phpAds_context = array();
+        }
+        // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+        $phpAds_raw = view_local('', 5, 0, 0, '', '', '0', $phpAds_context, '');
+      }
+      echo $phpAds_raw['html'];
+    ?>
+
+    <?php
+      // 028
+      define('MAX_PATH', '/var/www/html/ad');
+      if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+        if (!isset($phpAds_context)) {
+          $phpAds_context = array();
+        }
+        // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+        $phpAds_raw = view_local('', 7, 0, 0, '', '', '0', $phpAds_context, '');
+      }
+      echo $phpAds_raw['html'];
+    ?>
+    
+    <?php
+      // 029
+      define('MAX_PATH', '/var/www/html/ad');
+      if (@include_once(MAX_PATH . '/www/delivery/alocal.php')) {
+        if (!isset($phpAds_context)) {
+          $phpAds_context = array();
+        }
+        // function view_local($what, $zoneid=0, $campaignid=0, $bannerid=0, $target='', $source='', $withtext='', $context='', $charset='')
+        $phpAds_raw = view_local('', 8, 0, 0, '', '', '0', $phpAds_context, '');
+      }
+      echo $phpAds_raw['html'];
+    ?>
+    <br/>
+	</div><!-- / .advbox04 -->
+    
+  <h2 class="sec-title">ビザについて</h2>
+	  <h3 class="h3-01">目的</h3>
+	  <p class="text01">ワーキングホリデービザは18歳から30歳までの協定締結国の国民に対し、12ヶ月間オーストラリアで休暇の機会と、その資金を補うための一時的な就労の機会を与える制度です。</p>
+	  <p class="text01">重要：申請日に18歳以上で31歳になっていない事。</p>
+	  <h3 class="h3-01">ビザの条件</h3>
+	  <p class="text01">最高12ヶ月まで滞在可能<br />
+	    ビザ有効期限内は出入国が何度も可能<br />
+	    1雇用主のもとで最高6ヶ月就労可能<br />
+      就学またはトレーニングが最高4ヶ月まで可能</p>
+
+	  <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+	  <h2 class="sec-title">ビザ申請対象</h2>
+	  <p class="bg-blue">1回目のワーキングホリデービザ</p>
+	  <h3 class="h3-01">【 一般条件】</h3>
+	  <p class="text01">申請日・ビザ発給日ともにオーストラリア国外にいること。<br />
+	    ワーキングホリデービザで以前に入国したことがないこと。<br />
+	    申請日に18歳以上31歳になっていないこと。<br />
+	    オーストラリアに12ヶ月以上滞在する意思がないこと。<br />
+	    扶養する子供が同行しないこと。<br />
+      オーストラリアとワーキングホリデープログラム協定締結国のパスポートを保持していること。</p>
+	  <h3 class="h3-01">【健康診断】</h3>
+	  <p class="text01">すべての申請者は健康上の基準を満たす必要があり、状況に応じて健康診断が必要となります。健康診断はビザ審査が判断される以前に受診しなくてはなりません。健康診断費は申請料金に含まれておりません。</p>
+	  <h3 class="h3-01">【人物審査】</h3>
+	  <p class="text01">ビザを発給する条件として人物審査の基準をみたしていなければなりません。</p>
+	  <p class="text01">詳細: 人物審査</p>
+	  <h3 class="h3-01">【英文のオーストラリアドル建ての資金証明書（発行から1か月以内）】</h3>
+	  <p class="text01">滞在にあたり十分な資金として$5,000以上＋帰国時の航空券を購入できる資金$2,000＝$7000以上を推薦しています。金融機関にて英文のオーストラリアドル建ての資金証明書（残高証明書）を依頼し、ご準備してください。</p>
+	  <h3 class="h3-01">【滞在の延長について】</h3>
+	  <p class="text01">2回目のワーキングホリデービザを申請するためには、1回目のワーキングホリデービザにて滞在中、オーストラリア地方地域内にて3ヶ月間季節労働に従事した証明が必要です。</p>
+	  <p class="bg-blue">2回目のワーキングホリデービザ</p>
+	  <p class="text01">2005年度11月1日より、以前にワーキング・ホリデービザでオーストラリアに滞在中、3ヵ月以上オーストラリアの地方地域にて季節労働に従事した人であれば、2度目のワーキング・ホリデービザを申請することができるようになりました。
+申請の条件および方法はこちらをご覧ください。</p>
+	  <p class="bg-blue">3回目のワーキングホリデービザ</p>
+	  <p class="text01">2019年7月1日以降、セカンドワーキングホリデービザを保持している間に、指定された地域で6か月間特定の仕事に従事した場合、ワーキングホリデービザでの滞在期間をさらに一年延長する（合計3年間）ことが可能となりました。
+</p>
+      
+      <br/>
+      <h3 class="h3-02">もうすぐ開催！オーストラリアの無料セミナー</h3>
+      <?php 
+			//settings for the calendar module display
+            $country_to_display = 'オーストラリア';
+            $number_to_display = '2';
+            $start_display_from = '2'; //empty is begining
+            
+			display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from); 
+      ?>
+      
+      <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	  </div>
+
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline5_off.gif"></a></center>
+    
+    
+    <h2 class="sec-title">ビザ取得までのステップチャート</h2>
+    <h3 class="h3-01">参加可能年齢　18～30歳（申請時30歳であれば31歳での入国が可能）</h3>
+    <p class="text01">オーストラリアの場合、HP上からのオンライン申請です。有効なパスポート（有効期間が滞在予定期間を満たしたもの）とクレジットカード（申請料金485豪ドルはクレジットカード決済のみ。本人名義でなくともよい）を用意して大使館のホームページで申請します。</p>
+    
+    <div class="visaFlowBox">
+     <!-- <ul class="stepFlow">
+        <li>
+          <div class="bgStep01_127-121 w127 line1">
+            <p class="heading"><strong>スタート</strong></p>
+          </div>
+          <div class="baloonBox">オーストラリア大使館HPの申請事項を確認</div>
+        </li>
+        <li>
+          <div class="bgStep02_127-121 w127">
+            <p class="heading"><strong>申請</strong></p>
+            <p class="sentence">オーストラリア大使館HP<br>より申請<br>申請料480ドル</p>
+          </div>
+          <div class="baloonBox">申請時に必要なもの<br>①有効なパスポート<br>②クレジットカード</div>
+        </li>
+        <li>
+          <div class="bgStep03_127-121 w127">
+            <p class="heading"><strong>審査</strong></p>
+            <p class="sentence">オーストラリア政府移民<br>市民権省<br>DIACで審査</p>
+          </div>
+        </li>
+        <li>
+          <div class="bgStep04_127-121 w127">
+            <p class="heading"><strong>通知発送</strong></p>
+            <p class="sentence">ビザ発給通知取得</p>
+          </div>
+          <p>※1</p>
+        </li>
+        <li>
+          <div class="bgStep05_127-121 w127">
+            <p class="heading"><strong>発給</strong></p>
+            <p class="sentence">入国時にパスポート<br>提示で、<em>ビザ発給</em></p>
+          </div>
+          <p>※2</p>
+        </li>
+      </ul>--><!-- / .stepFlow -->  
+      
+     <!-- <p class="text10p-tyu">※１　ビザ発給通知書（Visa Grant Notification）は申請時に指定した方法（E-mail/郵送）で届きます。別途、健康診断受診が必要な場合もあるので注意して下さい。</p>
+      <p class="text10p-tyu">※２　電子上で許可されるビザのため、入国の再、入国審査官にパスポートを提示するだけで結構です。ただし、念のためビザ発給通知書のコピーは所持しておいて下さい。</p>
+      <p class="bg-yellow">オーストラリア大使館<br />〒108－8361 東京都港区三田２－１－１４　オーストラリア大使館 ワーキング・ホリデービザ係</p>-->
+      <h3 class="h3-01">外務省ＨＰで基本情報を確認しよう</h3>
+        <ul class="list-visabasic">
+          <a href="http://www.mofa.go.jp/mofaj/area/australia/index.html" target="_blank">基本情報</a>
+          <a href="http://www2.anzen.mofa.go.jp/info/pcinfectionspothazardinfo.asp?id=071" target="_blank">安全情報</a>
+          <a href="http://www.mofa.go.jp/mofaj/annai/zaigai/list/oceania/australi.html" target="_blank">在外公館</a>
+        </ul>
+        <br />
+        <h3 class="h3-02">もうすぐ開催！オーストラリアの無料セミナー</h3>
+        <?php 
+              //settings for the calendar module display
+              $country_to_display = 'オーストラリア';
+              $number_to_display = '2';
+              $start_display_from = ''; //empty is begining
+              
+        display_horizontal_calendar($country_to_display,$number_to_display,$start_display_from);            
+        ?>
+
+
+
+      <div class="top-move">
+        <p><a href="#header">▲ページのＴＯＰへ</a></p>
+      </div>
+      <center>
+      <p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+      <a href="/mem/#meritt"><img src="images/memline3_off.gif"></a></center>
+    </div><!-- / .visaFlowBox -->
+    
+    
+    
+      <h2 class="sec-title">申請方法</h2>
+	  <h3 class="h3-01">【申請料金】</h3>
+	  <p class="text01">参照: Charges(Fees)-Visiting Australia</p>
+	  <h3 class="h3-01">【申請方法】</h3>
+	  <p class="text01">日本在住の方は、インターネットで申請を行わなくてはなりません。</p>
+	  <div class="noteBox note250">
+	  <p><span>POINT</span>稀にシステムダウンによりすぐに申請ができない場合があります。必ず余裕を持って申請を行いましょう。</p> 
+    </div><!-- / .noteBox -->
+
+	  <h3 class="h3-01">【e-Visa申請時に必要なもの】</h3>
+	  <h4>1.有効なパスポート</h4>
+	  <p class="text01">滞在予定期間を満たしていない場合は、あなたの居住地を管轄するパスポートセンターに相談し、滞在予定期間を満たしたパスポートを取得してからeVisa 申請を行ってください。</p>
+    <div class="noteBox note250">
+    </div><!-- / .noteBox -->
+    
+    <h4>2. クレジットカード</h4>
+	  <p class="text01">申請料金(485豪ドル)はクレジットカード決済のみとなります。Visa, MasterCard, American Express, Diners Club International, JCB が使用可能。自分名義でなくても大丈夫です。（例:父親のクレジットカード等。カード名義人が使用を了承していればどなたのものでも構いません）</p>    
+	  <p class="text01">参照: Charges(Fees)-Visiting Australia</p>
+    <div class="noteBox note250">
+      <p><span>POINT</span>ビザ申請料金は予告無く変更になる場合がありますのでご注意下さい。</p> 
+    </div><!-- / .noteBox -->
+	&nbsp;<br/>
+	  <h3 class="h3-01">【e-Visaに関するオーストラリア政府移民・市民権省（DIAC）との連絡方法】</h3>
+	  <p class="text01">あなたのeVisa 申請の審査は本国タスマニアにあるDIAC 事務所で行われます。eVisa に関するあなたとDIAC のやり取りは、あなたがeVisa 申請中で希望した連絡方法（e-mail、郵送）行われます。もし第３者を代理人として選任したのであれば、その方宛てに全ての通知が送られます。 DIAC より何らかの問い合わせ等があれば、その指示に従い速やかに手続きを行って下さい。ビザ発給の条件を全て満たした方には、ビザが許可され、ビザ発給許可通知書(Visa Grant Notification：VGN)が届きます。<br />
+      VGN には発給されたワーキング・ホリデービザの滞在許可期限や守らなければならない諸条件等が記載されています。eVisa は電子上で許可されるビザなので、空港でパスポートを提示するだけですが、VGN をプリントし携帯してオーストラリアへ渡航することをお勧めします。オーストラリア入国後、特に必要ありませんが、ご希望の方は最寄の移民局でシールの貼付ができます（無料）。</p>
+	  <h3 class="h3-01">【その他】</h3>
+	  <p class="text01">オンライン上で審査状況の確認を希望する方、一時保存した申請を再開希望の方、http://www.immi.gov.au/visitors/working-holiday/417/after-you-lodge.htmのページにあるOnline visa services にアクセスし手続きを行ってください。eVisa 申請後に申請内容に誤りがあったことが判明した場合は速やかにメールで（eVisa.WHM.Helpdesk@immi.gov.au）あなたの名前、生年月日、パスポート番号、TRN 番号を明記の上、要件を簡潔に英語で報告してください。eVisa 申請はタスマニアにあるDIAC 事務所で行っております。連絡や問い合わせ等が必要な方は直接上記メールアドレス宛てに行ってください。大使館へのお問い合せはご遠慮下さい。</p>
+
+	&nbsp;<br/>
+	&nbsp;<br/>
+	<p class="text01">
+	【注意】<br/>
+	ここに記載のある情報は法改正等により予告なく変更することもあります。<br/>
+	また、このページの内容は各国大使館・領事館等より情報を収集し細心の注意を払って作成しておりますが、<br/>
+	正確なものであることを保証するものではありません。<br/>
+	ビザ取得の際は、必ず各国大使館・領事館等の情報をご自身でもご確認ください。
+	</p>
+  &nbsp;<br/>
+  <div class="noteBox note610">
+	  <p><span>POINT</span>ワーキングホリデービザを自分で申請した人からの問い合わせ電話が増えています。 「英語だったので失敗したかも。」「2週間たっても連絡が来ない。」「健康診断を受けろと言われた。」「不備が多くて返送された」ビザ審査官に対して不備がない内容を心がけてください。そしてビザは法律に沿って発給されるので一つ間違えれば発給されなくても不思議ではありません。<br/>
+		  <br/>
+	  <a href="http://www.jawhm.or.jp/mem/">日本ワーキングホリデー協会ではこのような状態になってからのビザの修復申請はとても時間がかかるので自分で申請することをお勧めいたしません。費用がかかってもプロに頼む方がいいですし、緊急でなければ<b>日本ワーキングホリデー協会でも無料でお手伝いしております。</b>詳細はこちらから。</a></p> 
+  </div><!-- / .noteBox -->
+
+		<center>
+		<p><font color="orangered">ビザの申請、ひとりでできますか？</font></p>
+		<a href="/mem/#meritt"><img src="images/memline4_off.gif"></a></center>
+    <br />
+    
+    <div class="top-move">
+	    <p><a href="#header">▲ページのＴＯＰへ</a></p>
+	    <p><font size="1">※掲載されているビザ情報は、2017/07/13に確認した情報です。</font></p>
+	  </div> 
+
+    <div style="clear:both; height:10px;">&nbsp;</div>
+    <div class="step_box">
+      <div class="step_box1 clearfix">
+        <div class="btnarea"><a href="../../wh/australia/sydney/"><span>シドニーでワーキングホリデー</span></a></div>
+        <div class="btnarea"><a href="../../wh/australia/parth/"><span>パースのワーホリ（ワーキングホリデー）</span></a></div>
+      </div>
+    </div>
+    <div style="clear:both; height:30px;">&nbsp;</div>
+    
+    <h3 class="h3-02">その他のワーキングホリデー協定国のビザ情報</h3>
+    <?php $header_obj->display_visa_links(); ?>
+    <?php $links_obj->display_links(); ?>
+
+    
+    &nbsp;<br/>
+
+	</div>
+  </div>
+  </div>
+
+<?php fncMenuFooter($header_obj->footer_type, false); ?>
+
+<!-- Scripts -->
+<?php $header_obj->display_script(); ?>
+</body>
+</html>
